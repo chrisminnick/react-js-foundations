@@ -11,6 +11,9 @@ import BasicFigure from './chapter4/BasicFigure';
 import FigureList from './chapter4/FigureList';
 import FigureListProps from './chapter4/FigureListProps';
 import ThingsThatILike from './chapter4/ThingsThatILike';
+import FooClass from './chapter4/Listing420';
+import FooFunction from './chapter4/Listing421';
+
 function App() {
   return (
     <Router>
@@ -40,6 +43,12 @@ function App() {
                 <li>
                   <Link to="/listing419">Listing 4-19</Link>
                 </li>
+                <li>
+                  <Link to="/listing420">Listing 4-20</Link>
+                </li>
+                <li>
+                  <Link to="/listing421">Listing 4-21</Link>
+                </li>
               </ul>
             </li>
             
@@ -64,6 +73,12 @@ function App() {
           </Route>
           <Route path="/listing419">
             <ThingsThatILike />
+          </Route>
+          <Route path="/listing420">
+            <FooClass />
+          </Route>
+          <Route path="/listing421">
+            <FooFunction />
           </Route>
           <Route path="/">
             
