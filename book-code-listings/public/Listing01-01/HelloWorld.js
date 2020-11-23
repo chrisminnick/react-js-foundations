@@ -1,9 +1,9 @@
 'use strict';
 
-class HelloForm extends React.Component {
+class HelloWorld extends React.Component {
 constructor(props) {
     super(props);
-    this.state = { personName:'World' };
+    this.state = { personName:'Murray' };
 }
 
 render() {
@@ -12,4 +12,4 @@ render() {
 }
 
 const domContainer = document.querySelector('#app');
-ReactDOM.render(React.createElement(HelloForm), domContainer);
+ReactDOM.render(React.createElement(HelloWorld), domContainer);

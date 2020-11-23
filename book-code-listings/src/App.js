@@ -5,14 +5,15 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Listing411 from './chapter4/Listing411';
-import Listing412 from './chapter4/Listing412';
-import BasicFigure from './chapter4/BasicFigure';
-import FigureList from './chapter4/FigureList';
-import FigureListProps from './chapter4/FigureListProps';
-import ThingsThatILike from './chapter4/ThingsThatILike';
-import FooClass from './chapter4/Listing420';
-import FooFunction from './chapter4/Listing421';
+import Listing0103 from './chapter01/Listing0103';
+import Listing411 from './chapter04/Listing411';
+import Listing412 from './chapter04/Listing412';
+import BasicFigure from './chapter04/BasicFigure';
+import FigureList from './chapter04/FigureList';
+import FigureListProps from './chapter04/FigureListProps';
+import ThingsThatILike from './chapter04/ThingsThatILike';
+import FooClass from './chapter04/Listing420';
+import FooFunction from './chapter04/Listing421';
 
 function App() {
   return (
@@ -22,6 +23,17 @@ function App() {
           <ul>
             <li>
               <Link to="/">Home</Link>
+            </li>
+            <li>Chapter 0</li>
+            <li>Chapter 1
+              <ul>
+                <li>
+                  <a href="/Listing01-01">Listing 1-1</a>
+                </li>
+                <li>
+                  <Link to="/listing0103">Listing 1-3</Link>
+                </li>
+              </ul>
             </li>
             <li>Chapter 4
               <ul>
@@ -56,6 +68,9 @@ function App() {
         </nav>
         <main style={{padding:"20px"}}>
         <Switch>
+          <Route path="/listing0103">
+            <Listing0103 />
+          </Route>
           <Route path="/listing411">
             <Listing411 />
           </Route>
