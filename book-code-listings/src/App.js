@@ -12,6 +12,7 @@ import BasicFigure from './chapter04/BasicFigure';
 import FigureList from './chapter04/FigureList';
 import FigureListProps from './chapter04/FigureListProps';
 import ThingsThatILike from './chapter04/ThingsThatILike';
+import CloneElementExample from './chapter04/clone-element/App'
 import FooClass from './chapter04/Listing420';
 import FooFunction from './chapter04/Listing421';
 
@@ -56,6 +57,9 @@ function App() {
                   <Link to="/listing419">Listing 4-19</Link>
                 </li>
                 <li>
+                  <Link to="/clone-element">Clone Element Example</Link>
+                </li>
+                <li>
                   <Link to="/listing420">Listing 4-20</Link>
                 </li>
                 <li>
@@ -88,6 +92,9 @@ function App() {
           </Route>
           <Route path="/listing419">
             <ThingsThatILike />
+          </Route>
+          <Route path="/clone-element">
+            <CloneElementExample />
           </Route>
           <Route path="/listing420">
             <FooClass />
