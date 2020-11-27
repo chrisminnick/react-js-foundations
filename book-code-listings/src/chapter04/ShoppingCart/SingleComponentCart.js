@@ -12,6 +12,7 @@ function Cart(props){
   };
 
   const calculatedTotal = inCart.reduce((accumulator, item) => accumulator + (item.price || 0), 0);
+  
   let ItemList = inCart.map((item)=>{
     return (<div key={item.id}>{item.title} - {item.price}
       <button onClick={()=>{removeFromCart(item)}}>remove</button></div>)

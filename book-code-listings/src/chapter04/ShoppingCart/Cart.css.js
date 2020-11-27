@@ -1,5 +1,3 @@
-export default {
-    cart: {
+const cart = {};
 
-    }
-}
+export default cart;
