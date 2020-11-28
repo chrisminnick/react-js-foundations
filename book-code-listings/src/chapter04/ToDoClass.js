@@ -1,6 +1,6 @@
 import React from 'react';
 
-class FooClass extends React.Component{
+class ToDoClass extends React.Component{
   constructor(props){
     super(props);
     this.state = {
@@ -18,12 +18,14 @@ class FooClass extends React.Component{
         todolist:list
     })
   }
+
   handleChange(e){
     this.setState({item:e.target.value});
   }
       
   render(){
-    const currentTodos = this.state.todolist.map((todo,index)=><p key={index}>{todo}</p>);
+    const currentTodos = this.state.todolist.map(
+      (todo,index)=><p key={index}>{todo}</p>);
     return (
       <form onSubmit={this.handleSubmit}>
       <input type="text" 
@@ -40,4 +42,4 @@ class FooClass extends React.Component{
   }
 }
     
-export default FooClass;
+export default ToDoClass;

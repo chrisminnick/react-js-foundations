@@ -3,5 +3,4 @@ function NavItem(props){
     <button onClick={props.onClick}>Click Me</button>
   )
 }
-
 export default NavItem;

@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 
-function FooFunction(props){
+function ToDoFunction(props){
   const [item,setItem] = useState('');
   const [todolist,setTodoList] = useState([]);
       
@@ -25,4 +25,4 @@ function FooFunction(props){
   );
 }
     
-export default FooFunction;
+export default ToDoFunction;

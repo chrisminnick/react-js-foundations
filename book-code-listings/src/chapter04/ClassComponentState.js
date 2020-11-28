@@ -1,6 +1,6 @@
 import {Component} from 'react';
 
-class Listing411 extends Component {
+class ClassComponentState extends Component {
   constructor(props){
     super(props);
     this.state = {count: 0};
@@ -21,4 +21,4 @@ class Listing411 extends Component {
   }
 }
 
-export default Listing411;
+export default ClassComponentState;

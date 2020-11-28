@@ -1,6 +1,6 @@
 import {Component} from 'react';
 
-class Listing412 extends Component {
+class SetStateAsync extends Component {
   constructor(props){
     super(props);
     this.state = {count: 0};
@@ -8,7 +8,7 @@ class Listing412 extends Component {
   }
   incrementCount(){
     this.setState({count: this.state.count + 1});
-    console.log(this.state.count);
+    console.log("current count: " + this.state.count);
   }
   render(){
     return (
@@ -22,4 +22,4 @@ class Listing412 extends Component {
   }
 }
 
-export default Listing412;
+export default SetStateAsync;
