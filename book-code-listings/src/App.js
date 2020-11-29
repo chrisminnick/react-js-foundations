@@ -6,6 +6,18 @@ import {
   Link
 } from "react-router-dom";
 import Listing0103 from './chapter01/Listing0103';
+import Login from './chapter03/Login';
+import SearchBox from './chapter03/SearchBox/SearchBox';
+import MyFancyComponent from './chapter03/MyFancyComponent/MyFancyComponent';
+import Header from './chapter03/Header';
+import Welcome from './chapter03/Welcome';
+import ConditionalWelcome from './chapter03/ConditionalWelcome';
+import ConditionalWelcome2 from './chapter03/ConditionalWelcome2';
+import ConditionalWelcome3 from './chapter03/ConditionalWelcome3';
+import CountUp from './chapter03/CountUp';
+import ImmediateInvoke from './chapter03/ImmediateInvoke';
+import FragmentExample1 from './chapter03/FragmentExample1';
+import FragmentExample2 from './chapter03/FragmentExample2';
 import WelcomeMessage from './chapter04/WelcomeMessage';
 import WelcomeTitle from './chapter04/WelcomeTitle';
 import Cart from './chapter04/ShoppingCart/Cart';
@@ -53,6 +65,46 @@ function App() {
                 </li>
                 <li>
                   <Link to="/listing0103">Listing 1-3</Link>
+                </li>
+              </ul>
+            </li>
+            <li>Chapter 3
+              <ul>
+                <li>
+                  <Link to="/listing301">Listing 3-01</Link>
+                </li>
+                <li>
+                  <Link to="/listing302">Listing 3-02</Link>
+                </li>
+                <li>
+                  <Link to="/listing303">Listing 3-03</Link>
+                </li>
+                <li>
+                  <Link to="/listing306">Listing 3-06</Link>
+                </li>
+                <li>
+                  <Link to="/listing308">Listing 3-08</Link>
+                </li>
+                <li>
+                  <Link to="/listing309">Listing 3-09</Link>
+                </li>
+                <li>
+                  <Link to="/listing310">Listing 3-10</Link>
+                </li>
+                <li>
+                  <Link to="/listing311">Listing 3-11</Link>
+                </li>
+                <li>
+                  <Link to="/listing312">Listing 3-12</Link>
+                </li>
+                <li>
+                  <Link to="/listing313">Listing 3-13</Link>
+                </li>
+                <li>
+                  <Link to="/listing314">Listing 3-14</Link>
+                </li>
+                <li>
+                  <Link to="/listing315">Listing 3-15</Link>
                 </li>
               </ul>
             </li>
@@ -154,6 +206,42 @@ function App() {
         <Switch>
           <Route path="/listing0103">
             <Listing0103 />
+          </Route>
+          <Route path="/listing301">
+            <Login />
+          </Route>
+          <Route path="/listing302">
+            <SearchBox />
+          </Route>
+          <Route path="/listing303">
+            <MyFancyComponent />
+          </Route>
+          <Route path="/listing306">
+            <Header />
+          </Route>
+          <Route path="/listing308">
+            <Welcome />
+          </Route>
+          <Route path="/listing309">
+            <ConditionalWelcome />
+          </Route>
+          <Route path="/listing310">
+            <ConditionalWelcome2 />
+          </Route>
+          <Route path="/listing311">
+            <ConditionalWelcome3 />
+          </Route>
+          <Route path="/listing312">
+            <CountUp />
+          </Route>
+          <Route path="/listing313">
+            <ImmediateInvoke />
+          </Route>
+          <Route path="/listing314">
+            <FragmentExample1 />
+          </Route>
+          <Route path="/listing315">
+            <FragmentExample2 />
           </Route>
           <Route path="/listing401">
             <WelcomeMessage />
