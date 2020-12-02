@@ -1,51 +1,41 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import Cart from './components/Cart';
 import ProductList from './components/ProductList';
 
-class App extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            items: [],
-            products: []
-        };
+function App(props){
+    const [items,setItems] = useState([]);
+    const [products,setProducts] = useState([]);
 
-        this.addToCart = this.addToCart.bind(this);
-        this.removeFromCart = this.removeFromCart.bind(this);
-        this.sortedProducts = [];
-    }
-
-    componentDidMount() {
+    useEffect(()=>{
         fetch('http://localhost:3000/data/products.json')
             .then(response => response.json()
-                .then(products => this.shuffleArray(products))
+                .then(products => shuffleArray(products))
                 .then(products => {
-                    this.setState({products:products})
-                }))
-    };
+                    setProducts(products)
+                }));
+    },[]
+    );
 
-    getProduct(products, item) {
+    const getProduct = (products, item)=>{
         return products.find(product => item === product.id);
     }
 
-    addToCart(idToAdd) {
-        let newItems = [...this.state.items, idToAdd];
-        this.setState({
-            items: newItems
-        });
+    const addToCart = (idToAdd)=>{
+        let newItems = [...items, idToAdd];
+        setItems(newItems);
     }
 
-    removeFromCart(idToRemove) {
-        let newItems = this.state.items.filter(
+    const removeFromCart = (idToRemove)=>{
+        let newItems = items.filter(
             id => id !== idToRemove);
-        this.setState({items: newItems});
+        setItems({items: newItems});
     }
 
     /**
      * Randomize array element order in-place.
      * Using Durstenfeld shuffle algorithm.
      */
-    shuffleArray(array) {
+    const shuffleArray = (array)=>{
         for (let i = array.length - 1; i > 0; i--) {
             let j = Math.floor(Math.random() * (i + 1));
             let temp = array[i];
@@ -55,10 +45,7 @@ class App extends React.Component {
         return array;
     }
 
-
-    render() {
-
-        let items = this.state.items.map(id => this.getProduct(this.state.products, id));
+    let itemDetails = items.map(id => getProduct(products, id));
 
         return (
             <div className="container">
@@ -69,18 +56,17 @@ class App extends React.Component {
                 </header>
                 <div className="row">
                     <div className="col-md-8">
-                        <ProductList addToCart={this.addToCart} removeFromCart={this.removeFromCart}
-                                     products={this.state.products} inCart={this.state.items}/>
+                        <ProductList addToCart={addToCart} removeFromCart={removeFromCart}
+                                     products={products} inCart={items}/>
                     </div>
                     <div className="col-md-4">
-                        <Cart inCart={items}/>
+                        <Cart inCart={itemDetails}/>
                     </div>
                 </div>
                 <footer>
                 </footer>
             </div>
         );
-    }
 }
 
 export default App;
