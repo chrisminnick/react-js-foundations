@@ -1,7 +1,6 @@
 import React from 'react';
 import Product from './Product';
 import styles from './ProductList.css.js';
-import PropTypes from 'prop-types';
 
 function ProductList(props){
 
@@ -26,13 +25,5 @@ function ProductList(props){
         return null;
     }
 }
-
-
-ProductList.propTypes = {
-    addToCart: PropTypes.func.isRequired,
-    removeFromCart: PropTypes.func.isRequired,
-    products: PropTypes.array.isRequired,
-    inCart: PropTypes.array.isRequired
-};
 
 export default ProductList;
