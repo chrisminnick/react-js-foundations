@@ -15,7 +15,7 @@ function Cart(props){
         <div style={styles.cart}>
             <h2>Cart</h2>
             {props.inCart.map(item=>(
-                <CartItem key={item.id} {...item} />
+                <CartItem removeFromCart={props.removeFromCart} key={item.id} {...item} />
             ))}
             Total: ${calculateTotal(props.inCart)} USD
         </div>

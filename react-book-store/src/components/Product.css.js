@@ -4,6 +4,7 @@ export default {
     },
     thumbnail: {
         maxWidth: "100%",
-        height: "auto"
+        height: "auto",
+        padding: "4px"
     }
 };

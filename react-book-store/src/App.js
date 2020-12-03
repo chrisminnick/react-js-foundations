@@ -28,7 +28,7 @@ function App(props){
     const removeFromCart = (idToRemove)=>{
         let newItems = items.filter(
             id => id !== idToRemove);
-        setItems({items: newItems});
+        setItems(newItems);
     }
 
     /**
@@ -60,7 +60,7 @@ function App(props){
                                      products={products} inCart={items}/>
                     </div>
                     <div className="col-md-4">
-                        <Cart inCart={itemDetails}/>
+                        <Cart removeFromCart = {removeFromCart} inCart={itemDetails}/>
                     </div>
                 </div>
                 <footer>
