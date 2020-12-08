@@ -2,7 +2,7 @@ import React from 'react';
 import Product from './Product';
 import styles from './ProductList.css.js';
 
-const ProductList = React.memo((props)=>{
+function ProductList(props){
 
     const inCart = props.inCart;
     const products = props.products;
@@ -25,6 +25,5 @@ const ProductList = React.memo((props)=>{
         return null;
     }
 }
-)
 
 export default ProductList;
