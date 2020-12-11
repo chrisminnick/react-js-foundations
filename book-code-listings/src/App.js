@@ -47,6 +47,7 @@ import NoLeakCounterController from './chapter04/NoLeakCounterController';
 import ShallowCompare from './chapter04/ShallowCompare';
 import PureComponent from './chapter04/PureComponent';
 import ReactMemoExample from './chapter04/ReactMemoExample';
+import Mutato from './chapter06/PropsMutation/App.js';
 
 function App() {
   return (
@@ -199,6 +200,13 @@ function App() {
                 </li>                  
               </ul>
             </li>
+            <li>Chapter 6
+              <ul>
+                <li>
+                  <Link to="/listing601">Listing 6-01</Link>
+                </li>
+              </ul>
+            </li>
             
           </ul>
         </nav>
@@ -332,6 +340,9 @@ function App() {
           </Route>
           <Route path="/listing436">
             <ReactMemoExample />
+          </Route>
+          <Route path="/listing601">
+            <Mutato />
           </Route>
           <Route path="/">
             
