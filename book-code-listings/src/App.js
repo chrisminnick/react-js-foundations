@@ -5,6 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import Collapsible from 'react-collapsible';
 import Listing0103 from './chapter01/Listing0103';
 import Login from './chapter03/Login';
 import SearchBox from './chapter03/SearchBox/SearchBox';
@@ -48,18 +49,27 @@ import ShallowCompare from './chapter04/ShallowCompare';
 import PureComponent from './chapter04/PureComponent';
 import ReactMemoExample from './chapter04/ReactMemoExample';
 import Mutato from './chapter06/PropsMutation/App.js';
+import WelcomeMessageProps from './chapter06/WelcomeMessage';
+import WelcomeClass from './chapter06/WelcomeClass';
+import SiteLink from './chapter06/SiteLink';
+import SiteLinkNode from './chapter06/SiteLinkNode';
+import BorderBox from './chapter06/BorderBox';
+import CounterClass from './chapter06/CounterClass';
+import IncrementTwice from './chapter06/IncrementTwice';
+import IncrementTwiceFixed from './chapter06/IncrementTwiceFixed';
 
 function App() {
   return (
     <Router>
       <div style={{display:"flex"}}>
         <nav>
-          <ul>
+          <ul id="buttons">
             <li>
               <Link to="/">Home</Link>
             </li>
             <li>Chapter 0</li>
-            <li>Chapter 1
+            <li>
+              <Collapsible trigger="Chapter 1">
               <ul>
                 <li>
                   <a href="/Listing01-01">Listing 1-1</a>
@@ -68,8 +78,17 @@ function App() {
                   <Link to="/listing0103">Listing 1-3</Link>
                 </li>
               </ul>
+              </Collapsible>
             </li>
-            <li>Chapter 3
+            <li>
+              <Collapsible trigger="Chapter 2">
+                <ul>
+
+                </ul>
+              </Collapsible>
+            </li>
+            <li>
+              <Collapsible trigger="Chapter 3">
               <ul>
                 <li>
                   <Link to="/listing301">Listing 3-01</Link>
@@ -108,8 +127,10 @@ function App() {
                   <Link to="/listing315">Listing 3-15</Link>
                 </li>
               </ul>
+              </Collapsible>
             </li>
-            <li>Chapter 4
+            <li>
+            <Collapsible trigger="Chapter 4">
               <ul>
                 <li>
                   <Link to="/listing401">Listing 4-01</Link>
@@ -199,13 +220,50 @@ function App() {
                   <Link to="/listing436">Listing 4-36</Link>
                 </li>                  
               </ul>
+              </Collapsible>
             </li>
-            <li>Chapter 6
+            <li>
+              <Collapsible trigger="Chapter 5">
+                <ul>
+
+                </ul>
+              </Collapsible>
+            </li>
+            <li>
+              <Collapsible trigger="Chapter 6">
               <ul>
                 <li>
                   <Link to="/listing601">Listing 6-01</Link>
                 </li>
+                <li>
+                  <Link to="/listing602">Listing 6-02</Link>
+                </li>
+                <li>
+                  <Link to="/listing603">Listing 6-03</Link>
+                </li>
+                <li>
+                  <Link to="/listing604">Listing 6-04</Link>
+                </li>
+                <li>
+                  <Link to="/listing608">Listing 6-08</Link>
+                </li>
+                <li>
+                  <Link to="/listing609">Listing 6-09</Link>
+                </li>
+                <li>
+                  <Link to="/listing610">Listing 6-10</Link>
+                </li>
+                <li>
+                  <Link to="/listing617">Listing 6-17</Link>
+                </li>
+                <li>
+                  <Link to="/listing619">Listing 6-19</Link>
+                </li>
+                <li>
+                  <Link to="/listing620">Listing 6-20</Link>
+                </li>
               </ul>
+              </Collapsible>
             </li>
             
           </ul>
@@ -343,6 +401,33 @@ function App() {
           </Route>
           <Route path="/listing601">
             <Mutato />
+          </Route>
+          <Route path="/listing602">
+            <WelcomeMessageProps firstName={'Jimmy'} />
+          </Route>
+          <Route path="/listing603">
+            <WelcomeMessageProps firstName={'false'} />
+          </Route>
+          <Route path="/listing604">
+            <WelcomeClass firstName={'frank'} />
+          </Route>
+          <Route path="/listing608">
+            <SiteLink url="http://example.com" linkName="Example" />
+          </Route>
+          <Route path="/listing609">
+            <SiteLinkNode url="http://example.com" linkName="Example" />
+          </Route>
+          <Route path="/listing610">
+            <BorderBox><p>Some sample text</p><br /></BorderBox>
+          </Route>
+          <Route path="/listing617">
+            <CounterClass />
+          </Route>
+          <Route path="/listing619">
+            <IncrementTwice />
+          </Route>
+          <Route path="/listing620">
+            <IncrementTwiceFixed />
           </Route>
           <Route path="/">
             

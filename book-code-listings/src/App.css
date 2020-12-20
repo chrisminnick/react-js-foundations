@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+#buttons>li {
+  list-style: none;
+  width: 150px;
+  padding: 4px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+#buttons li a {
+  text-decoration: none;
+  display: block;
+}
+
+#buttons li a:hover {
+  text-decoration: none;
+}
