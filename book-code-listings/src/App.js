@@ -57,6 +57,7 @@ import BorderBox from './chapter06/BorderBox';
 import CounterClass from './chapter06/CounterClass';
 import IncrementTwice from './chapter06/IncrementTwice';
 import IncrementTwiceFixed from './chapter06/IncrementTwiceFixed';
+import Reminders from './chapter06/Reminders/App';
 
 function App() {
   return (
@@ -262,6 +263,9 @@ function App() {
                 <li>
                   <Link to="/listing620">Listing 6-20</Link>
                 </li>
+                <li>
+                  <Link to="/Reminders">Finished Reminders App</Link>
+                </li>
               </ul>
               </Collapsible>
             </li>
@@ -428,6 +432,9 @@ function App() {
           </Route>
           <Route path="/listing620">
             <IncrementTwiceFixed />
+          </Route>
+          <Route path="/Reminders">
+            <Reminders />
           </Route>
           <Route path="/">
             
