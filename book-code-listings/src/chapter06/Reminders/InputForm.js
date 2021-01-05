@@ -15,7 +15,7 @@ function InputForm(props){
     
     const handleClick = (e)=>{
         e.preventDefault();
-        const itemToAdd = {...props.userInput,status:0};
+        const itemToAdd = {...props.userInput,status:false};
         props.setReminders([...props.reminders,itemToAdd]);
     };
 
