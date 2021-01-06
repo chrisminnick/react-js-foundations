@@ -8,11 +8,23 @@ function App(){
   const [userInput,setUserInput] = useState();
   const [selectedFilter,setSelectedFilter] = useState("all");
 
-  const filteredList = filterList(reminders);
+  const filteredList = filterList(reminders,selectedFilter);
   console.log("selected filter: " + selectedFilter);
 
-  function filterList(reminders,selectedFilter="all"){
-      console.log("selected filter: " + selectedFilter);
+  function setStatus(status,index){
+    const newReminders = [ ...reminders.slice(0, index),
+                     {...reminders[index],status}, 
+                     ...reminders.slice(index+1) ];
+    console.log("new status: " + status);
+    console.log("index: " + index);
+    console.log("new reminder: " + reminders[index]);
+    console.log("new reminders list: " + reminders)
+    setReminders(newReminders);
+  }
+  
+
+  function filterList(reminders,selectedFilter){
+      console.log("selected filter inside: " + selectedFilter);
       if (selectedFilter === "all"){
           return reminders;
       } else {
@@ -26,7 +38,7 @@ function App(){
             case "1week":
               numberOfDays = 7;
               break;
-            case "1month":
+            case "30days":
               numberOfDays = 30;
               break;
             default:
@@ -35,12 +47,10 @@ function App(){
       }
 
       const result = reminders.filter(reminder=>{
-          const todaysDate = new Date().getTime();
+          const todaysDate = new Date().toISOString().substr(0,10);
+          const now = new Date(todaysDate).getTime();
           const dueDate = new Date(reminder.dueDate).getTime();
-          console.log("due date: " + dueDate);
-          console.log("todaysDate: " + todaysDate);
-          console.log("number of days: " + numberOfDays);
-          return dueDate < todaysDate + (numberOfDays * 86400);
+          return dueDate < (now + (numberOfDays * 86400000));
       }
       )
       return result;
@@ -55,9 +65,8 @@ function App(){
                      setUserInput={setUserInput} 
                      setReminders={setReminders}  />
           <FilterSelect selectedFilter={selectedFilter} 
-                        handleChange={setSelectedFilter} />
-          <RemindersList reminders={filteredList} 
-                         selectedFilter={selectedFilter} />
+                        setSelectedFilter={setSelectedFilter} />
+          <RemindersList reminders={filteredList} setStatus={setStatus}/>
       </div>
   );
 }

@@ -1,8 +1,13 @@
 import PropTypes from 'prop-types';
 
 function Reminder(props){
+    function handleChange(){
+        props.setStatus(!props.status,props.id);
+    }
     return(
-        <div>item: {props.reminderText} due date: {props.dueDate} status: {props.status}</div>
+        <div>item: {props.reminderText} due date: {props.dueDate} 
+        status: <input type="checkbox" checked={props.status} onChange={handleChange} />
+        </div>
     );
   }
   
