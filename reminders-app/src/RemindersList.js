@@ -1,12 +1,18 @@
 import Reminder from './Reminder';
 
 function RemindersList(props){
+
+  const reminders = props.reminders.map((reminder,index)=>{
+    return (<Reminder itemText={reminder.reminderText} 
+                      dueDate={reminder.dueDate} 
+                      status={reminder.status}
+                      key={index} />);
+  });
+
   return(
-    <div>
-      <Reminder itemText="Pick up Wesley" dueDate="2364-01-15" status={false} />
-      <Reminder itemText="Meet with Jean-Luc" dueDate="2364-01-29" status={false} />
-      <Reminder itemText="Holodeck time!" dueDate="2364-06-01" status={false} />
-    </div>
+      <div>
+        {reminders}
+      </div>
   );
 }
 export default RemindersList;
