@@ -4,7 +4,7 @@ import FilterSelect from './FilterSelect';
 import RemindersList from './RemindersList';
 
 function App(){
-  const [reminders,setReminders] = useState([]);
+  const [reminders,setReminders] = useState();
   const [userInput,setUserInput] = useState();
   const [selectedFilter,setSelectedFilter] = useState("all");
 
