@@ -6,6 +6,7 @@ function RemindersList(props){
     return (<Reminder itemText={reminder.reminderText} 
                       dueDate={reminder.dueDate} 
                       status={reminder.status}
+                      id={index}
                       key={index} />);
   });
 
