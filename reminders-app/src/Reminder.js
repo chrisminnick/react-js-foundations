@@ -1,6 +1,7 @@
 function Reminder(props){
   return(
-    <div>Reminder</div>
+      <div>item: {props.itemText} due date: {props.dueDate} status: {String(props.status)}</div>
   );
 }
+
 export default Reminder;
