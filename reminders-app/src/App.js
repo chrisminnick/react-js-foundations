@@ -8,12 +8,19 @@ function App(){
   const [userInput,setUserInput] = useState();
   const [selectedFilter,setSelectedFilter] = useState("all");
 
+  const addNewReminder = (itemToAdd) => {
+    if (reminders===undefined){
+      setReminders([itemToAdd]);
+    } else {
+      setReminders([...reminders,itemToAdd]);
+    }
+  }  
+  
   return(
     <div>
       <InputForm userInput={userInput} 
-                 reminders={reminders} 
-                 setUserInput={setUserInput} 
-                 setReminders={setReminders}  />
+                 setUserInput={setUserInput}
+                 addNewReminder={addNewReminder} />
       <FilterSelect selectedFilter={selectedFilter} 
                     setSelectedFilter={setSelectedFilter} />
       <RemindersList reminders={reminders} />
