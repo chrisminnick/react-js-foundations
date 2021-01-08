@@ -1,8 +1,13 @@
 import PropTypes from 'prop-types';
 
 function Reminder(props){
+    function handleChange(){
+        props.setStatus(!props.status,props.id);
+    }
     return(
-        <div>item: {props.itemText} due date: {props.dueDate} status: {String(props.status)}</div>
+        <div>item: {props.reminderText}&nbsp;due date: {props.dueDate} 
+        &nbsp;status: <input type="checkbox" checked={props.status} onChange={handleChange} />
+        </div>
     );
   }
   
@@ -20,4 +25,4 @@ Reminder.defaultProps = {
     dueDate:formattedDate,
     status: false
   }
-export default Reminder; 
+export default Reminder;

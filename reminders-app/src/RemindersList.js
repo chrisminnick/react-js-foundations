@@ -4,9 +4,10 @@ import Reminder from './Reminder';
 function RemindersList(props){
 
   const reminders = props.reminders.map((reminder,index)=>{
-    return (<Reminder itemText={reminder.reminderText} 
+    return (<Reminder reminderText={reminder.reminderText} 
                       dueDate={reminder.dueDate} 
                       status={reminder.status}
+                      setStatus={props.setStatus}
                       id={index}
                       key={index} />);
   });
