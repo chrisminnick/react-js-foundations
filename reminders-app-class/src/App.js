@@ -24,6 +24,7 @@ class App extends Component{
   setSelectedFilter(newFilter){
     this.setState({selectedFilter:newFilter});
   }
+  
   addNewReminder(itemToAdd) {
     if (this.state.reminders===undefined){
       this.setState({reminders:[itemToAdd]});
