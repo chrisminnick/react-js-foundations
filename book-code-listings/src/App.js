@@ -58,6 +58,7 @@ import CounterClass from './chapter06/CounterClass';
 import IncrementTwice from './chapter06/IncrementTwice';
 import IncrementTwiceFixed from './chapter06/IncrementTwiceFixed';
 import Reminders from './chapter06/Reminders/App';
+import FamilyTree from './chapter06/FamilyTree';
 
 function App() {
   return (
@@ -255,6 +256,18 @@ function App() {
                   <Link to="/listing610">Listing 6-10</Link>
                 </li>
                 <li>
+                  <Link to="/listing611">Listing 6-11</Link>
+                </li>
+                <li>
+                  <Link to="/listing612">Listing 6-12</Link>
+                </li>
+                <li>
+                  <Link to="/listing613">Listing 6-13</Link>
+                </li>
+                <li>
+                  <Link to="/listing614">Listing 6-14</Link>
+                </li>
+                <li>
                   <Link to="/listing617">Listing 6-17</Link>
                 </li>
                 <li>
@@ -423,8 +436,11 @@ function App() {
           </Route>
           <Route path="/listing610">
             <BorderBox><p>The first paragraph</p>
-                       <p>The second paragraph</p>
+                       {/* <p>The second paragraph</p> */}
             </BorderBox>
+          </Route>
+          <Route path="/listing611">
+            <FamilyTree father="Patrick" />
           </Route>
           <Route path="/listing617">
             <CounterClass />
