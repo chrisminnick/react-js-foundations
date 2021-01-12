@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
-import Reminder from './Reminder1';
+import Reminder from './Reminder';
 
 function RemindersList(props){
 
   const reminders = props.reminders.map((reminder,index)=>{
     return (<Reminder reminderText={reminder.reminderText} 
-              dueDate={reminder.dueDate}
-              status={reminder.status} 
-              setStatus={props.setStatus}
-              id = {index}
-              key={index} />);
+                      dueDate={reminder.dueDate} 
+                      status={reminder.status}
+                      setStatus={props.setStatus}
+                      id={index}
+                      key={index} />);
   });
 
   return(

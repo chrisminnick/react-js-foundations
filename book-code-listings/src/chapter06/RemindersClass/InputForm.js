@@ -14,10 +14,11 @@ function InputForm(props){
     }
     
     const handleClick = (e)=>{
-        e.preventDefault();
-        const itemToAdd = {...props.userInput,status:false};
-        props.setReminders([...props.reminders,itemToAdd]);
+      e.preventDefault();
+      const itemToAdd = {...props.userInput,status:false};
+      props.addNewReminder(itemToAdd);
     };
+    
 
     return(
         <form>
@@ -42,7 +43,8 @@ InputForm.propTypes = {
     reminderText: PropTypes.string,
     dueDate: PropTypes.string
   }),
-  setUserInput: PropTypes.func
+  setUserInput: PropTypes.func,
+  addNewReminder: PropTypes.func
 }
 
 const date = new Date();
