@@ -422,7 +422,7 @@ function App() {
             <SiteLinkNode url="http://example.com" linkName="Example" />
           </Route>
           <Route path="/listing610">
-            <BorderBox><p>Some sample text</p><br /></BorderBox>
+            <BorderBox>Some sample text</BorderBox>
           </Route>
           <Route path="/listing617">
             <CounterClass />
