@@ -63,6 +63,12 @@ import Person from './chapter06/Person';
 import Dog from './chapter06/Dog';
 import DisplayPrimaryColors from './chapter06/DisplayPrimaryColors';
 import Contact from './chapter06/Contact';
+import StoresNearYou from './chapter06/StoresNearYou';
+import StoresNearYou1 from './chapter06/StoresNearYou1';
+import StoresNearYou2 from './chapter06/StoresNearYou2';
+import StoresNearYou3 from './chapter06/StoresNearYou3';
+import StoresNearYou4 from './chapter06/StoresNearYou4';
+import StoresNearYou5 from './chapter06/StoresNearYou5';
 
 function App() {
   return (
@@ -272,6 +278,12 @@ function App() {
                   <Link to="/listing614">Listing 6-14</Link>
                 </li>
                 <li>
+                  <Link to="/listing615">Listing 6-15</Link>
+                </li>
+                <li>
+                  <Link to="/listing616">Listing 6-16</Link>
+                </li>
+                <li>
                   <Link to="/listing617">Listing 6-17</Link>
                 </li>
                 <li>
@@ -279,6 +291,21 @@ function App() {
                 </li>
                 <li>
                   <Link to="/listing620">Listing 6-20</Link>
+                </li>
+                <li>
+                  <Link to="/listing621">Listing 6-21</Link>
+                </li>
+                <li>
+                  <Link to="/listing622">Listing 6-22</Link>
+                </li>
+                <li>
+                  <Link to="/listing623">Listing 6-23</Link>
+                </li>
+                <li>
+                  <Link to="/listing624">Listing 6-24</Link>
+                </li>
+                <li>
+                  <Link to="/listing625">Listing 6-25</Link>
                 </li>
                 <li>
                   <Link to="/Reminders">Finished Reminders App</Link>
@@ -456,15 +483,45 @@ function App() {
           <Route path="/listing614">
             <Contact fullName="Chris Minnick" phone="5555555555" />
             <Contact fullName="John Doe" phone="5555" />
-
+          </Route>
+          <Route path="/listing615">
+            <StoresNearYou latitude="37.3230" longitude="122.0322" />
+          </Route>
+          <Route path="/listing616">
+            <StoresNearYou1 />
           </Route>
           <Route path="/listing617">
-            <CounterClass />
+            <StoresNearYou2 />
+          </Route>
+          <Route path="/listing618">
+            <StoresNearYou3 />
           </Route>
           <Route path="/listing619">
-            <IncrementTwice />
+            <StoresNearYou4 />
           </Route>
           <Route path="/listing620">
+            <StoresNearYou5 />
+          </Route>
+          <Route path="/listing621">
+            
+          </Route>
+          <Route path="/listing622">
+            
+          </Route>
+          <Route path="/listing623">
+            
+          </Route>
+          <Route path="/listing624">
+            
+          </Route>
+
+          <Route path="/listing625">
+            <CounterClass />
+          </Route>
+          <Route path="/listing627">
+            <IncrementTwice />
+          </Route>
+          <Route path="/listing628">
             <IncrementTwiceFixed />
           </Route>
           <Route path="/Reminders">
