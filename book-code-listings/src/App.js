@@ -59,6 +59,10 @@ import IncrementTwice from './chapter06/IncrementTwice';
 import IncrementTwiceFixed from './chapter06/IncrementTwiceFixed';
 import Reminders from './chapter06/Reminders/App';
 import FamilyTree from './chapter06/FamilyTree';
+import Person from './chapter06/Person';
+import Dog from './chapter06/Dog';
+import DisplayPrimaryColors from './chapter06/DisplayPrimaryColors';
+import Contact from './chapter06/Contact';
 
 function App() {
   return (
@@ -440,7 +444,17 @@ function App() {
             </BorderBox>
           </Route>
           <Route path="/listing611">
-            <FamilyTree father="Patrick" />
+            <FamilyTree father={new Person("Patrick")} /> {/* propType validates */}
+            {/* <FamilyTree father={"Patrick"} /> propType doesn't validate */}
+          </Route>
+          <Route path="/listing612">
+            <FamilyTree father={new Person("Patrick")} pet={Dog} /> {/* propType validates */}
+          </Route>
+          <Route path="/listing613">
+            <DisplayPrimaryColors primaryColor = "red" />
+          </Route>
+          <Route path="/listing614">
+            <Contact fullName="Chris Minnick" phone="5555555" />
           </Route>
           <Route path="/listing617">
             <CounterClass />

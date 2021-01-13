@@ -1,16 +1,20 @@
 import {Component} from 'react';
 import {PropTypes} from 'prop-types';
+import Person from './Person';
 
 class FamilyTree extends Component {
+    
     render(){
         return(
-            <p>{this.props.father}</p>
+            <div><h1>{this.props.father.firstName}</h1>
+            </div>
         )
     }
 }
 
 FamilyTree.propTypes = {
-    father: PropTypes.instanceOf(Boolean).isRequired
+    father: PropTypes.instanceOf(Person).isRequired,
+    pet: PropTypes.elementType
 }
 
 export default FamilyTree;
