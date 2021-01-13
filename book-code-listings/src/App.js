@@ -454,7 +454,9 @@ function App() {
             <DisplayPrimaryColors primaryColor = "red" />
           </Route>
           <Route path="/listing614">
-            <Contact fullName="Chris Minnick" phone="5555555" />
+            <Contact fullName="Chris Minnick" phone="5555555555" />
+            <Contact fullName="John Doe" phone="5555" />
+
           </Route>
           <Route path="/listing617">
             <CounterClass />
