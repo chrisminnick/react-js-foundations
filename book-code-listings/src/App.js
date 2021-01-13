@@ -424,10 +424,10 @@ function App() {
             <Mutato />
           </Route>
           <Route path="/listing602">
-            <WelcomeMessageProps firstName={'Jimmy'} />
+            <WelcomeMessageProps firstName='Jimmy' />
           </Route>
           <Route path="/listing603">
-            <WelcomeMessageProps firstName={'false'} />
+            <WelcomeMessageProps firstName='Test' />
           </Route>
           <Route path="/listing604">
             <WelcomeClass firstName={'frank'} />
