@@ -55,8 +55,6 @@ import SiteLink from './chapter06/SiteLink';
 import SiteLinkNode from './chapter06/SiteLinkNode';
 import BorderBox from './chapter06/BorderBox';
 import CounterClass from './chapter06/CounterClass';
-import IncrementTwice from './chapter06/IncrementTwice';
-import IncrementTwiceFixed from './chapter06/IncrementTwiceFixed';
 import Reminders from './chapter06/Reminders/App';
 import FamilyTree from './chapter06/FamilyTree';
 import Person from './chapter06/Person';
@@ -69,6 +67,13 @@ import StoresNearYou2 from './chapter06/StoresNearYou2';
 import StoresNearYou3 from './chapter06/StoresNearYou3';
 import StoresNearYou4 from './chapter06/StoresNearYou4';
 import StoresNearYou5 from './chapter06/StoresNearYou5';
+import NewsFeed from './chapter06/NewsFeed';
+import NewsFeed2 from './chapter06/NewsFeed2';
+import NewsFeed3 from './chapter06/NewsFeed3';
+import NewsFeed4 from './chapter06/NewsFeed4';
+import CounterClass2 from './chapter06/CounterClass2';
+import CounterClass3 from './chapter06/CounterClass3';
+import CounterClass4 from './chapter06/CounterClass4';
 
 function App() {
   return (
@@ -308,6 +313,21 @@ function App() {
                   <Link to="/listing625">Listing 6-25</Link>
                 </li>
                 <li>
+                  <Link to="/listing626">Listing 6-26</Link>
+                </li>
+                <li>
+                  <Link to="/listing627">Listing 6-27</Link>
+                </li>
+                <li>
+                  <Link to="/listing628">Listing 6-28</Link>
+                </li>
+                <li>
+                  <Link to="/listing629">Listing 6-29</Link>
+                </li>
+                <li>
+                  <Link to="/listing630">Listing 6-30</Link>
+                </li>
+                <li>
                   <Link to="/Reminders">Finished Reminders App</Link>
                 </li>
               </ul>
@@ -503,26 +523,29 @@ function App() {
             <StoresNearYou5 />
           </Route>
           <Route path="/listing621">
-            
+            <NewsFeed />
           </Route>
+          
           <Route path="/listing622">
-            
+            <NewsFeed2 />
           </Route>
           <Route path="/listing623">
-            
+            <NewsFeed3 />
           </Route>
           <Route path="/listing624">
-            
+            <NewsFeed4 />
           </Route>
-
           <Route path="/listing625">
             <CounterClass />
           </Route>
+          <Route path="/listing626">
+            <CounterClass2 />
+          </Route>
           <Route path="/listing627">
-            <IncrementTwice />
+            <CounterClass3 />
           </Route>
           <Route path="/listing628">
-            <IncrementTwiceFixed />
+            <CounterClass4 />
           </Route>
           <Route path="/Reminders">
             <Reminders />
