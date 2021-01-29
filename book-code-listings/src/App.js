@@ -80,6 +80,8 @@ import ControlledInput from './chapter08/Controlled1';
 import ControllingFunction from './chapter08/Controlled2';
 import ControllingClass from './chapter08/Controlled3';
 import ControllingClass2 from './chapter08/Controlled4';
+import SearchInterface from './chapter08/SearchForm/SearchBox';
+
 
 function App() {
   return (
@@ -366,6 +368,9 @@ function App() {
                 <li>
                   <Link to="/listing805">Listing 8-05</Link>
                 </li>
+                <li>
+                  <Link to="/listing806">Listing 8-06</Link>
+                </li>
                 </ul>
                 </Collapsible>
                 
@@ -604,6 +609,9 @@ function App() {
           </Route>
           <Route path="/listing805">
             <ControllingClass2 />
+          </Route>
+          <Route path="/listing806">
+            <SearchInterface />
           </Route>
         </Switch>
       </main>
