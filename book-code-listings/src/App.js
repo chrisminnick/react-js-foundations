@@ -76,6 +76,8 @@ import CounterClass3 from './chapter06/CounterClass3';
 import CounterClass4 from './chapter06/CounterClass4';
 import EventProps from './chapter07/EventProps';
 import UncontrolledInput from './chapter08/Uncontrolled1';
+import ControlledInput from './chapter08/Controlled1';
+import ControllingFunction from './chapter08/Controlled2';
 
 function App() {
   return (
@@ -350,6 +352,12 @@ function App() {
                 <li>
                   <Link to="/listing801">Listing 8-01</Link>
                 </li>
+                <li>
+                  <Link to="/listing802">Listing 8-02</Link>
+                </li>
+                <li>
+                  <Link to="/listing803">Listing 8-03</Link>
+                </li>
                 </ul>
                 </Collapsible>
                 
@@ -576,6 +584,12 @@ function App() {
           </Route>
           <Route path="/listing801">
             <UncontrolledInput />
+          </Route>
+          <Route path="/listing802">
+            <ControlledInput />
+          </Route>
+          <Route path="/listing803">
+            <ControllingFunction />
           </Route>
 
         </Switch>
