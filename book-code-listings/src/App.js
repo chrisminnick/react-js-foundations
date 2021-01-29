@@ -74,6 +74,8 @@ import NewsFeed4 from './chapter06/NewsFeed4';
 import CounterClass2 from './chapter06/CounterClass2';
 import CounterClass3 from './chapter06/CounterClass3';
 import CounterClass4 from './chapter06/CounterClass4';
+import EventProps from './chapter07/EventProps';
+import UncontrolledInput from './chapter08/Uncontrolled1';
 
 function App() {
   return (
@@ -330,8 +332,27 @@ function App() {
                 <li>
                   <Link to="/Reminders">Finished Reminders App</Link>
                 </li>
-              </ul>
-              </Collapsible>
+                </ul>
+                </Collapsible>
+                </li>
+                <li>
+                <Collapsible trigger="Chapter 7">
+                <ul>
+                <li>
+                  <Link to="/listing701">Listing 7-01</Link>
+                </li>
+                </ul>
+                </Collapsible>
+                </li>
+                <li>
+                <Collapsible trigger="Chapter 8">
+                <ul>
+                <li>
+                  <Link to="/listing801">Listing 8-01</Link>
+                </li>
+                </ul>
+                </Collapsible>
+                
             </li>
             
           </ul>
@@ -550,9 +571,13 @@ function App() {
           <Route path="/Reminders">
             <Reminders />
           </Route>
-          <Route path="/">
-            
+          <Route path="/listing701">
+            <EventProps />
           </Route>
+          <Route path="/listing801">
+            <UncontrolledInput />
+          </Route>
+
         </Switch>
       </main>
       </div>
