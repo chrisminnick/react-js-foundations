@@ -81,7 +81,11 @@ import ControllingFunction from './chapter08/Controlled2';
 import ControllingClass from './chapter08/Controlled3';
 import ControllingClass2 from './chapter08/Controlled4';
 import SearchInterface from './chapter08/SearchForm/SearchBox';
-
+import BlogComment from './chapter08/BlogComment';
+import TextReader from './chapter09/TextReader';
+import {mobydick} from './chapter09/mobydick';
+import CodeDisplay from './chapter09/CodeDisplay';
+import AudioPlayer from './chapter09/AudioPlayer';
 
 function App() {
   return (
@@ -371,10 +375,27 @@ function App() {
                 <li>
                   <Link to="/listing806">Listing 8-06</Link>
                 </li>
+                <li>
+                  <Link to="/listing807">Listing 8-07</Link>
+                </li>
                 </ul>
                 </Collapsible>
-                
-            </li>
+                </li>
+                <li>
+                <Collapsible trigger="Chapter 9">
+                <ul>
+                <li>
+                  <Link to="/listing903">Listing 9-03</Link>
+                </li>
+                <li>
+                  <Link to="/listing904">Listing 9-04</Link>
+                </li>
+                <li>
+                  <Link to="/listing905">Listing 9-05</Link>
+                </li>
+                </ul>
+                </Collapsible>
+                </li>
             
           </ul>
         </nav>
@@ -612,6 +633,18 @@ function App() {
           </Route>
           <Route path="/listing806">
             <SearchInterface />
+          </Route>
+          <Route path="/listing807">
+            <BlogComment />
+          </Route>
+          <Route path="/listing903">
+            <TextReader bookText={mobydick} />
+          </Route>
+          <Route path="/listing904">
+            <CodeDisplay yourCode="8675309" />
+          </Route>
+          <Route path="/listing905">
+            <AudioPlayer />
           </Route>
         </Switch>
       </main>
