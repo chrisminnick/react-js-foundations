@@ -86,6 +86,9 @@ import TextReader from './chapter09/TextReader';
 import {mobydick} from './chapter09/mobydick';
 import CodeDisplay from './chapter09/CodeDisplay';
 import AudioPlayer from './chapter09/AudioPlayer';
+import TextReaderCallback from './chapter09/TextReaderCallback';
+import TextReaderCallback2 from './chapter09/TextReaderCallback2';
+import ScrollToDemo from './chapter09/ScrollToDemo';
 
 function App() {
   return (
@@ -393,6 +396,15 @@ function App() {
                 <li>
                   <Link to="/listing905">Listing 9-05</Link>
                 </li>
+                <li>
+                  <Link to="/listing906">Listing 9-06</Link>
+                </li>
+                <li>
+                  <Link to="/listing907">Listing 9-07</Link>
+                </li>
+                <li>
+                  <Link to="/listing908">Listing 9-08</Link>
+                </li>
                 </ul>
                 </Collapsible>
                 </li>
@@ -641,10 +653,19 @@ function App() {
             <TextReader bookText={mobydick} />
           </Route>
           <Route path="/listing904">
-            <CodeDisplay yourCode="8675309" />
+            <TextReaderCallback bookText={mobydick} />
           </Route>
           <Route path="/listing905">
+            <TextReaderCallback2 bookText={mobydick} />
+          </Route>
+          <Route path="/listing906">
+            <CodeDisplay yourCode="8675309" />
+          </Route>
+          <Route path="/listing907">
             <AudioPlayer />
+          </Route>
+          <Route path="/listing908">
+            <ScrollToDemo />
           </Route>
         </Switch>
       </main>

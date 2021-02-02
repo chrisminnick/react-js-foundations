@@ -13,7 +13,7 @@ class TextReader extends Component {
 
   render(){
     return (
-        <textarea style={{width:'380px',height:'400px'}} ref={this.textView}>{this.props.bookText}</textarea>
+        <textarea style={{width:'380px',height:'400px'}} ref={this.textView} value={this.props.bookText} />
       );
   }
 
