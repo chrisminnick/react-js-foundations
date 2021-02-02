@@ -19,7 +19,7 @@ class AudioPlayer extends Component {
   render(){
     return (
         <>
-        <audio autoPlay ref={this.mediaFile}>
+        <audio ref={this.mediaFile}>
           <source src="/music/thebestsongever.mp3" type="audio/mpeg" />
         </audio><br />
         <button onClick={this.playToggle}>Play/Pause</button>
