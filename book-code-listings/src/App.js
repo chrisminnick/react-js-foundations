@@ -75,6 +75,11 @@ import CounterClass2 from './chapter06/CounterClass2';
 import CounterClass3 from './chapter06/CounterClass3';
 import CounterClass4 from './chapter06/CounterClass4';
 import EventProps from './chapter07/EventProps';
+import ScreenDoor from './chapter07/ScreenDoor';
+import SearchTerm from './chapter07/Search';
+import CoffeeMachine from './chapter07/CoffeeMachine';
+import ColorWheel from './chapter07/ColorWheel';
+
 import UncontrolledInput from './chapter08/Uncontrolled1';
 import ControlledInput from './chapter08/Controlled1';
 import ControllingFunction from './chapter08/Controlled2';
@@ -89,6 +94,8 @@ import AudioPlayer from './chapter09/AudioPlayer';
 import TextReaderCallback from './chapter09/TextReaderCallback';
 import TextReaderCallback2 from './chapter09/TextReaderCallback2';
 import ScrollToDemo from './chapter09/ScrollToDemo';
+import StyledParent from './chapter10/StyledParent';
+
 
 function App() {
   return (
@@ -354,6 +361,18 @@ function App() {
                 <li>
                   <Link to="/listing701">Listing 7-01</Link>
                 </li>
+                <li>
+                  <Link to="/listing706">Listing 7-06</Link>
+                </li>
+                <li>
+                  <Link to="/listing707">Listing 7-07</Link>
+                </li>
+                <li>
+                  <Link to="/listing708">Listing 7-08</Link>
+                </li>  
+                <li>
+                  <Link to="/listing709">Listing 7-09</Link>
+                </li>                
                 </ul>
                 </Collapsible>
                 </li>
@@ -404,6 +423,15 @@ function App() {
                 </li>
                 <li>
                   <Link to="/listing908">Listing 9-08</Link>
+                </li>
+                </ul>
+                </Collapsible>
+                </li>
+                <li>
+                <Collapsible trigger="Chapter 10">
+                <ul>
+                <li>
+                  <Link to="/listing1001">Listing 10-01</Link>
                 </li>
                 </ul>
                 </Collapsible>
@@ -628,6 +656,18 @@ function App() {
           <Route path="/listing701">
             <EventProps />
           </Route>
+          <Route path="/listing706">
+            <ScreenDoor />
+          </Route>
+          <Route path="/listing707">
+            <SearchTerm />
+          </Route>
+          <Route path="/listing708">
+            <CoffeeMachine />
+          </Route>
+          <Route path="/listing709">
+            <ColorWheel />
+          </Route>
           <Route path="/listing801">
             <UncontrolledInput />
           </Route>
@@ -666,6 +706,9 @@ function App() {
           </Route>
           <Route path="/listing908">
             <ScrollToDemo />
+          </Route>
+          <Route path="/listing1001">
+            <StyledParent />
           </Route>
         </Switch>
       </main>
