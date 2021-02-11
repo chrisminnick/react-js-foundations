@@ -14,8 +14,8 @@ function SignUp(props){
         <label>Enter your email address:
           <input value={emailAddress} onChange={handleChange} type="text" />
         </label>
-      </form>
-      <p>Your email address: {emailAddress}</p>
+      </form><br />
+      Your email address: {emailAddress}
     </>
   )
 }
