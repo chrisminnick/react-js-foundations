@@ -5,9 +5,9 @@ class FigureListProps extends Component {
   render() {
     return (
         <div style={{display:"flex"}}>
-            <BasicFigureProps filename="images/dog.jpeg" caption="Chauncey" />
-            <BasicFigureProps filename="images/cat.jpeg" caption="Murray" />
-            <BasicFigureProps filename="images/chickens.jpeg" caption="Lefty and Ginger" />
+            <BasicFigureProps filename="images/dog.png" caption="Dog" />
+            <BasicFigureProps filename="images/cat.png" caption="Cat" />
+            <BasicFigureProps filename="images/chickens.png" caption="Chickens" />
         </div>
     )
   }
