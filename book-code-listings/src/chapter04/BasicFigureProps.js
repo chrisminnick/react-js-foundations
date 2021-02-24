@@ -5,7 +5,7 @@ class BasicFigureProps extends Component {
   render() {
     return(
       <figure>
-        <img src={this.props.filename} alt={this.props.caption} />
+        <img style={{width:"150px"}} src={this.props.filename} alt={this.props.caption} />
         <figcaption>{this.props.caption}</figcaption>
       </figure>
     );

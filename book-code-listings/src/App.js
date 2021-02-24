@@ -79,7 +79,6 @@ import ScreenDoor from './chapter07/ScreenDoor';
 import SearchTerm from './chapter07/Search';
 import CoffeeMachine from './chapter07/CoffeeMachine';
 import ColorWheel from './chapter07/ColorWheel';
-
 import UncontrolledInput from './chapter08/Uncontrolled1';
 import ControlledInput from './chapter08/Controlled1';
 import ControllingFunction from './chapter08/Controlled2';
@@ -95,7 +94,15 @@ import TextReaderCallback from './chapter09/TextReaderCallback';
 import TextReaderCallback2 from './chapter09/TextReaderCallback2';
 import ScrollToDemo from './chapter09/ScrollToDemo';
 import StyledParent from './chapter10/StyledParent';
-
+import NumberGuessing from './chapter11/NumberGuessing';
+import {ButtonContainer,MyButton} from './chapter11/PassingSetter';
+import TimerFun from './chapter11/TimerDemo';
+import TimerRestartFun from './chapter11/TimerRestartDemo';
+import TimerOnceFun from './chapter11/TimerOnceDemo';
+import TimerConditionalFun from './chapter11/TimerConditionalDemo';
+import ShippingAddress from './chapter11/ShippingAddress';
+import ShippingAddress2 from './chapter11/ShippingAddress2';
+import WeatherWidget from './chapter11/WeatherWidget';
 
 function App() {
   return (
@@ -436,7 +443,39 @@ function App() {
                 </ul>
                 </Collapsible>
                 </li>
-            
+                <li>
+                <Collapsible trigger="Chapter 11">
+                <ul>
+                <li>
+                  <Link to="/listing1101">Listing 11-01</Link>
+                </li>
+                <li>
+                  <Link to="/listing1102">Listing 11-02</Link>
+                </li>
+                <li>
+                  <Link to="/listing1103">Listing 11-03</Link>
+                </li>
+                <li>
+                  <Link to="/listing1104">Listing 11-04</Link>
+                </li>
+                <li>
+                  <Link to="/listing1105">Listing 11-05</Link>
+                </li>
+                <li>
+                  <Link to="/listing1106">Listing 11-06</Link>
+                </li>
+                <li>
+                  <Link to="/listing1107">Listing 11-07</Link>
+                </li>
+                <li>
+                  <Link to="/listing1111">Listing 11-11</Link>
+                </li>
+                <li>
+                  <Link to="/listing1112">Listing 11-12</Link>
+                </li>
+                </ul>
+                </Collapsible>
+                </li>
           </ul>
         </nav>
         <main style={{padding:"20px"}}>
@@ -709,6 +748,36 @@ function App() {
           </Route>
           <Route path="/listing1001">
             <StyledParent />
+          </Route>
+          <Route path="/listing1101">
+            <NumberGuessing />
+          </Route>
+          <Route path="/listing1102">
+            <ButtonContainer />
+          </Route>
+          <Route path="/listing1103">
+            <TimerFun />
+          </Route>
+          <Route path="/listing1104">
+            <TimerRestartFun />
+          </Route>
+          <Route path="/listing1105">
+            <TimerOnceFun />
+          </Route>
+          <Route path="/listing1105">
+            <TimerOnceFun />
+          </Route>
+          <Route path="/listing1106">
+            <TimerConditionalFun />
+          </Route>
+          <Route path="/listing1107">
+            <ShippingAddress />
+          </Route>
+          <Route path="/listing1111">
+            <ShippingAddress2 />
+          </Route>
+          <Route path="/listing1112">
+            <WeatherWidget />
           </Route>
         </Switch>
       </main>
