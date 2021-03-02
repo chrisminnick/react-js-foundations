@@ -8,7 +8,6 @@ function CallMe(props){
   const phoneInputRef = useRef();
 
   const handleClick = (e)=>{
-      e.preventDefault();
       setPhoneNumber(currentNumber);
   }
 
@@ -24,14 +23,14 @@ function CallMe(props){
   },[phoneNumber,placeCall]);
 
   return(
-    <form>
+    <>
       <label>Enter the number to call:</label>
       <input type="phone" ref={phoneInputRef} onChange={()=>{setCurrentNumber(phoneInputRef.current.value)}}/>
       <button onClick={handleClick}>
         Place Call
       </button>
       <h1>{currentNumber}</h1>
-    </form>
+    </>
   );
 }
 
