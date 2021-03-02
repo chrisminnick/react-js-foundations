@@ -107,7 +107,7 @@ import CallMe from './chapter11/CallMe';
 import CallMeFixed from './chapter11/CallMeFixed';
 import WordCount from './chapter11/WordCount';
 import CountingBox from './chapter11/CountingBox';
-
+import RenderCounter from './chapter11/RenderCounter';
 
 function App() {
   return (
@@ -770,15 +770,18 @@ function App() {
             <ButtonContainer />
           </Route>
           <Route path="/listing1103">
-            <TimerFun />
+            <RenderCounter />
           </Route>
           <Route path="/listing1104">
+            <TimerFun />
+          </Route>
+          <Route path="/listing1105">
             <TimerRestartFun />
           </Route>
-          <Route path="/listing1105">
+          <Route path="/listing1106">
             <TimerOnceFun />
           </Route>
-          <Route path="/listing1105">
+          <Route path="/listing1106">
             <TimerOnceFun />
           </Route>
           <Route path="/listing1106">

@@ -1,8 +1,6 @@
-import {useEffect,useState} from 'react';
+import {useEffect} from 'react';
 
 function TimerFun(props){
-
-    const [count,setCount] = useState(0);
 
     useEffect(() => {
         let time = 0;

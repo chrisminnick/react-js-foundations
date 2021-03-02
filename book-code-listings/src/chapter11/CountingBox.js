@@ -1,34 +1,33 @@
 import {useState,useRef,useImperativeHandle,forwardRef} from 'react';
 
 const CountingBox = forwardRef((props, ref) => {
-    const internalRef = useRef();
-    const [wordCount,setWordCount] = useState(0);
 
-    useImperativeHandle(ref, () => ({
-        wordCount: wordCount
-      }
-    ),[wordCount]);
+    const [text,setText] = useState('');
 
-    const countWords = () => {
-      const count = internalRef.current.value.split(" ").length
-      setWordCount(count);
-    }
+    useImperativeHandle(ref, () => {
+        return {count: text.split(" ").length}
+    },[text]);
 
     return (
     <>
-      <textarea ref={internalRef} /><br />
-      <button onClick={countWords}>count words</button>
+      <textarea value={text} onChange={(e)=>setText(e.target.value)} />
     </>);
 });
 
 function TextEdit(props){
 
-    const countingBoxRef = useRef(null);
+    const countingBoxRef = useRef();
+    const [wordCount,setWordCount] = useState(0);
+
+    const handleClick = (count) => {
+      setWordCount(count)
+    }
 
     return (
         <>
-          <CountingBox ref={countingBoxRef}/>
-          {countingBoxRef.wordCount} words
+          <CountingBox ref={countingBoxRef} /><br />
+          <button onClick={()=>handleClick(countingBoxRef.current.count)}>count words</button><br />
+          current count: {wordCount}<br />
         </>
     )
 }
