@@ -108,6 +108,8 @@ import CallMeFixed from './chapter11/CallMeFixed';
 import WordCount from './chapter11/WordCount';
 import CountingBox from './chapter11/CountingBox';
 import RenderCounter from './chapter11/RenderCounter';
+import ChooseYourAdventure from './chapter12/ChooseYourAdventure';
+
 
 function App() {
   return (
@@ -496,6 +498,15 @@ function App() {
                 </ul>
                 </Collapsible>
                 </li>
+                <li>
+                <Collapsible trigger="Chapter 12">
+                <ul>
+                <li>
+                  <Link to="/listing1201">Listing 12-01</Link>
+                </li>
+                </ul>
+                </Collapsible>
+                </li>
           </ul>
         </nav>
         <main style={{padding:"20px"}}>
@@ -810,6 +821,9 @@ function App() {
           </Route>
           <Route path="/listing1115">
             <WeatherWidget />
+          </Route>
+          <Route path="/listing1201">
+            <ChooseYourAdventure />
           </Route>
         </Switch>
       </main>
