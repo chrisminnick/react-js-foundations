@@ -109,7 +109,7 @@ import WordCount from './chapter11/WordCount';
 import CountingBox from './chapter11/CountingBox';
 import RenderCounter from './chapter11/RenderCounter';
 import ChooseYourAdventure from './chapter12/ChooseYourAdventure';
-
+import NavMenu from './chapter12/NavMenu';
 
 function App() {
   return (
@@ -504,6 +504,9 @@ function App() {
                 <li>
                   <Link to="/listing1201">Listing 12-01</Link>
                 </li>
+                <li>
+                  <Link to="/listing1202">Listing 12-02</Link>
+                </li>
                 </ul>
                 </Collapsible>
                 </li>
@@ -824,6 +827,9 @@ function App() {
           </Route>
           <Route path="/listing1201">
             <ChooseYourAdventure />
+          </Route>
+          <Route path="/listing1202">
+            <NavMenu />
           </Route>
         </Switch>
       </main>
