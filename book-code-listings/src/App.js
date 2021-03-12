@@ -110,6 +110,11 @@ import CountingBox from './chapter11/CountingBox';
 import RenderCounter from './chapter11/RenderCounter';
 import ChooseYourAdventure from './chapter12/ChooseYourAdventure';
 import NavMenu from './chapter12/NavMenu';
+import NavMenuWithRouter from './chapter12/NavMenuWithRouter';
+import ViewLocation from './chapter12/ViewLocation';
+import ComponentProp from './chapter12/ComponentProp';
+import RenderProp from './chapter12/RenderProp';
+import ViewMatch from './chapter12/ViewMatch';
 
 function App() {
   return (
@@ -507,6 +512,21 @@ function App() {
                 <li>
                   <Link to="/listing1202">Listing 12-02</Link>
                 </li>
+                <li>
+                  <Link to="/listing1203">Listing 12-03</Link>
+                </li>
+                <li>
+                  <Link to="/listing1204">Listing 12-04</Link>
+                </li>
+                <li>
+                  <Link to="/listing1205">Listing 12-05</Link>
+                </li>
+                <li>
+                  <Link to="/listing1206">Listing 12-06</Link>
+                </li>
+                <li>
+                  <Link to="/listing1207">Listing 12-07</Link>
+                </li>
                 </ul>
                 </Collapsible>
                 </li>
@@ -830,6 +850,21 @@ function App() {
           </Route>
           <Route path="/listing1202">
             <NavMenu />
+          </Route>
+          <Route path="/listing1203">
+            <NavMenuWithRouter />
+          </Route>
+          <Route path="/listing1204">
+            <ViewLocation />
+          </Route>
+          <Route path="/listing1205">
+            <ComponentProp />
+          </Route>
+          <Route path="/listing1206">
+            <RenderProp />
+          </Route>
+          <Route path="/listing1207">
+            <ViewMatch />
           </Route>
         </Switch>
       </main>
