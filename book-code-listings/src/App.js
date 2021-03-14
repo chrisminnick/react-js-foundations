@@ -115,6 +115,8 @@ import ViewLocation from './chapter12/ViewLocation';
 import ComponentProp from './chapter12/ComponentProp';
 import RenderProp from './chapter12/RenderProp';
 import ViewMatch from './chapter12/ViewMatch';
+import UserListRedirect from './chapter12/RedirectRoute.js';
+import NestedRoutes from './chapter12/NestedRoutes';
 
 function App() {
   return (
@@ -527,6 +529,12 @@ function App() {
                 <li>
                   <Link to="/listing1207">Listing 12-07</Link>
                 </li>
+                <li>
+                  <Link to="/listing1212">Listing 12-12</Link>
+                </li>
+                <li>
+                  <Link to="/listing1214">Listing 12-14</Link>
+                </li>
                 </ul>
                 </Collapsible>
                 </li>
@@ -865,6 +873,12 @@ function App() {
           </Route>
           <Route path="/listing1207">
             <ViewMatch />
+          </Route>
+          <Route path="/listing1212">
+            <UserListRedirect />
+          </Route>
+          <Route path="/listing1214">
+            <NestedRoutes />
           </Route>
         </Switch>
       </main>

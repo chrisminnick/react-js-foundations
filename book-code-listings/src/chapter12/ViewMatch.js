@@ -5,16 +5,26 @@ import {
 
 function ViewMatch(props) {
 
-    const matchView = Object.keys(props.match).map((key) => {
-        return <tr><td><strong>{key}</strong></td><td>{ String(props.match[key]) }</td></tr>
-     })
+  const iterate = (obj) => {
+    let result = [];
+    Object.keys(obj).forEach(key => {
+
+    if (typeof obj[key] === 'object') {
+      result.push(<li key={key}>{key}: </li>);
+      iterate(obj[key])
+    } else {
+      result.push(<li key={key}>{key}: {obj[key]}</li>);
+    }
+    })
+    return result;
+  }
 
     return (
           <>
             <h1>Current Match</h1>
             <table>
             
-                {matchView}
+                {iterate(props.match)}
             
             </table>
           </>

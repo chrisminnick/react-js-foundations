@@ -5,18 +5,18 @@ import {
 
 function ViewLocation(props) {
 
-    const locationView = Object.keys(props.location).map((key) => {
-        return <tr><td><strong>{key}</strong></td><td>{ JSON.stringify(props.location[key]) }</td></tr>
-     })
-
     return (
           <>
+           
             <h1>Current Location</h1>
-            <table>
+            <ul>
             
-                {locationView}
+                <li>pathname: {props.location.pathname}</li>
+                <li>hash: {props.location.hash}</li>
+                <li>search: {props.location.search}</li>
+                <li>key: {props.location.key}</li>
             
-            </table>
+            </ul>
           </>
           
       );
