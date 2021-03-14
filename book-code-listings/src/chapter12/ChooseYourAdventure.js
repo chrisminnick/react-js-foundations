@@ -14,7 +14,7 @@ function ChooseYourAdventure() {
         <p>You come to a fork in the road. Which path will you take?</p>
         <ul>
           <li>
-            <Link to="http://www.chrisminnick.com">The More Well-traveled Path</Link>
+            <Link to="/worn">The More Well-traveled Path</Link>
           </li>
           <li>
             <Link to="/untrodden">The Less Well-traveled Path</Link>
