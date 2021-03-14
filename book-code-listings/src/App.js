@@ -110,6 +110,7 @@ import CountingBox from './chapter11/CountingBox';
 import RenderCounter from './chapter11/RenderCounter';
 import ChooseYourAdventure from './chapter12/ChooseYourAdventure';
 import NavMenu from './chapter12/NavMenu';
+import NavMenuExact from './chapter12/NavMenuExact';
 import NavMenuWithRouter from './chapter12/NavMenuWithRouter';
 import ViewLocation from './chapter12/ViewLocation';
 import ComponentProp from './chapter12/ComponentProp';
