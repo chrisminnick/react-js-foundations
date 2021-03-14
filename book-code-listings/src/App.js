@@ -866,9 +866,7 @@ function App() {
           <Route path="/listing1204">
             <NavMenuWithRouter />
           </Route>
-          <Route path="/listing1205">
-            <ViewLocation />
-          </Route>
+
           <Route path="/listing1206">
             <ComponentProp />
           </Route>
@@ -882,6 +880,9 @@ function App() {
             <UserListRedirect />
           </Route>
           <Route path="/listing1214">
+            <ViewLocation />
+          </Route>
+          <Route path="/listing1215">
             <NestedRoutes />
           </Route>
         </Switch>
