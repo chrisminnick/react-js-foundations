@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2021-03-14T14:51:13.831Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36" etag="ZjFhE2vjBX5YxXn62Fjl" version="14.3.1" type="github">
+<mxfile host="app.diagrams.net" modified="2021-03-14T14:52:59.233Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36" etag="Xr3bMKNP9LdcepYg22yo" version="14.3.1" type="github">
   <diagram id="cj0Z7pNimVpw6jqo-E7z" name="Page-1">
     <mxGraphModel dx="1402" dy="711" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="IR-eqQ5YHkqLA4fKnOQH-5" value="" style="aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.azure.script_file" vertex="1" parent="1">
-          <mxGeometry x="390" y="200" width="47" height="50" as="geometry" />
+          <mxGeometry x="480" y="200" width="47" height="50" as="geometry" />
         </mxCell>
         <mxCell id="IR-eqQ5YHkqLA4fKnOQH-6" value="" style="aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.mscae.enterprise.app_generic" vertex="1" parent="1">
           <mxGeometry x="103.88999999999999" y="230" width="50" height="39" as="geometry" />
@@ -15,6 +15,12 @@
         </mxCell>
         <mxCell id="IR-eqQ5YHkqLA4fKnOQH-8" value="" style="aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.azure.computer" vertex="1" parent="1">
           <mxGeometry x="40" y="190" width="177.78" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="IR-eqQ5YHkqLA4fKnOQH-9" value="HTTP Request" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;" vertex="1" parent="1">
+          <mxGeometry x="270" y="280" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="IR-eqQ5YHkqLA4fKnOQH-10" value="HTTP Response" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;flipH=1;notch=0;" vertex="1" parent="1">
+          <mxGeometry x="265" y="190" width="200" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
