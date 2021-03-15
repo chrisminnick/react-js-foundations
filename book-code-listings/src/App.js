@@ -1,6 +1,5 @@
 import './App.css';
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
   Link
@@ -121,7 +120,6 @@ import NestedRoutes from './chapter12/NestedRoutes';
 
 function App() {
   return (
-    <Router>
       <div style={{display:"flex"}}>
         <nav>
           <ul id="buttons">
@@ -882,13 +880,12 @@ function App() {
           <Route path="/listing1214">
             <ViewLocation />
           </Route>
-          <Route path="/listing1216">
+          <Route path="/listing1215">
             <NestedRoutes />
           </Route>
         </Switch>
       </main>
       </div>
-    </Router>
   );
 }
 
