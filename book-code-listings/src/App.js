@@ -121,7 +121,8 @@ import BadComponent from './chapter13/BadComponent';
 import BadComponentWithBoundary from './chapter13/BadComponentWithBoundary';
 import ErrorBoundaryWithDidCatch from './chapter13/ErrorBoundaryWithDidCatch';
 import ErrorBoundaryWithLogging from './chapter13/ErrorBoundaryWithLogging';
-
+import SometimesBad from './chapter13/SometimesBad';
+import ErrorBoundaryWithReset from './chapter13/ErrorBoundaryWithReset';
 
 function App() {
   return (
@@ -566,6 +567,9 @@ function App() {
                 <li>
                   <Link to="/listing1307">Listing 13-07</Link>
                 </li>
+                <li>
+                  <Link to="/listing1308">Listing 13-08</Link>
+                </li>
                 
                 </ul>
                 </Collapsible>
@@ -928,6 +932,12 @@ function App() {
           </Route>
           <Route path="/listing1306">
             <ErrorBoundaryWithLogging><BadComponent /></ErrorBoundaryWithLogging>
+          </Route>
+          <Route path="/listing1307">
+            <SometimesBad />
+          </Route>
+          <Route path="/listing1308">
+            <ErrorBoundaryWithReset><SometimesBad /></ErrorBoundaryWithReset>
           </Route>
         </Switch>
       </main>
