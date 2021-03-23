@@ -94,7 +94,7 @@ import TextReaderCallback2 from './chapter09/TextReaderCallback2';
 import ScrollToDemo from './chapter09/ScrollToDemo';
 import StyledParent from './chapter10/StyledParent';
 import NumberGuessing from './chapter11/NumberGuessing';
-import {ButtonContainer,MyButton} from './chapter11/PassingSetter';
+import {ButtonContainer} from './chapter11/PassingSetter';
 import TimerFun from './chapter11/TimerDemo';
 import TimerRestartFun from './chapter11/TimerRestartDemo';
 import TimerOnceFun from './chapter11/TimerOnceDemo';
@@ -117,6 +117,11 @@ import RenderProp from './chapter12/RenderProp';
 import ViewMatch from './chapter12/ViewMatch';
 import UserListRedirect from './chapter12/RedirectRoute.js';
 import NestedRoutes from './chapter12/NestedRoutes';
+import BadComponent from './chapter13/BadComponent';
+import BadComponentWithBoundary from './chapter13/BadComponentWithBoundary';
+import ErrorBoundaryWithDidCatch from './chapter13/ErrorBoundaryWithDidCatch';
+import ErrorBoundaryWithLogging from './chapter13/ErrorBoundaryWithLogging';
+
 
 function App() {
   return (
@@ -537,6 +542,34 @@ function App() {
                 </ul>
                 </Collapsible>
                 </li>
+                <li>
+                <Collapsible trigger="Chapter 13">
+                <ul>
+                <li>
+                  <Link to="/listing1301">Listing 13-01</Link>
+                </li>
+                <li>
+                  <Link to="/listing1302">Listing 13-02</Link>
+                </li>
+                <li>
+                  <Link to="/listing1303">Listing 13-03</Link>
+                </li>
+                <li>
+                  <Link to="/listing1304">Listing 13-04</Link>
+                </li>
+                <li>
+                  <Link to="/listing1305">Listing 13-05</Link>
+                </li>
+                <li>
+                  <Link to="/listing1306">Listing 13-06</Link>
+                </li>
+                <li>
+                  <Link to="/listing1307">Listing 13-07</Link>
+                </li>
+                
+                </ul>
+                </Collapsible>
+                </li>
           </ul>
         </nav>
         <main style={{padding:"20px"}}>
@@ -882,6 +915,19 @@ function App() {
           </Route>
           <Route path="/listing1215">
             <NestedRoutes />
+          </Route>
+
+          <Route path="/listing1302">
+            <BadComponent />
+          </Route>
+          <Route path="/listing1303">
+            <BadComponentWithBoundary />
+          </Route>
+          <Route path="/listing1304">
+            <ErrorBoundaryWithDidCatch><BadComponent /></ErrorBoundaryWithDidCatch>
+          </Route>
+          <Route path="/listing1306">
+            <ErrorBoundaryWithLogging><BadComponent /></ErrorBoundaryWithLogging>
           </Route>
         </Switch>
       </main>
