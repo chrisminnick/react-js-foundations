@@ -124,6 +124,7 @@ import ErrorBoundaryWithLogging from './chapter13/ErrorBoundaryWithLogging';
 import SometimesBad from './chapter13/SometimesBad';
 import ErrorBoundaryWithReset from './chapter13/ErrorBoundaryWithReset';
 import SampleTree from './chapter13/SampleTree';
+import SampleTreeWithErrorBoundary from './chapter13/SampleTreeWithBoundary';
 
 function App() {
   return (
@@ -574,7 +575,9 @@ function App() {
                 <li>
                   <Link to="/chapter13example">Sample App</Link>
                 </li>
-                
+                <li>
+                  <Link to="/chapter13example2">Sample App with Boundary</Link>
+                </li>
                 </ul>
                 </Collapsible>
                 </li>
@@ -945,6 +948,9 @@ function App() {
           </Route>
           <Route path="/chapter13example">
             <SampleTree />
+          </Route>
+          <Route path="/chapter13example2">
+            <SampleTreeWithErrorBoundary />
           </Route>
         </Switch>
       </main>
