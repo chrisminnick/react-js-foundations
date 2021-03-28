@@ -7,7 +7,7 @@ function App(props){
     const [products,setProducts] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:3000/data/products.json')
+        fetch('/data/products.json')
             .then(response => response.json()
                 .then(products => shuffleArray(products))
                 .then(products => {
