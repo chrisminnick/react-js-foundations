@@ -1,0 +1,17 @@
+.container {
+    width: 85%;
+    margin: 0 auto;
+    text-align:center;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.current-count {
+
+}
+
+.increment-button {
+    font-size: 3em;
+}
+.reset-button {
+    background-color:red;
+}

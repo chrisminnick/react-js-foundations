@@ -125,6 +125,10 @@ import SometimesBad from './chapter13/SometimesBad';
 import ErrorBoundaryWithReset from './chapter13/ErrorBoundaryWithReset';
 import SampleTree from './chapter13/SampleTree';
 import SampleTreeWithErrorBoundary from './chapter13/SampleTreeWithBoundary';
+import Clicker1 from './chapter16/Clicker1.js';
+import Clicker2 from './chapter16/Clicker2.js';
+import Clicker3 from './chapter16/Clicker3.js';
+import Clicker4 from './chapter16/Clicker4.js';
 
 function App() {
   return (
@@ -581,9 +585,27 @@ function App() {
                 </ul>
                 </Collapsible>
                 </li>
+                <li>
+                <Collapsible trigger="Chapter 16">
+                <ul>
+                <li>
+                  <Link to="/listing1605">Listing 16-05</Link>
+                </li>
+                <li>
+                  <Link to="/listing1606">Listing 16-06</Link>
+                </li>
+                <li>
+                  <Link to="/listing1607">Listing 16-07</Link>
+                </li>
+                <li>
+                  <Link to="/listing1608">Listing 16-08</Link>
+                </li>
+                </ul>
+                </Collapsible>
+                </li>
           </ul>
         </nav>
-        <main style={{padding:"20px"}}>
+        <main style={{padding:"20px",width:"100%"}}>
         <Switch>
           <Route path="/listing0103">
             <Listing0103 />
@@ -951,6 +973,18 @@ function App() {
           </Route>
           <Route path="/chapter13example2">
             <SampleTreeWithErrorBoundary />
+          </Route>
+          <Route path="/listing1605">
+            <Clicker1 />
+          </Route>
+          <Route path="/listing1606">
+            <Clicker2 />
+          </Route>
+          <Route path="/listing1607">
+            <Clicker3 />
+          </Route>
+          <Route path="/listing1608">
+            <Clicker4 />
           </Route>
         </Switch>
       </main>
