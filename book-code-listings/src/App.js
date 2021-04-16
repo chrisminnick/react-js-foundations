@@ -129,6 +129,7 @@ import Clicker1 from './chapter16/Clicker1.js';
 import Clicker2 from './chapter16/Clicker2.js';
 import Clicker3 from './chapter16/Clicker3.js';
 import Clicker4 from './chapter16/Clicker4.js';
+import UnitsContext from './chapter17/App';
 
 function App() {
   return (
@@ -603,6 +604,16 @@ function App() {
                 </ul>
                 </Collapsible>
                 </li>
+                <li>
+                <Collapsible trigger="Chapter 17">
+                <ul>
+                <li>
+                  <Link to="/listing1701">Listing 17-01</Link>
+                </li>
+                
+                </ul>
+                </Collapsible>
+                </li>
           </ul>
         </nav>
         <main style={{padding:"20px",width:"100%"}}>
@@ -985,6 +996,9 @@ function App() {
           </Route>
           <Route path="/listing1608">
             <Clicker4 />
+          </Route>
+          <Route path="/listing1701">
+            <UnitsContext />
           </Route>
         </Switch>
       </main>
