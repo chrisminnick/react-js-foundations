@@ -130,6 +130,10 @@ import Clicker2 from './chapter16/Clicker2.js';
 import Clicker3 from './chapter16/Clicker3.js';
 import Clicker4 from './chapter16/Clicker4.js';
 import UnitsContext from './chapter17/App';
+import PropDrilling from './chapter17/PropDrilling';
+import DashboardProps from './chapter17/DashboardApp';
+import DashboardContext from './chapter17/DashboardAppContext';
+import DashboardComposition from './chapter17/DashboardAppComposition';
 
 function App() {
   return (
@@ -610,7 +614,18 @@ function App() {
                 <li>
                   <Link to="/listing1701">Listing 17-01</Link>
                 </li>
-                
+                <li>
+                  <Link to="/listing1702">Listing 17-02</Link>
+                </li>
+                <li>
+                  <Link to="/listing1707">Listing 17-07</Link>
+                </li>
+                <li>
+                  <Link to="/listing1708">Listing 17-08</Link>
+                </li>
+                <li>
+                  <Link to="/listing1710">Listing 17-10</Link>
+                </li>
                 </ul>
                 </Collapsible>
                 </li>
@@ -998,7 +1013,19 @@ function App() {
             <Clicker4 />
           </Route>
           <Route path="/listing1701">
+            <PropDrilling story="test" />
+          </Route>
+          <Route path="/listing1702">
             <UnitsContext />
+          </Route>
+          <Route path="/listing1707">
+            <DashboardProps />
+          </Route>
+          <Route path="/listing1708">
+            <DashboardContext />
+          </Route>
+          <Route path="/listing1710">
+            <DashboardComposition />
           </Route>
         </Switch>
       </main>
