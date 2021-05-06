@@ -1,0 +1,63 @@
+.episode_download_list ul {
+  list-style: none;
+}
+
+.episode_download_list li {
+  display: inline;
+  font-size: 0.75em;
+}
+
+.episode_download_list .size {
+  font-size: 0.5em;
+  padding-left: 3px;
+}
+
+.episode_downloads select {
+  font-size: 18px;
+  display: inline;
+}
+
+.episode_downloads button {
+  margin-left: 10px;
+}
+
+div.podlove_cc_license {
+  display: block;
+  text-align: center;
+}
+
+ul.podlove-donations-list, ul.podlove-social-list {
+  margin: auto 0px auto 0px;
+}
+
+ul.podlove-donations-list li a, ul.podlove-social-list li a, img.podlove-contributor-button, ul.podlove-donations-list li, ul.podlove-social-list li {
+  width: 20px;
+  height: 20px;
+}
+
+ul.podlove-donations-list li a, ul.podlove-social-list li a {
+  display: block;
+}
+
+ul.podlove-donations-list li, ul.podlove-social-list li {
+  display: inline-block;
+  line-height: 20px;
+  list-style-type: none;
+  margin-right: 5px;
+}
+
+/* player */
+
+.podlove-player-wrapper {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.podlove-player-wrapper iframe {
+  width: 1px;
+  min-width: 100%;
+}
+
+.podlovewebplayer_wrapper {
+  margin-bottom: 10px;
+}

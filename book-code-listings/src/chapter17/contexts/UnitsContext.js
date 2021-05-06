@@ -10,9 +10,3 @@ export const UnitsProvider = ({ children }) => {
         </UnitsContext.Provider>
     );
 };
-
-export const withUnits = (Child) => (props) => (
-    <UnitsContext.Consumer>
-        {(context) => <Child {...props} {...context} />}
-    </UnitsContext.Consumer>
-)

@@ -10,7 +10,6 @@ const App = () => {
             <UserContext.Provider value={username,setUsername}>
               <Dashboard/>
             </UserContext.Provider>
-            <Logout />
           </>
 
         )
