@@ -1,6 +1,5 @@
 import {useState,useRef,useEffect} from 'react';
 import Modal from './Modal';
-import SalesChart from './SalesChart';
 import './styles.css';
 
 function App() {
