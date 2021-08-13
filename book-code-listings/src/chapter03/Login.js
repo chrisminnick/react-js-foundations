@@ -2,13 +2,16 @@ import React from "react";
 
 function Login(){
 
-	const handleSubmit = (event)=>{
-		event.preventDefault();
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		console.log(`logging in ${e.target[0].value}`);
+
 		// do something else here
+
 	}
 
 	return (
-		<form id="login-form" onSubmit="(e)=> {handleSubmit}">
+		<form id="login-form" onSubmit={handleSubmit}>
 			<input	type="email"
 				id="email"
 				placeholder="E-Mail Address" />
