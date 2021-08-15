@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Product.css.js';
 
-const Product = React.memo((props)=>{
+const Product = (props)=>{
     const handleClick = ()=>{
         if(props.inCart) {
             props.removeFromCart(props.id);
@@ -25,6 +25,6 @@ const Product = React.memo((props)=>{
                 </div>
             </div>
     );
-})
+}
 
-export default Product;
+export default React.memo(Product);
