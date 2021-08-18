@@ -55,6 +55,7 @@ import SiteLinkNode from './chapter06/SiteLinkNode';
 import BorderBox from './chapter06/BorderBox';
 import CounterClass from './chapter06/CounterClass';
 import Reminders from './chapter06/Reminders/App';
+import RemindersClass from './chapter06/RemindersClass/App';
 import FamilyTree from './chapter06/FamilyTree';
 import Person from './chapter06/Person';
 import Dog from './chapter06/Dog';
@@ -388,6 +389,9 @@ function App() {
                 </li>
                 <li>
                   <Link to="/Reminders">Finished Reminders App</Link>
+                </li>
+                <li>
+                  <Link to="/RemindersClass">Finished Reminders App (Class Component Version)</Link>
                 </li>
                 </ul>
                 </Collapsible>
@@ -775,7 +779,8 @@ function App() {
             <WelcomeClass firstName={'frank'} />
           </Route>
           <Route path="/listing608">
-            <SiteLink url="http://example.com" linkName="Example" />
+            <p>Uncomment the SiteLink element in App.js to see the error from passing an object to the SiteLink component.</p>
+            {/* <SiteLink url="http://example.com" linkName={{name:'Example'}} /> */}
           </Route>
           <Route path="/listing609">
             <SiteLinkNode url="http://example.com" linkName="Example" />
@@ -844,6 +849,9 @@ function App() {
           </Route>
           <Route path="/Reminders">
             <Reminders />
+          </Route>
+          <Route path="/RemindersClass">
+            <RemindersClass />
           </Route>
           <Route path="/listing701">
             <EventProps />

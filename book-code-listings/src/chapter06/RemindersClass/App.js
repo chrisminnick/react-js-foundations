@@ -14,7 +14,7 @@ class App extends Component{
     this.setUserInput = this.setUserInput.bind(this);
     this.setSelectedFilter = this.setSelectedFilter.bind(this);
     this.addNewReminder = this.addNewReminder.bind(this);
-    this.setStatus = this.setStatus.bind(this);
+    this.setIsComplete = this.setIsComplete.bind(this);
   }
 
   setUserInput(newInput){
@@ -39,9 +39,9 @@ class App extends Component{
     }
   }  
   
-  setStatus(status,index){
+  setIsComplete(isComplete,index){
     const newReminders = [ ...this.state.reminders.slice(0, index),
-                     {...this.state.reminders[index],status}, 
+                     {...this.state.reminders[index],isComplete}, 
                      ...this.state.reminders.slice(index+1) ];
     this.setState({reminders:newReminders});
   }
@@ -88,7 +88,7 @@ class App extends Component{
                    addNewReminder={this.addNewReminder} />
         <FilterSelect selectedFilter={this.state.selectedFilter} 
                       setSelectedFilter={this.setSelectedFilter} />
-        <RemindersList reminders={filteredList} setStatus={this.setStatus} />
+        <RemindersList reminders={filteredList} setIsComplete={this.setIsComplete} />
       </div>
     );
   }

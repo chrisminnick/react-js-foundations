@@ -6,8 +6,8 @@ function RemindersList(props){
   const reminders = props.reminders.map((reminder,index)=>{
     return (<Reminder reminderText={reminder.reminderText} 
                       dueDate={reminder.dueDate} 
-                      status={reminder.status}
-                      setStatus={props.setStatus}
+                      isComplete={reminder.isComplete}
+                      setIsComplete={props.setIsComplete}
                       id={index}
                       key={index} />);
   });
@@ -30,7 +30,7 @@ RemindersList.defaultProps = {
   reminders: [{
     reminderText:"No Reminders Yet",
     dueDate:formattedDate,
-    status: false
+    isComplete: false
   }]
 }
 

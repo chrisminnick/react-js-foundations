@@ -1,4 +1,4 @@
 function WelcomeMessage(){
-    return ("Welcome!");
+    return "Welcome!";
 }
 export default WelcomeMessage;

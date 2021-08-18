@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 
 function Reminder(props){
     function handleChange(){
-        props.setStatus(!props.status,props.id);
+        props.setIsComplete(!props.isComplete,props.id);
     }
     return(
         <div>item: {props.reminderText}&nbsp;due date: {props.dueDate} 
-        &nbsp;status: <input type="checkbox" checked={props.status} onChange={handleChange} />
+        &nbsp;Completed?: <input type="checkbox" checked={props.isComplete} onChange={handleChange} />
         </div>
     );
   }
@@ -14,7 +14,7 @@ function Reminder(props){
 Reminder.propTypes = {
     itemText: PropTypes.string,
     dueDate: PropTypes.string,
-    status: PropTypes.bool
+    isComplete: PropTypes.bool
 }
 
 const date = new Date();

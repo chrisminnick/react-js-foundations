@@ -18,9 +18,9 @@ function App(){
   
   const filteredList = filterList(reminders,selectedFilter);
 
-  function setStatus(status,index){
+  function setIsComplete(isComplete,index){
     const newReminders = [ ...reminders.slice(0, index),
-                     {...reminders[index],status}, 
+                     {...reminders[index],isComplete}, 
                      ...reminders.slice(index+1) ];
     setReminders(newReminders);
   }
@@ -63,7 +63,7 @@ function App(){
                  addNewReminder={addNewReminder} />
       <FilterSelect selectedFilter={selectedFilter} 
                     setSelectedFilter={setSelectedFilter} />
-      <RemindersList reminders={filteredList} setStatus={setStatus} />
+      <RemindersList reminders={filteredList} setIsComplete={setIsComplete} />
     </div>
   );
 }

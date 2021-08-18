@@ -1,7 +1,7 @@
 export default function ThingsThatAreFunny(props) {
     return (
       <>
-        <h1>The following things are funny.</h1>
+        <h1>Here are some funny things.</h1>
         {props.children}
       </>
     )
