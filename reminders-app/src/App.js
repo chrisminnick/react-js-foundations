@@ -15,15 +15,14 @@ function App(){
       setReminders([...reminders,itemToAdd]);
     }
   }  
-  
-  const filteredList = filterList(reminders,selectedFilter);
-
-  function setStatus(status,index){
+  function setIsComplete(isComplete,index){
     const newReminders = [ ...reminders.slice(0, index),
-                     {...reminders[index],status}, 
-                     ...reminders.slice(index+1) ];
+                          {...reminders[index],isComplete}, 
+                           ...reminders.slice(index+1) ];
     setReminders(newReminders);
   }
+  
+  const filteredList = filterList(reminders,selectedFilter);
 
   function filterList(reminders,selectedFilter){
     if (selectedFilter === "all"){
@@ -63,7 +62,7 @@ function App(){
                  addNewReminder={addNewReminder} />
       <FilterSelect selectedFilter={selectedFilter} 
                     setSelectedFilter={setSelectedFilter} />
-      <RemindersList reminders={filteredList} setStatus={setStatus} />
+      <RemindersList reminders={filteredList} setIsComplete={setIsComplete} />
     </div>
   );
 }

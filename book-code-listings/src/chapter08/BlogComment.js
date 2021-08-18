@@ -8,8 +8,8 @@ function BlogComment(props){
         setComments([...comments,textAreaRef.current.value]);
     }
     
-    const commentList = comments.map((comment)=>{
-        return (<p>{comment}</p>);
+    const commentList = comments.map((comment,index)=>{
+        return (<p key={index}>{comment}</p>);
     })
 
     return(
@@ -19,7 +19,7 @@ function BlogComment(props){
             <textarea ref={textAreaRef}></textarea><br />
             <button>Submit Comment</button>
             <p>All Comments:</p>
-            {[commentList]}
+            {commentList}
             </form>
         </>
     );
