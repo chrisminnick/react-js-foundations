@@ -102,6 +102,8 @@ import TimerOnceFun from './chapter11/TimerOnceDemo';
 import TimerConditionalFun from './chapter11/TimerConditionalDemo';
 import ShippingAddress from './chapter11/ShippingAddress';
 import ShippingAddress2 from './chapter11/ShippingAddress2';
+import ReducerCounter from './chapter11/ReducerCounter';
+import UsingUseForm from './chapter11/UsingUseForm';
 import WeatherWidget from './chapter11/WeatherWidget';
 import CallMe from './chapter11/CallMe';
 import CallMeFixed from './chapter11/CallMeFixed';
@@ -126,6 +128,7 @@ import SometimesBad from './chapter13/SometimesBad';
 import ErrorBoundaryWithReset from './chapter13/ErrorBoundaryWithReset';
 import SampleTree from './chapter13/SampleTree';
 import SampleTreeWithErrorBoundary from './chapter13/SampleTreeWithBoundary';
+import Restful from './chapter16/Restful.js';
 import Clicker1 from './chapter16/Clicker1.js';
 import Clicker2 from './chapter16/Clicker2.js';
 import Clicker3 from './chapter16/Clicker3.js';
@@ -522,6 +525,12 @@ function App() {
                 <li>
                   <Link to="/listing1114">Listing 11-14</Link>
                 </li>
+                <li>
+                  <Link to="/listing1118">Listing 11-18</Link>
+                </li>
+                <li>
+                  <Link to="/listing1121">Listing 11-21</Link>
+                </li>
                 </ul>
                 </Collapsible>
                 </li>
@@ -554,6 +563,9 @@ function App() {
                 </li>
                 <li>
                   <Link to="/listing1214">Listing 12-14</Link>
+                </li>
+                <li>
+                  <Link to="/listing1216">Listing 12-16</Link>
                 </li>
                 </ul>
                 </Collapsible>
@@ -934,6 +946,9 @@ function App() {
           <Route path="/listing1108">
             <ShippingAddress />
           </Route>
+          <Route path="/listing1110">
+            <ReducerCounter />
+          </Route>
           <Route path="/listing1112">
             <CallMe />
           </Route>
@@ -952,6 +967,12 @@ function App() {
           <Route path="/listing1115">
             <WeatherWidget />
           </Route>
+          <Route path="/listing1118">
+            <ShippingAddress2 />
+          </Route>
+          <Route path="/listing1121">
+            <UsingUseForm />
+          </Route>         
           <Route path="/listing1201">
             <ChooseYourAdventure />
           </Route>
@@ -980,7 +1001,7 @@ function App() {
           <Route path="/listing1214">
             <ViewLocation />
           </Route>
-          <Route path="/listing1215">
+          <Route path="/listing1216">
             <NestedRoutes />
           </Route>
 
@@ -1009,15 +1030,18 @@ function App() {
             <SampleTreeWithErrorBoundary />
           </Route>
           <Route path="/listing1605">
-            <Clicker1 />
+            <Restful />
           </Route>
           <Route path="/listing1606">
-            <Clicker2 />
+            <Clicker1 />
           </Route>
           <Route path="/listing1607">
-            <Clicker3 />
+            <Clicker2 />
           </Route>
           <Route path="/listing1608">
+            <Clicker3 />
+          </Route>
+          <Route path="/listing1609">
             <Clicker4 />
           </Route>
           <Route path="/listing1701">

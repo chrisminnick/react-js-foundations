@@ -2,7 +2,7 @@ import {useState} from 'react';
 
 function NumberGuessing(props){
     const [score,setScore] = useState(0);
-    const [guess,setGuess] = useState();
+    const [guess,setGuess] = useState('');
     console.log('Guess: ' + guess);
     const checkNumber =(e)=>{
         const randomNumber = Math.floor(Math.random() * 10)+1;
