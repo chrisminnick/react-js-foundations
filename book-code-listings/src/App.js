@@ -5,139 +5,24 @@ import {
   Link
 } from "react-router-dom";
 import Collapsible from 'react-collapsible';
-import Listing0103 from './chapter01/Listing0103';
-import Login from './chapter03/Login';
-import SearchBox from './chapter03/SearchBox/SearchBox';
-import MyFancyComponent from './chapter03/MyFancyComponent/MyFancyComponent';
-import Header from './chapter03/Header';
-import Welcome from './chapter03/Welcome';
-import ConditionalWelcome from './chapter03/ConditionalWelcome';
-import ConditionalWelcome2 from './chapter03/ConditionalWelcome2';
-import ConditionalWelcome3 from './chapter03/ConditionalWelcome3';
-import CountUp from './chapter03/CountUp';
-import ImmediateInvoke from './chapter03/ImmediateInvoke';
-import FragmentExample1 from './chapter03/FragmentExample1';
-import FragmentExample2 from './chapter03/FragmentExample2';
-import WelcomeMessage from './chapter04/WelcomeMessage';
-import WelcomeTitle from './chapter04/WelcomeTitle';
-import Cart from './chapter04/ShoppingCart/Cart';
-import SingleComponentCart from './chapter04/ShoppingCart/SingleComponentCart';
-import Farms from './chapter04/Farm/Farms';
-import ImprovedFarms from './chapter04/Farm/ImprovedFarms';
-import CreateReactClass from './chapter04/CreateReactClass';
-import ReactClassComponent from './chapter04/ReactClassComponent';
-import UnboundFunction from './chapter04/UnboundFunction';
-import BoundFunction from './chapter04/BoundFunction';
-import ClassComponentState from './chapter04/ClassComponentState';
-import SetStateAsync from './chapter04/SetStateAsync';
-import BasicFigure from './chapter04/BasicFigure';
-import FigureList from './chapter04/FigureList';
-import FigureListProps from './chapter04/FigureListProps';
-import ToDoClass from './chapter04/ToDoClass';
-import ToDoFunction from './chapter04/ToDoFunction';
-import {ToDoFunctionSimple} from './chapter04/ToDoFunctionSimple';
-import Counter from './chapter04/Counter';
-import LoginForm from './chapter04/LoginForm/LoginForm';
-import ThingsThatAreFunny from './chapter04/ThingsThatAreFunny';
-import ThingsThatILike from './chapter04/ThingsThatILike';
-import CloneElementExample from './chapter04/clone-element/App'
-import LeakyCounter from './chapter04/LeakyCounter';
-import CounterController from './chapter04/CounterController';
-import NoLeakCounterController from './chapter04/NoLeakCounterController';
-import ShallowCompare from './chapter04/ShallowCompare';
-import PureComponent from './chapter04/PureComponent';
-import ReactMemoExample from './chapter04/ReactMemoExample';
-import Mutato from './chapter06/PropsMutation/App.js';
-import WelcomeMessageProps from './chapter06/WelcomeMessage';
-import WelcomeClass from './chapter06/WelcomeClass';
-import SiteLink from './chapter06/SiteLink';
-import SiteLinkNode from './chapter06/SiteLinkNode';
-import BorderBox from './chapter06/BorderBox';
-import CounterClass from './chapter06/CounterClass';
-import Reminders from './chapter06/Reminders/App';
-import RemindersClass from './chapter06/RemindersClass/App';
-import FamilyTree from './chapter06/FamilyTree';
-import Person from './chapter06/Person';
-import Dog from './chapter06/Dog';
-import DisplayPrimaryColors from './chapter06/DisplayPrimaryColors';
-import Contact from './chapter06/Contact';
-import StoresNearYou from './chapter06/StoresNearYou';
-import StoresNearYou1 from './chapter06/StoresNearYou1';
-import StoresNearYou2 from './chapter06/StoresNearYou2';
-import StoresNearYou3 from './chapter06/StoresNearYou3';
-import StoresNearYou4 from './chapter06/StoresNearYou4';
-import StoresNearYou5 from './chapter06/StoresNearYou5';
-import NewsFeed from './chapter06/NewsFeed';
-import NewsFeed2 from './chapter06/NewsFeed2';
-import NewsFeed3 from './chapter06/NewsFeed3';
-import NewsFeed4 from './chapter06/NewsFeed4';
-import CounterClass2 from './chapter06/CounterClass2';
-import CounterClass3 from './chapter06/CounterClass3';
-import CounterClass4 from './chapter06/CounterClass4';
-import EventProps from './chapter07/EventProps';
-import ScreenDoor from './chapter07/ScreenDoor';
-import SearchTerm from './chapter07/Search';
-import CoffeeMachine from './chapter07/CoffeeMachine';
-import ColorWheel from './chapter07/ColorWheel';
-import UncontrolledInput from './chapter08/Uncontrolled1';
-import ControlledInput from './chapter08/Controlled1';
-import ControllingFunction from './chapter08/Controlled2';
-import ControllingClass from './chapter08/Controlled3';
-import ControllingClass2 from './chapter08/Controlled4';
-import SearchInterface from './chapter08/SearchForm/SearchBox';
-import BlogComment from './chapter08/BlogComment';
-import TextReader from './chapter09/TextReader';
-import {mobydick} from './chapter09/mobydick';
-import CodeDisplay from './chapter09/CodeDisplay';
-import AudioPlayer from './chapter09/AudioPlayer';
-import TextReaderCallback from './chapter09/TextReaderCallback';
-import TextReaderCallback2 from './chapter09/TextReaderCallback2';
-import ScrollToDemo from './chapter09/ScrollToDemo';
-import StyledParent from './chapter10/StyledParent';
-import NumberGuessing from './chapter11/NumberGuessing';
-import {ButtonContainer} from './chapter11/PassingSetter';
-import TimerFun from './chapter11/TimerDemo';
-import TimerRestartFun from './chapter11/TimerRestartDemo';
-import TimerOnceFun from './chapter11/TimerOnceDemo';
-import TimerConditionalFun from './chapter11/TimerConditionalDemo';
-import ShippingAddress from './chapter11/ShippingAddress';
-import ShippingAddress2 from './chapter11/ShippingAddress2';
-import ReducerCounter from './chapter11/ReducerCounter';
-import UsingUseForm from './chapter11/UsingUseForm';
-import WeatherWidget from './chapter11/WeatherWidget';
-import CallMe from './chapter11/CallMe';
-import CallMeFixed from './chapter11/CallMeFixed';
-import WordCount from './chapter11/WordCount';
-import CountingBox from './chapter11/CountingBox';
-import RenderCounter from './chapter11/RenderCounter';
-import ChooseYourAdventure from './chapter12/ChooseYourAdventure';
-import NavMenu from './chapter12/NavMenu';
-import NavMenuExact from './chapter12/NavMenuExact';
-import NavMenuWithRouter from './chapter12/NavMenuWithRouter';
-import ViewLocation from './chapter12/ViewLocation';
-import ComponentProp from './chapter12/ComponentProp';
-import RenderProp from './chapter12/RenderProp';
-import ViewMatch from './chapter12/ViewMatch';
-import UserListRedirect from './chapter12/RedirectRoute.js';
-import NestedRoutes from './chapter12/NestedRoutes';
-import BadComponent from './chapter13/BadComponent';
-import BadComponentWithBoundary from './chapter13/BadComponentWithBoundary';
-import ErrorBoundaryWithDidCatch from './chapter13/ErrorBoundaryWithDidCatch';
-import ErrorBoundaryWithLogging from './chapter13/ErrorBoundaryWithLogging';
-import SometimesBad from './chapter13/SometimesBad';
-import ErrorBoundaryWithReset from './chapter13/ErrorBoundaryWithReset';
-import SampleTree from './chapter13/SampleTree';
-import SampleTreeWithErrorBoundary from './chapter13/SampleTreeWithBoundary';
-import Restful from './chapter16/Restful.js';
-import Clicker1 from './chapter16/Clicker1.js';
-import Clicker2 from './chapter16/Clicker2.js';
-import Clicker3 from './chapter16/Clicker3.js';
-import Clicker4 from './chapter16/Clicker4.js';
-import UnitsContext from './chapter17/App';
-import PropDrilling from './chapter17/PropDrilling';
-import DashboardProps from './chapter17/DashboardApp';
-import DashboardContext from './chapter17/DashboardAppContext';
-import DashboardComposition from './chapter17/DashboardAppComposition';
+import * as Chapter01 from './chapter01';
+import * as Chapter03 from './chapter03';
+import * as Chapter04 from './chapter04';
+import * as Chapter06 from './chapter06';
+import * as Chapter07 from './chapter07';
+import * as Chapter08 from './chapter08';
+import * as Chapter09 from './chapter09';
+import * as Chapter10 from './chapter10';
+import * as Chapter11 from './chapter11';
+import * as Chapter12 from './chapter12';
+import * as Chapter13 from './chapter13';
+import * as Chapter16 from './chapter16';
+import * as Chapter17 from './chapter17';
+
+
+
+
+
 
 function App() {
   return (
@@ -650,414 +535,414 @@ function App() {
         <main style={{padding:"20px",width:"100%"}}>
         <Switch>
           <Route path="/listing0103">
-            <Listing0103 />
+            <Chapter01.Listing0103 />
           </Route>
           <Route path="/listing301">
-            <Login />
+            <Chapter03.Login />
           </Route>
           <Route path="/listing302">
-            <SearchBox />
+            <Chapter03.SearchBox />
           </Route>
           <Route path="/listing303">
-            <MyFancyComponent />
+            <Chapter03.MyFancyComponent />
           </Route>
           <Route path="/listing306">
-            <Header />
+            <Chapter03.Header />
           </Route>
           <Route path="/listing308">
-            <Welcome />
+            <Chapter03.Welcome />
           </Route>
           <Route path="/listing309">
-            <ConditionalWelcome />
+            <Chapter03.ConditionalWelcome />
           </Route>
           <Route path="/listing310">
-            <ConditionalWelcome2 />
+            <Chapter03.ConditionalWelcome2 />
           </Route>
           <Route path="/listing311">
-            <ConditionalWelcome3 />
+            <Chapter03.ConditionalWelcome3 />
           </Route>
           <Route path="/listing312">
-            <CountUp />
+            <Chapter03.CountUp />
           </Route>
           <Route path="/listing313">
-            <ImmediateInvoke />
+            <Chapter03.ImmediateInvoke />
           </Route>
           <Route path="/listing314">
-            <FragmentExample1 />
+            <Chapter03.FragmentExample1 />
           </Route>
           <Route path="/listing315">
-            <FragmentExample2 />
+            <Chapter03.FragmentExample2 />
           </Route>
           <Route path="/listing401">
-            <WelcomeMessage />
+            <Chapter04.WelcomeMessage />
           </Route>
           <Route path="/listing402">
-            <WelcomeTitle />
+            <Chapter04.WelcomeTitle />
           </Route>
           <Route path="/listing403">
-            <Cart />
+            <Chapter04.Cart />
           </Route>
           <Route path="/listing404">
-            <SingleComponentCart />
+            <Chapter04.SingleComponentCart />
           </Route>
           <Route path="/listing405">
-            <Farms />
+            <Chapter04.Farms />
           </Route>
           <Route path="/listing407">
-            <ImprovedFarms />
+            <Chapter04.ImprovedFarms />
           </Route>
           <Route path="/listing408">
-            <CreateReactClass />
+            <Chapter04.CreateReactClass />
           </Route>
           <Route path="/listing409">
-            <ReactClassComponent />
+            <Chapter04.ReactClassComponent />
           </Route>
           <Route path="/listing410">
-            <UnboundFunction />
+            <Chapter04.UnboundFunction />
           </Route>    
           <Route path="/listing411">
-            <BoundFunction />
+            <Chapter04.BoundFunction />
           </Route>                  
           <Route path="/listing412">
-            <ClassComponentState />
+            <Chapter04.ClassComponentState />
           </Route>
           <Route path="/listing413">
-            <SetStateAsync />
+            <Chapter04.SetStateAsync />
           </Route>
           <Route path="/listing414">
-            <BasicFigure />
+            <Chapter04.BasicFigure />
           </Route>
           <Route path="/listing415">
-            <FigureList />
+            <Chapter04.FigureList />
           </Route>
           <Route path="/listing416">
-            <FigureListProps />
+            <Chapter04.FigureListProps />
           </Route>
           <Route path="/listing417">
-            <FigureListProps />
+            <Chapter04.FigureListProps />
           </Route>
           <Route path="/listing418">
-            <ToDoClass />
+            <Chapter04.ToDoClass />
           </Route>
           <Route path="/listing419">
-            <ToDoFunction />
+            <Chapter04.ToDoFunction />
           </Route>
           <Route path="/listing420">
-            <ToDoFunctionSimple />
+            <Chapter04.ToDoFunctionSimple />
           </Route>
           <Route path="/listing421">
-            <Counter />
+            <Chapter04.Counter />
           </Route>
           <Route path="/listing422">
-            <LoginForm />
+            <Chapter04.LoginForm />
           </Route>
           <Route path="/listing423">
-            <ThingsThatAreFunny />
+            <Chapter04.ThingsThatAreFunny />
           </Route>
           <Route path="/listing424">
-            <ThingsThatILike />
+            <Chapter04.ThingsThatILike />
           </Route>
           <Route path="/listing425">
-            <CloneElementExample />
+            <Chapter04.CloneElementExample />
           </Route>
           <Route path="/listing431">
-            <LeakyCounter />
+            <Chapter04.LeakyCounter />
           </Route>
           <Route path="/listing432">
-            <CounterController />
+            <Chapter04.CounterController />
           </Route>
           <Route path="/listing433">
-            <NoLeakCounterController />
+            <Chapter04.NoLeakCounterController />
           </Route>
           <Route path="/listing434">
-            <ShallowCompare />
+            <Chapter04.ShallowCompare />
           </Route>
           <Route path="/listing435">
-            <PureComponent />
+            <Chapter04.PureComponent />
           </Route>
           <Route path="/listing436">
-            <ReactMemoExample />
+            <Chapter04.ReactMemoExample />
           </Route>
           <Route path="/listing601">
-            <Mutato />
+            <Chapter06.Mutato />
           </Route>
           <Route path="/listing602">
-            <WelcomeMessageProps firstName='Jimmy' />
+            <Chapter06.WelcomeMessageProps firstName='Jimmy' />
           </Route>
           <Route path="/listing603">
-            <WelcomeMessageProps firstName='Test' />
+            <Chapter06.WelcomeMessageProps firstName='Test' />
           </Route>
           <Route path="/listing604">
-            <WelcomeClass firstName={'frank'} />
+            <Chapter06.WelcomeClass firstName={'frank'} />
           </Route>
           <Route path="/listing608">
             <p>Uncomment the SiteLink element in App.js to see the error from passing an object to the SiteLink component.</p>
-            {/* <SiteLink url="http://example.com" linkName={{name:'Example'}} /> */}
+            {/* <Chapter06.SiteLink url="http://example.com" linkName={{name:'Example'}} /> */}
           </Route>
           <Route path="/listing609">
-            <SiteLinkNode url="http://example.com" linkName="Example" />
+            <Chapter06.SiteLinkNode url="http://example.com" linkName="Example" />
           </Route>
           <Route path="/listing610">
-            <BorderBox><p>The first paragraph</p>
+            <Chapter06.BorderBox><p>The first paragraph</p>
                        {/* <p>The second paragraph</p> */}
-            </BorderBox>
+            </Chapter06.BorderBox>
           </Route>
           <Route path="/listing611">
-            <FamilyTree father={new Person("Patrick")} /> {/* propType validates */}
-            {/* <FamilyTree father={"Patrick"} /> propType doesn't validate */}
+            <Chapter06.FamilyTree father={new Chapter06.Person("Patrick")} /> {/* propType validates */}
+            {/* <Chapter06.FamilyTree father={"Patrick"} /> propType doesn't validate */}
           </Route>
           <Route path="/listing612">
-            <FamilyTree father={new Person("Patrick")} pet={Dog} /> {/* propType validates */}
+            <Chapter06.FamilyTree father={new Chapter06.Person("Patrick")} pet={Chapter06.Dog} /> {/* propType validates */}
           </Route>
           <Route path="/listing613">
-            <DisplayPrimaryColors primaryColor = "red" />
+            <Chapter06.DisplayPrimaryColors primaryColor = "red" />
           </Route>
           <Route path="/listing614">
-            <Contact fullName="Chris Minnick" phone="5555555555" />
-            <Contact fullName="John Doe" phone="5555" />
+            <Chapter06.Contact fullName="Chris Minnick" phone="5555555555" />
+            <Chapter06.Contact fullName="John Doe" phone="5555" />
           </Route>
           <Route path="/listing615">
-            <StoresNearYou latitude="37.3230" longitude="122.0322" />
+            <Chapter06.StoresNearYou latitude="37.3230" longitude="122.0322" />
           </Route>
           <Route path="/listing616">
-            <StoresNearYou1 />
+            <Chapter06.StoresNearYou1 />
           </Route>
           <Route path="/listing617">
-            <StoresNearYou2 />
+            <Chapter06.StoresNearYou2 />
           </Route>
           <Route path="/listing618">
-            <StoresNearYou3 />
+            <Chapter06.StoresNearYou3 />
           </Route>
           <Route path="/listing619">
-            <StoresNearYou4 />
+            <Chapter06.StoresNearYou4 />
           </Route>
           <Route path="/listing620">
-            <StoresNearYou5 />
+            <Chapter06.StoresNearYou5 />
           </Route>
           <Route path="/listing621">
-            <NewsFeed />
+            <Chapter06.NewsFeed />
           </Route>
           
           <Route path="/listing622">
-            <NewsFeed2 />
+            <Chapter06.NewsFeed2 />
           </Route>
           <Route path="/listing623">
-            <NewsFeed3 />
+            <Chapter06.NewsFeed3 />
           </Route>
           <Route path="/listing624">
-            <NewsFeed4 />
+            <Chapter06.NewsFeed4 />
           </Route>
           <Route path="/listing625">
-            <CounterClass />
+            <Chapter06.CounterClass />
           </Route>
           <Route path="/listing626">
-            <CounterClass2 />
+            <Chapter06.CounterClass2 />
           </Route>
           <Route path="/listing627">
-            <CounterClass3 />
+            <Chapter06.CounterClass3 />
           </Route>
           <Route path="/listing628">
-            <CounterClass4 />
+            <Chapter06.CounterClass4 />
           </Route>
           <Route path="/Reminders">
-            <Reminders />
+            <Chapter06.Reminders />
           </Route>
           <Route path="/RemindersClass">
-            <RemindersClass />
+            <Chapter06.RemindersClass />
           </Route>
           <Route path="/listing701">
-            <EventProps />
+            <Chapter07.EventProps />
           </Route>
           <Route path="/listing706">
-            <ScreenDoor />
+            <Chapter07.ScreenDoor />
           </Route>
           <Route path="/listing707">
-            <SearchTerm />
+            <Chapter07.SearchTerm />
           </Route>
           <Route path="/listing708">
-            <CoffeeMachine />
+            <Chapter07.CoffeeMachine />
           </Route>
           <Route path="/listing709">
-            <ColorWheel />
+            <Chapter07.ColorWheel />
           </Route>
           <Route path="/listing801">
-            <UncontrolledInput />
+            <Chapter08.UncontrolledInput />
           </Route>
           <Route path="/listing802">
-            <ControlledInput />
+            <Chapter08.ControlledInput />
           </Route>
           <Route path="/listing803">
-            <ControllingFunction />
+            <Chapter08.ControllingFunction />
           </Route>
           <Route path="/listing804">
-            <ControllingClass />
+            <Chapter08.ControllingClass />
           </Route>
           <Route path="/listing805">
-            <ControllingClass2 />
+            <Chapter08.ControllingClass2 />
           </Route>
           <Route path="/listing806">
-            <SearchInterface />
+            <Chapter08.SearchInterface />
           </Route>
           <Route path="/listing807">
-            <BlogComment />
+            <Chapter08.BlogComment />
           </Route>
           <Route path="/listing903">
-            <TextReader bookText={mobydick} />
+            <Chapter09.TextReader bookText={Chapter09.mobydick} />
           </Route>
           <Route path="/listing904">
-            <TextReaderCallback bookText={mobydick} />
+            <Chapter09.TextReaderCallback bookText={Chapter09.mobydick} />
           </Route>
           <Route path="/listing905">
-            <TextReaderCallback2 bookText={mobydick} />
+            <Chapter09.TextReaderCallback2 bookText={Chapter09.mobydick} />
           </Route>
           <Route path="/listing906">
-            <CodeDisplay yourCode="8675309" />
+            <Chapter09.CodeDisplay yourCode="8675309" />
           </Route>
           <Route path="/listing907">
-            <AudioPlayer />
+            <Chapter09.AudioPlayer />
           </Route>
           <Route path="/listing908">
-            <ScrollToDemo />
+            <Chapter09.ScrollToDemo />
           </Route>
           <Route path="/listing1001">
-            <StyledParent />
+            <Chapter10.StyledParent />
           </Route>
           <Route path="/listing1101">
-            <NumberGuessing />
+            <Chapter11.NumberGuessing />
           </Route>
           <Route path="/listing1102">
-            <ButtonContainer />
+            <Chapter11.ButtonContainer />
           </Route>
           <Route path="/listing1103">
-            <RenderCounter />
+            <Chapter11.RenderCounter />
           </Route>
           <Route path="/listing1104">
-            <TimerFun />
+            <Chapter11.TimerFun />
           </Route>
           <Route path="/listing1105">
-            <TimerRestartFun />
+            <Chapter11.TimerRestartFun />
           </Route>
           <Route path="/listing1106">
-            <TimerOnceFun />
+            <Chapter11.TimerOnceFun />
           </Route>
           <Route path="/listing1107">
-          <TimerConditionalFun />
+          <Chapter11.TimerConditionalFun />
           </Route>
           <Route path="/listing1108">
-            <ShippingAddress />
+            <Chapter11.ShippingAddress />
           </Route>
           <Route path="/listing1110">
-            <ReducerCounter />
+            <Chapter11.ReducerCounter />
           </Route>
           <Route path="/listing1112">
-            <CallMe />
+            <Chapter11.CallMe />
           </Route>
           <Route path="/listing1113">
-            <CallMeFixed />
+            <Chapter11.CallMeFixed />
           </Route>
           <Route path="/listing1114">
-            <ShippingAddress2 />
+            <Chapter11.ShippingAddress2 />
           </Route>
           <Route path="/listing1113">
-            <WordCount />
+            <Chapter11.WordCount />
           </Route>
           <Route path="/listing1114">
-            <CountingBox />
+            <Chapter11.CountingBox />
           </Route>
           <Route path="/listing1115">
-            <WeatherWidget />
+            <Chapter11.WeatherWidget />
           </Route>
           <Route path="/listing1118">
-            <ShippingAddress2 />
+            <Chapter11.ShippingAddress2 />
           </Route>
           <Route path="/listing1121">
-            <UsingUseForm />
+            <Chapter11.UsingUseForm />
           </Route>         
           <Route path="/listing1201">
-            <ChooseYourAdventure />
+            <Chapter12.ChooseYourAdventure />
           </Route>
           <Route path="/listing1202">
-            <NavMenu />
+            <Chapter12.NavMenu />
           </Route>
           <Route path="/listing1203">
-            <NavMenuExact />
+            <Chapter12.NavMenuExact />
           </Route>
           <Route path="/listing1204">
-            <NavMenuWithRouter />
+            <Chapter12.NavMenuWithRouter />
           </Route>
 
           <Route path="/listing1206">
-            <ComponentProp />
+            <Chapter12.ComponentProp />
           </Route>
           <Route path="/listing1207">
-            <RenderProp />
+            <Chapter12.RenderProp />
           </Route>
           <Route path="/listing1208">
-            <ViewMatch />
+            <Chapter12.ViewMatch />
           </Route>
           <Route path="/listing1209">
-            <UserListRedirect />
+            <Chapter12.UserListRedirect />
           </Route>
           <Route path="/listing1214">
-            <ViewLocation />
+            <Chapter12.ViewLocation />
           </Route>
           <Route path="/listing1216">
-            <NestedRoutes />
+            <Chapter12.NestedRoutes />
           </Route>
 
           <Route path="/listing1302">
-            <BadComponent />
+            <Chapter13.BadComponent />
           </Route>
           <Route path="/listing1303">
-            <BadComponentWithBoundary />
+            <Chapter13.BadComponentWithBoundary />
           </Route>
           <Route path="/listing1304">
-            <ErrorBoundaryWithDidCatch><BadComponent /></ErrorBoundaryWithDidCatch>
+            <Chapter13.ErrorBoundaryWithDidCatch><Chapter13.BadComponent /></Chapter13.ErrorBoundaryWithDidCatch>
           </Route>
           <Route path="/listing1306">
-            <ErrorBoundaryWithLogging><BadComponent /></ErrorBoundaryWithLogging>
+            <Chapter13.ErrorBoundaryWithLogging><Chapter13.BadComponent /></Chapter13.ErrorBoundaryWithLogging>
           </Route>
           <Route path="/listing1307">
-            <SometimesBad />
+            <Chapter13.SometimesBad />
           </Route>
           <Route path="/listing1308">
-            <ErrorBoundaryWithReset><SometimesBad /></ErrorBoundaryWithReset>
+            <Chapter13.ErrorBoundaryWithReset><Chapter13.SometimesBad /></Chapter13.ErrorBoundaryWithReset>
           </Route>
           <Route path="/chapter13example">
-            <SampleTree />
+            <Chapter13.SampleTree />
           </Route>
           <Route path="/chapter13example2">
-            <SampleTreeWithErrorBoundary />
+            <Chapter13.SampleTreeWithErrorBoundary />
           </Route>
           <Route path="/listing1605">
-            <Restful />
+            <Chapter16.Restful />
           </Route>
           <Route path="/listing1606">
-            <Clicker1 />
+            <Chapter16.Clicker1 />
           </Route>
           <Route path="/listing1607">
-            <Clicker2 />
+            <Chapter16.Clicker2 />
           </Route>
           <Route path="/listing1608">
-            <Clicker3 />
+            <Chapter16.Clicker3 />
           </Route>
           <Route path="/listing1609">
-            <Clicker4 />
+            <Chapter16.Clicker4 />
           </Route>
           <Route path="/listing1701">
-            <PropDrilling story="test" />
+            <Chapter17.PropDrilling story="test" />
           </Route>
           <Route path="/listing1702">
-            <UnitsContext />
+            <Chapter17.UnitsContext />
           </Route>
           <Route path="/listing1707">
-            <DashboardProps />
+            <Chapter17.DashboardProps />
           </Route>
           <Route path="/listing1708">
-            <DashboardContext />
+            <Chapter17.DashboardContext />
           </Route>
           <Route path="/listing1710">
-            <DashboardComposition />
+            <Chapter17.DashboardComposition />
           </Route>
         </Switch>
       </main>

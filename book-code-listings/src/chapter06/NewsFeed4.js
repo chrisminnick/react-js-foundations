@@ -2,7 +2,7 @@ import {useState} from 'react'
 
 function NewsFeed4(props) {
 
-const [state,setState] = useState({date:new Date(),headlines:[]});
+const [state] = useState({date:new Date(),headlines:[]});
   
   return(
     <>
