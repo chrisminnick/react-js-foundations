@@ -19,11 +19,6 @@ import * as Chapter13 from './chapter13';
 import * as Chapter16 from './chapter16';
 import * as Chapter17 from './chapter17';
 
-
-
-
-
-
 function App() {
   return (
       <div style={{display:"flex"}}>
@@ -32,7 +27,6 @@ function App() {
             <li>
               <Link to="/">Home</Link>
             </li>
-            <li>Chapter 0</li>
             <li>
               <Collapsible trigger="Chapter 1">
               <ul>
@@ -45,13 +39,7 @@ function App() {
               </ul>
               </Collapsible>
             </li>
-            <li>
-              <Collapsible trigger="Chapter 2">
-                <ul>
 
-                </ul>
-              </Collapsible>
-            </li>
             <li>
               <Collapsible trigger="Chapter 3">
               <ul>
@@ -526,6 +514,30 @@ function App() {
                 </li>
                 <li>
                   <Link to="/listing1710">Listing 17-10</Link>
+                </li>
+                </ul>
+                </Collapsible>
+                </li>
+                <li>
+                <Collapsible trigger="Chapter 18">
+                <ul>
+                <li>
+                </li>
+                </ul>
+                </Collapsible>
+                </li>
+                <li>
+                <Collapsible trigger="Chapter 19">
+                <ul>
+                <li>
+                </li>
+                </ul>
+                </Collapsible>
+                </li>
+                <li>
+                <Collapsible trigger="Chapter 20">
+                <ul>
+                <li>
                 </li>
                 </ul>
                 </Collapsible>
