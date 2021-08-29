@@ -1,37 +1,6 @@
-## Welcome to GitHub Pages
+# React JS Foundations: Building User Interfaces with ReactJS by Chris Minnick
+Here, you'll find all the source code from the book, bug fixes and corrections, and a discussion area where you can ask questions about the book or whatever.
 
-You can use the [editor on GitHub](https://github.com/chrisminnick/react-js-foundations/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+## About the Author
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/chrisminnick/react-js-foundations/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Chris Minnick has been a full stack developer for over 25 years, and a professional author and trainer for 15 years. He has been the lead front-end React developer for several startup companies, and has been building web and mobile user interfaces with React since 2015. Chris has produced online video courses for Pluralsight and O'Reilly Media and is the author of the forthcoming book for Wiley Publishing: React JS Foundations: Building User Interfaces with React JS (to be released in March 2022).![image](https://user-images.githubusercontent.com/235308/131252144-cb0e8fb4-03ce-4f9d-83e2-e3742ee48ae9.png)
