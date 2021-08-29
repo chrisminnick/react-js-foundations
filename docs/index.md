@@ -1,4 +1,4 @@
-# React JS Foundations: Building User Interfaces with ReactJS by Chris Minnick
+# React JS Foundations: Building User Interfaces with ReactJS
 Here, you'll find all the source code from the book, bug fixes and corrections, and a discussion area where you can ask questions about the book or whatever.
 
 ## About the Author
