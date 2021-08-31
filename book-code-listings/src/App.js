@@ -50,7 +50,7 @@ function App() {
                   <Link to="/listing302">Listing 3-02</Link>
                 </li>
                 <li>
-                  <Link to="/listing303">Listing 3-03</Link>
+                  <Link to="/listing304">Listing 3-04</Link>
                 </li>
                 <li>
                   <Link to="/listing306">Listing 3-06</Link>
@@ -555,7 +555,7 @@ function App() {
           <Route path="/listing302">
             <Chapter03.SearchBox />
           </Route>
-          <Route path="/listing303">
+          <Route path="/listing304">
             <Chapter03.MyFancyComponent />
           </Route>
           <Route path="/listing306">

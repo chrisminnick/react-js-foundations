@@ -33,7 +33,7 @@ function Cart(props){
 }
 
 Cart.defaultProps = {
-    inCart: [{id:1,title:"Beginning React",price:5}]
+    inCart: [{id:1,title:"React JS Foundations",price:5}]
 };
 
 export default Cart;
