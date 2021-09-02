@@ -113,6 +113,9 @@ function App() {
                   <Link to="/listing405">Listing 4-05</Link>
                 </li>
                 <li>
+                  <Link to="/listing406">Listing 4-06</Link>
+                </li>
+                <li>
                   <Link to="/listing407">Listing 4-07</Link>
                 </li>      
                 <li>
@@ -138,6 +141,9 @@ function App() {
                 </li>
                 <li>
                   <Link to="/listing415">Listing 4-15</Link>
+                </li>
+                <li>
+                  <Link to="/listing416">Listing 4-16</Link>
                 </li>
                 <li>
                   <Link to="/listing417">Listing 4-17</Link>
@@ -692,61 +698,124 @@ export default Header;
           </>
           </Route>
           <Route path="/listing401">
+          <>
+            <h2>Listing 4-1: Components Define Elements</h2>
             <Chapter04.WelcomeMessage />
+          </>
           </Route>
           <Route path="/listing402">
+          <>
+            <h2>Listing 4-2: Components can be imported into other components</h2>
             <Chapter04.WelcomeTitle />
+          </>
           </Route>
           <Route path="/listing403">
+          <>
+            <h2>Listing 4-3: Using components to reduce complexity</h2>
             <Chapter04.Cart />
+          </>
           </Route>
           <Route path="/listing404">
+          <>
+            <h2>Listing 4-4: Putting everything in one component</h2>
             <Chapter04.SingleComponentCart />
+          </>
           </Route>
           <Route path="/listing405">
+          <>
+            <h2>Listing 4-5: Passing props</h2>
             <Chapter04.Farms />
+          </>
+          </Route>
+          <Route path="/listing406">
+          <>
+            <h2>Listing 4-6: Using props inside a component</h2>
+            <Chapter04.Farm farmer="Old McDonald" animals={['pigs','cows','chickens']} />
+          </>
           </Route>
           <Route path="/listing407">
+          <>
+            <h2>Listing 4-7: An improved version of the Farm component</h2>
             <Chapter04.ImprovedFarms />
+          </>
           </Route>
           <Route path="/listing408">
+          <>
+          <h2>Listing 4-8: Creating a Component with React.createClass</h2>
             <Chapter04.CreateReactClass />
+          </>
           </Route>
           <Route path="/listing409">
+          <>
+            <h2>Listing 4-9: Creating a Component Using a Class</h2>
             <Chapter04.ReactClassComponent />
+          </>
           </Route>
           <Route path="/listing410">
+          <>
+            <h2>Listing 4-10: Not binding your functions results in errors</h2>
             <Chapter04.UnboundFunction />
+          </>
           </Route>    
           <Route path="/listing411">
+          <>
+            <h2>Listing 4-11: Binding a function and using it in another class</h2>
             <Chapter04.BoundFunction />
+          </>
           </Route>                  
           <Route path="/listing412">
+          <>
+            <h2>Listing 4-12: Using state and setState in a Class Component</h2>
             <Chapter04.ClassComponentState />
+          </>
           </Route>
           <Route path="/listing413">
+          <>
+            <h2>Listing 4-13: setState() is asynchronous</h2>
             <Chapter04.SetStateAsync />
+          </>
           </Route>
           <Route path="/listing414">
+          <>
+            <h2>Listing 4-14: Rendering a figure and caption</h2>
             <Chapter04.BasicFigure />
+          </>
           </Route>
           <Route path="/listing415">
+          <>
+            <h2>Listing 4-15: The FigureList component</h2>
             <Chapter04.FigureList />
+          </>
           </Route>
           <Route path="/listing416">
+          <>
+            <h2>Listing 4-16: Using props to pass data to a child component</h2>
             <Chapter04.FigureListProps />
+          </>
           </Route>
           <Route path="/listing417">
-            <Chapter04.FigureListProps />
+          <>
+            <h2>Listing 4-17: Using props in a class component</h2>
+            <Chapter04.BasicFigureProps filename="images/chickens.png" caption="Lefty and Ginger" />
+          </>
           </Route>
           <Route path="/listing418">
+          <>
+            <h2>Listing 4-18: A typical class component</h2>
             <Chapter04.ToDoClass />
+          </>
           </Route>
           <Route path="/listing419">
+          <>
+            <h2>Listing 4-19: A typical function component</h2>
             <Chapter04.ToDoFunction />
+          </>
           </Route>
           <Route path="/listing420">
+          <>
+            <h2>Listing 4-20: Further simplifying a function component</h2>
             <Chapter04.ToDoFunctionSimple />
+          </>
           </Route>
           <Route path="/listing421">
             <Chapter04.Counter />

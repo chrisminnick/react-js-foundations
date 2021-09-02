@@ -1,15 +1,34 @@
 import {Component} from 'react';
 import BasicFigureProps from './BasicFigureProps';
 
-class FigureListProps extends Component {
+class FigureList extends Component {
   render() {
     return (
-        <div style={{display:"flex"}}>
-            <BasicFigureProps filename="images/dog.png" caption="Dog" />
-            <BasicFigureProps filename="images/cat.png" caption="Cat" />
-            <BasicFigureProps filename="images/chickens.png" caption="Chickens" />
-        </div>
+      <>
+      <div style={{display:"flex"}}>  
+        <BasicFigureProps filename="images/dog.png" caption="Chauncey" />
+        <BasicFigureProps filename="images/cat.png" caption="Murray" />
+        <BasicFigureProps filename="images/chickens.png" caption="Lefty and Ginger" />
+      </div>
+      <pre>
+{`import {Component} from 'react';
+import BasicFigureProps from './BasicFigureProps';
+
+class FigureList extends Component {
+  render() {
+    return (
+      <div style={{display:"flex"}}>  
+        <BasicFigureProps filename="dog.jpg" caption="Chauncey" />
+        <BasicFigureProps filename="cat.jpg" caption="Murray" />
+        <BasicFigureProps filename="chickens.jpg" caption="Lefty and Ginger" />
+      </div>
     )
   }
 }
-export default FigureListProps;
+export default FigureList;`}
+      </pre>
+      </>
+    )
+  }
+}
+export default FigureList;
