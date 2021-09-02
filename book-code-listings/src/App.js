@@ -34,6 +34,9 @@ function App() {
                   <a href="/Listing01-01">Listing 1-1</a>
                 </li>
                 <li>
+                  <a href="/Listing0102">Listing 1-2</a>
+                </li>
+                <li>
                   <Link to="/listing0103">Listing 1-3</Link>
                 </li>
               </ul>
@@ -50,10 +53,19 @@ function App() {
                   <Link to="/listing302">Listing 3-02</Link>
                 </li>
                 <li>
+                  <Link to="/listing303">Listing 3-03</Link>
+                </li>
+                <li>
                   <Link to="/listing304">Listing 3-04</Link>
                 </li>
                 <li>
+                  <Link to="/listing305">Listing 3-05</Link>
+                </li>
+                <li>
                   <Link to="/listing306">Listing 3-06</Link>
+                </li>
+                <li>
+                  <Link to="/listing307">Listing 3-07</Link>
                 </li>
                 <li>
                   <Link to="/listing308">Listing 3-08</Link>
@@ -545,45 +557,139 @@ function App() {
           </ul>
         </nav>
         <main style={{padding:"20px",width:"100%"}}>
+          <h1>React JS Foundations Building User Interfaces with ReactJS: An Approachable Guide</h1>
+          <p>by Chris Minnick</p>
         <Switch>
+          <Route path="/listing0102">
+            <>
+            <h2>Listing 1-2: Changing the state data in a component</h2>
+            <Chapter01.Listing0102 />
+            </>
+          </Route>
           <Route path="/listing0103">
+            <>
+            <h2>Listing 1-3: An interactive Hello, World component</h2>
             <Chapter01.Listing0103 />
+            </>
           </Route>
           <Route path="/listing301">
+            <>
+            <h2>Listing 3-1: A React Component</h2>
             <Chapter03.Login />
+            </>
           </Route>
           <Route path="/listing302">
+            <>
+            <h2>Listing 3-2: Using a user-defined React component in JSX</h2>
             <Chapter03.SearchBox />
+            </>
+          </Route>
+          <Route path="/listing303">
+            <>
+            <h2>Listing 3-3: Custom attributes in HTML must start with data-</h2>
+            <pre>{`<div data-size="XL" 
+         data-color="black"
+         data-description="awesome">
+         My Favorite T-Shirt
+    </div>
+`}</pre>
+            </>
           </Route>
           <Route path="/listing304">
+            <>
+            <h2>Listing 3-4: User-defined elements can have any attributes</h2>
             <Chapter03.MyFancyComponent />
+            </>
+          </Route>
+          <Route path="/listing305">
+            <>
+            <h2>Listing 3-5: Using literal JavaScript inside of JSX</h2>
+            <pre>
+{`function SearchInput(props) {
+
+return (
+  <div id="search-box">
+    <input  type="text" 
+            name="search" 
+            value={props.term}
+            onChange={(e)=>{props.onChange(e.target.value)}} />
+  </div>
+)
+}
+
+export default SearchInput;
+`}</pre>
+            </>
           </Route>
           <Route path="/listing306">
+          <>
+            <h2>Listing 3-6:  Object literals in JSX result in double curly braces</h2>
             <Chapter03.Header />
+          </>
+          </Route>
+          <Route path="/listing307">
+            <>
+              <h2>Listing 3-7: Enclose comments in curly braces</h2>
+<pre>{`function Header(props){
+return (
+  <h1 style={{fontSize:"24px",color:"blue"}}>
+    {/* Todo: Make this header dynamic */}
+
+    Welcome to My Website
+  </h1>
+  )
+}
+export default Header;
+`}</pre>
+          </>
           </Route>
           <Route path="/listing308">
+          <>
+            <h2>Listing 3-8: Using Element Variables</h2>
             <Chapter03.Welcome />
+          </>
           </Route>
           <Route path="/listing309">
+          <>
+            <h2>Listing 3-9: Conditional Rendering with Element Variables</h2>
             <Chapter03.ConditionalWelcome />
+          </>
           </Route>
           <Route path="/listing310">
+          <>
+            <h2>Listing 3-10: Conditional Rendering with &&</h2>
             <Chapter03.ConditionalWelcome2 />
+          </>
           </Route>
           <Route path="/listing311">
+          <>
+            <h2>Listing 3-11: Using the conditional operator</h2>
             <Chapter03.ConditionalWelcome3 />
+          </>
           </Route>
           <Route path="/listing312">
+          <>
+            <h2>Listing 3-12: Using an arrow function as an event handler</h2>
             <Chapter03.CountUp />
+          </>
           </Route>
           <Route path="/listing313">
+          <>
+            <h2>Listing 3-13: Immediately invoking a function in JSX</h2>
             <Chapter03.ImmediateInvoke />
+          </>
           </Route>
           <Route path="/listing314">
+          <>
+            <h2>Listing 3-14: Using React.Fragment</h2>
             <Chapter03.FragmentExample1 />
+          </>
           </Route>
           <Route path="/listing315">
+          <>
+            <h2>Listing 3-15: Using React.Fragment's Short Syntax</h2>
             <Chapter03.FragmentExample2 />
+          </>
           </Route>
           <Route path="/listing401">
             <Chapter04.WelcomeMessage />
