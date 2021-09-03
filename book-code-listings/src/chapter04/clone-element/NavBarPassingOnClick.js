@@ -25,8 +25,7 @@ function App(props){
 export default App;
 `}
     </pre>
-    </>
-    );
+    </>);
 }
 
 export default App;

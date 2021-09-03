@@ -173,6 +173,21 @@ function App() {
                   <Link to="/listing425">Listing 4-25</Link>
                 </li>
                 <li>
+                  <Link to="/listing426">Listing 4-26</Link>
+                </li>
+                <li>
+                  <Link to="/listing427">Listing 4-27</Link>
+                </li>
+                <li>
+                  <Link to="/listing428">Listing 4-28</Link>
+                </li>
+                <li>
+                  <Link to="/listing429">Listing 4-29</Link>
+                </li>
+                <li>
+                  <Link to="/listing430">Listing 4-30</Link>
+                </li>
+                <li>
                   <Link to="/listing431">Listing 4-31</Link>
                 </li>
                 <li>
@@ -196,7 +211,9 @@ function App() {
             <li>
               <Collapsible trigger="Chapter 5">
                 <ul>
-
+                <li>
+                  <Link to="/listing501">React Book Store</Link>
+                </li>
                 </ul>
               </Collapsible>
             </li>
@@ -818,37 +835,108 @@ export default Header;
           </>
           </Route>
           <Route path="/listing421">
+          <>
+            <h2>Listing 4-21: Using state in functional components</h2>
             <Chapter04.Counter />
+          </>
           </Route>
           <Route path="/listing422">
+          <>
+            <h2>Listing 4-22: A component made up of three child components</h2>
             <Chapter04.LoginForm />
+          </>
           </Route>
           <Route path="/listing423">
+          <>
+            <h2>Listing 4-23: Presenting ThingsThatAreFunny</h2>
             <Chapter04.ThingsThatAreFunny />
+          </>
           </Route>
           <Route path="/listing424">
+          <>
+            <h2>Listing 4-24: Passing children into a component</h2>
             <Chapter04.ThingsThatILike />
+          </>
           </Route>
           <Route path="/listing425">
+          <>
+            <h2>Listing 4-25: Rendering a NavBar inside of App</h2>
             <Chapter04.CloneElementExample />
+          </>
+          </Route>
+          <Route path="/listing426">
+          <>
+            <h2>Listing 4-26: Rendering the Children using props.children</h2>
+            <Chapter04.NavBarChildren />
+          </>
+          </Route>
+          <Route path="/listing427">
+          <>
+            <h2>Listing 4-27: Cloning the Children in NavBar.js</h2>
+            <Chapter04.NavBarCloneChildren />
+          </>
+          </Route>
+          <Route path="/listing428">
+          <>
+            <h2>Listing 4-28: Passing onClick into the parent component</h2>
+            <Chapter04.NavBarPassingOnClick />
+          </>
+          </Route>
+          <Route path="/listing429">
+          <>
+            <h2>Listing 4-29: Making use of props in a child component</h2>
+            <Chapter04.NavBarUsingOnClick />
+          </>
+          </Route>
+          <Route path="/listing430">
+          <>
+            <h2>Listing 4-30: Comparing previous and next props in shouldComponentUpdate</h2>
+            <pre>
+{`class ToDoItem extends Component {
+    shouldComponentUpdate(nextProps, nextState) {
+        return nextProps.isChecked != this.props.isChecked;
+    }
+    ...
+}
+`}
+            </pre>
+          </>
           </Route>
           <Route path="/listing431">
+          <>
+            <h2>Listing 4-31: A React component with a potential memory leak</h2>
             <Chapter04.LeakyCounter />
+          </>
           </Route>
           <Route path="/listing432">
+          <>
+            <h2>Listing 4-32: Toggling the rendering of the Counter</h2>
             <Chapter04.CounterController />
+          </>
           </Route>
           <Route path="/listing433">
+          <>
+            <h2>Listing 4-33: Fixing a memory leak</h2>
             <Chapter04.NoLeakCounterController />
+          </>
           </Route>
           <Route path="/listing434">
+          <>
+            <h2>Listing 4-34: Using shouldComponentUpdate() and shallowCompare()</h2>
             <Chapter04.ShallowCompare />
+          </>
           </Route>
           <Route path="/listing435">
+          <>
+            <h2>Listing 4-35: Extending React.PureComponent</h2>
             <Chapter04.PureComponent />
+          </>
           </Route>
           <Route path="/listing436">
+          <>
+            <h2>Listing 4-36: Using React.memo</h2>
             <Chapter04.ReactMemoExample />
+          </>
           </Route>
           <Route path="/listing601">
             <Chapter06.Mutato />
