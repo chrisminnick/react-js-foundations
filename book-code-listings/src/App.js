@@ -208,15 +208,7 @@ function App() {
               </ul>
               </Collapsible>
             </li>
-            <li>
-              <Collapsible trigger="Chapter 5">
-                <ul>
-                <li>
-                  <Link to="/listing501">React Book Store</Link>
-                </li>
-                </ul>
-              </Collapsible>
-            </li>
+
             <li>
               <Collapsible trigger="Chapter 6">
               <ul>
@@ -231,6 +223,15 @@ function App() {
                 </li>
                 <li>
                   <Link to="/listing604">Listing 6-04</Link>
+                </li>
+                <li>
+                  <Link to="/listing605">Listing 6-05</Link>
+                </li>
+                <li>
+                  <Link to="/listing606">Listing 6-06</Link>
+                </li>
+                <li>
+                  <Link to="/listing607">Listing 6-07</Link>
                 </li>
                 <li>
                   <Link to="/listing608">Listing 6-08</Link>
@@ -261,6 +262,9 @@ function App() {
                 </li>
                 <li>
                   <Link to="/listing617">Listing 6-17</Link>
+                </li>
+                <li>
+                  <Link to="/listing618">Listing 6-18</Link>
                 </li>
                 <li>
                   <Link to="/listing619">Listing 6-19</Link>
@@ -297,6 +301,87 @@ function App() {
                 </li>
                 <li>
                   <Link to="/listing630">Listing 6-30</Link>
+                </li>
+                <li>
+                  <Link to="/listing631">Listing 6-31</Link>
+                </li>
+                <li>
+                  <Link to="/listing632">Listing 6-32</Link>
+                </li>
+                <li>
+                  <Link to="/listing633">Listing 6-33</Link>
+                </li>
+                <li>
+                  <Link to="/listing634">Listing 6-34</Link>
+                </li>
+                <li>
+                  <Link to="/listing635">Listing 6-35</Link>
+                </li>
+                <li>
+                  <Link to="/listing636">Listing 6-36</Link>
+                </li>
+                <li>
+                  <Link to="/listing637">Listing 6-37</Link>
+                </li>
+                <li>
+                  <Link to="/listing638">Listing 6-38</Link>
+                </li>
+                <li>
+                  <Link to="/listing639">Listing 6-39</Link>
+                </li>
+                <li>
+                  <Link to="/listing640">Listing 6-40</Link>
+                </li>
+                <li>
+                  <Link to="/listing641">Listing 6-41</Link>
+                </li>
+                <li>
+                  <Link to="/listing642">Listing 6-42</Link>
+                </li>
+                <li>
+                  <Link to="/listing643">Listing 6-43</Link>
+                </li>
+                <li>
+                  <Link to="/listing644">Listing 6-44</Link>
+                </li>
+                <li>
+                  <Link to="/listing645">Listing 6-45</Link>
+                </li>
+                <li>
+                  <Link to="/listing646">Listing 6-46</Link>
+                </li>
+                <li>
+                  <Link to="/listing647">Listing 6-47</Link>
+                </li>
+                <li>
+                  <Link to="/listing648">Listing 6-48</Link>
+                </li>
+                <li>
+                  <Link to="/listing649">Listing 6-49</Link>
+                </li>
+                <li>
+                  <Link to="/listing650">Listing 6-50</Link>
+                </li>
+                <li>
+                  <Link to="/listing651">Listing 6-51</Link>
+                </li>
+                <li>
+                  <Link to="/listing652">Listing 6-52</Link>
+                </li>
+                <li>
+                  <Link to="/listing653">Listing 6-53</Link>
+                </li>
+                <li>
+                  <Link to="/listing654">Listing 6-54</Link>
+                </li>
+                <li>
+                  <Link to="/listing655">Listing 6-55</Link>
+                </li>
+                <li>
+                  <Link to="/listing656">Listing 6-56</Link>
+                </li>
+                <li>
+                  <Link to="/listing657">Listing 6-57</Link>
                 </li>
                 <li>
                   <Link to="/Reminders">Finished Reminders App</Link>
@@ -939,85 +1024,1257 @@ export default Header;
           </>
           </Route>
           <Route path="/listing601">
+          <>
+            <h2>Listing 6-1: Changing local variables doesn't update the view</h2>
             <Chapter06.Mutato />
+          </>
           </Route>
           <Route path="/listing602">
+          <>
+            <h2>Listing 6-2: A Component That Uses a String Prop</h2>
             <Chapter06.WelcomeMessageProps firstName='Jimmy' />
+          </>
           </Route>
           <Route path="/listing603">
+          <>
+            <h2>Listing 6-3: Validating That a Prop is a String</h2>
             <Chapter06.WelcomeMessageProps firstName='Test' />
+          </>
           </Route>
           <Route path="/listing604">
+          <>
+            <h2>Listing 6-4: PropTypes Inside a Component's Body</h2>
             <Chapter06.WelcomeClass firstName={'frank'} />
+          </>
+          </Route>
+          <Route path="/listing605">
+          <>
+            <h2>Listing 6-5: Putting PropTypes Outside the Class Body</h2>
+<pre>{`import PropTypes from 'prop-types';
+import {Component} from 'react';
+
+class WelcomeMessage extends Component {
+
+  render(){
+    return(<h1>Welcome, {this.props.firstName}!</h1>);
+  }
+}
+
+WelcomeMessage.propTypes = {
+  firstName: PropTypes.string
+}
+
+export default WelcomeMessage;
+`}</pre>
+          </>
+          </Route>
+          <Route path="/listing606">
+          <>
+            <h2>Listing 6-6: Using PropTypes with a Function Component</h2>
+<pre>
+{`import PropTypes from 'prop-types';
+
+function MyComponent(props){
+  return (<p>The value is {props.itemValue}</p>);
+}
+
+MyComponent.propTypes = {
+  itemValue: PropTypes.number
+}
+
+export default MyComponent;
+`}</pre>
+          </>
+          </Route>
+          <Route path="/listing607">
+          <>
+            <h2>Listing 6-7: Appending the isRequired Validator</h2>
+<pre>
+{`MyComponent.propTypes = {
+  firstName: PropTypes.string.isRequired,
+  middleName: PropTypes.string,
+  lastName: PropTypes.string.isRequired
+}
+`}</pre>
+          </>
           </Route>
           <Route path="/listing608">
+          <>
+          <h2>Listing 6-8: Trying to render a non-node value</h2>
             <p>Uncomment the SiteLink element in App.js to see the error from passing an object to the SiteLink component.</p>
             {/* <Chapter06.SiteLink url="http://example.com" linkName={{name:'Example'}} /> */}
+          </>
           </Route>
           <Route path="/listing609">
+          <>
+            <h2>Listing 6-9: Using PropTypes.node</h2>
             <Chapter06.SiteLinkNode url="http://example.com" linkName="Example" />
+          </>
           </Route>
           <Route path="/listing610">
-            <Chapter06.BorderBox><p>The first paragraph</p>
-                       {/* <p>The second paragraph</p> */}
+          <>
+            <h2>Listing 6-10: Validating React Elements</h2>
+            <Chapter06.BorderBox>
+                <p>The first paragraph</p>
+                <p>The second paragraph</p>
             </Chapter06.BorderBox>
+          </>
           </Route>
           <Route path="/listing611">
-            <Chapter06.FamilyTree father={new Chapter06.Person("Patrick")} /> {/* propType validates */}
-            {/* <Chapter06.FamilyTree father={"Patrick"} /> propType doesn't validate */}
+            <>
+            <h2>Listing 6-11: Using the elementType Validator</h2>
+          
+            <pre>
+{`FamilyTree.propTypes = {
+  pet: PropTypes.elementType
+}
+`}
+            </pre>
+            </>
           </Route>
           <Route path="/listing612">
-            <Chapter06.FamilyTree father={new Chapter06.Person("Patrick")} pet={Chapter06.Dog} /> {/* propType validates */}
+          <>
+            <h2>Listing 6-12: Validating that a prop is an instance of a class</h2>
+            <Chapter06.FamilyTree father={new Chapter06.Person("Patrick")} /> {/* propType validates */}
+            {/* <Chapter06.FamilyTree father={"Patrick"} /> propType doesn't validate */}
+          </>
           </Route>
           <Route path="/listing613">
+          <>
+            <h2>Listing 6-13: Using PropTypes.oneOf</h2>
             <Chapter06.DisplayPrimaryColors primaryColor = "red" />
+          </>
           </Route>
           <Route path="/listing614">
+            <>
+            <h2>Listing 6-14: Using a Custom validator to test for a phone number</h2>
             <Chapter06.Contact fullName="Chris Minnick" phone="5555555555" />
             <Chapter06.Contact fullName="John Doe" phone="5555" />
+            </>
           </Route>
           <Route path="/listing615">
+            <>
+            <h2>Listing 6-15: A component without default props</h2>
             <Chapter06.StoresNearYou latitude="37.3230" longitude="122.0322" />
+            </>
           </Route>
           <Route path="/listing616">
+            <>
+            <h2>Listing 6-16: Setting defaults with the || Operator</h2>
             <Chapter06.StoresNearYou1 />
+            </>
           </Route>
           <Route path="/listing617">
+            <>
+            <h2>Listing 6-17: Destructuring props and setting defaults</h2>
             <Chapter06.StoresNearYou2 />
+            </>
           </Route>
           <Route path="/listing618">
+            <>
+            <h2>Listing 6-18: Setting defaultProps as a static property</h2>
             <Chapter06.StoresNearYou3 />
+            </>
           </Route>
           <Route path="/listing619">
+            <>
+            <h2>Listing 6-19: Setting defaultProps outside of the component body</h2>
             <Chapter06.StoresNearYou4 />
+            </>
           </Route>
           <Route path="/listing620">
+            <>
+            <h2>Listing 6-20: Setting defaultProps for a function component</h2>
             <Chapter06.StoresNearYou5 />
+            </>
           </Route>
           <Route path="/listing621">
+            <>
+            <h2>Listing 6-21: Initializing State in a Class Component</h2>
             <Chapter06.NewsFeed />
+            </>
           </Route>
           
           <Route path="/listing622">
+            <>
+            <h2>Listing 6-22: Initializing state using the class property</h2>
             <Chapter06.NewsFeed2 />
+            </>
           </Route>
           <Route path="/listing623">
+            <>
+            <h2>Listing 6-23: Initializing State in a Function Component</h2>
             <Chapter06.NewsFeed3 />
+            </>
           </Route>
           <Route path="/listing624">
+            <>
+            <h2>Listing 6-24: Another Approach to Initializing State in a Function Component</h2>
             <Chapter06.NewsFeed4 />
+            </>
           </Route>
           <Route path="/listing625">
+            <>
+            <h2>Listing 6-25: Using setState</h2>
             <Chapter06.CounterClass />
+            </>
           </Route>
           <Route path="/listing626">
+            <>
+            <h2>Listing 6-26: Using setState with Multiple State Properties</h2>
             <Chapter06.CounterClass2 />
+            </>
           </Route>
           <Route path="/listing627">
+            <>
+            <h2>Listing 6-27: Demonstrating setState's asychronous nature</h2>
             <Chapter06.CounterClass3 />
+            </>
           </Route>
           <Route path="/listing628">
+            <>
+            <h2>Listing 6-28: Using the updater function with setState</h2>
             <Chapter06.CounterClass4 />
+            </>
+          </Route>
+          <Route path="/listing629">
+            <>
+            <h2>Listing 6-29: The Static Version of the App Component</h2>
+            <pre>
+{`import InputForm from './InputForm';
+import FilterSelect from './FilterSelect';
+import RemindersList from './RemindersList';
+
+function App(){
+  return(
+      <div>
+          <InputForm />
+          <FilterSelect />
+          <RemindersList />
+      </div>
+  );
+}
+
+export default App;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing630">
+            <>
+            <h2>Listing 6-30: A Shell Component for InputForm</h2>
+            <pre>
+{`function InputForm(props){
+  return(
+    <div>Input form here</div>
+  );
+}
+export default InputForm;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing631">
+            <>
+            <h2>Listing 6-31: A Shell Component for FilterSelect</h2>
+            <pre>
+{`function FilterSelect(props){
+  return(
+      <div>Filter the List</div>
+  );
+}
+export default FilterSelect;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing632">
+            <>
+            <h2>Listing 6-32: A Shell Component for RemindersList</h2>
+            <pre>
+              {`function RemindersList(props){
+  return(
+      <div>Reminders List</div>
+  );
+}
+export default RemindersList;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing633">
+            <>
+            <h2>Listing 6-33: A Shell Component for Reminder</h2>
+            <pre>
+              {`function Reminder(props){
+  return(
+      <div>Reminder</div>
+  );
+}
+export default Reminder;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing634">
+            <>
+            <h2>Listing 6-34: RemindersList with Reminder Imported</h2>
+            <pre>
+              {`import Reminder from './Reminder';
+
+function RemindersList(props){
+  return(
+    <div>
+      <Reminder />
+      <Reminder />
+      <Reminder />
+    </div>
+  );
+}
+export default RemindersList;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing635">
+            <>
+            <h2>Listing 6-35: Round Two of InputForm</h2>
+            <pre>
+              {`function InputForm(props){
+  return(
+    <form>
+      <input id="reminderText" type="text" placeholder="What do you want to do?" />
+      <input id="dueDate" type="date" />
+      <button>Add Item</button>
+    </form>
+  );
+}
+export default InputForm;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing636">
+            <>
+            <h2>Listing 6-36: Round Two of FilterSelect</h2>
+            <pre>
+              {`function FilterSelect(props){
+  return(
+    <label htmlFor="filterReminders">Show tasks due: 
+      <select id="filterReminders" value="2day">
+        <option value="2day">within 2 Days</option>
+        <option value="1week">within 1 Week</option>
+        <option value="30days">within 30 Days</option>
+        <option value="all">any time</option>
+      </select>
+    </label>
+  );
+}
+export default FilterSelect;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing637">
+            <>
+            <h2>Listing 6-37: Round Two of RemindersList</h2>
+            <pre>
+              {`import Reminder from './Reminder';
+
+function RemindersList(props){
+  return(
+    <div>
+      <Reminder reminderText="Pick up Wesley" dueDate="2364-01-15" isComplete={false} />
+      <Reminder reminderText="Meet with Jean-Luc" dueDate="2364-01-29" isComplete={false} />
+      <Reminder reminderText="Holodeck time!" dueDate="2364-06-01" isComplete={false} />
+    </div>
+  );
+}
+export default RemindersList;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing638">
+            <>
+            <h2>Listing 6-38: Round Two of Reminder</h2>
+            <pre>
+              {`function Reminder(props){
+  return(
+    <div>item: {props.reminderText} 
+         due date: {props.dueDate} 
+         Completed?: {String(props.isComplete)}
+    </div>
+  );
+}
+export default Reminder;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing639">
+            <>
+            <h2>Listing 6-39: App with Lifted State</h2>
+            <pre>
+              {`import {useState} from 'react';
+import InputForm from './InputForm';
+import FilterSelect from './FilterSelect';
+import RemindersList from './RemindersList';
+
+function App(){
+  const [reminders,setReminders] = useState();
+  const [userInput,setUserInput] = useState();
+  const [selectedFilter,setSelectedFilter] = useState("all");
+
+  return(
+    <div>
+      <InputForm userInput={userInput} 
+                 setUserInput={setUserInput} />
+      <FilterSelect selectedFilter={selectedFilter} 
+                    setSelectedFilter={setSelectedFilter} />
+      <RemindersList reminders={reminders} />
+    </div>
+  );
+}
+
+export default App;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing640">
+            <>
+            <h2>Listing 6-40: Pure InputForm</h2>
+            <pre>
+              {`function InputForm(props){
+  return(
+    <form>
+      <input value={props.userInput.reminderText} 
+             id="reminderText" 
+             type="text" 
+             placeholder="What do you want to do?" />
+      <input value={props.userInput.dueDate}
+             id="dueDate" 
+             type="date" />
+      <button>Add Item</button>
+    </form>
+  );
+}
+export default InputForm;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing641">
+            <>
+            <h2>Listing 6-41: Pure FilterSelect</h2>
+            <pre>
+            {`function FilterSelect(props){
+  return(
+    <label htmlFor="filterReminders">Show tasks due: 
+      <select id="filterReminders" value={props.selectedFilter}>
+        <option value="2day">within 2 Days</option>
+        <option value="1week">within 1 Week</option>
+        <option value="30days">within 30 Days</option>
+        <option value="all">any time</option>
+      </select>
+    </label>
+  );
+}
+export default FilterSelect;
+`}</pre>
+            </>
+          </Route>
+          <Route path="/Listing642">
+            <>
+            <h2>Listing 6-42: Pure RemindersList</h2>
+            <pre>
+              {`import Reminder from './Reminder';
+
+function RemindersList(props){
+
+  const reminders = props.reminders.map((reminder,index)=>{
+    return (<Reminder reminderText={reminder.reminderText} 
+                      dueDate={reminder.dueDate} 
+                      isComplete={reminder.isComplete}
+                      id={index}
+                      key={index} />);
+  });
+
+  return(
+      <div>
+        {reminders}
+      </div>
+  );
+}
+export default RemindersList;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing643">
+            <>
+            <h2>Listing 6-43: Adding PropTypes and Default Values to InputForm</h2>
+            <pre>
+              {`import PropTypes from 'prop-types';
+
+function InputForm(props){
+  return(
+      <form>
+        <input value={props.userInput.reminderText} 
+               id="reminderText" 
+               type="text" 
+               placeholder="What do you want to do?" />
+        <input value={props.userInput.dueDate}
+               id="dueDate" 
+               type="date" />
+        <button>Add Item</button>
+      </form>
+  );
+}
+
+InputForm.propTypes = {
+  userInput: PropTypes.shape({
+    reminderText: PropTypes.string,
+    dueDate: PropTypes.string
+  }),
+  setUserInput: PropTypes.func
+}
+
+const date = new Date();
+const formattedDate = date.toISOString().substr(0,10);
+
+InputForm.defaultProps = {
+  userInput: {
+    reminderText:"",
+    dueDate:formattedDate
+  }
+}
+
+export default InputForm;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing644">
+            <>
+            <h2>Listing 6-44: RemindersList with Default Props and PropTypes</h2>
+            <pre>
+              {`import PropTypes from 'prop-types';
+import Reminder from './Reminder';
+
+function RemindersList(props){
+
+  const reminders = props.reminders.map((reminder,index)=>{
+    return (<Reminder reminderText={reminder.reminderText} 
+                      dueDate={reminder.dueDate}
+                      isComplete={reminder.isComplete}
+                      id={index} 
+                      key={index} />);
+  });
+
+  return(
+      <div>
+        {reminders}
+      </div>
+  );
+}
+
+RemindersList.propTypes = {
+  reminders: PropTypes.array
+}
+
+const date = new Date();
+const formattedDate = date.toISOString().substr(0,10);
+
+RemindersList.defaultProps = {
+  reminders: [{
+    reminderText:"No Reminders Yet",
+    dueDate:formattedDate,
+    isComplete: false
+  }]
+}
+
+export default RemindersList;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing645">
+            <>
+            <h2>Listing 6-45: Validating and Setting Defaults for FilterSelect</h2>
+            <pre>
+              {`import PropTypes from 'prop-types';
+
+function FilterSelect(props){
+  return(
+    <label htmlFor="filterReminders">Show tasks due: 
+      <select id="filterReminders" value={props.selectedFilter}>
+        <option value="2day">within 2 Days</option>
+        <option value="1week">within 1 Week</option>
+        <option value="30days">within 30 days</option>
+        <option value="all">any time</option>
+      </select>
+    </label>
+  );
+}
+
+FilterSelect.propTypes = {
+  selectedFilter: PropTypes.string,
+  setSelectedFilter: PropTypes.func
+}
+
+FilterSelect.defaultProps = {
+  selectedFilter:'all'
+}
+
+export default FilterSelect;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing646">
+            <>
+            <h2>Listing 6-46: Reminder with PropTypes and defaultProps</h2>
+            <pre>
+              {`import PropTypes from 'prop-types';
+
+function Reminder(props){
+    return(
+        <div>item: {props.reminderText} 
+             due date: {props.dueDate} 
+             Completed?: {String(props.isComplete)}</div>
+    );
+  }
+  
+Reminder.propTypes = {
+    reminderText: PropTypes.string,
+    dueDate: PropTypes.string,
+    isComplete: PropTypes.bool
+}
+
+const date = new Date();
+const formattedDate = date.toISOString().substr(0,10);
+
+Reminder.defaultProps = {
+    reminderText:"No Reminder Set",
+    dueDate:formattedDate,
+    isComplete: false
+}
+
+export default Reminder; 
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing647">
+            <>
+            <h2>Listing 6-47: The InputForm component with event handlers and event listeners</h2>
+            <pre>
+              {`import PropTypes from 'prop-types';
+
+function InputForm(props){
+  const handleTextChange = (e)=>{
+    const newUserInput = {...props.userInput,reminderText:e.target.value}
+    props.setUserInput(newUserInput);
+  }
+    
+  const handleDateChange = (e)=>{
+    const date = new Date(e.target.value);
+    const formattedDate = date.toISOString().substr(0,10);
+    const newUserInput = {...props.userInput,dueDate:formattedDate};
+    props.setUserInput(newUserInput);
+  }
+    
+  const handleClick = (e)=>{
+    e.preventDefault();
+    const itemToAdd = {...props.userInput,status:false};
+    props.addNewReminder(itemToAdd);
+  };
+    
+
+  return(
+    <form>
+      <input value={props.userInput.reminderText} 
+             id="reminderText" 
+             type="text" 
+             placeholder="What do you want to do?" 
+             onChange={handleTextChange} />
+
+      <input value={props.userInput.dueDate}
+             id="dueDate"
+             type="date" 
+             onChange={handleDateChange} />
+
+      <button onClick={handleClick}>Add Item</button>
+    </form>
+  );
+}
+
+InputForm.propTypes = {
+  userInput: PropTypes.shape({
+    reminderText: PropTypes.string,
+    dueDate: PropTypes.string
+  }),
+  setUserInput: PropTypes.func,
+  addNewReminder: PropTypes.func
+}
+
+const date = new Date();
+const formattedDate = date.toISOString().substr(0,10);
+
+InputForm.defaultProps = {
+  userInput: {
+    reminderText:"",
+    dueDate:formattedDate
+  }
+}
+
+export default InputForm;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing648">
+            <>
+            <h2>Listing 6-48: Creating a New filteredReminders Array</h2>
+            <pre>
+              {`import {useState} from 'react';
+import InputForm from './InputForm';
+import FilterSelect from './FilterSelect';
+import RemindersList from './RemindersList';
+
+function App(){
+  const [reminders,setReminders] = useState();
+  const [userInput,setUserInput] = useState();
+  const [selectedFilter,setSelectedFilter] = useState("all");
+    
+  const addNewReminder = (itemToAdd) => {
+    if (reminders===undefined){
+      setReminders([itemToAdd]);
+    } else {
+      setReminders([...reminders,itemToAdd]);
+    }
+  }  
+  
+  const filteredList = reminders?[...reminders]:undefined;
+  
+  return(
+    <div>
+      <InputForm userInput={userInput} 
+                 setUserInput={setUserInput}
+                 addNewReminder={addNewReminder} />
+      <FilterSelect selectedFilter={selectedFilter} 
+                    setSelectedFilter={setSelectedFilter} />
+      <RemindersList reminders={filteredList} />
+    </div>
+  );
+}
+
+export default App;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing649">
+            <>
+            <h2>Listing 6-49: Filtering the Reminders List</h2>
+            <pre>
+              {`function filterList(reminders,selectedFilter){
+      if (selectedFilter === "all"){
+          return reminders;
+      } else {
+
+      let numberOfDays;
+
+      switch(selectedFilter){
+            case "2day":
+              numberOfDays = 2;
+              break;
+            case "1week":
+              numberOfDays = 7;
+              break;
+            case "30days":
+              numberOfDays = 30;
+              break;
+            default:
+              numberOfDays = 0;
+              break;
+      }
+
+      const result = reminders.filter(reminder=>{
+          const todaysDate = new Date().toISOString().substr(0,10);
+          const todayTime = new Date(todaysDate).getTime();
+          const dueTime = new Date(reminder.dueDate).getTime();
+          return dueTime < (todayTime + (numberOfDays * 86400000));
+      });
+      return result;
+    }
+  }
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing650">
+            <>
+            <h2>Listing 6-50: Implementing the filterList Function</h2>
+            <pre>
+              {`import {useState} from 'react';
+import InputForm from './InputForm';
+import FilterSelect from './FilterSelect';
+import RemindersList from './RemindersList';
+
+function App(){
+  const [reminders,setReminders] = useState();
+  const [userInput,setUserInput] = useState();
+  const [selectedFilter,setSelectedFilter] = useState("all");
+    
+  const addNewReminder = (itemToAdd) => {
+    if (reminders===undefined){
+      setReminders([itemToAdd]);
+    } else {
+      setReminders([...reminders,itemToAdd]);
+    }
+  }  
+  
+  const filteredList = filterList(reminders,selectedFilter);
+
+  function filterList(reminders,selectedFilter){
+    if (selectedFilter === "all"){
+        return reminders;
+    } else {
+
+    let numberOfDays;
+
+    switch(selectedFilter){
+          case "2day":
+            numberOfDays = 2;
+            break;
+          case "1week":
+            numberOfDays = 7;
+            break;
+          case "30days":
+            numberOfDays = 30;
+            break;
+          default:
+            numberOfDays = 0;
+            break;
+    }
+
+    const result = reminders.filter(reminder=>{
+        const todaysDate = new Date().toISOString().substr(0,10);
+        const todayTime = new Date(todaysDate).getTime();
+        const dueTime = new Date(reminder.dueDate).getTime();
+        return dueTime < (todayTime + (numberOfDays * 86400000));
+    });
+    return result;
+    }
+  }
+  return(
+    <div>
+      <InputForm userInput={userInput} 
+                 setUserInput={setUserInput}
+                 addNewReminder={addNewReminder} />
+      <FilterSelect selectedFilter={selectedFilter} 
+                    setSelectedFilter={setSelectedFilter} />
+      <RemindersList reminders={filteredList} />
+    </div>
+  );
+}
+
+export default App;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing651">
+            <>
+            <h2>Listing 6-51: FilterSelect with an event handler and event listener</h2>
+            <pre>
+              {`import PropTypes from 'prop-types';
+
+function FilterSelect(props){
+
+function handleChange(e){
+  props.setSelectedFilter(e.target.value);
+}
+
+return(
+  <label htmlFor="filterReminders">Show tasks due: 
+    <select id="filterReminders" value={props.selectedFilter} onChange={handleChange}>
+      <option value="2day">within 2 Days</option>
+      <option value="1week">within 1 Week</option>
+      <option value="30days">within 30 days</option>
+      <option value="all">any time</option>
+    </select>
+  </label>
+  );
+}
+
+FilterSelect.propTypes = {
+  selectedFilter: PropTypes.string,
+  setSelectedFilter: PropTypes.func
+}
+
+FilterSelect.defaultProps = {
+  selectedFilter:'all'
+}
+
+export default FilterSelect;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing652">
+            <>
+            <h2>Listing 6-52: Reminder with the checkbox</h2>
+            <pre>
+              {`import PropTypes from 'prop-types';
+
+function Reminder(props){
+  function handleChange(){
+    props.setIsComplete(!props.isComplete,props.id);
+  }
+  
+  return(
+    <div className="item">item: {props.reminderText}
+      <span className="due-date">due date: {props.dueDate}</span>
+      <span className="is-complete">
+          Completed?: <input type="checkbox" 
+                         checked={props.isComplete} 
+                         onChange={handleChange} /></span>
+    </div>
+    );
+  }
+  
+Reminder.propTypes = {
+  reminderText: PropTypes.string,
+  dueDate: PropTypes.string,
+  isComplete: PropTypes.bool
+}
+
+const date = new Date();
+const formattedDate = date.toISOString().substr(0,10);
+
+Reminder.defaultProps = {
+  reminderText:"No Reminder Set",
+  dueDate:formattedDate,
+  isComplete: false
+}
+
+export default Reminder; 
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing653">
+            <>
+            <h2>Listing 6-53: Initializing State in App</h2>
+            <pre>
+              {`import {Component} from 'react';
+class App extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      reminders:undefined,
+      userInput:undefined,
+      selectedFilter:"all"
+    }
+  }
+  render(){
+    return();
+  }
+}
+
+export default App;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing654">
+            <>
+            <h2>Listing 6-54: Copying and Modifying JSX in App</h2>
+            <pre>
+              {`import {Component} from 'react';
+import InputForm from './InputForm';
+import FilterSelect from './FilterSelect';
+import RemindersList from './RemindersList';
+
+class App extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      reminders:undefined,
+      userInput:undefined,
+      selectedFilter:"all"
+    }
+  }
+  render(){
+    return(
+      <div>
+        <InputForm userInput={this.state.userInput} 
+                   setUserInput={this.setUserInput}
+                   addNewReminder={this.addNewReminder} />
+        <FilterSelect selectedFilter={this.state.selectedFilter} 
+                      setSelectedFilter={this.setSelectedFilter} />
+        <RemindersList reminders={filteredList} setIsComplete={this.setIsComplete} />
+      </div>
+    );
+  }
+}
+
+export default App;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing655">
+            <>
+            <h2>Listing 6-55: Adding Methods and Binding Them to App</h2>
+            <pre>
+              {`import {Component} from 'react';
+import InputForm from './InputForm';
+import FilterSelect from './FilterSelect';
+import RemindersList from './RemindersList';
+
+class App extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      reminders:undefined,
+      userInput:undefined,
+      selectedFilter:"all"
+    }
+    this.setUserInput = this.setUserInput.bind(this);
+    this.setSelectedFilter = this.setSelectedFilter.bind(this);
+    this.addNewReminder = this.addNewReminder.bind(this);
+    this.setIsComplete = this.setIsComplete.bind(this);
+  }
+
+  setUserInput(newInput){
+    this.setState({userInput:newInput});
+  }
+  
+  setSelectedFilter(newFilter){
+    this.setState({selectedFilter:newFilter});
+  }
+
+  addNewReminder(itemToAdd) {
+    if (this.state.reminders===undefined){
+      this.setState({reminders:[itemToAdd]});
+    } else {
+      this.setState((current)=>{
+        return (
+          {
+            reminders:[...current.reminders,itemToAdd]
+          }
+          )
+      });    
+    }
+  }  
+
+  setIsComplete(isComplete,index){
+    const newReminders = [ ...this.state.reminders.slice(0, index),
+                     {...this.state.reminders[index],isComplete}, 
+                     ...this.state.reminders.slice(index+1) ];
+    this.setState({reminders:newReminders});
+  }
+
+  render(){
+    return(
+      <div>
+        <InputForm userInput={this.state.userInput} 
+                   setUserInput={this.setUserInput}
+                   addNewReminder={this.addNewReminder} />
+        <FilterSelect selectedFilter={this.state.selectedFilter} 
+                      setSelectedFilter={this.setSelectedFilter} />
+        <RemindersList reminders={filteredList} setIsComplete={this.setIsComplete} />
+      </div>
+    );
+  }
+}
+
+export default App;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing656">
+            <>
+            <h2>Listing 6-56: The Converted App Component</h2>
+            <pre>
+              {`import {Component} from 'react';
+import InputForm from './InputForm';
+import FilterSelect from './FilterSelect';
+import RemindersList from './RemindersList';
+
+class App extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      reminders:undefined,
+      userInput:undefined,
+      selectedFilter:"all"
+    }
+    this.setUserInput = this.setUserInput.bind(this);
+    this.setSelectedFilter = this.setSelectedFilter.bind(this);
+    this.addNewReminder = this.addNewReminder.bind(this);
+    this.setIsComplete = this.setIsComplete.bind(this);
+  }
+
+  setUserInput(newInput){
+    this.setState({userInput:newInput});
+  }
+
+  setSelectedFilter(newFilter){
+    this.setState({selectedFilter:newFilter});
+  }
+  
+  addNewReminder(itemToAdd) {
+    if (this.state.reminders===undefined){
+      this.setState({reminders:[itemToAdd]});
+    } else {
+      this.setState((current)=>{
+        return (
+          {
+            reminders:[...current.reminders,itemToAdd]
+          }
+          )
+      });    
+    }
+  }  
+  
+  setIsComplete(isComplete,index){
+    const newReminders = [ ...this.state.reminders.slice(0, index),
+                     {...this.state.reminders[index],isComplete}, 
+                     ...this.state.reminders.slice(index+1) ];
+    this.setState({reminders:newReminders});
+  }
+
+  filterList(reminders,selectedFilter){
+    if (selectedFilter === "all"){
+        return reminders;
+    } else {
+
+    let numberOfDays;
+
+    switch(selectedFilter){
+          case "2day":
+            numberOfDays = 2;
+            break;
+          case "1week":
+            numberOfDays = 7;
+            break;
+          case "30days":
+            numberOfDays = 30;
+            break;
+          default:
+            numberOfDays = 0;
+            break;
+    }
+
+    const result = this.state.reminders.filter(reminder=>{
+        const todaysDate = new Date().toISOString().substr(0,10);
+        const todayTime = new Date(todaysDate).getTime();
+        const dueTime = new Date(reminder.dueDate).getTime();
+        return dueTime < (todayTime + (numberOfDays * 86400000));
+    });
+
+    return result;
+    }
+  }
+  render(){
+    const filteredList = this.filterList(this.state.reminders,this.state.selectedFilter);
+
+    return(
+      <div>
+        <InputForm userInput={this.state.userInput} 
+                   setUserInput={this.setUserInput}
+                   addNewReminder={this.addNewReminder} />
+        <FilterSelect selectedFilter={this.state.selectedFilter} 
+                      setSelectedFilter={this.setSelectedFilter} />
+        <RemindersList reminders={filteredList} setIsComplete={this.setIsComplete} />
+      </div>
+    );
+  }
+}
+
+export default App;
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/Listing657">
+            <>
+            <h2>Listing 6-57: The converted InputForm component</h2>
+            <pre>
+              {`import {Component} from 'react';
+import PropTypes from 'prop-types';
+
+class InputForm extends Component {
+
+  render(){ 
+
+    const handleTextChange=(e)=>{
+      const newUserInput = {...this.props.userInput,reminderText:e.target.value}
+      this.props.setUserInput(newUserInput);
+    }
+    
+    const handleDateChange=(e)=>{
+      const date = new Date(e.target.value);
+      const formattedDate = date.toISOString().substr(0,10);
+      const newUserInput = {...this.props.userInput,dueDate:formattedDate};
+      this.props.setUserInput(newUserInput);
+    }
+        
+    const handleClick=(e)=>{
+      e.preventDefault();
+      const itemToAdd = {...this.props.userInput,isComplete:false};
+      this.props.addNewReminder(itemToAdd);
+    }
+    return(
+          <form>
+              <input value={this.props.userInput.reminderText} 
+                  id="reminderText" 
+                  type="text" 
+                  placeholder="What do you want to do?" 
+                  onChange={handleTextChange} />
+  
+              <input value={this.props.userInput.dueDate}
+                  id="dueDate"
+                  type="date" 
+                  onChange={handleDateChange} />
+  
+              <button onClick={handleClick}>Add Item</button>
+        </form>
+    );
+  }
+  
+}
+
+InputForm.propTypes = {
+  userInput: PropTypes.shape({
+    reminderText: PropTypes.string,
+    dueDate: PropTypes.string
+  }),
+  setUserInput: PropTypes.func,
+  addNewReminder: PropTypes.func
+}
+
+const date = new Date();
+const formattedDate = date.toISOString().substr(0,10);
+
+InputForm.defaultProps = {
+  userInput: {
+    reminderText:"",
+    dueDate:formattedDate
+  }
+}
+
+export default InputForm;
+`}
+            </pre>
+            </>
           </Route>
           <Route path="/Reminders">
             <Chapter06.Reminders />
