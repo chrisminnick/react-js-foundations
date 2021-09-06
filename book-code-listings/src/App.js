@@ -399,6 +399,18 @@ function App() {
                   <Link to="/listing701">Listing 7-01</Link>
                 </li>
                 <li>
+                  <Link to="/listing702">Listing 7-02</Link>
+                </li>
+                <li>
+                  <Link to="/listing703">Listing 7-03</Link>
+                </li>
+                <li>
+                  <Link to="/listing704">Listing 7-04</Link>
+                </li>
+                <li>
+                  <Link to="/listing705">Listing 7-05</Link>
+                </li>
+                <li>
                   <Link to="/listing706">Listing 7-06</Link>
                 </li>
                 <li>
@@ -409,7 +421,22 @@ function App() {
                 </li>  
                 <li>
                   <Link to="/listing709">Listing 7-09</Link>
-                </li>                
+                </li>
+                <li>
+                  <Link to="/listing710">Listing 7-10</Link>
+                </li>  
+                <li>
+                  <Link to="/listing711">Listing 7-11</Link>
+                </li>  
+                <li>
+                  <Link to="/listing712">Listing 7-12</Link>
+                </li>  
+                <li>
+                  <Link to="/listing713">Listing 7-13</Link>
+                </li>  
+                <li>
+                  <Link to="/listing714">Listing 7-14</Link>
+                </li>                  
                 </ul>
                 </Collapsible>
                 </li>
@@ -437,12 +464,39 @@ function App() {
                 <li>
                   <Link to="/listing807">Listing 8-07</Link>
                 </li>
+                <li>
+                  <Link to="/listing808">Listing 8-08</Link>
+                </li>
+                <li>
+                  <Link to="/listing809">Listing 8-09</Link>
+                </li>
+                <li>
+                  <Link to="/listing810">Listing 8-10</Link>
+                </li>
+                <li>
+                  <Link to="/listing811">Listing 8-11</Link>
+                </li>
+                <li>
+                  <Link to="/listing812">Listing 8-12</Link>
+                </li>
+                <li>
+                  <Link to="/listing813">Listing 8-13</Link>
+                </li>
+                <li>
+                  <Link to="/listing814">Listing 8-14</Link>
+                </li>
                 </ul>
                 </Collapsible>
                 </li>
                 <li>
                 <Collapsible trigger="Chapter 9">
                 <ul>
+                <li>
+                  <Link to="/listing901">Listing 9-01</Link>
+                </li>
+                <li>
+                  <Link to="/listing902">Listing 9-02</Link>
+                </li>
                 <li>
                   <Link to="/listing903">Listing 9-03</Link>
                 </li>
@@ -469,6 +523,45 @@ function App() {
                 <ul>
                 <li>
                   <Link to="/listing1001">Listing 10-01</Link>
+                </li>
+                <li>
+                  <Link to="/listing1002">Listing 10-02</Link>
+                </li>
+                <li>
+                  <Link to="/listing1003">Listing 10-03</Link>
+                </li>
+                <li>
+                  <Link to="/listing1004">Listing 10-04</Link>
+                </li>
+                <li>
+                  <Link to="/listing1005">Listing 10-05</Link>
+                </li>
+                <li>
+                  <Link to="/listing1006">Listing 10-06</Link>
+                </li>
+                <li>
+                  <Link to="/listing1007">Listing 10-07</Link>
+                </li>
+                <li>
+                  <Link to="/listing1008">Listing 10-08</Link>
+                </li>
+                <li>
+                  <Link to="/listing1009">Listing 10-09</Link>
+                </li>
+                <li>
+                  <Link to="/listing1010">Listing 10-10</Link>
+                </li>
+                <li>
+                  <Link to="/listing1011">Listing 10-11</Link>
+                </li>
+                <li>
+                  <Link to="/listing1012">Listing 10-12</Link>
+                </li>
+                <li>
+                  <Link to="/listing1013">Listing 10-13</Link>
+                </li>
+                <li>
+                  <Link to="/listing1014">Listing 10-14</Link>
                 </li>
                 </ul>
                 </Collapsible>
@@ -2283,58 +2376,301 @@ export default InputForm;
             <Chapter06.RemindersClass />
           </Route>
           <Route path="/listing701">
+            <>
+            <h2>Listing 7-1: Using an event attribute in HTML</h2>
+            <pre>
+              {`<form id="signup-form" onsubmit="validate()">
+  <input type="text" id="email">
+  <input type="text" id="fullname">
+  <input type="submit">
+</form>
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/listing702">
+            <>
+            <h2>Listing 7-2: Using addEventListener</h2>
+            <pre>
+              {`<html>
+  <head>
+    <script>
+      function validate(e){
+        //do something here
+      }
+    </script>
+  </head>
+  <body>
+    <form id="signup-form">
+      <input type="text" id="email">
+      <input type="text" id="fullname">
+      <input type="submit">
+    </form>
+  <script>
+    document.getElementById("signup-form").addEventListener("submit",validate);
+  </script>
+</html>
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/listing703">
+            <>
+            <h2>Listing 7-3: Setting an event listener in a React component</h2>
+            <Chapter07.MyForm />
+            </>
+          </Route>
+          <Route path="/listing704">
+            <>
+            <h2>Listing 7-4: Viewing the properties of the Event object</h2>
             <Chapter07.EventProps />
+            </>
+          </Route>
+          <Route path="/listing705">
+            <>
+            <h2>Listing 7-5: Using an inline event handler to show an alert</h2>
+            <Chapter07.WarningButton />
+            </>
           </Route>
           <Route path="/listing706">
+            <>
+            <h2>Listing 7-6: Using an inline event handler to call setState()</h2>
             <Chapter07.ScreenDoor />
+            </>
           </Route>
           <Route path="/listing707">
+            <>
+            <h2>Listing 7-7: Using an event handler function in a function component</h2>
             <Chapter07.SearchTerm />
+            </>
           </Route>
           <Route path="/listing708">
+            <>
+            <h2>Listing 7-8: Writing and binding an event handler method in a class</h2>
             <Chapter07.CoffeeMachine />
+            </>
           </Route>
           <Route path="/listing709">
+            <>
+            <h2>Listing 7-9: Binding a function in the constructor</h2>
             <Chapter07.ColorWheel />
+            </>
+          </Route>
+          <Route path="/listing710">
+            <>
+            <h2>Listing 7-10: Binding an event handler inline</h2>
+            <Chapter07.ColorWheel2 />
+            </>
+          </Route>
+          <Route path="/listing711">
+            <>
+            <h2>Listing 7-11: Using an arrow function as an event handler</h2>
+            <Chapter07.ColorWheel3 />
+            </>
+          </Route>
+          <Route path="/listing712">
+            <>
+            <h2>Listing 7-12: Defining state using a class property</h2>
+            <Chapter07.ColorWheel4 />
+            </>
+          </Route>
+          <Route path="/listing713">
+            <>
+            <h2>Listing 7-13: The Event object is passed automatically</h2>
+            <Chapter07.EventObject />
+            </>
+          </Route>
+          <Route path="/listing714">
+            <>
+            <h2>Listing 7-14: Passing the Event object to the event handler</h2>
+            <Chapter07.EventObject2 />
+            </>
           </Route>
           <Route path="/listing801">
+            <>
+            <h2>Listing 8-1: Omiting the value attribute creates an uncontrolled input</h2>
             <Chapter08.UncontrolledInput />
+            </>
           </Route>
           <Route path="/listing802">
+            <>
+            <h2>Listing 8-2: Adding the value attribute creates a controlled input</h2>
             <Chapter08.ControlledInput />
+            </>
           </Route>
           <Route path="/listing803">
+            <>
+            <h2>Listing 8-3: Updating an input element with one-way data flow</h2>
             <Chapter08.ControllingFunction />
+            </>
           </Route>
           <Route path="/listing804">
+            <>
+            <h2>Listing 8-4: Controlling an input in a class component</h2>
             <Chapter08.ControllingClass />
+            </>
           </Route>
           <Route path="/listing805">
+            <>
+            <h2>Listing 8-5: Simplifying a Controlled Input in a Class</h2>
             <Chapter08.ControllingClass2 />
+            </>
           </Route>
           <Route path="/listing806">
+            <>
+            <h2>Listing 8-6: The SearchBox component</h2>
             <Chapter08.SearchInterface />
+            </>
           </Route>
           <Route path="/listing807">
+            <>
+            <h2>Listing 8-7: The SearchInput component</h2>
+            <Chapter08.SearchInput />
+            </>
+          </Route>
+          <Route path="/listing808">
+            <>
+            <h2>Listing 8-8: The SearchResults component</h2>
+            <Chapter08.SearchResults />
+            </>
+          </Route>
+          <Route path="/listing809">
+            <>
+            <h2>Listing 8-9: A blog comment interface using an uncontrolled input</h2>
             <Chapter08.BlogComment />
+            </>
+          </Route>
+          <Route path="/listing810">
+            <>
+            <h2>Listing 8-10: An HTML textarea's value is its children</h2>
+            <pre>
+              {`<textarea name="terms-of-use">
+  Make sure to read all of these terms of use. By reading this book, you agree to learn React and to never try to mutate a prop or forget to bind an event handler in a class component. Furthermore, although it is not required, you agree to consider writing a review of this book and to tell your friends how great this book is.
+</textarea>
+`}
+            </pre>
+            </>
+          </Route>
+          <Route path="/listing811">
+            <>
+            <h2>Listing 8-11: Using a textarea in React</h2>
+            <Chapter08.TermsOfUse terms="Make sure to read all of these terms of use. By reading this book, you agree to learn React and to never try to mutate a prop or forget to bind an event handler in a class component. Furthermore, although it is not required, you agree to consider writing a review of this book and to tell your friends how great this book is.
+"/>
+            </>
+          </Route>
+          <Route path="/listing812">
+            <>
+            <h2>Listing 8-12: A select element in HTML</h2>
+            <pre>
+              {`<select name="pizza-type">
+  <option value="thin">Thin Crust</option>
+  <option value="thick">Thick Crust</option>
+  <option value="deep">Deep Dish</option>
+  <option value="detroit" selected>Detroit-style</option>
+  <option value="chicago">Chicago-style</option>
+</select>
+`}
+</pre>
+            </>
+          </Route>
+          <Route path="/listing813">
+            <>
+            <h2>Listing 8-13: Using a select input in React</h2>
+            <Chapter08.SizeSelect />
+            </>
+          </Route>
+          <Route path="/listing814">
+            <>
+            <h2>Listing 8-14: Using preventDefault</h2>
+            <Chapter08.PreventDefault />
+            </>
+          </Route>
+          <Route path="/listing901">
+            <>
+            <h2>Listing 9-1: Creating a Ref in a Class Component</h2>
+            <Chapter09.CreateRefClass bookText={Chapter09.mobydick} />
+            </>
+          </Route>
+          <Route path="/listing902">
+            <>
+            <h2>Listing 9-2: Creating a Ref with useRef()</h2>
+            <Chapter09.CreateRefFunction bookText={Chapter09.mobydick} />
+            </>
           </Route>
           <Route path="/listing903">
+            <>
+            <h2>Listing 9-3: Calling a DOM Method on a Child Using a Ref</h2>
             <Chapter09.TextReader bookText={Chapter09.mobydick} />
+            </>
           </Route>
           <Route path="/listing904">
+            <>
+            <h2>Listing 9-4: Creating a Callback Ref</h2>
             <Chapter09.TextReaderCallback bookText={Chapter09.mobydick} />
+            </>
           </Route>
           <Route path="/listing905">
+            <>
+            <h2>Listing 9-5: Passing a ref Callback as an Inline Function</h2>
             <Chapter09.TextReaderCallback2 bookText={Chapter09.mobydick} />
+            </>
           </Route>
           <Route path="/listing906">
+            <>
+            <h2>Listing 9-6: Selecting and Copying Text with a ref</h2>
             <Chapter09.CodeDisplay yourCode="8675309" />
+            </>
           </Route>
           <Route path="/listing907">
+            <>
+            <h2>Listing 9-7: A React Audio Player</h2>
             <Chapter09.AudioPlayer />
+            </>
           </Route>
           <Route path="/listing908">
+            <>
+            <h2>Listing 9-8: Scrolling to an Element with a ref</h2>
             <Chapter09.ScrollToDemo />
+            </>
+          </Route>
+          <Route path="/listing1001">
+            <Chapter10.StyledParent />
+          </Route>
+          <Route path="/listing1001">
+            <Chapter10.StyledParent />
+          </Route>
+          <Route path="/listing1001">
+            <Chapter10.StyledParent />
+          </Route>
+          <Route path="/listing1001">
+            <Chapter10.StyledParent />
+          </Route>
+          <Route path="/listing1001">
+            <Chapter10.StyledParent />
+          </Route>
+          <Route path="/listing1001">
+            <Chapter10.StyledParent />
+          </Route>
+          <Route path="/listing1001">
+            <Chapter10.StyledParent />
+          </Route>
+          <Route path="/listing1001">
+            <Chapter10.StyledParent />
+          </Route>
+          <Route path="/listing1001">
+            <Chapter10.StyledParent />
+          </Route>
+          <Route path="/listing1001">
+            <Chapter10.StyledParent />
+          </Route>
+          <Route path="/listing1001">
+            <Chapter10.StyledParent />
+          </Route>
+          <Route path="/listing1001">
+            <Chapter10.StyledParent />
+          </Route>
+          <Route path="/listing1001">
+            <Chapter10.StyledParent />
           </Route>
           <Route path="/listing1001">
             <Chapter10.StyledParent />
