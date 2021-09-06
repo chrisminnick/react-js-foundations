@@ -610,7 +610,22 @@ function App() {
                   <Link to="/listing1114">Listing 11-14</Link>
                 </li>
                 <li>
+                  <Link to="/listing1115">Listing 11-15</Link>
+                </li>
+                <li>
+                  <Link to="/listing1116">Listing 11-16</Link>
+                </li>
+                <li>
+                  <Link to="/listing1117">Listing 11-17</Link>
+                </li>
+                <li>
                   <Link to="/listing1118">Listing 11-18</Link>
+                </li>
+                <li>
+                  <Link to="/listing1119">Listing 11-19</Link>
+                </li>
+                <li>
+                  <Link to="/listing1120">Listing 11-20</Link>
                 </li>
                 <li>
                   <Link to="/listing1121">Listing 11-21</Link>
@@ -643,10 +658,28 @@ function App() {
                   <Link to="/listing1207">Listing 12-07</Link>
                 </li>
                 <li>
+                  <Link to="/listing1208">Listing 12-08</Link>
+                </li>
+                <li>
+                  <Link to="/listing1209">Listing 12-09</Link>
+                </li>
+                <li>
+                  <Link to="/listing1210">Listing 12-10</Link>
+                </li>
+                <li>
+                  <Link to="/listing1211">Listing 12-11</Link>
+                </li>
+                <li>
                   <Link to="/listing1212">Listing 12-12</Link>
                 </li>
                 <li>
+                  <Link to="/listing1213">Listing 12-13</Link>
+                </li>
+                <li>
                   <Link to="/listing1214">Listing 12-14</Link>
+                </li>
+                <li>
+                  <Link to="/listing1215">Listing 12-15</Link>
                 </li>
                 <li>
                   <Link to="/listing1216">Listing 12-16</Link>
@@ -2764,60 +2797,155 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
           </Route>
 
           <Route path="/listing1101">
+            <h2>Listing 11-1: A Number Guessing Game with useState</h2>
             <Chapter11.NumberGuessing />
           </Route>
           <Route path="/listing1102">
+            <h2>Listing 11-2: Setter functions are bound to their creator component</h2>
             <Chapter11.ButtonContainer />
           </Route>
           <Route path="/listing1103">
+            <h2>Listing 11-3: The most basic form of useEffect</h2>
             <Chapter11.RenderCounter />
           </Route>
           <Route path="/listing1104">
+            <h2>Listing 11-4: Starting a timer with each render</h2>
             <Chapter11.TimerFun />
           </Route>
           <Route path="/listing1105">
+            <h2>Listing 11-5: Creating a new timer with each render</h2>
             <Chapter11.TimerRestartFun />
           </Route>
           <Route path="/listing1106">
+            <h2>Listing 11-6: Passing an empty array to only run useEffect on mount</h2>
             <Chapter11.TimerOnceFun />
           </Route>
           <Route path="/listing1107">
+            <h2>Listing 11-7: Specifying useEffect's dependencies</h2>
           <Chapter11.TimerConditionalFun />
           </Route>
           <Route path="/listing1108">
+            <h2>Listing 11-8: Asynchronous Requests with useEffect</h2>
             <Chapter11.ShippingAddress />
           </Route>
+          <Route path="/listing1109">
+            <h2>Listing 11-9: Using Context with the useContext Hook</h2>
+            <Chapter11.UsingContext />
+          </Route>
           <Route path="/listing1110">
+            <h2>Listing 11-10: A Counter with useReducer</h2>
             <Chapter11.ReducerCounter />
           </Route>
+          <Route path="/listing1111">
+            <h2>Listing 11-11: Passing a Payload to a Reducer</h2>
+            <Chapter11.ReducerCounterPayload />
+          </Route>
           <Route path="/listing1112">
+            <h2>Listing 11-12: Function dependencies cause unnecessary renders</h2>
             <Chapter11.CallMe />
           </Route>
           <Route path="/listing1113">
+            <h2>Listing 11-13: Memoized callbacks fix the unnecessary effect problem</h2>
             <Chapter11.CallMeFixed />
           </Route>
           <Route path="/listing1114">
+            <h2>Listing 11-14: Solving performance problems with useMemo</h2>
             <Chapter11.ShippingAddress2 />
-          </Route>
-          <Route path="/listing1113">
-            <Chapter11.WordCount />
-          </Route>
-          <Route path="/listing1114">
-            <Chapter11.CountingBox />
           </Route>
           <Route path="/listing1115">
-            <Chapter11.WeatherWidget />
+            <h2>Listing 11-15: Getting the value of a textarea and counting its words</h2>
+            <Chapter11.WordCount />
+          </Route>
+          <Route path="/listing1116">
+            <h2>Listing 11-16: Customizing a value exposed by a ref</h2>
+            <Chapter11.CountingBox />
+          </Route>
+          <Route path="/listing1117">
+            <h2>Listing 11-17:	useZipLookup: a custom hook to return location data based on a zipcode</h2>
+            <pre>
+              {`import {useEffect,useState} from 'react';
+
+function useZipLookup(zipcode){
+  const [city,setCity] = useState('');
+  const [state,setState] = useState('');
+
+  const API_URL = 'https://api.zip-codes.com/ZipCodesAPI.svc/1.0/QuickGetZipCodeDetails/';
+  const API_KEY = 'DEMOAPIKEY';
+
+  useEffect(()=>{
+    if (zipcode){  
+      const loadAddressData = async ()=>{
+        const response = await fetch(\`\${API_URL}\${zipcode}?key=\${API_KEY}\`);
+        const data = await response.json();
+        setCity(data.City);
+        setState(data.State);
+      }
+
+      loadAddressData();
+
+    }
+    },[zipcode]);
+
+    return [city,state];
+}
+
+export default useZipLookup;
+`}
+            </pre>
           </Route>
           <Route path="/listing1118">
+            <h2>Listing 11-18: Using the useZipLookup custom hook</h2>
             <Chapter11.ShippingAddress2 />
           </Route>
+          <Route path="/listing1119">
+            <h2>Listing 11-19:	Using useDebugValue</h2>
+            <pre>
+              {`import {useEffect,useState,useDebugValue} from 'react';
+
+function useZipLookup(zipcode){
+  const [city,setCity] = useState('');
+  const [state,setState] = useState('');
+  
+  useDebugValue(zipcode);
+  
+  const API_URL = 'https://api.zip-codes.com/ZipCodesAPI.svc/1.0/QuickGetZipCodeDetails/';
+  const API_KEY = 'DEMOAPIKEY';
+
+  useEffect(()=>{
+    if (zipcode){  
+      const loadAddressData = async ()=>{
+        const response = await fetch(\`\${API_URL}\${zipcode}?key=\${API_KEY}\`);
+        const data = await response.json();
+        setCity(data.City);
+        setState(data.State);
+      }
+
+      loadAddressData();
+
+    }
+    },[zipcode]);
+
+    return [city,state];
+}
+
+export default useZipLookup;
+`}
+            </pre>
+          </Route>   
+          <Route path="/listing1120">
+            <h2>Listing 11-20: Using useAxios</h2>
+            <Chapter11.WeatherWidget />
+          </Route>   
           <Route path="/listing1121">
+            <h2>Listing 11-21: Using useForm</h2>
             <Chapter11.UsingUseForm />
-          </Route>         
+          </Route>     
           <Route path="/listing1201">
+            <h2>Listing 12-1: A Simple Routing Component</h2>
             <Chapter12.ChooseYourAdventure />
           </Route>
           <Route path="/listing1202">
+            <h2>Listing 12-2: A list of NavLinks with sub-items</h2>
             <Chapter12.NavMenu />
           </Route>
           <Route path="/listing1203">
@@ -2826,7 +2954,9 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
           <Route path="/listing1204">
             <Chapter12.NavMenuWithRouter />
           </Route>
-
+          <Route path="/listing1205">
+            <Chapter12.ComponentProp />
+          </Route>
           <Route path="/listing1206">
             <Chapter12.ComponentProp />
           </Route>
@@ -2839,8 +2969,23 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
           <Route path="/listing1209">
             <Chapter12.UserListRedirect />
           </Route>
+          <Route path="/listing1210">
+            <Chapter12.UserListRedirect />
+          </Route>
+          <Route path="/listing1211">
+            <Chapter12.UserListRedirect />
+          </Route>
+          <Route path="/listing1212">
+            <Chapter12.UserListRedirect />
+          </Route>
+          <Route path="/listing1213">
+            <Chapter12.UserListRedirect />
+          </Route>
           <Route path="/listing1214">
             <Chapter12.ViewLocation />
+          </Route>
+          <Route path="/listing1215">
+            <Chapter12.UserListRedirect />
           </Route>
           <Route path="/listing1216">
             <Chapter12.NestedRoutes />
