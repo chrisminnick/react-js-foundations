@@ -560,9 +560,7 @@ function App() {
                 <li>
                   <Link to="/listing1013">Listing 10-13</Link>
                 </li>
-                <li>
-                  <Link to="/listing1014">Listing 10-14</Link>
-                </li>
+
                 </ul>
                 </Collapsible>
                 </li>
@@ -2634,47 +2632,137 @@ export default InputForm;
             </>
           </Route>
           <Route path="/listing1001">
+            <h2>Listing 10-1: Adding an HTML Link to the HTML File</h2>
+            <pre>
+              {`<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/style.css" />
+
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    
+  </body>
+</html>
+`}
+            </pre>
+          </Route>
+          <Route path="/listing1002">
+            <h2>Listing 10-2: Including CSS in a Component</h2>
+            <Chapter10.ArticleLink />
+          </Route>
+          <Route path="/listing1003">
+            <h2>Listing 10-3: Cascading Styles in Components</h2>
             <Chapter10.StyledParent />
           </Route>
-          <Route path="/listing1001">
-            <Chapter10.StyledParent />
+          <Route path="/listing1004">
+            <h2>Listing 10-4: Using Inline Styles in React</h2>
+            <Chapter10.WarningMessage warningMessage="Look out!" />
           </Route>
-          <Route path="/listing1001">
-            <Chapter10.StyledParent />
+          <Route path="/listing1005">
+            <h2>Listing 10-5: CSS rule-sets vs. JavaScript style objects</h2>
+            <pre>
+              {`/* CSS rule-set */
+.headingStyle{
+  background-color: #999999;
+  color: #eee;
+  border: 1px solid black;
+  border-radius: 4px;
+  width: 50%;
+}
+
+//JavaScript style object
+const headingStyle = {
+  backgroundColor: '#999999',
+  color: '#eee',
+  border: '1px solid black',
+  borderRadius: '4px',
+  width: '50%'
+};
+`}
+            </pre>
           </Route>
-          <Route path="/listing1001">
-            <Chapter10.StyledParent />
+          <Route path="/listing1006">
+            <h2>Listing 10-6: Using Variables to Hold Style Objects</h2>
+            <Chapter10.WarningMessageVars warningMessage="Look out!" />
           </Route>
-          <Route path="/listing1001">
-            <Chapter10.StyledParent />
+          <Route path="/listing1007">
+            <h2>Listing 10-7: A Style Module Library </h2>
+            <pre>
+              {`export const warningStyle = {color:"red",padding:"6px",backgroundColor:"#000000"};
+export const infoStyle = {color:"yellow",padding:"6px",backgroundColor:"#000000"};
+export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#000000"};
+`}
+            </pre>
           </Route>
-          <Route path="/listing1001">
-            <Chapter10.StyledParent />
+          <Route path="/listing1008">
+            <h2>Listing 10-8: Importing Multiple Styles</h2>
+            <Chapter10.DisplayStatus message={{text:'Look Out!',type:'info'}} />
           </Route>
-          <Route path="/listing1001">
-            <Chapter10.StyledParent />
+          <Route path="/listing1009">
+            <h2>Listing 10-9: A CSS Module</h2>
+          <pre>
+            {`/* my-component.module.css */
+.bigText {
+  font-size: 4em;
+}
+
+.redText {
+  color: #FF0000;
+}
+`}
+          </pre>
           </Route>
-          <Route path="/listing1001">
-            <Chapter10.StyledParent />
+          <Route path="/listing1010">
+            <h2>Listing 10-10: Using a CSS Module</h2>
+            <Chapter10.CSSModule />
           </Route>
-          <Route path="/listing1001">
-            <Chapter10.StyledParent />
+          <Route path="/listing1011">
+            <h2>Listing 10-11: Using Class Composition</h2>
+            <pre>{`.bodyText {
+  font-size: 12px;
+  font-family: Georgia serif;
+  color: #333;
+  text-indent: 25px;
+}
+
+.firstParagraph {
+  composes: bodyText;
+  text-indent: 0px;
+}
+`}</pre>
           </Route>
-          <Route path="/listing1001">
-            <Chapter10.StyledParent />
+          <Route path="/listing1012">
+            <h2>Listing 10-12: Basing a new class on an external style</h2>
+            <pre>
+              {`.checkoutButton {
+  composes: button from './buttons';
+  background-color: #4CAF50;
+  font-size: 32px;
+}
+`}
+            </pre>
           </Route>
-          <Route path="/listing1001">
-            <Chapter10.StyledParent />
+          <Route path="/listing1013">
+            <h2>Listing 10-13: Using Styled Components</h2>
+            <Chapter10.ExampleStyled />
           </Route>
-          <Route path="/listing1001">
-            <Chapter10.StyledParent />
-          </Route>
-          <Route path="/listing1001">
-            <Chapter10.StyledParent />
-          </Route>
-          <Route path="/listing1001">
-            <Chapter10.StyledParent />
-          </Route>
+
           <Route path="/listing1101">
             <Chapter11.NumberGuessing />
           </Route>
