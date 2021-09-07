@@ -18,6 +18,7 @@ import * as Chapter12 from './chapter12';
 import * as Chapter13 from './chapter13';
 import * as Chapter16 from './chapter16';
 import * as Chapter17 from './chapter17';
+import { UnitsContext } from './chapter17/contexts/UnitsContext';
 
 function App() {
   return (
@@ -737,6 +738,18 @@ function App() {
                 <Collapsible trigger="Chapter 16">
                 <ul>
                 <li>
+                  <Link to="/listing1601">Listing 16-01</Link>
+                </li>
+                <li>
+                  <Link to="/listing1602">Listing 16-02</Link>
+                </li>
+                <li>
+                  <Link to="/listing1603">Listing 16-03</Link>
+                </li>
+                <li>
+                  <Link to="/listing1604">Listing 16-04</Link>
+                </li>
+                <li>
                   <Link to="/listing1605">Listing 16-05</Link>
                 </li>
                 <li>
@@ -747,6 +760,9 @@ function App() {
                 </li>
                 <li>
                   <Link to="/listing1608">Listing 16-08</Link>
+                </li>
+                <li>
+                  <Link to="/listing1609">Listing 16-09</Link>
                 </li>
                 </ul>
                 </Collapsible>
@@ -761,13 +777,37 @@ function App() {
                   <Link to="/listing1702">Listing 17-02</Link>
                 </li>
                 <li>
+                  <Link to="/listing1703">Listing 17-03</Link>
+                </li>
+                <li>
+                  <Link to="/listing1704">Listing 17-04</Link>
+                </li>
+                <li>
+                  <Link to="/listing1705">Listing 17-05</Link>
+                </li>
+                <li>
+                  <Link to="/listing1706">Listing 17-06</Link>
+                </li>
+                <li>
                   <Link to="/listing1707">Listing 17-07</Link>
                 </li>
                 <li>
                   <Link to="/listing1708">Listing 17-08</Link>
                 </li>
                 <li>
+                  <Link to="/listing1709">Listing 17-09</Link>
+                </li>
+                <li>
                   <Link to="/listing1710">Listing 17-10</Link>
+                </li>
+                <li>
+                  <Link to="/listing1711">Listing 17-11</Link>
+                </li>
+                <li>
+                  <Link to="/listing1712">Listing 17-12</Link>
+                </li>
+                <li>
+                  <Link to="/listing1713">Listing 17-13</Link>
                 </li>
                 </ul>
                 </Collapsible>
@@ -3218,35 +3258,276 @@ export default ErrorBoundary;
           <Route path="/chapter13example2">
             <Chapter13.SampleTreeWithErrorBoundary />
           </Route>
-          <Route path="/listing1605">
+          <Route path="/listing1601">
+            <h2>Listing 16-1: Callbacks within Callbacks</h2>
+            <pre>
+              {`function userCheck(username, password, callback){
+  db.verifyUser(username, password, (error, userInfo) => {
+    if (error) {
+      callback(error)
+    }else{
+      db.getRoles(username, (error, roles) => {
+        if (error){
+          callback(error)
+        }else {
+          db.logAccess(username, (error) => {
+            if (error){
+              callback(error);
+            }else{
+              callback(null, userInfo, roles);
+            }
+          })
+        }
+      })
+    }
+  })
+};
+`}
+            </pre>
+          </Route>
+          <Route path="/listing1602">
+            <h2>Listing 16-2: Loading initial data in a class component</h2>
+            <pre>
+              {`import {Component} from 'react';
+
+class NewsFeed extends Component {
+    constructor(props){
+        super(props);
+        this.state={
+            news:[]
+        }
+    }
+    componentDidMount(){
+        fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=[YOUR KEY]')
+          .then(response => response.json())
+          .then(data => {
+              this.setState({news:data.articles})})
+          .catch(error => console.error(error))
+    }
+    render(){
+        const todaysNews = this.state.news.map((article)=>{
+            return (<p>{article.title}</p>);
+        })
+        return(
+            <>
+              <h1>Today's News</h1>
+              {todaysNews}
+            </>
+        )
+    }
+}
+
+export default NewsFeed;
+`}
+            </pre>
+          </Route>
+          <Route path="/listing1603">
+            <h2>Listing 16-3: Loading initial data in a function component</h2>
+            <pre>
+              {`import {useState,useEffect} from 'react';
+
+const NewsFeedFunction = () => {
+    const [news,setNews] = useState([]);
+    useEffect(()=> {
+        fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=[YOUR KEY]')
+          .then(response => response.json())
+          .then(data => {
+            setNews(data.articles)
+          })
+          .catch(error => console.error(error))
+    },[])
+
+    const todaysNews = news.map((article)=>{
+        return (<p>{article.title}</p>);
+    })
+
+    return(
+        <>
+            <h1>Today's News</h1>
+            {todaysNews}
+        </>
+    )
+}
+
+export default NewsFeedFunction;
+`}
+            </pre>
+          </Route>
+          <Route path="/listing1604">
+            <h2>Listing 16-4: Using Fetch in Response to Events</h2>
             <Chapter16.Restful />
           </Route>
+          <Route path="/listing1605">
+            <h2>Listing 16-5: Performing a GET request with Axios</h2>
+            <Chapter16.Restful2 />
+          </Route>
           <Route path="/listing1606">
+            <h2>Listing 16-6: A Clicker App</h2>
             <Chapter16.Clicker1 />
           </Route>
           <Route path="/listing1607">
+            <h2>Listing 16-7: Writing to localStorage When the State Changes</h2>
             <Chapter16.Clicker2 />
           </Route>
           <Route path="/listing1608">
+            <h2>Listing 16-8: Reading localStorage Data in Clicker</h2>
             <Chapter16.Clicker3 />
           </Route>
           <Route path="/listing1609">
+            <h2>Listing 16-9: Clearing localStorage in the Clicker</h2>
             <Chapter16.Clicker4 />
           </Route>
           <Route path="/listing1701">
+            <h2>Listing 17-1: Using Prop Drilling</h2>
             <Chapter17.PropDrilling story="test" />
           </Route>
           <Route path="/listing1702">
-            <Chapter17.UnitsContext />
+            <h2>Listing 17-2: A Context for User Preferences</h2>
+            <pre>
+              {`const PrefsContext = React.createContext({lang:'English',timezone:'Pacific Time'});`}
+            </pre>
+          </Route>
+          <Route path="/listing1703">
+            <h2>Listing 17-3: Using a Provider Component</h2>
+            <pre>
+              {`import React, {useState} from 'react';
+import {PrefsContext} from './contexts/UserPrefs';
+
+const UserPrefsProvider = ({ children }) => {
+  const [lang, setLang] = useState("English");
+  const [timezone, setTimezone] = useState("UTC");
+  return (
+    <PrefsContext.Provider value={{ lang, timezone }}>
+      {children}
+    </PrefsContext.Provider>
+  );
+};
+
+function App(){
+  return (
+    <UserPrefsProvider>
+      <Header />
+      <Main />
+      <Footer />
+    </UserPrefsProvider>
+  )
+}
+
+export default App;
+`}
+            </pre>
+          </Route>
+          <Route path="/listing1704">
+            <h2>Listing 17-4: Consuming a Context in a Class Component</h2>
+            <pre>
+              {`import React from 'react';
+import {PrefsContext} from './contexts/UserPrefs';
+
+class TimeDisplay extends React.Component {
+
+  static contextType = PrefsContext;
+  
+  render() {
+    return (
+      <>
+        Your language preference is {this.context.lang}.<br />
+        Your timezone is {this.context.timezone}.
+      </>
+    )
+  }
+}
+
+export default TimeDisplay;
+`}
+            </pre>
+          </Route>
+          <Route path="/listing1705">
+          <h2>Listing 17-5: Using the Context.Consumer Component</h2>
+            <pre>
+              {`import React from 'react';
+import {PrefsContext} from './contexts/UserPrefs';
+
+class TimeDisplay extends React.Component {
+  
+  render() {
+    return (
+      <PrefsContext.Consumer>
+        {userPrefs => {
+          <>
+            Your language preference is {userPrefs.lang}.<br />
+            Your timezone is {userPrefs.timezone}.
+          </>
+         }};
+      </ PrefsContext.Consumer >
+    )
+  }
+}
+
+export default TimeDisplay;
+`}
+            </pre>
+          </Route>
+          <Route path="/listing1706">
+          <h2>Listing 17-6: Consuming a Context in a Function Component</h2>
+            <pre>
+              {`import {useContext} from 'react';
+import {PrefsContext} from './contexts/UserPrefs';
+
+function TimeDisplay(props){
+  const userPrefs = useContext(PrefsContext);
+
+  return (
+    <>
+      Your language preference is {userPrefs.timezone}.<br />
+      Your timezone is {userPrefs.timezone}.
+    </>
+  );
+}
+
+export default TimeDisplay;
+`}
+            </pre>
           </Route>
           <Route path="/listing1707">
+          <h2>Listing 17-7: Getting Data to a Deeply-nested Component with Prop Drilling</h2>
             <Chapter17.DashboardProps />
           </Route>
           <Route path="/listing1708">
+          <h2>Listing 17-8: Eliminating Prop Drilling with Context</h2>
             <Chapter17.DashboardContext />
           </Route>
+          <Route path="/listing1709">
+          <h2>Listing 17-9: Using a component outside of a required Context</h2>
+            <Chapter17.ComponentOutsideContext />
+          </Route>
           <Route path="/listing1710">
+          <h2>Listing 17-10: Using Composition Instead of Context</h2>
             <Chapter17.DashboardComposition />
+          </Route>
+          <Route path="/listing1711">
+          <h2>Listing 17-11: Making a Provider</h2>
+          <pre>
+            {`import React, {createContext, useState} from 'react';
+export const UnitsContext = createContext();
+
+export const UnitsProvider = ({ children }) => {
+    const [lengthUnit, setLengthUnit] = useState("cm");
+    const [tempUnit, setTempUnit] = useState("c");
+    return (
+        <UnitsContext.Provider value={{ lengthUnit, setLengthUnit, tempUnit, setTempUnit }}>
+            {children}
+        </UnitsContext.Provider>
+    );
+};`}
+          </pre>
+          </Route>
+          <Route path="/listing1712">
+          <h2>Listing 17-12: Providing a Context to a Tree</h2>
+          <Chapter17.UnitsContext />
+          </Route>
+          <Route path="/listing1713">
+          <h2>Listing 17-13: Consuming a Context</h2>
+          <Chapter17.UnitsContext />
           </Route>
         </Switch>
       </main>

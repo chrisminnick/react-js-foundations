@@ -1,14 +1,15 @@
 import {useState} from 'react';
+import axios from 'axios';
 
 function Restful(){
     const [repos,setRepos] = useState([]);
     const [status,setStatus] = useState();
 
     const getRepos = function(){
-        fetch('https://api.github.com/users/facebook/repos')
-            .then(response => response.json())
-            .then(data => {
-                setRepos(data);})
+        axios({
+            method:'get',
+            url:'https://api.github.com/users/facebook/repos'
+            }).then(resp => {setRepos(resp.data);})
             .then(setStatus("fetched"))
             .catch(error => console.error(error))
     }
@@ -23,16 +24,17 @@ function Restful(){
           <button onClick={logRepos}>Log Repos</button>
           <pre>
               {`import {useState} from 'react';
+import axios from 'axios';
 
 function Restful(){
     const [repos,setRepos] = useState([]);
     const [status,setStatus] = useState();
 
     const getRepos = function(){
-        fetch('https://api.github.com/users/facebook/repos')
-            .then(response => response.json())
-            .then(data => {
-                setRepos(data);})
+        axios({
+            method:'get',
+            url:'https://api.github.com/users/facebook/repos'
+            }).then(resp => {setRepos(resp.data);})
             .then(setStatus("fetched"))
             .catch(error => console.error(error))
     }
