@@ -7,7 +7,7 @@ const App = () => {
     if (username) {
         return (
         <>
-            <UserContext.Provider value={username,setUsername}>
+            <UserContext.Provider value={{username,setUsername}}>
               <Dashboard/>
             </UserContext.Provider>
           </>

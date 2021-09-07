@@ -1,4 +1,3 @@
-import ErrorBoundary from './ErrorBoundary';
 import {useState} from 'react';
 
 function SometimesBad(){

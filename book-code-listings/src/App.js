@@ -18,7 +18,6 @@ import * as Chapter12 from './chapter12';
 import * as Chapter13 from './chapter13';
 import * as Chapter16 from './chapter16';
 import * as Chapter17 from './chapter17';
-import { UnitsContext } from './chapter17/contexts/UnitsContext';
 
 function App() {
   return (
@@ -816,14 +815,52 @@ function App() {
                 <Collapsible trigger="Chapter 18">
                 <ul>
                 <li>
+                  <Link to="/listing1801">Listing 18-01</Link>
+                </li>
+                <li>
+                  <Link to="/listing1802">Listing 18-02</Link>
+                </li>
+                <li>
+                  <Link to="/listing1803">Listing 18-03</Link>
+                </li>
+                <li>
+                  <Link to="/listing1804">Listing 18-04</Link>
+                </li>
+                <li>
+                  <Link to="/listing1805">Listing 18-05</Link>
+                </li>
+                <li>
+                  <Link to="/listing1806">Listing 18-06</Link>
+                </li>
+                <li>
+                  <Link to="/listing1807">Listing 18-07</Link>
                 </li>
                 </ul>
                 </Collapsible>
                 </li>
                 <li>
-                <Collapsible trigger="Chapter 19">
+                {/* <Collapsible trigger="Chapter 19">
                 <ul>
                 <li>
+                  <Link to="/listing1901">Listing 19-01</Link>
+                </li>
+                <li>
+                  <Link to="/listing1902">Listing 19-02</Link>
+                </li>
+                <li>
+                  <Link to="/listing1903">Listing 19-03</Link>
+                </li>
+                <li>
+                  <Link to="/listing1904">Listing 19-04</Link>
+                </li>
+                <li>
+                  <Link to="/listing1905">Listing 19-05</Link>
+                </li>
+                <li>
+                  <Link to="/listing1906">Listing 19-06</Link>
+                </li>
+                <li>
+                  <Link to="/listing1907">Listing 19-07</Link>
                 </li>
                 </ul>
                 </Collapsible>
@@ -834,7 +871,7 @@ function App() {
                 <li>
                 </li>
                 </ul>
-                </Collapsible>
+                </Collapsible> */}
                 </li>
           </ul>
         </nav>
@@ -3528,6 +3565,190 @@ export const UnitsProvider = ({ children }) => {
           <Route path="/listing1713">
           <h2>Listing 17-13: Consuming a Context</h2>
           <Chapter17.UnitsContext />
+          </Route>
+          <Route path="/listing1801">
+          <h2>Listing 18-1: An HTML document with multiple nodes in the body</h2>
+          <pre>
+            {`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Demo</title>
+</head>
+<body>
+    <div style="display:flex;">
+      <div id="root" style="width:50%"></div>
+      <div id="sidebar" style="width:50%"></div>
+    </div>
+</body>
+</html>
+`}
+          </pre>
+          </Route>
+          <Route path="/listing1802">
+          <h2>Listing 18-2: Creating a Portal</h2>
+          <pre>
+            {`import {createPortal} from 'react-dom';
+
+function SidebarHelp(props){
+  return createPortal(
+    <p>{props.helpText}</p>,
+    document.getElementById('sidebar')
+  );
+}
+
+export default SidebarHelp;
+`}
+          </pre>
+          </Route>
+          <Route path="/listing1803">
+          <h2>Listing 18-3: Using the SidebarHelp Component</h2>
+          <pre>
+            {`import Chart from './Chart';
+import SidebarHelp from './SidebarHelp';
+
+function SalesChart(props){
+  return (
+    <>
+      <Chart type="sales" />
+      <SidebarHelp helpText="This chart shows your sales over time." />
+    </>
+  )
+}
+
+export default SalesChart;
+`}
+          </pre>
+          </Route>
+          <Route path="/listing1804">
+          <h2>Listing 18-4: One Way to Style a Modal</h2>
+          <pre>
+            {`.modalOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding-top: 60px;
+  background-color: rgba(50,50,50,0.6);
+}
+.modalContainer {
+    border:1px solid black;
+    background: white;
+    width: 50%;
+    margin: 0 auto;
+    padding: 25px;
+}
+.modalTitle {
+  text-align:center;
+  background-color: black;
+  color: white;
+
+}
+.modalContent {
+  background: white;
+  text-align: center;
+}
+`}
+          </pre>
+          </Route>
+          <Route path="/listing1805">
+          <h2>Listing 18-5: The App Component</h2>
+          <pre>
+            {`import {useState} from 'react';
+import Modal from './Modal';
+import './styles.css';
+
+function App() {
+
+  const[isModalOpen,setModalOpen] = useState(false);
+  const toggleModal = () => setModalOpen(!isModalOpen);
+
+  return (
+    <div>
+      <button onClick={toggleModal}>Open the Modal</button>
+
+      <Modal title="Warning" isOpen={isModalOpen}>
+        <p>This Modal is awesome.</p>
+        <button onClick={toggleModal}>close modal</button>
+      </Modal>
+    </div>
+  );
+}
+
+export default App;
+`}
+          </pre>
+          </Route>
+          <Route path="/listing1806">
+          <h2>Listing 18-6: The Finished Modal Component</h2>
+          <pre>
+            {`import ReactDOM from 'react-dom';
+import "./styles.css";
+
+function Modal(props){
+
+  return (
+    <>
+      {props.isOpen &&
+        ReactDOM.createPortal((  
+          <div className="modalOverlay">
+            <div className="modalContainer">
+              <h1 className="modalTitle">{props.title}</h1>
+              <div className="modalContent">
+                {props.children}
+              </div>
+            </div>
+          </div>)
+        ,document.getElementById('modal'))}
+    </>
+  )
+}
+export default Modal;
+`}
+          </pre>
+          </Route>
+          <Route path="/listing1807">
+          <h2>Listing 18-7: Using a ref to set keyboard focus</h2>
+          <pre>
+            {`import {useState,useRef,useEffect} from 'react';
+import Modal from './Modal';
+import './styles.css';
+
+function App() {
+  const CSCRef = useRef()
+  const[isModalOpen,setModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setModalOpen(()=>!isModalOpen);
+  }
+
+  useEffect(() => {
+    setTimeout(()=>{!isModalOpen && CSCRef.current.focus()},1000)
+  }, [isModalOpen]);
+
+  return (
+    <>
+    <div style={{padding:"60px"}}>
+      <label>Card Security Code:<input ref={CSCRef} /></label>
+      <button onClick={toggleModal}>What's This?</button>
+      
+      <Modal title="What is the CSC Code?" isOpen={isModalOpen}>
+        <p>A credit card security code is the 3-4 digit number that 
+          is printed, not embossed, on all credit cards. The length 
+          and location of a credit card’s security code depend on 
+          what network the card is on. </p>
+        <button onClick={toggleModal}>close modal</button>
+      </Modal>
+    </div>
+    </>
+  );
+}
+
+export default App;
+`}
+          </pre>
           </Route>
         </Switch>
       </main>
