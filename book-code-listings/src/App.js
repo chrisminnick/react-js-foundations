@@ -646,13 +646,13 @@ function App() {
                   <Link to="/listing1203">Listing 12-03</Link>
                 </li>
                 <li>
-                  <Link to="/listing1204">Listing 12-04</Link>
+                  <Link to="/listing1204/login">Listing 12-04</Link>
                 </li>
                 <li>
-                  <Link to="/listing1205">Listing 12-05</Link>
+                  <Link to="/listing1205/user/12">Listing 12-05</Link>
                 </li>
                 <li>
-                  <Link to="/listing1206">Listing 12-06</Link>
+                  <Link to="/listing1206/user/12">Listing 12-06</Link>
                 </li>
                 <li>
                   <Link to="/listing1207">Listing 12-07</Link>
@@ -714,6 +714,16 @@ function App() {
                 <li>
                   <Link to="/listing1308">Listing 13-08</Link>
                 </li>
+                <li>
+                  <Link to="/listing1309">Listing 13-09</Link>
+                </li>
+                <li>
+                  <Link to="/listing1310">Listing 13-10</Link>
+                </li>
+                <li>
+                  <Link to="/listing1311">Listing 13-11</Link>
+                </li>
+
                 <li>
                   <Link to="/chapter13example">Sample App</Link>
                 </li>
@@ -2946,69 +2956,262 @@ export default useZipLookup;
           </Route>
           <Route path="/listing1202">
             <h2>Listing 12-2: A list of NavLinks with sub-items</h2>
-            <Chapter12.NavMenu />
+            <pre>
+              {`<ul>
+  <li><NavLink to="/" activeClassName="active">Home</NavLink></li>
+  <li><NavLink to="/aboutUs" activeClassName="active">About Us</NavLink>
+    <ul>
+      <li>
+          <NavLink to="/aboutUs/team" activeClassName="active">
+            Meet the Team
+          </NavLink>
+      </li>
+      <li>
+        <NavLink to="/aboutUs/history" activeClassName="active">
+          Company History
+        </NavLink>
+      </li>
+    </ul>
+  </li>
+<li><NavLink to="/contactUs" activeClassName="active">Contact Us</NavLink></li>
+</ul>
+`}
+            </pre>
           </Route>
           <Route path="/listing1203">
-            <Chapter12.NavMenuExact />
+          <h2>Listing 12-3: Using the exact attribute on NavLink components</h2>
+
+            <pre>
+              {`
+            <ul>
+          <li><NavLink exact to="/" activeClassName="active">Home</NavLink></li>
+          <li><NavLink exact to="/aboutUs" activeStyle={{color:'green'}}>About Us</NavLink>
+            <ul>
+              <li><NavLink exact to="/aboutUs/team" activeClassName="active">Meet the Team</NavLink></li>
+              <li><NavLink exact to="/aboutUs/history" activeClassName="active">Company History</NavLink></li>
+            </ul>
+          </li>
+          <li><NavLink exact to="/contactUs" activeClassName="active">Contact Us</NavLink></li>
+        </ul>
+        `}
+        </pre>
+
           </Route>
           <Route path="/listing1204">
-            <Chapter12.NavMenuWithRouter />
+            <h2>Listing 12-4: Multiple routes in a component may have matches</h2>
+            <Chapter12.MultipleMatches />
           </Route>
           <Route path="/listing1205">
-            <Chapter12.ComponentProp />
+            <h2>Listing 12-5: Using URL parameters</h2>
+            <Chapter12.URLParams />
           </Route>
           <Route path="/listing1206">
-            <Chapter12.ComponentProp />
+            <h2>Listing 12-6: Using the useParams Hook</h2>
+            <Chapter12.URLParamsHook />
           </Route>
           <Route path="/listing1207">
-            <Chapter12.RenderProp />
+            <h2>Listing 12-7: Using the component attribute</h2>
+            <Chapter12.ComponentProp />
           </Route>
           <Route path="/listing1208">
-            <Chapter12.ViewMatch />
+            <h2>Listing 12-8: Using the render attribute</h2>
+            <Chapter12.RenderProp />
           </Route>
           <Route path="/listing1209">
-            <Chapter12.UserListRedirect />
+            <h2>Listing 12-9: Rendering a render prop</h2>
+            <pre>{`function Route(props) {
+
+return (
+  <>
+    {props.render({})}
+  </>        
+);
+}
+
+export default Route;
+`}</pre>
+         
           </Route>
           <Route path="/listing1210">
-            <Chapter12.UserListRedirect />
+            <h2>Listing 12-10: Switching between multiple routes</h2>
+            <pre>{`<Switch>  
+  <Route path="/">
+    <p>home</p>
+  </Route>
+  <Route path="/aboutUs">
+    <p>about us</p>
+  </Route>
+  <Route path="/aboutUs/team">
+    <p>meet the team</p>
+  </Route>
+</Switch>
+`}</pre>
           </Route>
           <Route path="/listing1211">
-            <Chapter12.UserListRedirect />
+            <h2>Listing 12-11: Rendering a default route</h2>
+            <pre>{`<Switch>  
+  <Route path="/">
+    <p>home</p>
+  </Route>
+  <Route path="/aboutUs">
+    <p>about us</p>
+  </Route>
+  <Route path="/aboutUs/team">
+    <p>meet the team</p>
+  </Route>
+  <Route>
+    <PageNotFound />
+  </Route>
+</Switch>
+`}</pre>
           </Route>
           <Route path="/listing1212">
+            <h2>Listing 12-12: Redirecting from one location to another</h2>
             <Chapter12.UserListRedirect />
           </Route>
           <Route path="/listing1213">
-            <Chapter12.UserListRedirect />
+            <h2>Listing 12-13: Using withRouter</h2>
+            <Chapter12.NavMenuWithRouter />
           </Route>
           <Route path="/listing1214">
-            <Chapter12.ViewLocation />
+            <h2>Listing 12-14: Using useHistory</h2>
+            <Chapter12.UsingHistory />
           </Route>
           <Route path="/listing1215">
-            <Chapter12.UserListRedirect />
+            <h2>Listing 12-15: Viewing properties of the current location object</h2>
+            <Chapter12.ViewLocation />
           </Route>
           <Route path="/listing1216">
+            <h2>Listing 12-16: Dynamic Links and Routes in nested Routes</h2>
             <Chapter12.NestedRoutes />
           </Route>
-
+          <Route path="/listing1301">
+            <h2>Listing 13-1: An ErrorBoundary component</h2>
+            <Chapter13.ErrorBoundary />
+          </Route>
           <Route path="/listing1302">
-            <Chapter13.BadComponent />
+            <h2>Listing 13-2: A component with an error</h2>
+            <pre>
+              {`function BadComponent(){
+  return (
+    {oops:"this is not good"}
+  );
+}
+
+export default BadComponent;
+`}
+            </pre>
           </Route>
           <Route path="/listing1303">
+            <h2>Listing 13-3: Exporting with an ErrorBoundary</h2>
             <Chapter13.BadComponentWithBoundary />
           </Route>
           <Route path="/listing1304">
+            <h2>Listing 13-4: Logging the error and the info object to the console</h2>
             <Chapter13.ErrorBoundaryWithDidCatch><Chapter13.BadComponent /></Chapter13.ErrorBoundaryWithDidCatch>
           </Route>
+          <Route path="/listing1305">
+            <h2>Listing 13-5: The Logger Component</h2>
+            <pre>
+              {`import { LogglyTracker } from 'loggly-jslogger';
+
+const logger = new LogglyTracker();
+
+logger.push({ 'logglyKey': 'YOUR CUSTOMER TOKEN HERE' });
+
+export default logger;`}
+            </pre>
+          </Route>
           <Route path="/listing1306">
+            <h2>Listing 13-6: The updated ErrorBoundary with remote logging</h2>
             <Chapter13.ErrorBoundaryWithLogging><Chapter13.BadComponent /></Chapter13.ErrorBoundaryWithLogging>
           </Route>
           <Route path="/listing1307">
+            <h2>Listing 13-7: A Component That Sometimes Errors</h2>
             <Chapter13.SometimesBad />
           </Route>
           <Route path="/listing1308">
+            <h2>Listing 13-8: Providing a reset link in the Error Boundary</h2>
             <Chapter13.ErrorBoundaryWithReset><Chapter13.SometimesBad /></Chapter13.ErrorBoundaryWithReset>
           </Route>
+          <Route path="/listing1309">
+            <>
+            <h2>Listing 13-9: Specifying a fallback component with react-error-boundary</h2>
+            <pre>
+              {`import ErrorBoundary from 'react-error-boundary';
+
+function ErrorFallback({error}) {
+  return (
+    <div role="alert">
+      <p>Something went wrong:</p>
+      <pre>{error.message}</pre>
+    </div>  
+  )
+}
+
+function BadComponentContainer(){
+    return (
+        <ErrorBoundary
+          FallbackComponent={ErrorFallback}>
+            <BadComponent />
+        </ErrorBoundary>
+    )
+}
+
+function BadComponent(){
+    return (
+      {oops:"this is not good"}
+    );
+}
+
+export default BadComponentContainer;
+`}
+</pre>
+            </>
+          </Route>
+          <Route path="/listing1310">
+            <h2>Listing 13-10: Using try/catch to catch errors in an ErrorBoundary</h2>
+            <pre>
+              {`import {Component} from 'react';
+import logger from './logger';
+
+class ErrorBoundary extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };  
+  }
+
+  componentDidCatch(error,info){
+    try {
+      logger.push({ error, info });
+    } catch(error){
+      // handle the error here
+    }
+  }
+  
+  render() {
+
+    if (this.state.hasError) {
+      return <h1>Oops! There's been an error.</h1>;   
+    }
+
+    return this.props.children; 
+  }
+}
+
+export default ErrorBoundary;
+`}
+            </pre>
+          </Route>
+          <Route path="/listing1311">
+            <h2>Listing 13-11: Using useErrorHandler()</h2>
+            <Chapter13.ErrorBoundaryWithReset><Chapter13.UseErrorHandler /></Chapter13.ErrorBoundaryWithReset>
+          </Route>
+          
           <Route path="/chapter13example">
             <Chapter13.SampleTree />
           </Route>
