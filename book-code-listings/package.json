@@ -1,6 +1,6 @@
 {
   "name": "book-code-listings",
-  "homepages": "http://chrisminnick.github.io/react-js-foundations",
+  "homepage": "http://chrisminnick.github.io/react-js-foundations/",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
