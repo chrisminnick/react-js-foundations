@@ -920,7 +920,7 @@ function App() {
           <Route exact path="/">
           <p>Here, you'll find all the source code and live demos where possible. 
             You can download the examples, report issues, and ask/answer questions 
-            in the discussion area by visiting the books <a href="https://github.com/chrisminnick/react-js-foundations">github page</a>.
+            in the discussion area by visiting the book's <a href="https://github.com/chrisminnick/react-js-foundations">github page</a>.
           </p>
 
           <h3>About the Author</h3>
