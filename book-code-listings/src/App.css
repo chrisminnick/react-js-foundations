@@ -59,8 +59,7 @@ footer, header, hgroup, menu, nav, section {
   display: block; }
 
 body {
-  padding: 25px;
-  line-height: 1; }
+  padding: 25px;}
 
 blockquote, q {
   quotes: none; }
@@ -109,8 +108,11 @@ html {
   font-size: 16px; }
 
 body {
-  font-family: 'Roboto', sans-serif;
   padding-top: 20px; }
+
+main {
+  padding: 20px;
+}
 
 strong {
   font-weight: bold; }

@@ -913,10 +913,26 @@ function App() {
                 </li>
           </ul>
         </nav>
-        <main style={{padding:"20px",width:"100%"}}>
+        <main>
           <h1>React JS Foundations Building User Interfaces with ReactJS: An Approachable Guide</h1>
           <p>by Chris Minnick</p>
         <Switch>
+          <Route exact path="/">
+          <p>Here, you'll find all the source code and live demos where possible. 
+            You can download the examples, report issues, and ask/answer questions 
+            in the discussion area by visiting the books <a href="https://github.com/chrisminnick/react-js-foundations">github page</a>.
+          </p>
+
+          <h3>About the Author</h3>
+          <p>Chris Minnick has been a full stack developer for over 25 years, 
+            and a professional author and trainer for 15 years. He has been 
+            the lead front-end React developer for several startup companies, 
+            and has been building web and mobile user interfaces with React 
+            since 2015. Chris has produced online video courses for Pluralsight 
+            and O'Reilly Media and is the author of over a dozen books including 
+            React JS Foundations: Building User Interfaces 
+            with React JS.</p>
+          </Route>
           <Route path="/listing0102">
             <>
             <h2>Listing 1-2: Changing the state data in a component</h2>
