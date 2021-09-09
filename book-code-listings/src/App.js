@@ -24,9 +24,7 @@ function App() {
       <div style={{display:"flex"}}>
         <nav>
           <ul id="buttons">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
+
             <li>
               <Collapsible trigger="Chapter 1 - Hello, World!">
               <ul>
