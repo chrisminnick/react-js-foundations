@@ -28,18 +28,11 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
 
 #buttons>li {
   list-style: none;
-  width: 150px;
+  width: 300px;
   padding: 4px;
   border: 1px solid black;
   cursor: pointer;

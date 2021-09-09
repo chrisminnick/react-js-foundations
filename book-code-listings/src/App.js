@@ -28,13 +28,13 @@ function App() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Collapsible trigger="Chapter 1">
+              <Collapsible trigger="Chapter 1 - Hello, World!">
               <ul>
                 <li>
                   <a href="/Listing01-01">Listing 1-1</a>
                 </li>
                 <li>
-                  <a href="/Listing0102">Listing 1-2</a>
+                  <Link to="/Listing0102">Listing 1-2</Link>
                 </li>
                 <li>
                   <Link to="/listing0103">Listing 1-3</Link>
@@ -42,9 +42,15 @@ function App() {
               </ul>
               </Collapsible>
             </li>
-
             <li>
-              <Collapsible trigger="Chapter 3">
+            <Collapsible trigger="Chapter 2 - The Foundation of React">
+              <ul>
+                <li>No Code Listings</li>
+              </ul>
+            </Collapsible>
+            </li>
+            <li>
+              <Collapsible trigger="Chapter 3 - JSX">
               <ul>
                 <li>
                   <Link to="/listing301">Listing 3-01</Link>
@@ -95,7 +101,7 @@ function App() {
               </Collapsible>
             </li>
             <li>
-            <Collapsible trigger="Chapter 4">
+            <Collapsible trigger="Chapter 4 - All About Components">
               <ul>
                 <li>
                   <Link to="/listing401">Listing 4-01</Link>
@@ -208,9 +214,15 @@ function App() {
               </ul>
               </Collapsible>
             </li>
-
             <li>
-              <Collapsible trigger="Chapter 6">
+            <Collapsible trigger="Chapter 5 - React DevTools">
+              <ul>
+                <li>No Code Listings</li>
+              </ul>
+            </Collapsible>
+            </li>
+            <li>
+              <Collapsible trigger="Chapter 6 - React Data Flow">
               <ul>
                 <li>
                   <Link to="/listing601">Listing 6-01</Link>
@@ -393,7 +405,7 @@ function App() {
                 </Collapsible>
                 </li>
                 <li>
-                <Collapsible trigger="Chapter 7">
+                <Collapsible trigger="Chapter 7 - Events">
                 <ul>
                 <li>
                   <Link to="/listing701">Listing 7-01</Link>
@@ -441,7 +453,7 @@ function App() {
                 </Collapsible>
                 </li>
                 <li>
-                <Collapsible trigger="Chapter 8">
+                <Collapsible trigger="Chapter 8 - Forms">
                 <ul>
                 <li>
                   <Link to="/listing801">Listing 8-01</Link>
@@ -489,7 +501,7 @@ function App() {
                 </Collapsible>
                 </li>
                 <li>
-                <Collapsible trigger="Chapter 9">
+                <Collapsible trigger="Chapter 9 - Refs">
                 <ul>
                 <li>
                   <Link to="/listing901">Listing 9-01</Link>
@@ -519,7 +531,7 @@ function App() {
                 </Collapsible>
                 </li>
                 <li>
-                <Collapsible trigger="Chapter 10">
+                <Collapsible trigger="Chapter 10 - Styling React">
                 <ul>
                 <li>
                   <Link to="/listing1001">Listing 10-01</Link>
@@ -565,7 +577,7 @@ function App() {
                 </Collapsible>
                 </li>
                 <li>
-                <Collapsible trigger="Chapter 11">
+                <Collapsible trigger="Chapter 11 - Introducing Hooks">
                 <ul>
                 <li>
                   <Link to="/listing1101">Listing 11-01</Link>
@@ -634,7 +646,7 @@ function App() {
                 </Collapsible>
                 </li>
                 <li>
-                <Collapsible trigger="Chapter 12">
+                <Collapsible trigger="Chapter 12 - Routing">
                 <ul>
                 <li>
                   <Link to="/listing1201">Listing 12-01</Link>
@@ -688,7 +700,7 @@ function App() {
                 </Collapsible>
                 </li>
                 <li>
-                <Collapsible trigger="Chapter 13">
+                <Collapsible trigger="Chapter 13 - Error Boundaries">
                 <ul>
                 <li>
                   <Link to="/listing1301">Listing 13-01</Link>
@@ -734,7 +746,21 @@ function App() {
                 </Collapsible>
                 </li>
                 <li>
-                <Collapsible trigger="Chapter 16">
+            <Collapsible trigger="Chapter 14 - Deploying React">
+              <ul>
+                <li>No Code Listings</li>
+              </ul>
+            </Collapsible>
+            </li>
+            <li>
+            <Collapsible trigger="Chapter 15 - Initialize a React Project from Scratch">
+              <ul>
+                <li>No Code Listings</li>
+              </ul>
+            </Collapsible>
+            </li>
+                <li>
+                <Collapsible trigger="Chapter 16 - Fetching and Caching Data">
                 <ul>
                 <li>
                   <Link to="/listing1601">Listing 16-01</Link>
@@ -767,7 +793,7 @@ function App() {
                 </Collapsible>
                 </li>
                 <li>
-                <Collapsible trigger="Chapter 17">
+                <Collapsible trigger="Chapter 17 - Context API">
                 <ul>
                 <li>
                   <Link to="/listing1701">Listing 17-01</Link>
@@ -812,7 +838,7 @@ function App() {
                 </Collapsible>
                 </li>
                 <li>
-                <Collapsible trigger="Chapter 18">
+                <Collapsible trigger="Chapter 18 - React Portals">
                 <ul>
                 <li>
                   <Link to="/listing1801">Listing 18-01</Link>
@@ -838,6 +864,20 @@ function App() {
                 </ul>
                 </Collapsible>
                 </li>
+                <li>
+            <Collapsible trigger="Chapter 19 - Accessibility in React">
+              <ul>
+                <li>No Code Listings</li>
+              </ul>
+            </Collapsible>
+            </li>
+            <li>
+            <Collapsible trigger="Chapter 20 - Going Further">
+              <ul>
+                <li>No Code Listings</li>
+              </ul>
+            </Collapsible>
+            </li>
                 <li>
                 {/* <Collapsible trigger="Chapter 19">
                 <ul>
