@@ -18,6 +18,8 @@ import * as Chapter12 from './chapter12';
 import * as Chapter13 from './chapter13';
 import * as Chapter16 from './chapter16';
 import * as Chapter17 from './chapter17';
+import WhereToBuy from './WhereToBuy';
+import About from './About';
 
 function App() {
   return (
@@ -26,11 +28,23 @@ function App() {
           <ul id="buttons">
 
             <li>
-              <Collapsible trigger="Chapter 1 - Hello, World!">
+            <Collapsible trigger="About the Book">
               <ul>
                 <li>
-                  <a href="/Listing01-01">Listing 1-1</a>
+                  <Link to="/WhereToBuy">Where to Buy It</Link>
                 </li>
+                <li>
+                  <Link to="/AboutChrisMinnick">About Chris Minnick</Link>
+                </li>
+              </ul>
+              </Collapsible>
+              </li>
+              <li>
+              <Collapsible trigger="Chapter 1 - Hello, World!">
+              <ul>
+                {/* <li>
+                  <a href="/Listing01-01">Listing 1-1</a>
+                </li> */}
                 <li>
                   <Link to="/Listing0102">Listing 1-2</Link>
                 </li>
@@ -916,6 +930,7 @@ function App() {
         <main>
           <h1>React JS Foundations Building User Interfaces with ReactJS: An Approachable Guide</h1>
           <p>by Chris Minnick</p>
+
         <Switch>
           <Route exact path="/">
           <p>Here, you'll find all the source code and live demos where possible. 
@@ -923,16 +938,10 @@ function App() {
             in the discussion area by visiting the book's <a href="https://github.com/chrisminnick/react-js-foundations">github page</a>.
           </p>
 
-          <h3>About the Author</h3>
-          <p>Chris Minnick has been a full stack developer for over 25 years, 
-            and a professional author and trainer for 15 years. He has been 
-            the lead front-end React developer for several startup companies, 
-            and has been building web and mobile user interfaces with React 
-            since 2015. Chris has produced online video courses for Pluralsight 
-            and O'Reilly Media and is the author of over a dozen books including 
-            React JS Foundations: Building User Interfaces 
-            with React JS.</p>
+          
           </Route>
+          <Route path="/WhereToBuy" component={WhereToBuy} />
+          <Route path="/AboutChrisMinnick" component={About} />
           <Route path="/listing0102">
             <>
             <h2>Listing 1-2: Changing the state data in a component</h2>
