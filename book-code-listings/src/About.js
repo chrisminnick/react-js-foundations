@@ -10,6 +10,16 @@ function About() {
             and O'Reilly Media and is the author of over a dozen books including 
             React JS Foundations: Building User Interfaces 
             with React JS.</p>
+
+            <h3>Other Books by Chris Minnick</h3>
+            <ul>
+                <li><a href="https://amzn.to/3EdqbLR">Coding with JavaScript for Dummies</a></li>
+                <li><a href="https://amzn.to/3C19kKv">JavaScript For Kids For Dummies</a></li>
+                <li><a href="https://amzn.to/392hWEg">Beginning HTML5 and CSS3 for Dummies</a></li>
+                <li><a href="https://amzn.to/3hJpnVJ">Writing Computer Code</a></li>
+                <li><a href="https://amzn.to/2XcC1oq">Adventures in Coding</a></li>
+                <li><a href="https://amzn.to/2XgOdVy">Complete List of Books by Chris Minnick</a></li>
+            </ul>
         </>
     )
 }
