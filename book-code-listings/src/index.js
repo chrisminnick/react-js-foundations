@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router basename="/react-js-foundations">
+    <Router>
       <App />
     </Router>
   </React.StrictMode>,
