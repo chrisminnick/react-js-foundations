@@ -1973,7 +1973,7 @@ const headingStyle = {
             <Chapter10.WarningMessageVars warningMessage="Look out!" />
           </Route>
           <Route path="/listing1007">
-            <h2>Listing 10-7: A Style Module Library </h2>
+            <h2>Listing 10-7: A Style Module Library</h2>
             <pre>
               {`export const warningStyle = {color:"red",padding:"6px",backgroundColor:"#000000"};
 export const infoStyle = {color:"yellow",padding:"6px",backgroundColor:"#000000"};
