@@ -2,38 +2,13 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#buttons ul {
+  margin-left: 0; padding-left: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-
 
 #buttons>li {
   list-style: none;
-  width: 400px;
-  padding: 4px;
+  width: 500px;
   border: 1px solid black;
   cursor: pointer;
 }
@@ -124,7 +99,8 @@ strong {
   padding: 10px;
   border: 1px solid #ebebeb;
   border-top: 0; }
-  .Collapsible__contentInner p {
+  .Collapsible__contentInner li {
+    list-style-type: none;
     margin-bottom: 10px;
     font-size: 14px;
     line-height: 20px; }
