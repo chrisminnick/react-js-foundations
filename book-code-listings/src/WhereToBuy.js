@@ -8,6 +8,7 @@ function WhereToBuy(props){
         </p>
         <ul>
             <li><a href="https://amzn.to/3lbXwya">Amazon.com</a></li>
+            <li><a href="https://www.barnesandnoble.com/w/react-js-foundations-building-user-interfaces-with-reactjs-chris-minnick/1140168465?ean=9781119685548">Barnes and Noble</a></li>
 
         </ul>
         </>
