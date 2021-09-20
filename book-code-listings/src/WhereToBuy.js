@@ -9,7 +9,8 @@ function WhereToBuy(props){
         <ul>
             <li><a href="https://amzn.to/3lbXwya">Amazon.com</a></li>
             <li><a href="https://www.barnesandnoble.com/w/react-js-foundations-building-user-interfaces-with-reactjs-chris-minnick/1140168465?ean=9781119685548">Barnes and Noble</a></li>
-
+            <li><a href="https://www.booksamillion.com/product/9781119685548">Books a Million</a></li>
+            <li><a href="https://www.walmart.com/ip/React-Js-Foundations-Building-User-Interfaces-with-Reactjs-An-Approachable-Guide-Paperback-9781119685548/363681939">Walmart</a></li>
         </ul>
         </>
     )
