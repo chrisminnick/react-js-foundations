@@ -32,7 +32,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "echo 'www.reactjsfoundations.com' > ./build/CNAME && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -53,6 +53,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^3.2.3",
+    "react-app-rewired": "^2.1.8"
   }
 }
