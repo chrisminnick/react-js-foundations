@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+}
+.navlink {
+  text-decoration: none;
+  padding: 4px;
+  font-size: 1.5em;
+  color: black;
+}
 #buttons ul {
   margin-left: 0; padding-left: 0;
 }

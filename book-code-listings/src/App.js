@@ -3,13 +3,14 @@ import {Link} from "react-router-dom";
 import Collapsible from 'react-collapsible';
 import {routes} from './routes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome } from '@fortawesome/free-solid-svg-icons'
+import { faHome,faDownload } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
   return (
       <div style={{display:"flex"}}>
         <nav>
-          <Link to="/"><FontAwesomeIcon icon={faHome} /></Link>
+        <span className="navlink"><Link to="/"><FontAwesomeIcon icon={faHome} /> Home</Link></span>
+        <span className="navlink"><a title="download code" href="https://github.com/chrisminnick/react-js-foundations/archive/refs/heads/main.zip"><FontAwesomeIcon icon={faDownload} /> Code</a></span>
           <ul id="buttons">
 
             <li>
