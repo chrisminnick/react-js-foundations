@@ -18,15 +18,11 @@ import * as Chapter16 from './chapter16';
 import * as Chapter17 from './chapter17';
 import WhereToBuy from './WhereToBuy';
 import About from './About';
+import HomePage from './HomePage';
 
 export const routes = (<Switch>
           <Route exact path="/">
-          <p>Here, you'll find all the source code and live demos where possible. 
-            You can download the examples, report issues, and ask/answer questions 
-            in the discussion area by visiting the book's <a href="https://github.com/chrisminnick/react-js-foundations">github page</a>.
-          </p>
-
-          
+            <HomePage />
           </Route>
           <Route path="/WhereToBuy" component={WhereToBuy} />
           <Route path="/AboutChrisMinnick" component={About} />

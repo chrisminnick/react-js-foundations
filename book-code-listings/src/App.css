@@ -101,6 +101,25 @@ main {
 strong {
   font-weight: bold; }
 
+.NonCollapsibleNav {
+  padding: 10px;
+  border: 1px solid #ebebeb;
+  border-top: 0;
+}
+.NonCollapsibleNav li {
+  display: block;
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+  border: 1px solid white;
+  padding: 10px;
+  background: #00ac9d;
+  color: white;
+  list-style-type: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+}
 .Collapsible {
   background-color: white; }
 
@@ -120,7 +139,6 @@ strong {
   display: block;
   font-weight: 400;
   text-decoration: none;
-  color: #333333;
   position: relative;
   border: 1px solid white;
   padding: 10px;

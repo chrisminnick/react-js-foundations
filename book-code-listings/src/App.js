@@ -2,22 +2,23 @@ import './App.css';
 import {Link} from "react-router-dom";
 import Collapsible from 'react-collapsible';
 import {routes} from './routes';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome,faDownload } from '@fortawesome/free-solid-svg-icons';
-import { fab } from '@fortawesome/free-brands-svg-icons'
-library.add(fab, faHome, faDownload);
+
 
 function App() {
   return (
       <div style={{display:"flex"}}>
         <nav>
-        <span className="navlink"><Link to="/"><FontAwesomeIcon icon={faHome} /> Home</Link></span>
-        <span className="navlink"><a title="download code" href="https://github.com/chrisminnick/react-js-foundations/archive/refs/heads/main.zip"><FontAwesomeIcon icon={faDownload} /> Download Code</a></span>
-        <span className="navlink"><a title="github repo" href="https://github.com/chrisminnick/react-js-foundations"><FontAwesomeIcon icon={['fab', 'github']} /> Github</a></span>
+        
 
           <ul id="buttons">
 
+            <li>
+            <div className="Collapsible">
+              <span className="Collapsible__trigger is-closed">
+                <Link to="/" style={{color:"#fff"}}>Home</Link>
+              </span>
+            </div>          
+            </li>
             <li>
             <Collapsible trigger="About the Book">
               <ul>
