@@ -20,10 +20,17 @@ function App() {
             </div>          
             </li>
             <li>
+            <div className="Collapsible">
+              <span className="Collapsible__trigger is-closed">
+                <Link to="/WhereToBuy" style={{color:"#fff"}}>Buy the Book</Link>
+              </span>
+            </div>          
+            </li>
+            <li>
             <Collapsible trigger="About the Book">
               <ul>
                 <li>
-                  <Link to="/WhereToBuy">Where to Buy It</Link>
+                  <Link to="/intro">Introduction</Link>
                 </li>
                 <li>
                   <Link to="/AboutChrisMinnick">About Chris Minnick</Link>

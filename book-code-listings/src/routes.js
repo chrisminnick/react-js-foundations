@@ -16,6 +16,7 @@ import * as Chapter12 from './chapter12';
 import * as Chapter13 from './chapter13';
 import * as Chapter16 from './chapter16';
 import * as Chapter17 from './chapter17';
+import Introduction from './Introduction';
 import WhereToBuy from './WhereToBuy';
 import About from './About';
 import HomePage from './HomePage';
@@ -24,6 +25,7 @@ export const routes = (<Switch>
           <Route exact path="/">
             <HomePage />
           </Route>
+          <Route path="/intro" component={Introduction} />
           <Route path="/WhereToBuy" component={WhereToBuy} />
           <Route path="/AboutChrisMinnick" component={About} />
           <Route path="/listing0102">
