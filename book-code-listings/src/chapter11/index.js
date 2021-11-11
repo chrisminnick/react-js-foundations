@@ -1,5 +1,5 @@
 export { default as NumberGuessing } from "./NumberGuessing";
-export { ButtonContainer } from "./PassingSetter";
+export { default as ButtonContainer } from "./PassingSetter";
 export { default as TimerFun } from "./TimerDemo";
 export { default as TimerRestartFun } from "./TimerRestartDemo";
 export { default as TimerOnceFun } from "./TimerOnceDemo";

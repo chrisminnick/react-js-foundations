@@ -46,4 +46,4 @@ function MyButton(props) {
   );
 }
 
-export { ButtonContainer, MyButton };
+export default ButtonContainer;
