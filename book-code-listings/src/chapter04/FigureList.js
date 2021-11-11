@@ -1,5 +1,5 @@
-import {Component} from 'react';
-import BasicFigure from './BasicFigure';
+import { Component } from "react";
+import BasicFigure from "./BasicFigure";
 
 class FigureList extends Component {
   render() {
@@ -8,8 +8,8 @@ class FigureList extends Component {
         <BasicFigure />
         <BasicFigure />
         <BasicFigure />
-      <pre>
-{`import {Component} from 'react';
+        <pre>
+          {`import {Component} from 'react';
 import BasicFigure from './BasicFigure';
 
 class FigureList extends Component {
@@ -25,9 +25,9 @@ class FigureList extends Component {
 }
 export default FigureList;
 `}
-      </pre>
+        </pre>
       </>
-    )
+    );
   }
 }
 export default FigureList;

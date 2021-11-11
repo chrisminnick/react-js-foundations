@@ -1,12 +1,12 @@
-import StyledChild from './StyledChild';
+import StyledChild from "./StyledChild";
 
 //import './style.css';
 
-function StyledParent(props){
-    return (
+function StyledParent(props) {
+  return (
     <>
-    <StyledChild />
-    <pre>
+      <StyledChild />
+      <pre>
         {`import StyledChild from './StyledChild';
 
 import './style.css';
@@ -15,8 +15,10 @@ function StyledParent(props){
     return (<StyledChild />)
 }
 
-export default StyledParent;`}</pre>
-</>)
+export default StyledParent;`}
+      </pre>
+    </>
+  );
 }
 
 export default StyledParent;

@@ -1,20 +1,21 @@
-import {useState} from 'react';
+import { useState } from "react";
 
-function SignUp(props){
+function SignUp(props) {
+  const [emailAddress, setEmailAddress] = useState("");
 
-  const [emailAddress,setEmailAddress] = useState('');
-
-  const handleChange = (e)=>{
+  const handleChange = (e) => {
     setEmailAddress(e.target.value);
-  }
+  };
 
-  return(
+  return (
     <>
       <form>
-        <label>Enter your email address:
+        <label>
+          Enter your email address:
           <input value={emailAddress} onChange={handleChange} type="text" />
         </label>
-      </form><br />
+      </form>
+      <br />
       Your email address: {emailAddress}
       <pre>
         {`import {useState} from 'react';
@@ -43,7 +44,7 @@ export default SignUp;
 `}
       </pre>
     </>
-  )
+  );
 }
 
 export default SignUp;

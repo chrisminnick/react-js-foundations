@@ -1,24 +1,24 @@
-import ErrorBoundary from 'react-error-boundary';
+import ErrorBoundary from "react-error-boundary";
 
-function ErrorFallback({error}) {
+function ErrorFallback({ error }) {
   return (
     <div role="alert">
       <p>Something went wrong:</p>
       <pre>{error.message}</pre>
-    </div>  
-  )
+    </div>
+  );
 }
 
-function BadComponentContainer(){
-    return (
-        <ErrorBoundary FallbackComponent={ErrorFallback}>
-            <BadComponent />
-        </ErrorBoundary>
-    )
+function BadComponentContainer() {
+  return (
+    <ErrorBoundary FallbackComponent={ErrorFallback}>
+      <BadComponent />
+    </ErrorBoundary>
+  );
 }
 
-function BadComponent(){
-    throw new Error('💥 CABOOM 💥')
+function BadComponent() {
+  throw new Error("💥 CABOOM 💥");
 }
 
 export default BadComponentContainer;

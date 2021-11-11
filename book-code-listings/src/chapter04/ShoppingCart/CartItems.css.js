@@ -1,3 +1,3 @@
 export default {
-    cartItems: {}
+  cartItems: {},
 };

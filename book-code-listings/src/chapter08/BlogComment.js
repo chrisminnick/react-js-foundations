@@ -1,28 +1,29 @@
-import {useState,useRef} from 'react';
+import { useState, useRef } from "react";
 
-function BlogComment(props){
-    const [comments,setComments] = useState([]);
-    const textAreaRef = useRef(null);
-    const recordComment = (e)=>{
-        e.preventDefault();
-        setComments([...comments,textAreaRef.current.value]);
-    }
-    
-    const commentList = comments.map((comment,index)=>{
-        return (<p key={index}>{comment}</p>);
-    })
+function BlogComment(props) {
+  const [comments, setComments] = useState([]);
+  const textAreaRef = useRef(null);
+  const recordComment = (e) => {
+    e.preventDefault();
+    setComments([...comments, textAreaRef.current.value]);
+  };
 
-    return(
-        <>
-            <form onSubmit={recordComment}>
-            <p>Enter your comment:</p>
-            <textarea ref={textAreaRef}></textarea><br />
-            <button>Submit Comment</button>
-            <p>All Comments:</p>
-            {commentList}
-            </form>
-            <pre>
-                {`import {useState,useRef} from 'react';
+  const commentList = comments.map((comment, index) => {
+    return <p key={index}>{comment}</p>;
+  });
+
+  return (
+    <>
+      <form onSubmit={recordComment}>
+        <p>Enter your comment:</p>
+        <textarea ref={textAreaRef}></textarea>
+        <br />
+        <button>Submit Comment</button>
+        <p>All Comments:</p>
+        {commentList}
+      </form>
+      <pre>
+        {`import {useState,useRef} from 'react';
 
 function BlogComment(props){
     const [comments,setComments] = useState([]);
@@ -51,9 +52,9 @@ function BlogComment(props){
 
 export default BlogComment;
 `}
-            </pre>
-        </>
-    );
+      </pre>
+    </>
+  );
 }
 
 export default BlogComment;

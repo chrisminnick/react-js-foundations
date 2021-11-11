@@ -1,10 +1,15 @@
-function WarningButton(){
-
-    return (
+function WarningButton() {
+  return (
     <>
-      <button onClick={()=>{alert('Are you sure?');}}>Don't Click Here</button>
+      <button
+        onClick={() => {
+          alert("Are you sure?");
+        }}
+      >
+        Don't Click Here
+      </button>
       <pre>
-          {`function WarningButton(){
+        {`function WarningButton(){
 
 return (
   <button onClick={()=>{alert('Are you sure?');}}>Don't Click Here</button>
@@ -15,8 +20,7 @@ return (
 export default WarningButton;    `}
       </pre>
     </>
-    );
-    
-    }
-    
-export default WarningButton;    
+  );
+}
+
+export default WarningButton;

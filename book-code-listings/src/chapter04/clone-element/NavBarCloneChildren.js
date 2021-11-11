@@ -1,16 +1,17 @@
-import React from 'react';
+import React from "react";
 
-function NavBar(props){
+function NavBar(props) {
   return (
     <>
-    <div>
-      {React.Children.map(props.children, child => {
-        return React.cloneElement(child, {
-          onClick: props.onClick })   
-      })}
-    </div>
-    <pre>
-{`import React from 'react';
+      <div>
+        {React.Children.map(props.children, (child) => {
+          return React.cloneElement(child, {
+            onClick: props.onClick,
+          });
+        })}
+      </div>
+      <pre>
+        {`import React from 'react';
 
 function NavBar(props){
   return (
@@ -25,9 +26,9 @@ function NavBar(props){
 
 export default NavBar;
 `}
-    </pre>
+      </pre>
     </>
-   ) 
+  );
 }
 
 export default NavBar;

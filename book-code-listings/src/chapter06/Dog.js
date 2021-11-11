@@ -1,9 +1,9 @@
-import {Component} from 'react';
+import { Component } from "react";
 
 class Dog extends Component {
-    render(){
-        return(<p>A Dog: {this.props.firstName}</p>)
-    }
+  render() {
+    return <p>A Dog: {this.props.firstName}</p>;
+  }
 }
 
 export default Dog;

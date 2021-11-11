@@ -1,3 +1,3 @@
-export default function LoginSubmit(props){
-    return (<button>Submit</button>);
+export default function LoginSubmit(props) {
+  return <button>Submit</button>;
 }

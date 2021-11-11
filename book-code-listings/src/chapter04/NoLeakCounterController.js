@@ -1,21 +1,21 @@
-import {useState} from 'react';
-import NoLeakCounter from './NoLeakCounter';
+import { useState } from "react";
+import NoLeakCounter from "./NoLeakCounter";
 
 function NoLeakCounterController() {
-  const [displayCounter,setDisplayCounter] = useState(true);
+  const [displayCounter, setDisplayCounter] = useState(true);
 
-  function toggleCounter(){
-      setDisplayCounter(!displayCounter);
-  };
+  function toggleCounter() {
+    setDisplayCounter(!displayCounter);
+  }
 
   return (
     <>
-    <div>
-      {displayCounter ? <NoLeakCounter /> : null}
-      <button onClick={toggleCounter}>Toggle Count</button>
-    </div>
-    <pre>
-{`import {useState} from 'react';
+      <div>
+        {displayCounter ? <NoLeakCounter /> : null}
+        <button onClick={toggleCounter}>Toggle Count</button>
+      </div>
+      <pre>
+        {`import {useState} from 'react';
 import NoLeakCounter from './NoLeakCounter';
 
 function NoLeakCounterController() {
@@ -34,7 +34,7 @@ function NoLeakCounterController() {
 }
 export default NoLeakCounterController;
 `}
-    </pre>
+      </pre>
     </>
   );
 }

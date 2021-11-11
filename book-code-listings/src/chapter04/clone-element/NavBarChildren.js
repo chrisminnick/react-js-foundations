@@ -1,11 +1,9 @@
-function NavBar(props){
-    return (
-      <>
-      <div>
-        {props.children}
-      </div>
+function NavBar(props) {
+  return (
+    <>
+      <div>{props.children}</div>
       <pre>
-{`function NavBar(props){
+        {`function NavBar(props){
     return (
       <div>
         {props.children}
@@ -15,8 +13,7 @@ function NavBar(props){
 export default NavBar;
 `}
       </pre>
-      </>
-    )
-  }
+    </>
+  );
+}
 export default NavBar;
-  

@@ -1,18 +1,24 @@
-import React from 'react';
+import React from "react";
 
-function ReactMemoExample(props){
+function ReactMemoExample(props) {
   return (
-  <>
-  <p>Hi, {props.firstName}. This component returns the same thing when given the same props.</p>
-  <pre>
-{`import React from 'react';
+    <>
+      <p>
+        Hi, {props.firstName}. This component returns the same thing when given
+        the same props.
+      </p>
+      <pre>
+        {`import React from 'react';
 
 function ReactMemoExample(props){
   return (<p>Hi, {props.firstName}. This component returns the same thing when given the same props.</p>);
 }
 
 export default React.memo(ReactMemoExample);
-`}</pre></>);
+`}
+      </pre>
+    </>
+  );
 }
 
 export default React.memo(ReactMemoExample);

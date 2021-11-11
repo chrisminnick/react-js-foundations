@@ -1,24 +1,25 @@
-import {useState} from 'react';
-import useZipLookup from './useZipLookup';
+import { useState } from "react";
+import useZipLookup from "./useZipLookup";
 
-function ShippingAddress2(props){
-  const [zipcode,setZipcode] = useState('');
-  const [city,state] = useZipLookup(zipcode);
+function ShippingAddress2(props) {
+  const [zipcode, setZipcode] = useState("");
+  const [city, state] = useZipLookup(zipcode);
 
-  const setZip = (e)=>{
+  const setZip = (e) => {
     e.preventDefault();
     setZipcode(e.target.zipcode.value);
-  }
+  };
 
-    return (
-      <>
+  return (
+    <>
       <form onSubmit={setZip}>
-        Zipcode: <input type="text" name="zipcode" /> 
-        <button type="submit">Lookup City/State</button><br />
-
-        City: {city}<br />
-        State: {state}<br />
-
+        Zipcode: <input type="text" name="zipcode" />
+        <button type="submit">Lookup City/State</button>
+        <br />
+        City: {city}
+        <br />
+        State: {state}
+        <br />
       </form>
       <pre>
         {`import {useRef,useState} from 'react';
@@ -48,8 +49,8 @@ function ShippingAddress2(props){
 export default ShippingAddress2;
 `}
       </pre>
-      </>
-    )
+    </>
+  );
 }
 
 export default ShippingAddress2;

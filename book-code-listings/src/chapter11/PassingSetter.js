@@ -1,12 +1,12 @@
-import {useState} from 'react';
+import { useState } from "react";
 
-function ButtonContainer(){
-
-  const [count,setCount] = useState(0);
+function ButtonContainer() {
+  const [count, setCount] = useState(0);
 
   return (
     <>
-      <MyButton count = {count} setCount = {setCount} /><br />
+      <MyButton count={count} setCount={setCount} />
+      <br />
       count value: {count}
       <pre>
         {`import {useState} from 'react';
@@ -38,13 +38,12 @@ export {ButtonContainer,MyButton};
   );
 }
 
-function MyButton(props){
-    
+function MyButton(props) {
   return (
-    <button onClick = {()=>props.setCount(props.count+1)}>
+    <button onClick={() => props.setCount(props.count + 1)}>
       Add 1 to the Count
     </button>
   );
 }
 
-export {ButtonContainer,MyButton};
+export { ButtonContainer, MyButton };

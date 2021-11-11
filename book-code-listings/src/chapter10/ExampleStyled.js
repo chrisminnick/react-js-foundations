@@ -1,17 +1,17 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Heading = styled.h1`
   width: 50%;
   margin: 0 auto;
   font-size: 2.2em;
-  color: #333300;`
+  color: #333300;
+`;
 
-
-const ExampleComponent = ()=>{
-  return(
-      <>
-    <Heading>Example Heading</Heading>
-    <pre>
+const ExampleComponent = () => {
+  return (
+    <>
+      <Heading>Example Heading</Heading>
+      <pre>
         {`import styled from 'styled-components';
 
 const Heading = styled.h1\`
@@ -29,9 +29,9 @@ const ExampleComponent = ()=>{
 
 export default ExampleComponent;
 `}
-    </pre>
+      </pre>
     </>
   );
-}
+};
 
 export default ExampleComponent;

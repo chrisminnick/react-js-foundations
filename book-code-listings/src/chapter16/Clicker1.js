@@ -1,22 +1,23 @@
-import {useState} from 'react';
-import './style.css';
+import { useState } from "react";
+import "./style.css";
 
-function Clicker1(){
-    const [count,setCount] = useState(0);
+function Clicker1() {
+  const [count, setCount] = useState(0);
 
-    const incrementCount = ()=>{
-        setCount((prev)=>prev+1);
-    }
-    
-    return(
-        <>
-        <div className="container">
-            <h1 className="current-count">{count}</h1>
-            <button className="increment-button"
-                    onClick={incrementCount}>+</button>
-        </div>
-        <pre>
-            {`import {useState} from 'react';
+  const incrementCount = () => {
+    setCount((prev) => prev + 1);
+  };
+
+  return (
+    <>
+      <div className="container">
+        <h1 className="current-count">{count}</h1>
+        <button className="increment-button" onClick={incrementCount}>
+          +
+        </button>
+      </div>
+      <pre>
+        {`import {useState} from 'react';
 import './style.css';
 
 function Clicker1(){
@@ -36,9 +37,9 @@ function Clicker1(){
 }
 
 export default Clicker1;`}
-        </pre>
-        </>
-    )
+      </pre>
+    </>
+  );
 }
 
 export default Clicker1;

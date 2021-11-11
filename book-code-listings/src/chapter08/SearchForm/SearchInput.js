@@ -1,12 +1,12 @@
-function SearchInput(props){
+function SearchInput(props) {
+  const handleChange = (e) => {
+    props.setSearchTerm(e.target.value);
+  };
 
-    const handleChange = (e)=>{
-      props.setSearchTerm(e.target.value);
-    }
-  
-    return(
-      <>
-      <label>Enter your search term:
+  return (
+    <>
+      <label>
+        Enter your search term:
         <input type="text" value={props.searchTerm} onChange={handleChange} />
       </label>
       <pre>
@@ -26,8 +26,8 @@ return(
 export default SearchInput;
 `}
       </pre>
-      </>
-    );
-  }
-  
-export default SearchInput;  
+    </>
+  );
+}
+
+export default SearchInput;

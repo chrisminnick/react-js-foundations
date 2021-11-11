@@ -1,8 +1,7 @@
-import React from 'react';
-import shallowCompare from 'react-addons-shallow-compare';
+import React from "react";
+import shallowCompare from "react-addons-shallow-compare";
 
 class ShallowCompare extends React.Component {
-
   shouldComponentUpdate(nextProps, nextState) {
     return shallowCompare(this, nextProps, nextState);
   }
@@ -10,9 +9,9 @@ class ShallowCompare extends React.Component {
   render() {
     return (
       <>
-      <div>foo</div>
-      <pre>
-{`import React from 'react';
+        <div>foo</div>
+        <pre>
+          {`import React from 'react';
 import shallowCompare from 'react-addons-shallow-compare';
 
 class ShallowCompare extends React.Component {
@@ -28,8 +27,9 @@ class ShallowCompare extends React.Component {
 
 export default ShallowCompare;
 `}
-      </pre>
-      </>);
+        </pre>
+      </>
+    );
   }
 }
 

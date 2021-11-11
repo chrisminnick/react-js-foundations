@@ -5,14 +5,14 @@ import {
   Link,
   useParams,
   useRouteMatch,
-  useLocation
+  useLocation,
 } from "react-router-dom";
-  
+
 function Reports() {
   let { path, url } = useRouteMatch();
-  
-    return (
-      <>
+
+  return (
+    <>
       <div>
         <h2>Reports</h2>
         <ul>
@@ -26,7 +26,7 @@ function Reports() {
             <Link to={`${url}/payroll`}>Payroll</Link>
           </li>
         </ul>
-  
+
         <Switch>
           <Route exact path={path}>
             <h3>Select a report.</h3>
@@ -114,20 +114,19 @@ function App() {
 export default App;
 `}
       </pre>
-      </>
-    );
-  }
-  
-  function Report() {
-  
-    let { reportId } = useParams();
-  
-    return (
-      <div>
-        <h3>{reportId}</h3>
-      </div>
-    );
-  }
+    </>
+  );
+}
+
+function Report() {
+  let { reportId } = useParams();
+
+  return (
+    <div>
+      <h3>{reportId}</h3>
+    </div>
+  );
+}
 
 function App() {
   const location = useLocation();

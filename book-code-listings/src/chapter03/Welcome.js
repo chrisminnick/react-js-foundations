@@ -1,15 +1,12 @@
-import Header from './Header';
+import Header from "./Header";
 
-function Welcome(){
-
+function Welcome() {
   let header = <Header />;
-  return(
+  return (
     <>
-    <div>
-      {header}
-    </div>
-<pre>
-{`import Header from './Header';
+      <div>{header}</div>
+      <pre>
+        {`import Header from './Header';
 
 function Welcome(){
 
@@ -21,7 +18,8 @@ function Welcome(){
   );
 }
 export default Welcome;
-`}</pre>
+`}
+      </pre>
     </>
   );
 }

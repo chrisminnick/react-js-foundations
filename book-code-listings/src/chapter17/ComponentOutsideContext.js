@@ -1,17 +1,17 @@
-import React,{useState,useContext} from 'react';
+import React, { useState, useContext } from "react";
 const UserContext = React.createContext();
 
 const App = () => {
-  const [username,setUsername] = useState();
-  
-    if (username) {
-        return (
-        <>
-            <UserContext.Provider value={{username,setUsername}}>
-              <Dashboard/>
-            </UserContext.Provider>
-            <pre>
-                {`import React,{useState,useContext} from 'react';
+  const [username, setUsername] = useState();
+
+  if (username) {
+    return (
+      <>
+        <UserContext.Provider value={{ username, setUsername }}>
+          <Dashboard />
+        </UserContext.Provider>
+        <pre>
+          {`import React,{useState,useContext} from 'react';
 const UserContext = React.createContext();
 
 const App = () => {
@@ -57,38 +57,47 @@ const Logout = (props) => {
 }
 
 export default App;`}
-            </pre>
-          </>
-
-        )
-    } else {
-        return <button onClick={()=>setUsername('Chris')}>Login</button>
-    }
-}
+        </pre>
+      </>
+    );
+  } else {
+    return <button onClick={() => setUsername("Chris")}>Login</button>;
+  }
+};
 
 const Dashboard = (props) => {
-    return <Header />
-}
+  return <Header />;
+};
 
 const Header = (props) => {
-    return <UserControls />
-}
+  return <UserControls />;
+};
 
 const UserControls = (props) => {
-    return (<>
+  return (
+    <>
       <WelcomeMessage />
       <Logout />
-    </>)
-}
+    </>
+  );
+};
 
 const WelcomeMessage = () => {
-    const {username} = useContext(UserContext);
-    return <>Welcome {username}!</>
-}
+  const { username } = useContext(UserContext);
+  return <>Welcome {username}!</>;
+};
 
 const Logout = (props) => {
-    const {setUsername} = useContext(UserContext);
-    return <button onClick = {()=>{setUsername('')}}>Logout</button>
-}
+  const { setUsername } = useContext(UserContext);
+  return (
+    <button
+      onClick={() => {
+        setUsername("");
+      }}
+    >
+      Logout
+    </button>
+  );
+};
 
 export default App;

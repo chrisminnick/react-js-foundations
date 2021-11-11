@@ -1,13 +1,12 @@
-import {useRef} from 'react';
+import { useRef } from "react";
 
 function TextReader(props) {
-
   const textView = useRef(null);
 
   return (
-      <>
-    <textarea ref={textView} value={props.bookText} />
-    <pre>
+    <>
+      <textarea ref={textView} value={props.bookText} />
+      <pre>
         {`import {useRef} from 'react';
 
 function TextReader(props) {
@@ -22,10 +21,9 @@ function TextReader(props) {
 
 export default TextReader;
 `}
-    </pre>
+      </pre>
     </>
   );
-
 }
 
 export default TextReader;

@@ -1,15 +1,12 @@
-export default function Farm(props){
+export default function Farm(props) {
+  const onTheFarm = props.animals.map((animal) => {
+    return `On his farm he had some ${animal}. `;
+  });
 
-    const onTheFarm = props.animals.map ((animal)=>{
-      return `On his farm he had some ${animal}. `;
-    });
-  
-    return (
-    <div>  
+  return (
+    <div>
       <p>{props.farmer} had a farm.</p>
       {onTheFarm}
     </div>
-    )
-  
-  }
-  
+  );
+}

@@ -1,20 +1,20 @@
-import {Component} from 'react';
+import { Component } from "react";
 
 class CounterClass extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state = {count:0};
+    this.state = { count: 0 };
     this.increment = this.increment.bind(this);
   }
-  increment(){
-    this.setState({count: this.state.count + 1});
+  increment() {
+    this.setState({ count: this.state.count + 1 });
   }
-  render(){
-    return(
+  render() {
+    return (
       <>
-      <button onClick={this.increment}>{this.state.count}</button>
-      <pre>
-{`import {Component} from 'react';
+        <button onClick={this.increment}>{this.state.count}</button>
+        <pre>
+          {`import {Component} from 'react';
 
 class CounterClass extends Component {
   constructor(props){
@@ -33,9 +33,9 @@ class CounterClass extends Component {
 }
 export default CounterClass;
 `}
-      </pre>
+        </pre>
       </>
-    )
+    );
   }
 }
 export default CounterClass;

@@ -1,9 +1,14 @@
-function WelcomeMessage(){
-    return <>Welcome!
-    <pre>
-{`function WelcomeMessage(){
+function WelcomeMessage() {
+  return (
+    <>
+      Welcome!
+      <pre>
+        {`function WelcomeMessage(){
     return "Welcome!";
 }
-export default WelcomeMessage;`}</pre></>;
+export default WelcomeMessage;`}
+      </pre>
+    </>
+  );
 }
 export default WelcomeMessage;

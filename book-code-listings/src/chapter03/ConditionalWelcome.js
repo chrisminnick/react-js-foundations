@@ -1,21 +1,19 @@
-import Header from './Header';
-import Login from './Login';
+import Header from "./Header";
+import Login from "./Login";
 
-function Welcome({loggedIn}) {
-    let header;
+function Welcome({ loggedIn }) {
+  let header;
 
-    if (loggedIn) {
-      header = <Header />;
-    } else {
-      header = <Login />;
-    }
-    return (
-      <>
-      <div>
-        {header}
-      </div>
+  if (loggedIn) {
+    header = <Header />;
+  } else {
+    header = <Login />;
+  }
+  return (
+    <>
+      <div>{header}</div>
       <pre>
-      {`
+        {`
 import Header from './Header';
 import Login from './Login';
 
@@ -35,9 +33,9 @@ function Welcome({loggedIn}) {
 }
         
 export default Welcome;`}
-            </pre>
-        </>
-    );
-  }
-  
-export default Welcome;  
+      </pre>
+    </>
+  );
+}
+
+export default Welcome;

@@ -1,20 +1,21 @@
-import {useEffect,useState} from 'react';
+import { useEffect, useState } from "react";
 
-function TimerRestartFun(props){
+function TimerRestartFun(props) {
+  const [count, setCount] = useState(0);
 
-    const [count,setCount] = useState(0);
+  useEffect(() => {
+    let time = 0;
+    const interval = setInterval(() => {
+      console.log(time++);
+    }, 1000);
+    return () => clearInterval(interval);
+  });
 
-    useEffect(() => {
-        let time = 0;
-        const interval = setInterval(() => {
-          console.log(time++);
-        }, 1000);
-        return () => clearInterval(interval);
-    });
-
-    return (
-    <><p>Check the console to see the timer.
-        <button onClick={()=>setCount((prev)=>prev+1)}>{count}</button>
+  return (
+    <>
+      <p>
+        Check the console to see the timer.
+        <button onClick={() => setCount((prev) => prev + 1)}>{count}</button>
       </p>
       <pre>
         {`import {useEffect,useState} from 'react';
@@ -39,8 +40,8 @@ function TimerRestartFun(props){
 
 export default TimerRestartFun;`}
       </pre>
-      </>
-      );
+    </>
+  );
 }
 
 export default TimerRestartFun;

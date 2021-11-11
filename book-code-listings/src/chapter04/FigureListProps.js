@@ -1,17 +1,20 @@
-import {Component} from 'react';
-import BasicFigureProps from './BasicFigureProps';
+import { Component } from "react";
+import BasicFigureProps from "./BasicFigureProps";
 
 class FigureList extends Component {
   render() {
     return (
       <>
-      <div style={{display:"flex"}}>  
-        <BasicFigureProps filename="images/dog.png" caption="Chauncey" />
-        <BasicFigureProps filename="images/cat.png" caption="Murray" />
-        <BasicFigureProps filename="images/chickens.png" caption="Lefty and Ginger" />
-      </div>
-      <pre>
-{`import {Component} from 'react';
+        <div style={{ display: "flex" }}>
+          <BasicFigureProps filename="images/dog.png" caption="Chauncey" />
+          <BasicFigureProps filename="images/cat.png" caption="Murray" />
+          <BasicFigureProps
+            filename="images/chickens.png"
+            caption="Lefty and Ginger"
+          />
+        </div>
+        <pre>
+          {`import {Component} from 'react';
 import BasicFigureProps from './BasicFigureProps';
 
 class FigureList extends Component {
@@ -26,9 +29,9 @@ class FigureList extends Component {
   }
 }
 export default FigureList;`}
-      </pre>
+        </pre>
       </>
-    )
+    );
   }
 }
 export default FigureList;

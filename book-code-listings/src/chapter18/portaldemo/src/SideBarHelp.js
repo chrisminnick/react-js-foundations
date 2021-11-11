@@ -1,9 +1,9 @@
-import {createPortal} from 'react-dom';
+import { createPortal } from "react-dom";
 
-function SidebarHelp(props){
+function SidebarHelp(props) {
   return createPortal(
     <p>{props.helpText}</p>,
-    document.getElementById('sidebar')
+    document.getElementById("sidebar")
   );
 }
 

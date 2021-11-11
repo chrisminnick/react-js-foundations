@@ -1,18 +1,17 @@
-import PropTypes from 'prop-types';
-import {Component} from 'react';
+import PropTypes from "prop-types";
+import { Component } from "react";
 
 class WelcomeClass extends Component {
-
   static propTypes = {
-    firstName: PropTypes.string
-  }
+    firstName: PropTypes.string,
+  };
 
-  render(){
-    return(
-    <>
-    <h1>Welcome, {this.props.firstName}!</h1>
-    <pre>
-{`import PropTypes from 'prop-types';
+  render() {
+    return (
+      <>
+        <h1>Welcome, {this.props.firstName}!</h1>
+        <pre>
+          {`import PropTypes from 'prop-types';
 import {Component} from 'react';
 
 class WelcomeClass extends Component {
@@ -28,8 +27,9 @@ class WelcomeClass extends Component {
 
 export default WelcomeClass;
 `}
-    </pre>
-    </>);
+        </pre>
+      </>
+    );
   }
 }
 

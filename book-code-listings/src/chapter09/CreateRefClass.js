@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React, { Component } from "react";
 
 class TextReader extends Component {
   constructor(props) {
@@ -8,9 +8,9 @@ class TextReader extends Component {
   render() {
     return (
       <>
-      <textarea ref={this.textView} value={this.props.bookText} />
-      <pre>
-        {`import React,{Component} from 'react';
+        <textarea ref={this.textView} value={this.props.bookText} />
+        <pre>
+          {`import React,{Component} from 'react';
 
 class TextReader extends Component {
   constructor(props) {
@@ -25,7 +25,7 @@ class TextReader extends Component {
 }
 
 export default TextReader;`}
-      </pre>
+        </pre>
       </>
     );
   }

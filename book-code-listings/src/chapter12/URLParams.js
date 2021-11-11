@@ -1,6 +1,6 @@
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-function HomeScreen(props){
+function HomeScreen(props) {
   return (
     <Router>
       <Route exact path="/listing1205">
@@ -13,25 +13,19 @@ function HomeScreen(props){
         <UserProfile />
       </Route>
     </Router>
-  )
+  );
 }
 
 export default HomeScreen;
 
-function Home(){
-    return (
-        <p>Home Route</p>
-    )
+function Home() {
+  return <p>Home Route</p>;
 }
 
-function Login(){
-    return (
-        <p>Login Route</p>
-    )
+function Login() {
+  return <p>Login Route</p>;
 }
 
-function UserProfile(props){
-    return (
-        <p>User Profile</p>
-    )
+function UserProfile(props) {
+  return <p>User Profile</p>;
 }

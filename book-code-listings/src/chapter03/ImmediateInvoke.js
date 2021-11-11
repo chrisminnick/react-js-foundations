@@ -1,11 +1,13 @@
-function ImmediateInvoke(){
-    return(
-        <>
-        <div>
-          {(()=><h1>The Header</h1>)()}
-        </div>
-        <pre>
-{`function ImmediateInvoke(){
+function ImmediateInvoke() {
+  return (
+    <>
+      <div>
+        {(() => (
+          <h1>The Header</h1>
+        ))()}
+      </div>
+      <pre>
+        {`function ImmediateInvoke(){
     return(
         <div>
           {(()=><h1>The Header</h1>)()}
@@ -14,9 +16,8 @@ function ImmediateInvoke(){
       
 }
 export default ImmediateInvoke;`}
-        </pre>
-        </>
-      );
-      
+      </pre>
+    </>
+  );
 }
 export default ImmediateInvoke;

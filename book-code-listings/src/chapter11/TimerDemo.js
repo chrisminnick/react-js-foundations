@@ -1,20 +1,19 @@
-import {useEffect} from 'react';
+import { useEffect } from "react";
 
-function TimerFun(props){
+function TimerFun(props) {
+  useEffect(() => {
+    let time = 0;
+    const interval = setInterval(() => {
+      console.log(time++);
+    }, 1000);
+    return () => clearInterval(interval);
+  });
 
-    useEffect(() => {
-        let time = 0;
-        const interval = setInterval(() => {
-          console.log(time++);
-        }, 1000);
-        return () => clearInterval(interval);
-    });
-
-    return (
+  return (
     <>
-    <p>Check the console to see the timer.</p>
-    <pre>
-      {`import {useEffect} from 'react';
+      <p>Check the console to see the timer.</p>
+      <pre>
+        {`import {useEffect} from 'react';
 
 function TimerFun(props){
 
@@ -30,8 +29,9 @@ function TimerFun(props){
 }
 
 export default TimerFun;`}
-    </pre>
-    </>);
+      </pre>
+    </>
+  );
 }
 
 export default TimerFun;

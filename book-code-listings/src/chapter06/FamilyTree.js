@@ -1,16 +1,16 @@
-import {Component} from 'react';
-import {PropTypes} from 'prop-types';
-import Person from './Person';
+import { Component } from "react";
+import { PropTypes } from "prop-types";
+import Person from "./Person";
 
 class FamilyTree extends Component {
-    
-    render(){
-        return(
-            <>
-            <div><h1>{this.props.father.firstName}</h1>
-            </div>
-            <pre>
-{`import {Component} from 'react';
+  render() {
+    return (
+      <>
+        <div>
+          <h1>{this.props.father.firstName}</h1>
+        </div>
+        <pre>
+          {`import {Component} from 'react';
 import {PropTypes} from 'prop-types';
 import Person from './Person';
 
@@ -30,15 +30,15 @@ FamilyTree.propTypes = {
 }
 
 export default FamilyTree;`}
-            </pre>
-            </>
-        )
-    }
+        </pre>
+      </>
+    );
+  }
 }
 
 FamilyTree.propTypes = {
-    father: PropTypes.instanceOf(Person).isRequired,
-    pet: PropTypes.elementType
-}
+  father: PropTypes.instanceOf(Person).isRequired,
+  pet: PropTypes.elementType,
+};
 
 export default FamilyTree;

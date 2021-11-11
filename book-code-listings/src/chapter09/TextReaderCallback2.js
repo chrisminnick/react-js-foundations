@@ -1,7 +1,6 @@
-import {Component} from 'react';
+import { Component } from "react";
 
 class TextReaderCallback extends Component {
-  
   constructor(props) {
     super(props);
     this.textView = null;
@@ -10,17 +9,21 @@ class TextReaderCallback extends Component {
       if (this.textView) this.textView.focus();
     };
   }
-    
-  componentDidMount(){
+
+  componentDidMount() {
     this.focusTextView();
   }
 
-  render(){
+  render() {
     return (
       <>
-        <textarea style={{width:'380px',height:'400px'}} ref={(e)=>this.textView = e} value={this.props.bookText} />
-      <pre>
-        {`import {Component} from 'react';
+        <textarea
+          style={{ width: "380px", height: "400px" }}
+          ref={(e) => (this.textView = e)}
+          value={this.props.bookText}
+        />
+        <pre>
+          {`import {Component} from 'react';
 
 class TextReaderCallback extends Component {
   
@@ -46,11 +49,10 @@ class TextReaderCallback extends Component {
 }
 
 export default TextReaderCallback;`}
-      </pre>
+        </pre>
       </>
     );
   }
-
 }
 
 export default TextReaderCallback;

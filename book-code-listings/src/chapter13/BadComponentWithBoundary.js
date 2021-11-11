@@ -1,13 +1,13 @@
-import ErrorBoundary from './ErrorBoundary';
+import ErrorBoundary from "./ErrorBoundary";
 
-function BadComponentContainer(){
-    return (
-        <>
-        <ErrorBoundary>
-            <BadComponent />
-        </ErrorBoundary>
-        <pre>
-            {`import ErrorBoundary from './ErrorBoundary';
+function BadComponentContainer() {
+  return (
+    <>
+      <ErrorBoundary>
+        <BadComponent />
+      </ErrorBoundary>
+      <pre>
+        {`import ErrorBoundary from './ErrorBoundary';
 
 function BadComponentContainer(){
     return (
@@ -25,16 +25,13 @@ function BadComponent(){
 
 export default BadComponentContainer;
   `}
-        </pre>
-        </>
-    )
+      </pre>
+    </>
+  );
 }
 
-function BadComponent(){
-    return (
-      {oops:"this is not good"}
-    );
+function BadComponent() {
+  return { oops: "this is not good" };
 }
 
 export default BadComponentContainer;
-  

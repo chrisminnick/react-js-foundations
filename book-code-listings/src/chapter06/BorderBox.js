@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-function BorderBox(props){
-  return(
+function BorderBox(props) {
+  return (
     <>
-    <div style={{border:"1px solid black"}}>{props.children}</div>
-    <pre>
-{`import PropTypes from 'prop-types';
+      <div style={{ border: "1px solid black" }}>{props.children}</div>
+      <pre>
+        {`import PropTypes from 'prop-types';
 
 function BorderBox(props){
   return(
@@ -19,13 +19,13 @@ BorderBox.propTypes = {
 
 export default BorderBox;
 `}
-    </pre>
+      </pre>
     </>
-  )
+  );
 }
 
 BorderBox.propTypes = {
-  children: PropTypes.element.isRequired
-}
+  children: PropTypes.element.isRequired,
+};
 
 export default BorderBox;

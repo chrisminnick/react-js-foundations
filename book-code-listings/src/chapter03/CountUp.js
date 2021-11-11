@@ -1,15 +1,15 @@
-import {useState} from 'react';
+import { useState } from "react";
 
-function CountUp(){
-  const [count,setCount] = useState(0);
+function CountUp() {
+  const [count, setCount] = useState(0);
   return (
     <>
-    <div>
-      <button onClick={()=>setCount(count+1)}>Add One</button>
-      {count}
-    </div>
-    <pre>
-{`import {useState} from 'react';
+      <div>
+        <button onClick={() => setCount(count + 1)}>Add One</button>
+        {count}
+      </div>
+      <pre>
+        {`import {useState} from 'react';
 
 function CountUp(){
   const [count,setCount] = useState(0);
@@ -22,7 +22,7 @@ function CountUp(){
 }
 
 export default CountUp;`}
-    </pre>
+      </pre>
     </>
   );
 }

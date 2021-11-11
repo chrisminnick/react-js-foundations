@@ -1,16 +1,19 @@
-import {Component} from 'react';
+import { Component } from "react";
 
 class BasicFigureProps extends Component {
-
   render() {
-    return(
+    return (
       <>
-      <figure>
-        <img style={{width:"150px"}} src={this.props.filename} alt={this.props.caption} />
-        <figcaption>{this.props.caption}</figcaption>
-      </figure>
-      <pre>
-{`import {Component} from 'react';
+        <figure>
+          <img
+            style={{ width: "150px" }}
+            src={this.props.filename}
+            alt={this.props.caption}
+          />
+          <figcaption>{this.props.caption}</figcaption>
+        </figure>
+        <pre>
+          {`import {Component} from 'react';
 
 class BasicFigureProps extends Component {
 
@@ -26,7 +29,7 @@ class BasicFigureProps extends Component {
 
 export default BasicFigureProps;
 `}
-      </pre>
+        </pre>
       </>
     );
   }

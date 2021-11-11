@@ -1,8 +1,8 @@
-import Map from './Map';
-import StoreList from './StoreList';
+import Map from "./Map";
+import StoreList from "./StoreList";
 
-function StoresNearYou(props){
-  return(
+function StoresNearYou(props) {
+  return (
     <>
       <div id="map-container">
         <Map latitude={props.latitude} longitude={props.longitude} />
@@ -11,7 +11,7 @@ function StoresNearYou(props){
         <StoreList latitude={props.latitude} longitude={props.longitude} />
       </div>
       <pre>
-{`import Map from './Map';
+        {`import Map from './Map';
 import StoreList from './StoreList';
 
 function StoresNearYou(props){
@@ -37,13 +37,12 @@ export default StoresNearYou;
 `}
       </pre>
     </>
-  )
+  );
 }
 
 StoresNearYou.defaultProps = {
   latitude: "37.3230",
-  longitude: "122.0322"
-}
+  longitude: "122.0322",
+};
 
 export default StoresNearYou;
-

@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 function SiteLink(props) {
   return (
     <>
-    <a href="{props.url}">{props.linkName}</a>
-    <pre>
-{`import PropTypes from 'prop-types';
+      <a href="{props.url}">{props.linkName}</a>
+      <pre>
+        {`import PropTypes from 'prop-types';
 
 function SiteLink(props) {
   return (
@@ -19,13 +19,13 @@ SiteLink.propTypes = {
 
 export default SiteLink;
 `}
-    </pre>
+      </pre>
     </>
   );
 }
 
 SiteLink.propTypes = {
-  linkName: PropTypes.node
-}
+  linkName: PropTypes.node,
+};
 
 export default SiteLink;

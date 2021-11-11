@@ -1,8 +1,8 @@
-import React from 'react';
-import { ThemeContext } from './theme-context'
+import React from "react";
+import { ThemeContext } from "./theme-context";
 
 function App() {
-  const { theme } = React.useContext(ThemeContext)
+  const { theme } = React.useContext(ThemeContext);
   return (
     <>
       <header
@@ -12,7 +12,7 @@ function App() {
         <h1>Welcome to my app.</h1>
       </header>
       <pre>
-          {`import React from 'react';
+        {`import React from 'react';
 import { ThemeContext } from './theme-context'
 
 function App() {
@@ -33,7 +33,7 @@ export default App;
 `}
       </pre>
     </>
-  )
+  );
 }
 
 export default App;

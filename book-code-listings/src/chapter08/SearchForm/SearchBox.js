@@ -1,14 +1,14 @@
-import {useState} from 'react';
-import SearchInput from './SearchInput';
-import SearchResults from './SearchResults';
+import { useState } from "react";
+import SearchInput from "./SearchInput";
+import SearchResults from "./SearchResults";
 
-function SearchBox(){
-  const [searchTerm,setSearchTerm] = useState();
+function SearchBox() {
+  const [searchTerm, setSearchTerm] = useState();
 
-  return(
+  return (
     <>
-      <SearchInput searchTerm = {searchTerm} setSearchTerm = {setSearchTerm} />
-      <SearchResults searchTerm = {searchTerm} />
+      <SearchInput searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <SearchResults searchTerm={searchTerm} />
       <pre>
         {`import {useState} from 'react';
 import SearchInput from './SearchInput';

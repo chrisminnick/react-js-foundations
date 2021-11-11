@@ -1,12 +1,11 @@
-import styles from './my-component.module.css';
+import styles from "./my-component.module.css";
 
 function DisplayMessage(props) {
-
   return (
-  <>
-  <p className = {styles.redText}>This text is red.</p>
-  <pre>
-      {`import styles from './my-component.module.css';
+    <>
+      <p className={styles.redText}>This text is red.</p>
+      <pre>
+        {`import styles from './my-component.module.css';
 
 function DisplayMessage(props) {
 
@@ -15,8 +14,10 @@ function DisplayMessage(props) {
 }
 
 export default DisplayMessage;
-`}</pre></>);
-
+`}
+      </pre>
+    </>
+  );
 }
 
 export default DisplayMessage;

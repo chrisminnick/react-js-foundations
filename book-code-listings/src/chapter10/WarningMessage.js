@@ -1,11 +1,11 @@
-function WarningMessage(props){
-    return (
-        <>
-      <p style={{color:"red",padding:"6px",backgroundColor:"#000000"}}>
+function WarningMessage(props) {
+  return (
+    <>
+      <p style={{ color: "red", padding: "6px", backgroundColor: "#000000" }}>
         {props.warningMessage}
       </p>
       <pre>
-          {`function WarningMessage(props){
+        {`function WarningMessage(props){
     return (
       <p style={{color:"red",padding:"6px",backgroundColor:"#000000"}}>
         {props.warningMessage}
@@ -16,9 +16,8 @@ function WarningMessage(props){
   export default WarningMessage;
   `}
       </pre>
-      </>
-    )
-  }
-  
-  export default WarningMessage;
-  
+    </>
+  );
+}
+
+export default WarningMessage;

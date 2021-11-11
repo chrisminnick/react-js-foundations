@@ -1,8 +1,8 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
 function App() {
-  const [personName,setPersonName] = React.useState('');
+  const [personName, setPersonName] = React.useState("");
 
   return (
     <div>

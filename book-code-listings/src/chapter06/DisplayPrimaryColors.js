@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-function DisplayPrimaryColor(props){
-  return(
+function DisplayPrimaryColor(props) {
+  return (
     <>
-    <p>You picked: {props.primaryColor}</p>
-    <pre>
-{`import PropTypes from 'prop-types';
+      <p>You picked: {props.primaryColor}</p>
+      <pre>
+        {`import PropTypes from 'prop-types';
 
 function DisplayPrimaryColor(props){
   return(
@@ -19,13 +19,13 @@ DisplayPrimaryColor.propTypes = {
 
 export default DisplayPrimaryColor;
 `}
-    </pre>
+      </pre>
     </>
-  )
+  );
 }
 
 DisplayPrimaryColor.propTypes = {
-  primaryColor:PropTypes.oneOf(['red','green','blue'])
-}
+  primaryColor: PropTypes.oneOf(["red", "green", "blue"]),
+};
 
 export default DisplayPrimaryColor;

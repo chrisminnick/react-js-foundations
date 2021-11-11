@@ -1,17 +1,17 @@
-import {Component} from 'react';
+import { Component } from "react";
 
 class ScreenDoor extends Component {
-    constructor(props){
-      super(props);
-      this.state={
-        isOpen:true
-      }
-    }
-    render(){
-      return(
-        <>
-        <button onClick={()=>this.setState({isOpen:!this.state.isOpen})}>
-            {this.state.isOpen?'Close the Door':'Open the Door'}
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen: true,
+    };
+  }
+  render() {
+    return (
+      <>
+        <button onClick={() => this.setState({ isOpen: !this.state.isOpen })}>
+          {this.state.isOpen ? "Close the Door" : "Open the Door"}
         </button>
         <pre>
           {`import {Component} from 'react';
@@ -35,10 +35,9 @@ class ScreenDoor extends Component {
   export default ScreenDoor;
   `}
         </pre>
-        </>
-      )
-    }
+      </>
+    );
   }
-  
-  export default ScreenDoor;
-  
+}
+
+export default ScreenDoor;

@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
 class PureComponentExample extends React.PureComponent {
-    render() {
-      return (
+  render() {
+    return (
       <>
-      <div>foo</div>
-      <pre>
-{`import React from 'react';
+        <div>foo</div>
+        <pre>
+          {`import React from 'react';
 
 class PureComponentExample extends React.PureComponent {
     render() {
@@ -15,10 +15,10 @@ class PureComponentExample extends React.PureComponent {
 }
 
 export default PureComponentExample;`}
-      </pre>
-      </>);
-    }
+        </pre>
+      </>
+    );
+  }
 }
 
-export default PureComponentExample
-  
+export default PureComponentExample;

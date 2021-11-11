@@ -1,17 +1,16 @@
-import React from 'react';
+import React from "react";
 
 class UserProfile extends React.Component {
-
   constructor(props) {
     super(props);
   }
 
   render() {
     return (
-    <>
-      <h1>User Profile</h1>
-    <pre>
-{`import React from 'react';
+      <>
+        <h1>User Profile</h1>
+        <pre>
+          {`import React from 'react';
 
 class UserProfile extends React.Component {
 
@@ -27,10 +26,10 @@ class UserProfile extends React.Component {
 };
 
 export default UserProfile;`}
-    </pre>
-    </>
+        </pre>
+      </>
     );
   }
-};
+}
 
 export default UserProfile;

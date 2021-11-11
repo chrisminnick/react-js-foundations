@@ -1,3 +1,3 @@
-export default function Person (firstName){
-    this.firstName=firstName;
+export default function Person(firstName) {
+  this.firstName = firstName;
 }

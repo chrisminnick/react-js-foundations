@@ -1,17 +1,17 @@
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-function HomeScreen(props){
+function HomeScreen(props) {
   return (
-      <>
-    <Router>
-      <Route path="/listing1204">
-        <Home />
-      </Route>
-      <Route path="/listing1204/login">
-        <Login />
-      </Route>
-    </Router>
-    <pre>
+    <>
+      <Router>
+        <Route path="/listing1204">
+          <Home />
+        </Route>
+        <Route path="/listing1204/login">
+          <Login />
+        </Route>
+      </Router>
+      <pre>
         {`import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 function HomeScreen(props){
@@ -40,21 +40,17 @@ function Login(){
         <p>Login Route</p>
     )
 }`}
-    </pre>
+      </pre>
     </>
-  )
+  );
 }
 
 export default HomeScreen;
 
-function Home(){
-    return (
-        <p>Home Route</p>
-    )
+function Home() {
+  return <p>Home Route</p>;
 }
 
-function Login(){
-    return (
-        <p>Login Route</p>
-    )
+function Login() {
+  return <p>Login Route</p>;
 }

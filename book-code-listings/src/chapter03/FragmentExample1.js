@@ -1,12 +1,12 @@
-import {Fragment} from 'react';
+import { Fragment } from "react";
 
-function MyComponent(){
-  return(
+function MyComponent() {
+  return (
     <Fragment>
       <h1>The heading</h1>
       <h2>The subheading</h2>
-    <pre>
-{`import {Fragment} from 'react';
+      <pre>
+        {`import {Fragment} from 'react';
 
 function MyComponent(){
   return(
@@ -19,7 +19,7 @@ function MyComponent(){
 
 export default MyComponent;
 `}
-    </pre>
+      </pre>
     </Fragment>
   );
 }

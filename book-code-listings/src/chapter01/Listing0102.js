@@ -1,8 +1,7 @@
-
-function Listing0102(){
+function Listing0102() {
   return (
-<pre>
-{`class HelloWorld extends React.Component {
+    <pre>
+      {`class HelloWorld extends React.Component {
   constructor(props) {
     super(props);
     this.state = { personName:'Murray' };
@@ -15,10 +14,8 @@ function Listing0102(){
 
 const domContainer = document.querySelector('#app');
 ReactDOM.render(React.createElement(HelloWorld), domContainer);`}
-</pre>
-  )
+    </pre>
+  );
 }
 
 export default Listing0102;
-
-

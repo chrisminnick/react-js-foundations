@@ -1,23 +1,21 @@
-import {Component} from 'react';
+import { Component } from "react";
 
 class ColorWheel extends Component {
+  state = { currentColor: "#ff0000" };
 
-  state = {currentColor:'#ff0000'};
+  changeColor = (e) => {
+    this.setState({ currentColor: e.target.value });
+  };
 
-  changeColor = (e)=>{
-    this.setState({currentColor:e.target.value});
-  }
-
-  render(){
-
+  render() {
     const wheelStyle = {
-        width: "200px",
-        height: "200px",
-        borderRadius: "50%",
-        backgroundColor: this.state.currentColor
-    }
-    
-    return(
+      width: "200px",
+      height: "200px",
+      borderRadius: "50%",
+      backgroundColor: this.state.currentColor,
+    };
+
+    return (
       <>
         <div style={wheelStyle}></div>
         <input onChange={this.changeColor} value={this.state.currentColor} />
@@ -53,7 +51,7 @@ class ColorWheel extends Component {
 export default ColorWheel;`}
         </pre>
       </>
-    )
+    );
   }
 }
 

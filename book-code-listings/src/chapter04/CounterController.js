@@ -1,21 +1,21 @@
-import {useState} from 'react';
-import LeakyCounter from './LeakyCounter';
+import { useState } from "react";
+import LeakyCounter from "./LeakyCounter";
 
 function CounterController() {
-  const [displayCounter,setDisplayCounter] = useState(true);
+  const [displayCounter, setDisplayCounter] = useState(true);
 
-  function toggleCounter(){
-      setDisplayCounter(!displayCounter);
-  };
+  function toggleCounter() {
+    setDisplayCounter(!displayCounter);
+  }
 
   return (
     <>
-    <div>
-      {displayCounter ? <LeakyCounter /> : null}
-      <button onClick={toggleCounter}>Toggle Count</button>
-    </div>
-    <pre>
-{`import {useState} from 'react';
+      <div>
+        {displayCounter ? <LeakyCounter /> : null}
+        <button onClick={toggleCounter}>Toggle Count</button>
+      </div>
+      <pre>
+        {`import {useState} from 'react';
 import LeakyCounter from './LeakyCounter';
 
 function CounterController() {
@@ -34,7 +34,7 @@ function CounterController() {
 }
 export default CounterController;
 `}
-    </pre>
+      </pre>
     </>
   );
 }

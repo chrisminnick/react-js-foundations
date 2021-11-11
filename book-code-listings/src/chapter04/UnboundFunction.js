@@ -1,23 +1,23 @@
-import React from 'react';
+import React from "react";
 
-class Foo extends React.Component{
-  constructor( props ){
-    super( props );
+class Foo extends React.Component {
+  constructor(props) {
+    super(props);
     this.message = "hello";
   }
-      
-  handleClick(event){
+
+  handleClick(event) {
     console.log(this.message); // 'this' is undefined
   }
-      
-  render(){
+
+  render() {
     return (
-    <>
-      <button type="button" onClick={this.handleClick}>
-        Click Me
-      </button>
-    <pre>
-{`import React from 'react';
+      <>
+        <button type="button" onClick={this.handleClick}>
+          Click Me
+        </button>
+        <pre>
+          {`import React from 'react';
 
 class Foo extends React.Component{
   constructor( props ){
@@ -39,10 +39,10 @@ class Foo extends React.Component{
 }
     
 export default Foo;`}
-    </pre>
-    </>
+        </pre>
+      </>
     );
   }
 }
-    
+
 export default Foo;

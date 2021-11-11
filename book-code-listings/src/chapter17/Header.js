@@ -1,11 +1,11 @@
-import UserPrefs from './UserPrefs';
+import UserPrefs from "./UserPrefs";
 
 const Header = (props) => {
-    return (
-        <>
-          <UserPrefs />
-        </>
-    )
-}
+  return (
+    <>
+      <UserPrefs />
+    </>
+  );
+};
 
 export default Header;

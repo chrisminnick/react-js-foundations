@@ -1,19 +1,18 @@
-import {Component} from 'react'
+import { Component } from "react";
 
 class NewsFeed2 extends Component {
-
   state = {
     date: new Date(),
-    headlines:[]
-  }
+    headlines: [],
+  };
 
-  render(){
-    return(
+  render() {
+    return (
       <>
         <h1>Headlines for {this.state.date.toLocaleString()}</h1>
         ...
         <pre>
-{`import {Component} from 'react'
+          {`import {Component} from 'react'
 
 class NewsFeed2 extends Component {
 
@@ -35,7 +34,7 @@ class NewsFeed2 extends Component {
 export default NewsFeed2;`}
         </pre>
       </>
-    )
+    );
   }
 }
 

@@ -1,1 +1,1 @@
-export const FooFunction = props => <h1>Hello, World!</h1>
+export const FooFunction = (props) => <h1>Hello, World!</h1>;

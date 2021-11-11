@@ -1,20 +1,19 @@
-import {Component} from 'react'
+import { Component } from "react";
 
 class NewsFeed extends Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       date: new Date(),
-      headlines:[]
-    }
+      headlines: [],
+    };
   }
-  render(){
-    return(
+  render() {
+    return (
       <>
         <h1>Headlines for {this.state.date.toLocaleString()}</h1>
         <pre>
-{`import {Component} from 'react'
+          {`import {Component} from 'react'
 
 class NewsFeed extends Component {
 
@@ -37,7 +36,7 @@ class NewsFeed extends Component {
 export default NewsFeed;`}
         </pre>
       </>
-    )
+    );
   }
 }
 

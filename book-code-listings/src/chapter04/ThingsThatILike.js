@@ -1,17 +1,21 @@
-import ThingsThatAreFunny from './ThingsThatAreFunny';
-import Joke from './Joke';
+import ThingsThatAreFunny from "./ThingsThatAreFunny";
+import Joke from "./Joke";
 
-export default function ThingsILike(props){
-    return (
-      <>
+export default function ThingsILike(props) {
+  return (
+    <>
       <ThingsThatAreFunny>
         <ul>
-            <li><Joke id="0" /></li>
-            <li><Joke id="1" /></li>
+          <li>
+            <Joke id="0" />
+          </li>
+          <li>
+            <Joke id="1" />
+          </li>
         </ul>
       </ThingsThatAreFunny>
       <pre>
-{`import ThingsThatAreFunny from './ThingsThatAreFunny';
+        {`import ThingsThatAreFunny from './ThingsThatAreFunny';
 import Joke from './Joke';
 
 export default function ThingsILike(props){
@@ -25,6 +29,6 @@ export default function ThingsILike(props){
     )
 }`}
       </pre>
-      </>
-    )
-  }  
+    </>
+  );
+}

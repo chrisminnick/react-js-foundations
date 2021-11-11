@@ -1,15 +1,16 @@
-import {useEffect,useState} from 'react';
+import { useEffect, useState } from "react";
 
-function RenderCounter(){
+function RenderCounter() {
+  const [count, setCount] = useState(0);
 
-  const [count,setCount] = useState(0);
-  
-  useEffect(()=>{console.log(count)});
+  useEffect(() => {
+    console.log(count);
+  });
 
-  return(
+  return (
     <>
       This component will count how many times it renders.
-      <button onClick={()=>setCount((prev)=>prev+1)}>Update State</button>
+      <button onClick={() => setCount((prev) => prev + 1)}>Update State</button>
       <pre>
         {`import {useEffect,useState} from 'react';
 

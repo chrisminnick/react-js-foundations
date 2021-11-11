@@ -1,16 +1,20 @@
-import NavBar from './NavBar';
-import NavItem from './NavItem';
+import NavBar from "./NavBar";
+import NavItem from "./NavItem";
 
-function App(props){
+function App(props) {
   return (
     <>
-    <NavBar onClick={()=>{console.log('clicked');}}>
-      <NavItem />
-      <NavItem />
-      <NavItem />
-    </NavBar>
-    <pre>
-{`import NavBar from './NavBar';
+      <NavBar
+        onClick={() => {
+          console.log("clicked");
+        }}
+      >
+        <NavItem />
+        <NavItem />
+        <NavItem />
+      </NavBar>
+      <pre>
+        {`import NavBar from './NavBar';
 import NavItem from './NavItem';
 
 function App(props){
@@ -24,8 +28,9 @@ function App(props){
 
 export default App;
 `}
-    </pre>
-    </>);
+      </pre>
+    </>
+  );
 }
 
 export default App;

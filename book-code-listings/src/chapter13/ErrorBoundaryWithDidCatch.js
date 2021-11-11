@@ -1,4 +1,4 @@
-import {Component} from 'react';
+import { Component } from "react";
 
 class ErrorBoundaryWithDidCatch extends Component {
   constructor(props) {
@@ -7,22 +7,21 @@ class ErrorBoundaryWithDidCatch extends Component {
   }
 
   static getDerivedStateFromError(error) {
-    return { hasError: true };  
+    return { hasError: true };
   }
-  
-  componentDidCatch(error,info){
+
+  componentDidCatch(error, info) {
     console.log(`error: ${error}`);
     console.log(info);
   }
 
   render() {
-
     if (this.state.hasError) {
       return (
         <>
-        <h1>Oops! There's been an error.</h1>
-        <pre>
-          {`import {Component} from 'react';
+          <h1>Oops! There's been an error.</h1>
+          <pre>
+            {`import {Component} from 'react';
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -51,11 +50,12 @@ class ErrorBoundary extends Component {
 
 export default ErrorBoundary;
 `}
-        </pre>
-        </>);   
+          </pre>
+        </>
+      );
     }
 
-    return this.props.children; 
+    return this.props.children;
   }
 }
 

@@ -1,18 +1,20 @@
-import WelcomeMessage from './WelcomeMessage';
+import WelcomeMessage from "./WelcomeMessage";
 
-function WelcomeTitle(){
-    return <>
-    <WelcomeMessage />
-    <pre>
-{`import WelcomeMessage from './WelcomeMessage';
+function WelcomeTitle() {
+  return (
+    <>
+      <WelcomeMessage />
+      <pre>
+        {`import WelcomeMessage from './WelcomeMessage';
 
 function WelcomeTitle(){
     return <WelcomeMessage />;
 }
 
 export default WelcomeTitle;`}
-    </pre>
-    </>;
+      </pre>
+    </>
+  );
 }
 
 export default WelcomeTitle;

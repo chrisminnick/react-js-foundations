@@ -1,6 +1,6 @@
-function SizeSelect(props){
-    return(
-      <>
+function SizeSelect(props) {
+  return (
+    <>
       <select name="size" value={props.size} onChange={props.changeSize}>
         <option value="xs">Extra Small</option>
         <option value="sm">Small</option>
@@ -9,7 +9,7 @@ function SizeSelect(props){
         <option value="xl">Extra Large</option>
       </select>
       <pre>
-          {`function SizeSelect(props){
+        {`function SizeSelect(props){
     return(
       <select name="size" value={props.size} onChange={props.changeSize}>
         <option value="xs">Extra Small</option>
@@ -24,9 +24,8 @@ function SizeSelect(props){
   export default SizeSelect;
   `}
       </pre>
-      </>
-    );
-  }
-  
-  export default SizeSelect;
-  
+    </>
+  );
+}
+
+export default SizeSelect;

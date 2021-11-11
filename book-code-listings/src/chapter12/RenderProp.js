@@ -1,23 +1,20 @@
 import React from "react";
-import {
-  BrowserRouter as Router, 
-  Route,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function ComponentProp(props) {
-
-    return (
-          <>
-            <Router>
-                <Link to="/orders/4">Order #4</Link>
-                <Route path="/orders/:orderid" render={props => (
-                    <h1>Details for order # {props.match.params.orderid}</h1>
-                )
-                } />
-            </Router>
-            <pre>
-              {`import React from "react";
+  return (
+    <>
+      <Router>
+        <Link to="/orders/4">Order #4</Link>
+        <Route
+          path="/orders/:orderid"
+          render={(props) => (
+            <h1>Details for order # {props.match.params.orderid}</h1>
+          )}
+        />
+      </Router>
+      <pre>
+        {`import React from "react";
 import {
   BrowserRouter as Router, 
   Route,
@@ -41,10 +38,9 @@ function ComponentProp(props) {
 }
 
 export default ComponentProp;`}
-            </pre>
-          </>
-          
-      );
+      </pre>
+    </>
+  );
 }
 
 export default ComponentProp;

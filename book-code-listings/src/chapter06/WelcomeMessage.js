@@ -1,11 +1,11 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-function WelcomeMessage(props){
+function WelcomeMessage(props) {
   return (
-  <>
-  <p>Welcome back, {props.firstName}!</p>
-  <pre>
-{`import PropTypes from 'prop-types';
+    <>
+      <p>Welcome back, {props.firstName}!</p>
+      <pre>
+        {`import PropTypes from 'prop-types';
 
 function WelcomeMessage(props){
   return (<p>Welcome back, {props.firstName}!</p>);
@@ -16,12 +16,13 @@ WelcomeMessage.propTypes = {
 }
 
 export default WelcomeMessage;`}
-  </pre>
-  </>);
+      </pre>
+    </>
+  );
 }
-  
+
 WelcomeMessage.propTypes = {
-  firstName:PropTypes.string
-}
+  firstName: PropTypes.string,
+};
 
 export default WelcomeMessage;

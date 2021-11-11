@@ -1,12 +1,12 @@
-function LogInput(){
-    const logChange=(e)=>{
-        console.dir(e);
-    }
-    return(
-        <>
-        <input onChange={logChange} />
-        <pre>
-            {`function LogInput(){
+function LogInput() {
+  const logChange = (e) => {
+    console.dir(e);
+  };
+  return (
+    <>
+      <input onChange={logChange} />
+      <pre>
+        {`function LogInput(){
     const logChange=(e)=>{
         console.dir(e);
     }
@@ -16,9 +16,9 @@ function LogInput(){
 }
 
 export default LogInput;`}
-        </pre>
-        </>
-    )
+      </pre>
+    </>
+  );
 }
 
 export default LogInput;

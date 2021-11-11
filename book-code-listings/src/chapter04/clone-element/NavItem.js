@@ -1,17 +1,17 @@
-function NavItem(props){
+function NavItem(props) {
   return (
     <>
-    <button onClick={props.onClick}>Click Me</button>
-    <pre>
-{`function NavItem(props){
+      <button onClick={props.onClick}>Click Me</button>
+      <pre>
+        {`function NavItem(props){
   return (
     <button onClick={props.onClick}>Click Me</button>
   )
 }
 
 export default NavItem;`}
-    </pre>
+      </pre>
     </>
-  )
+  );
 }
 export default NavItem;

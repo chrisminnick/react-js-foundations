@@ -1,26 +1,29 @@
-import {useState,useEffect} from 'react';
-import './style.css';
+import { useState, useEffect } from "react";
+import "./style.css";
 
-function Clicker3(){
-    const [count,setCount] = useState(Number(localStorage.getItem('counter')) || 0);
+function Clicker3() {
+  const [count, setCount] = useState(
+    Number(localStorage.getItem("counter")) || 0
+  );
 
-    const incrementCount = ()=>{
-        setCount((prev)=>prev+1);
-    }
-    
-    useEffect(()=>{
-        localStorage.setItem('counter',count);
-    },[count]);
+  const incrementCount = () => {
+    setCount((prev) => prev + 1);
+  };
 
-    return(
-        <>
-        <div className="container">
-            <h1 className="current-count">{count}</h1>
-            <button className="increment-button"
-                    onClick={incrementCount}>+</button>
-        </div>
-        <pre>
-            {`import {useState,useEffect} from 'react';
+  useEffect(() => {
+    localStorage.setItem("counter", count);
+  }, [count]);
+
+  return (
+    <>
+      <div className="container">
+        <h1 className="current-count">{count}</h1>
+        <button className="increment-button" onClick={incrementCount}>
+          +
+        </button>
+      </div>
+      <pre>
+        {`import {useState,useEffect} from 'react';
 import './style.css';
 
 function Clicker3(){
@@ -44,9 +47,9 @@ function Clicker3(){
 }
 
 export default Clicker3;`}
-        </pre>
-        </>
-    )
+      </pre>
+    </>
+  );
 }
 
 export default Clicker3;

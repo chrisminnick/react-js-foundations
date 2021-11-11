@@ -1,13 +1,13 @@
-import React from 'react';
-import createClass from 'create-react-class';
+import React from "react";
+import createClass from "create-react-class";
 
 const UserProfile = createClass({
   render() {
     return (
-    <>
-      <h1>User Profile</h1>
-      <pre>
-{`import React from 'react';
+      <>
+        <h1>User Profile</h1>
+        <pre>
+          {`import React from 'react';
 import createClass from 'create-react-class';
 
 const UserProfile = createClass({
@@ -19,10 +19,10 @@ const UserProfile = createClass({
 });
 
 export default UserProfile;`}
-      </pre>
-    </>
+        </pre>
+      </>
     );
-  }
+  },
 });
 
 export default UserProfile;

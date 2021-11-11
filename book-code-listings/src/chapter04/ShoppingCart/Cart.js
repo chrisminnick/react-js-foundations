@@ -1,24 +1,23 @@
-import React from 'react';
-import CartItems from './CartItems';
-import DisplayTotal from './DisplayTotal';
-import CheckoutButton from './CheckoutButton';
-import styles from './Cart.css.js';
+import React from "react";
+import CartItems from "./CartItems";
+import DisplayTotal from "./DisplayTotal";
+import CheckoutButton from "./CheckoutButton";
+import styles from "./Cart.css.js";
 
-function Cart(props){
-  return(
+function Cart(props) {
+  return (
     <>
-    <div style={styles.cart}>
-      <h2>Cart</h2>
-      
-        <CartItems items = {props.inCart} />
+      <div style={styles.cart}>
+        <h2>Cart</h2>
 
-        <DisplayTotal items = {props.inCart} />
+        <CartItems items={props.inCart} />
+
+        <DisplayTotal items={props.inCart} />
 
         <CheckoutButton />
-
-    </div>
-    <pre>
-{`import React from 'react';
+      </div>
+      <pre>
+        {`import React from 'react';
 import CartItems from './CartItems';
 import DisplayTotal from './DisplayTotal';
 import CheckoutButton from './CheckoutButton';
@@ -40,7 +39,7 @@ function Cart(props){
 }
 
 export default Cart;`}
-    </pre>
+      </pre>
     </>
   );
 }

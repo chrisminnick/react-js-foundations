@@ -1,14 +1,14 @@
-import { UnitsProvider } from './contexts/UnitsContext';
-import Header from './Header';
+import { UnitsProvider } from "./contexts/UnitsContext";
+import Header from "./Header";
 
 const App = (props) => {
-    return (
-        <>
-        <UnitsProvider>
-            <Header />
-        </UnitsProvider>
-        <pre>
-            {`import { UnitsProvider } from './contexts/UnitsContext';
+  return (
+    <>
+      <UnitsProvider>
+        <Header />
+      </UnitsProvider>
+      <pre>
+        {`import { UnitsProvider } from './contexts/UnitsContext';
 import Header from './Header';
 
 const App = (props) => {
@@ -23,9 +23,9 @@ const App = (props) => {
 }
 
 export default App;`}
-        </pre>
-        </>
-    )
-}
+      </pre>
+    </>
+  );
+};
 
 export default App;
