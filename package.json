@@ -1,5 +1,56 @@
 {
+  "name": "book-code-listings",
+  "homepage": "http://www.reactjsfoundations.com",
+  "version": "1.0.0",
+  "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4"
-  }
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.1",
+    "@testing-library/user-event": "^12.2.2",
+    "axios": "^0.21.1",
+    "axios-hooks": "^2.3.0",
+    "create-react-class": "^15.7.0",
+    "loggly-jslogger": "^2.2.2",
+    "react": "^17.0.1",
+    "react-addons-shallow-compare": "^15.6.2",
+    "react-collapsible": "^2.8.1",
+    "react-dom": "^17.0.1",
+    "react-error-boundary": "^3.1.3",
+    "react-hook-form": "^7.12.2",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "4.0.3",
+    "styled-components": "^5.3.1",
+    "typescript": "^4.3.5",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prettier": "prettier --write",
+    "predeploy": "npm run build",
+    "deploy": "echo 'www.reactjsfoundations.com' > ./build/CNAME && gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": ["react-app", "react-app/jest"]
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "react-app-rewired": "^2.1.8"
+  },
+  "keywords": [],
+  "description": ""
 }
