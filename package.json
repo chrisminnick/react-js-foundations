@@ -32,15 +32,22 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prettier": "prettier --write",
+    "prettier": "prettier --write .",
     "predeploy": "npm run build",
     "deploy": "echo 'www.reactjsfoundations.com' > ./build/CNAME && gh-pages -d build"
   },
   "eslintConfig": {
-    "extends": ["react-app", "react-app/jest"]
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
@@ -49,6 +56,7 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",
+    "prettier": "^2.4.1",
     "react-app-rewired": "^2.1.8"
   },
   "keywords": [],

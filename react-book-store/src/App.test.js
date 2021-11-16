@@ -1,13 +1,15 @@
-import React from 'react';
-import App from './App';
-import {shallow} from 'enzyme';
+import React from "react";
+import App from "./App";
+import { shallow } from "enzyme";
 
 let component;
 
 beforeEach(() => {
-    component = shallow(<App />);
+  component = shallow(<App />);
 });
 
-it('renders without crashing', () => {
-    expect(component.text()).toEqual('Welcome to React Bookstore<ProductList /><Cart />');
+it("renders without crashing", () => {
+  expect(component.text()).toEqual(
+    "Welcome to React Bookstore<ProductList /><Cart />"
+  );
 });
