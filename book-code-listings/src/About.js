@@ -1,8 +1,12 @@
+import "./About.css";
 function About() {
   return (
     <>
       <h3>About the Author</h3>
-      <p>
+      <p><img src="/images/chris-and-car.jpeg" 
+      alt="Chris Minnick" 
+      className="img-thumbnail float-left mr-2"
+      width="250" />
         Chris Minnick has been a full stack developer for over 25 years, and a
         professional author and trainer for 15 years. He has been the lead
         front-end React developer for several startup companies, and has been
@@ -13,7 +17,7 @@ function About() {
       </p>
 
       <h3>Other Books by Chris Minnick</h3>
-      <ul>
+      <ul style={{listStyleType:"none"}}>
         <li>
           <a href="https://amzn.to/3EdqbLR">
             Coding with JavaScript for Dummies
