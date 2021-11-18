@@ -13,6 +13,7 @@
     "@testing-library/user-event": "^12.2.2",
     "axios": "^0.21.1",
     "axios-hooks": "^2.3.0",
+    "core-js": "^3.6.5",
     "create-react-class": "^15.7.0",
     "loggly-jslogger": "^2.2.2",
     "prettier": "^2.4.1",

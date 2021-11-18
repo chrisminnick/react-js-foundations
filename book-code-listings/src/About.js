@@ -2,7 +2,7 @@ import "./About.css";
 function About() {
   return (
     <>
-      <h3>About the Author</h3>
+      <h2>About the Author</h2>
       <p><img src="/images/chris-and-car.jpeg" 
       alt="Chris Minnick" 
       className="img-thumbnail float-left mr-2"

@@ -2,11 +2,16 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faDownload } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
+import Introduction from './Introduction';
+import WhereToBuy from './WhereToBuy';
+import About from './About';
+
 library.add(fab, faHome, faDownload);
 
 function HomePage() {
   return (
     <>
+      <Introduction />
       <p>
         Here, you'll find all the source code and live demos where possible. You
         can download the examples, report issues, and ask/answer questions in
@@ -33,6 +38,9 @@ function HomePage() {
           <FontAwesomeIcon icon={["fab", "github"]} /> Github
         </a>
       </span>
+  
+      <WhereToBuy />
+      <About />
     </>
   );
 }

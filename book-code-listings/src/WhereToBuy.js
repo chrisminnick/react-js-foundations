@@ -37,6 +37,11 @@ function WhereToBuy(props) {
             Walmart
           </a>
         </li>
+        <li>
+          <a href="https://www.indiebound.org/book/9781119685548">
+            Indiebound
+          </a>
+        </li>
       </ul>
     </>
   );
