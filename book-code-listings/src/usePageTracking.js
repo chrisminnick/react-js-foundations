@@ -17,7 +17,7 @@ const usePageTracking = () => {
       gtag('js', new Date());
     
       gtag('config', 'G-GVT9Z3S6EH');
-      console.log(window.dataLayer);
+      //console.log(window.dataLayer);
     //ReactGA.pageview(location.pathname + location.search);
   }, [location]);
 };
