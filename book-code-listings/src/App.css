@@ -20,7 +20,7 @@ a {
 
 #buttons > li {
   list-style: none;
-  width: 500px;
+  max-width: 500px;
   border: 1px solid black;
   cursor: pointer;
 }
@@ -176,8 +176,7 @@ strong {
   color: white;
 }
 .Collapsible__trigger:after {
-  font-family: "FontAwesome";
-  content: "\f107";
+  content: "\25BC";
   position: absolute;
   right: 10px;
   top: 10px;
