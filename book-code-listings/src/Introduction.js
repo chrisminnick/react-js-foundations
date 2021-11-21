@@ -4,6 +4,8 @@ function Introduction(props) {
     <div style={{textAlign:"center"}}>
       <img src="/images/cover.jpg" className="img-fluid" alt="React JS Foundations" />
     </div>
+    <h2>Building User Interfaces with ReactJS: An
+          Approachable Guide</h2>
       <p>
         Get up to speed on building applications with ReactJS with this
         practical yet very approachable book that will provide you with

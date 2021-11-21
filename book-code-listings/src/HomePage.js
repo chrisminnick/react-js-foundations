@@ -11,6 +11,8 @@ library.add(fab, faHome, faDownload);
 function HomePage() {
   return (
     <>
+    <h2>Building User Interfaces with ReactJS: An
+          Approachable Guide</h2>
       <Introduction />
       <p>
         Here, you'll find all the source code and live demos where possible. You

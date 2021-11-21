@@ -3,11 +3,21 @@ import { Link } from "react-router-dom";
 import Collapsible from "react-collapsible";
 import { routes } from "./routes";
 import usePageTracking from './usePageTracking';
+import Helmet from 'react-helmet';
 
 function App() {
   usePageTracking();
   return (
+    <>
+    <Helmet>
+      <title>React JS Foundations by Chris Minnick - {document.getElementsByTagName('h2')[0].innerText}</title>
+      <meta name="description" content="Get up to speed on building applications with ReactJS with this
+        practical yet very approachable book that will provide you with
+        everything you need to understand what React is and how to start
+        building applications with it." />
+    </Helmet>
     <div style={{ display: "flex" }}>
+
       <nav>
         <ul id="buttons">
           <li>
@@ -1409,14 +1419,15 @@ function App() {
       </nav>
       <main>
         <h1>
-          React JS Foundations Building User Interfaces with ReactJS: An
-          Approachable Guide
+          React JS Foundations
         </h1>
+        
         <p>by Chris Minnick</p>
 
         {routes}
       </main>
     </div>
+    </>
   );
 }
 
