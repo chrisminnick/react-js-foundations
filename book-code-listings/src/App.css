@@ -54,9 +54,7 @@ section {
   display: block;
 }
 
-body {
-  padding: 25px;
-}
+
 
 blockquote,
 q {
@@ -118,9 +116,13 @@ html {
 body {
   padding-top: 20px;
 }
-
+ul#buttons {
+  padding: 10px;
+}
 main {
-  padding: 20px;
+  padding: 10px;
+  margin: 0px auto;
+  max-width: 600px;
 }
 
 strong {
