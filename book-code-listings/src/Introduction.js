@@ -14,8 +14,7 @@ function Introduction(props) {
         everything you need to understand what React is and how to start
         building applications with it." />
     </Helmet>
-    <h2>Building User Interfaces with ReactJS: An
-          Approachable Guide</h2>
+
       <p>
         Get up to speed on building applications with ReactJS with this
         practical yet very approachable book that will provide you with
