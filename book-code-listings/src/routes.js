@@ -30,7 +30,7 @@ export const routes = (
     <Route path="/listing0102">
       <>
         <Helmet> 
-          <title>React JS Foundations by Chris Minnick - Listing 1-2: Changing the state data in a component</title>
+          <title>ReactJS Foundations: Changing the state data in a component</title>
         </Helmet>
         <h2>Listing 1-2: Changing the state data in a component</h2>
         <Chapter01.Listing0102 />
@@ -39,7 +39,7 @@ export const routes = (
     <Route path="/listing0103">
       <>
         <Helmet> 
-          <title>React JS Foundations by Chris Minnick - Listing 1-3: An interactive Hello, World component</title>
+          <title>ReactJS Foundations: An interactive Hello, World component</title>
         </Helmet>
         <h2>Listing 1-3: An interactive Hello, World component</h2>
         <Chapter01.Listing0103 />
@@ -48,7 +48,7 @@ export const routes = (
     <Route path="/listing301">
       <>
         <Helmet> 
-          <title>React JS Foundations by Chris Minnick - Listing 3-1: A React Component</title>
+          <title>ReactJS Foundations: Listing 3-1: A React Component</title>
         </Helmet>
         <h2>Listing 3-1: A React Component</h2>
         <Chapter03.Login />
@@ -57,7 +57,7 @@ export const routes = (
     <Route path="/listing302">
       <>
         <Helmet> 
-          <title>React JS Foundations by Chris Minnick - Listing 3-2: Using a user-defined React component in JSX</title>
+          <title>ReactJS Foundations: Using a user-defined React component in JSX</title>
         </Helmet>      
         <h2>Listing 3-2: Using a user-defined React component in JSX</h2>
         <Chapter03.SearchBox />
@@ -66,7 +66,7 @@ export const routes = (
     <Route path="/listing303">
       <>
         <Helmet> 
-          <title>React JS Foundations by Chris Minnick - Listing 3-3: Custom attributes in HTML must start with data-</title>
+          <title>ReactJS Foundations: Custom attributes in HTML must start with data-</title>
         </Helmet>       
         <h2>Listing 3-3: Custom attributes in HTML must start with data-</h2>
         <pre>{`<div data-size="XL" 
@@ -80,7 +80,7 @@ export const routes = (
     <Route path="/listing304">
       <>
         <Helmet> 
-          <title>React JS Foundations by Chris Minnick - Listing 3-4: User-defined elements can have any attributes</title>
+          <title>ReactJS Foundations: User-defined elements can have any attributes</title>
         </Helmet>
         <h2>Listing 3-4: User-defined elements can have any attributes</h2>
         <Chapter03.MyFancyComponent />
@@ -89,7 +89,7 @@ export const routes = (
     <Route path="/listing305">
       <>
         <Helmet> 
-          <title>React JS Foundations by Chris Minnick - Listing 3-5: Using literal JavaScript inside of JSX</title>
+          <title>ReactJS Foundations: Using literal JavaScript inside of JSX</title>
         </Helmet>
         <h2>Listing 3-5: Using literal JavaScript inside of JSX</h2>
         <pre>
