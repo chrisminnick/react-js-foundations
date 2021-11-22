@@ -4,13 +4,15 @@ import Collapsible from "react-collapsible";
 import { routes } from "./routes";
 import usePageTracking from './usePageTracking';
 import Helmet from 'react-helmet';
+import ReactDOM from 'react-dom';
 
-function App() {
+function App(props) {
   usePageTracking();
+
   return (
     <>
-    <Helmet>
-      <title>React JS Foundations by Chris Minnick - {document.getElementsByTagName('h2')[0].innerText}</title>
+    <Helmet> 
+      <title>React JS Foundations by Chris Minnick</title>
       <meta name="description" content="Get up to speed on building applications with ReactJS with this
         practical yet very approachable book that will provide you with
         everything you need to understand what React is and how to start

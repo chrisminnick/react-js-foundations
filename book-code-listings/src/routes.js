@@ -17,6 +17,7 @@ import Introduction from "./Introduction";
 import WhereToBuy from "./WhereToBuy";
 import About from "./About";
 import HomePage from "./HomePage";
+import Helmet from 'react-helmet';
 
 export const routes = (
   <Switch>
@@ -28,30 +29,45 @@ export const routes = (
     <Route path="/AboutChrisMinnick" component={About} />
     <Route path="/listing0102">
       <>
+        <Helmet> 
+          <title>React JS Foundations by Chris Minnick - Listing 1-2: Changing the state data in a component</title>
+        </Helmet>
         <h2>Listing 1-2: Changing the state data in a component</h2>
         <Chapter01.Listing0102 />
       </>
     </Route>
     <Route path="/listing0103">
       <>
+        <Helmet> 
+          <title>React JS Foundations by Chris Minnick - Listing 1-3: An interactive Hello, World component</title>
+        </Helmet>
         <h2>Listing 1-3: An interactive Hello, World component</h2>
         <Chapter01.Listing0103 />
       </>
     </Route>
     <Route path="/listing301">
       <>
+        <Helmet> 
+          <title>React JS Foundations by Chris Minnick - Listing 3-1: A React Component</title>
+        </Helmet>
         <h2>Listing 3-1: A React Component</h2>
         <Chapter03.Login />
       </>
     </Route>
     <Route path="/listing302">
       <>
+        <Helmet> 
+          <title>React JS Foundations by Chris Minnick - Listing 3-2: Using a user-defined React component in JSX</title>
+        </Helmet>      
         <h2>Listing 3-2: Using a user-defined React component in JSX</h2>
         <Chapter03.SearchBox />
       </>
     </Route>
     <Route path="/listing303">
       <>
+        <Helmet> 
+          <title>React JS Foundations by Chris Minnick - Listing 3-3: Custom attributes in HTML must start with data-</title>
+        </Helmet>       
         <h2>Listing 3-3: Custom attributes in HTML must start with data-</h2>
         <pre>{`<div data-size="XL" 
          data-color="black"
@@ -63,12 +79,18 @@ export const routes = (
     </Route>
     <Route path="/listing304">
       <>
+        <Helmet> 
+          <title>React JS Foundations by Chris Minnick - Listing 3-4: User-defined elements can have any attributes</title>
+        </Helmet>
         <h2>Listing 3-4: User-defined elements can have any attributes</h2>
         <Chapter03.MyFancyComponent />
       </>
     </Route>
     <Route path="/listing305">
       <>
+        <Helmet> 
+          <title>React JS Foundations by Chris Minnick - Listing 3-5: Using literal JavaScript inside of JSX</title>
+        </Helmet>
         <h2>Listing 3-5: Using literal JavaScript inside of JSX</h2>
         <pre>
           {`function SearchInput(props) {

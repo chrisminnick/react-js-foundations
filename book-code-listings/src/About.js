@@ -1,7 +1,16 @@
 import "./About.css";
+import Helmet from 'react-helmet';
+
 function About() {
   return (
     <>
+    <Helmet> 
+      <title>React JS Foundations by Chris Minnick - About the Author</title>
+      <meta name="description" content="Get up to speed on building applications with ReactJS with this
+        practical yet very approachable book that will provide you with
+        everything you need to understand what React is and how to start
+        building applications with it." />
+    </Helmet>
       <h2>About the Author</h2>
       <p><img src="/images/chris-and-car.jpeg" 
       alt="Chris Minnick" 

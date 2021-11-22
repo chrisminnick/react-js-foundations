@@ -1,6 +1,15 @@
+import Helmet from 'react-helmet';
+
 function WhereToBuy(props) {
   return (
     <>
+    <Helmet> 
+      <title>React JS Foundations by Chris Minnick - Where to Buy the Book</title>
+      <meta name="description" content="Get up to speed on building applications with ReactJS with this
+        practical yet very approachable book that will provide you with
+        everything you need to understand what React is and how to start
+        building applications with it." />
+    </Helmet>
       <h2>Where to Buy the Book</h2>
       <p>
         React JS Foundations Building User Interfaces with ReactJS: An

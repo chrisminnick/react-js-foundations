@@ -1,9 +1,19 @@
+import Helmet from 'react-helmet';
+
 function Introduction(props) {
   return (
     <>
     <div style={{textAlign:"center"}}>
       <img src="/images/cover.jpg" className="img-fluid" alt="React JS Foundations" />
     </div>
+    <Helmet> 
+      <title>React JS Foundations by Chris Minnick - Building User Interfaces with ReactJS: An
+          Approachable Guide</title>
+      <meta name="description" content="Get up to speed on building applications with ReactJS with this
+        practical yet very approachable book that will provide you with
+        everything you need to understand what React is and how to start
+        building applications with it." />
+    </Helmet>
     <h2>Building User Interfaces with ReactJS: An
           Approachable Guide</h2>
       <p>
