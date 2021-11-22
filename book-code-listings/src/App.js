@@ -4,7 +4,6 @@ import Collapsible from "react-collapsible";
 import { routes } from "./routes";
 import usePageTracking from './usePageTracking';
 import Helmet from 'react-helmet';
-import ReactDOM from 'react-dom';
 
 function App(props) {
   usePageTracking();
