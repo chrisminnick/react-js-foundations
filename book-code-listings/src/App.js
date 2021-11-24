@@ -4,6 +4,8 @@ import Collapsible from "react-collapsible";
 import { routes } from "./routes";
 import usePageTracking from './usePageTracking';
 import Helmet from 'react-helmet';
+import DeviceIdentifier from 'react-device-identifier';
+import CodeLinks from './CodeLinks';
 
 function App(props) {
   usePageTracking();
@@ -18,7 +20,7 @@ function App(props) {
         building applications with it." />
     </Helmet>
     <div style={{ display: "flex" }}>
-
+    <DeviceIdentifier isDesktop={true}>
       <nav>
         <ul id="buttons">
           <li>
@@ -1418,6 +1420,7 @@ function App(props) {
           </li>
         </ul>
       </nav>
+      </DeviceIdentifier>
       <main>
         <h1>
           React JS Foundations
@@ -1426,6 +1429,9 @@ function App(props) {
         <p>by Chris Minnick</p>
 
         {routes}
+        <DeviceIdentifier isMobile={true}>
+          <CodeLinks />
+        </DeviceIdentifier>
       </main>
     </div>
     </>
