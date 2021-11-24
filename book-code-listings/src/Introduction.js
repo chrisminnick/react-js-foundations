@@ -4,7 +4,7 @@ function Introduction(props) {
   return (
     <>
     <div style={{textAlign:"center"}}>
-      <img src="/images/cover.jpg" className="img-fluid" alt="React JS Foundations" />
+      <img src="/images/cover.jpg" style={{maxWidth:"100%"}} alt="React JS Foundations" />
     </div>
     <Helmet> 
       <title>React JS Foundations by Chris Minnick - Building User Interfaces with ReactJS: An
