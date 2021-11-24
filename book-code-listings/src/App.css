@@ -4,6 +4,9 @@
 h2 {
   margin-top: 50px;
 }
+img {
+  aspect-ratio: attr(width) / attr(height);
+}
 a {
   text-decoration: none;
 }
