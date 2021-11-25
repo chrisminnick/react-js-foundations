@@ -5,8 +5,6 @@ import { useLocation } from "react-router-dom";
 const usePageTracking = () => {
   const location = useLocation();
 
-
-
     useEffect(() => {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
