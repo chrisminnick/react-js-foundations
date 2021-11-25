@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 
 function App() {
   const [personName, setPersonName] = React.useState("");
@@ -10,7 +9,6 @@ function App() {
       <input type="text" onChange={(e) => setPersonName(e.target.value)} />
 
       <pre>{`import React from 'react';
-import './App.css';
 
 function App() {
   const [personName,setPersonName] = React.useState('');
