@@ -1,4 +1,5 @@
 import { Switch, Route } from "react-router-dom";
+import React, { lazy } from 'react';
 import * as Chapter01 from "./chapter01";
 import * as Chapter03 from "./chapter03";
 import * as Chapter04 from "./chapter04";
@@ -12,11 +13,12 @@ import * as Chapter12 from "./chapter12";
 import * as Chapter13 from "./chapter13";
 import * as Chapter16 from "./chapter16";
 import * as Chapter17 from "./chapter17";
-import Introduction from "./Introduction";
-import WhereToBuy from "./WhereToBuy";
-import About from "./About";
-import HomePage from "./HomePage";
 import Helmet from "react-helmet";
+
+const Introduction = lazy(() => import('./Introduction'));
+const WhereToBuy = lazy(() => import('./WhereToBuy'));
+const About = lazy(() => import('./About'));
+const HomePage = lazy(() => import('./HomePage'));
 
 export const routes = (
   <Switch>
