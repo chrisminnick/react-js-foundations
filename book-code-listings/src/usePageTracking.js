@@ -1,6 +1,5 @@
 import { useEffect} from "react";
 import { useLocation } from "react-router-dom";
-//import ReactGA from "react-ga";
 
 const usePageTracking = () => {
   const location = useLocation();
@@ -13,10 +12,8 @@ const usePageTracking = () => {
        });
       function gtag(){window.dataLayer.push(arguments);}
       gtag('js', new Date());
-    
       gtag('config', 'G-GVT9Z3S6EH');
-      //console.log(window.dataLayer);
-    //ReactGA.pageview(location.pathname + location.search);
+
   }, [location]);
 };
 
