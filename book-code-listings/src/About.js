@@ -12,8 +12,7 @@ function About() {
         building applications with it." />
     </Helmet>
       <h2>About the Author</h2>
-      <p><img src="/images/chris-and-car.jpeg" 
-      alt="Chris Minnick" width="300" height="400" style={{maxWidth:"100%",height:"auto"}} /><br />
+      <p>
         Chris Minnick has been a full stack developer for over 25 years, and a
         professional author and trainer for 15 years. He has been the lead
         front-end React developer for several startup companies, and has been
