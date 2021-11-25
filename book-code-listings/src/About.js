@@ -1,4 +1,3 @@
-import "./About.css";
 import Helmet from "react-helmet";
 
 function About() {
