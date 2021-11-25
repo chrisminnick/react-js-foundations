@@ -1,4 +1,3 @@
-//import "./App.css";
 import { Link } from "react-router-dom";
 import Collapsible from "react-collapsible";
 import { routes } from "./routes";
