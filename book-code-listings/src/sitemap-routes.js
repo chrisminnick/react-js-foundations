@@ -3,7 +3,6 @@ import React from 'react';
 
 export default (
   <Switch>
-    <Route exact path="/" />
 <Route path="/intro" />
 <Route path="/WhereToBuy" />
 <Route path="/AboutChrisMinnick" />
