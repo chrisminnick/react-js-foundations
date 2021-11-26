@@ -1,8 +1,8 @@
 import { Switch, Route } from "react-router-dom";
 import React, { lazy } from 'react';
 import { lazily } from 'react-lazily'
-
 import Helmet from "react-helmet";
+import * as Chapter09 from './chapter09';
 
 const Introduction = lazy(() => import('./Introduction'));
 const WhereToBuy = lazy(() => import('./WhereToBuy'));
@@ -14,7 +14,7 @@ const Chapter04 = lazily(() => import('./chapter04'));
 const Chapter06 = lazily(() => import('./chapter06'));
 const Chapter07 = lazily(() => import('./chapter07'));
 const Chapter08 = lazily(() => import('./chapter08'));
-const Chapter09 = lazily(() => import('./chapter09'));
+//const Chapter09 = lazily(() => import('./chapter09')); refs don't work when lazy loaded?
 const Chapter10 = lazily(() => import('./chapter10'));
 const Chapter11 = lazily(() => import('./chapter11'));
 const Chapter12 = lazily(() => import('./chapter12'));
