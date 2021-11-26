@@ -1,24 +1,26 @@
 import { Switch, Route } from "react-router-dom";
 import React, { lazy } from 'react';
-import * as Chapter01 from "./chapter01";
-import * as Chapter03 from "./chapter03";
-import * as Chapter04 from "./chapter04";
-import * as Chapter06 from "./chapter06";
-import * as Chapter07 from "./chapter07";
-import * as Chapter08 from "./chapter08";
-import * as Chapter09 from "./chapter09";
-import * as Chapter10 from "./chapter10";
-import * as Chapter11 from "./chapter11";
-import * as Chapter12 from "./chapter12";
-import * as Chapter13 from "./chapter13";
-import * as Chapter16 from "./chapter16";
-import * as Chapter17 from "./chapter17";
+import { lazily } from 'react-lazily'
+
 import Helmet from "react-helmet";
 
 const Introduction = lazy(() => import('./Introduction'));
 const WhereToBuy = lazy(() => import('./WhereToBuy'));
 const About = lazy(() => import('./About'));
 const HomePage = lazy(() => import('./HomePage'));
+const Chapter01 = lazily(() => import('./chapter01'));
+const Chapter03 = lazily(() => import('./chapter03'));
+const Chapter04 = lazily(() => import('./chapter04'));
+const Chapter06 = lazily(() => import('./chapter06'));
+const Chapter07 = lazily(() => import('./chapter07'));
+const Chapter08 = lazily(() => import('./chapter08'));
+const Chapter09 = lazily(() => import('./chapter09'));
+const Chapter10 = lazily(() => import('./chapter10'));
+const Chapter11 = lazily(() => import('./chapter11'));
+const Chapter12 = lazily(() => import('./chapter12'));
+const Chapter13 = lazily(() => import('./chapter13'));
+const Chapter16 = lazily(() => import('./chapter16'));
+const Chapter17 = lazily(() => import('./chapter17'));
 
 export const routes = (
   <Switch>
@@ -640,7 +642,7 @@ export default MyComponent;
         </title>
       </Helmet>
       <h2>Listing 6-12: Validating that a prop is an instance of a class</h2>
-      <Chapter06.FamilyTree father={new Chapter06.Person("Patrick")} />{" "}
+      <Chapter06.FamilyTree />{" "}
       {/* propType validates */}
       {/* <Chapter06.FamilyTree father={"Patrick"} /> propType doesn't validate */}
     </Route>
