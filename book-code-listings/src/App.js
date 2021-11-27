@@ -5,6 +5,7 @@ import usePageTracking from './usePageTracking';
 import Helmet from 'react-helmet';
 import DeviceIdentifier from 'react-device-identifier';
 import CodeLinks from './CodeLinks';
+import {Suspense} from 'react';
 
 function App(props) {
   usePageTracking();
@@ -1426,8 +1427,11 @@ function App(props) {
         </h1>
         
         <p>by Chris Minnick</p>
+        <Suspense fallback={<div>Loading...</div>}>
 
         {routes}
+
+        </Suspense>
         <DeviceIdentifier isMobile={true}>
           <CodeLinks />
         </DeviceIdentifier>
