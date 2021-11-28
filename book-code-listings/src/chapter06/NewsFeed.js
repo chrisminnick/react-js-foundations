@@ -43,6 +43,8 @@ class NewsFeed extends Component {
 
 export default NewsFeed;`}
       </pre>
+      <hr />
+
       <h1>Using State in a Class Component</h1>
       <p>
         Class components are components created by extending the React.Component
