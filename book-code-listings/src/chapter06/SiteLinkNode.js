@@ -3,13 +3,13 @@ import PropTypes from "prop-types";
 function SiteLink(props) {
   return (
     <>
-      <a href="{props.url}">{props.linkName}</a>
+      <a href={props.url}>{props.linkName}</a>
       <pre>
         {`import PropTypes from 'prop-types';
 
 function SiteLink(props) {
   return (
-    <a href="{props.url}">{props.linkName}</a>
+    <a href={props.url}>{props.linkName}</a>
   );
 }
 

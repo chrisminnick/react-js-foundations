@@ -5,6 +5,7 @@ import usePageTracking from "./usePageTracking";
 import Helmet from "react-helmet";
 import DeviceIdentifier from "react-device-identifier";
 import CodeLinks from "./CodeLinks";
+import BottomNav from './BottomNav';
 import { Suspense } from "react";
 
 function App(props) {
@@ -1481,6 +1482,7 @@ function App(props) {
           <DeviceIdentifier isMobile={true}>
             <CodeLinks />
           </DeviceIdentifier>
+          <BottomNav />
         </main>
         </div>
       </div>

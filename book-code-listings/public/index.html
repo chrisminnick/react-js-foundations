@@ -53,6 +53,32 @@
       a {
         text-decoration: none;
       }
+      @media only screen and (max-width: 480px) {
+        ul {
+          font-size: 1em;
+          line-height: 1.6;
+          margin-bottom: 1.25em;
+          list-style-position: outside;
+          font-family: inherit;
+          padding-left:0px;
+        }
+        li:first-child {
+          border-top: 1px solid #ccc;
+        }
+        li {
+          display: block;
+          list-style-type: none;
+          padding-left: 20px;
+          padding-right: 30px;
+          padding-bottom: 15px;
+          padding-top: 15px;
+          list-style-type: none;
+          border-left: 1px solid #ccc;
+          border-right: 1px solid #ccc;
+          border-bottom: 1px solid #ccc;
+          position: relative;
+        }
+      }
       .navlink {
         text-decoration: none;
         padding: 4px;
