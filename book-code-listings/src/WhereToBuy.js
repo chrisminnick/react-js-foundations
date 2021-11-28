@@ -17,7 +17,7 @@ function WhereToBuy(props) {
         The expected release date for the book is in March 2022. I'll add more
         stores to this list as they make the book availble for sale / presale.
       </p>
-      <ul>
+      <ul className="inside-links">
         <li>
           <a href="https://www.wiley.com/en-us/React+JS+Foundations+Building+User+Interfaces+with+ReactJS%3A+An+Approachable+Guide-p-9781119685548">
             Wiley.com

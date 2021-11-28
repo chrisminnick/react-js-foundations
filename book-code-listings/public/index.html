@@ -27,6 +27,7 @@
       src="https://www.googletagmanager.com/gtag/js?id=G-GVT9Z3S6EH"
     ></script>
     <style>
+      
       body {
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
@@ -35,7 +36,32 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
-
+      @media only screen and (max-width: 360px) {
+        ul.inside-links {
+          font-size: 1em;
+          line-height: 1.6;
+          margin-bottom: 1.25em;
+          list-style-position: outside;
+          font-family: inherit;
+          padding-left:0px;
+        }
+        ul.inside-links li:first-child {
+          border-top: 1px solid #ccc;
+        }
+        ul.inside-links li {
+          display: block;
+          list-style-type: none;
+          padding-left: 20px;
+          padding-right: 30px;
+          padding-bottom: 15px;
+          padding-top: 15px;
+          list-style-type: none;
+          border-left: 1px solid #ccc;
+          border-right: 1px solid #ccc;
+          border-bottom: 1px solid #ccc;
+          position: relative;
+        }
+      }
       code {
         font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
           monospace;
@@ -52,32 +78,6 @@
       }
       a {
         text-decoration: none;
-      }
-      @media only screen and (max-width: 480px) {
-        ul {
-          font-size: 1em;
-          line-height: 1.6;
-          margin-bottom: 1.25em;
-          list-style-position: outside;
-          font-family: inherit;
-          padding-left:0px;
-        }
-        li:first-child {
-          border-top: 1px solid #ccc;
-        }
-        li {
-          display: block;
-          list-style-type: none;
-          padding-left: 20px;
-          padding-right: 30px;
-          padding-bottom: 15px;
-          padding-top: 15px;
-          list-style-type: none;
-          border-left: 1px solid #ccc;
-          border-right: 1px solid #ccc;
-          border-bottom: 1px solid #ccc;
-          position: relative;
-        }
       }
       .navlink {
         text-decoration: none;
@@ -288,6 +288,7 @@
         background-color: #cbb700;
         color: black;
       }
+      
     </style>
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <meta

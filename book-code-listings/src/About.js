@@ -26,7 +26,7 @@ function About() {
       </p>
 
       <h3>Other Books by Chris Minnick</h3>
-      <ul style={{ listStyleType: "none" }}>
+      <ul className="inside-links" style={{ listStyleType: "none" }}>
         <li>
           <a href="https://amzn.to/3EdqbLR">
             Coding with JavaScript for Dummies
