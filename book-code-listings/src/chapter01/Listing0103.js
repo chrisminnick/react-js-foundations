@@ -5,10 +5,19 @@ function App() {
 
   return (
     <div>
+      <div className="listing-result">
       <h1>Hello {personName}</h1>
       <input type="text" onChange={(e) => setPersonName(e.target.value)} />
+      </div>
+      <CodeAndText />
+      
+    </div>
+  );
+}
 
-      <pre>{`import React from 'react';
+function CodeAndText() {
+  return (
+    <pre>{`import React from 'react';
 
 function App() {
   const [personName,setPersonName] = React.useState('');
@@ -22,8 +31,7 @@ function App() {
 }
 
 export default App;`}</pre>
-    </div>
-  );
+  )
 }
 
 export default App;
