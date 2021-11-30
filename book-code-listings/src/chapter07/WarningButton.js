@@ -1,6 +1,7 @@
 function WarningButton() {
   return (
     <>
+    <div className="listing-result">
       <button
         onClick={() => {
           alert("Are you sure?");
@@ -8,7 +9,17 @@ function WarningButton() {
       >
         Don't Click Here
       </button>
-      <pre>
+      </div>
+      <CodeAndText />
+
+    </>
+  );
+}
+
+function CodeAndText(){
+  return(
+    <>
+    <pre>
         {`function WarningButton(){
 
 return (
@@ -19,8 +30,9 @@ return (
 
 export default WarningButton;    `}
       </pre>
-    </>
-  );
+      
+      </>
+  )
 }
 
 export default WarningButton;
