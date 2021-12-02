@@ -1478,11 +1478,12 @@ function App(props) {
           <p>by Chris Minnick</p>
         </header>
         <main>
-          <Suspense fallback={<div>Loading...</div>}>{routes}</Suspense>
+          <Suspense fallback={<div>Loading...</div>}>{routes}
           <DeviceIdentifier isMobile={true}>
             <CodeLinks />
           </DeviceIdentifier>
           <BottomNav />
+          </Suspense>
         </main>
         </div>
       </div>
