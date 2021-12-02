@@ -5,7 +5,7 @@ import usePageTracking from "./usePageTracking";
 import Helmet from "react-helmet";
 import DeviceIdentifier from "react-device-identifier";
 import CodeLinks from "./CodeLinks";
-import BottomNav from './BottomNav';
+import BottomNav from "./BottomNav";
 import { Suspense } from "react";
 
 function App(props) {
@@ -17,13 +17,10 @@ function App(props) {
         <title>React JS Foundations by Chris Minnick</title>
         <meta
           name="description"
-          content="Get up to speed on building applications with ReactJS with this
-        practical yet very approachable book that will provide you with
-        everything you need to understand what React is and how to start
-        building applications with it."
+          content="Code examples, tutorials, updates, downloads, and blog for React JS Foundations by Chris Minnick. Get up to speed on building applications with ReactJS."
         />
       </Helmet>
-      <div style={{ display: "flex"}}>
+      <div style={{ display: "flex" }}>
         <DeviceIdentifier isDesktop={true} isTablet={true}>
           <nav>
             <ul id="buttons">
@@ -1472,19 +1469,20 @@ function App(props) {
             </ul>
           </nav>
         </DeviceIdentifier>
-        <div style={{flexDirection:"column"}}>
-        <header style={{display:"block"}}>
-          <h1>React JS Foundations</h1>
-          <p>by Chris Minnick</p>
-        </header>
-        <main>
-          <Suspense fallback={<div>Loading...</div>}>{routes}
-          <DeviceIdentifier isMobile={true}>
-            <CodeLinks />
-          </DeviceIdentifier>
-          <BottomNav />
-          </Suspense>
-        </main>
+        <div style={{ flexDirection: "column" }}>
+          <header style={{ display: "block" }}>
+            <h1>React JS Foundations</h1>
+            <p>by Chris Minnick</p>
+          </header>
+          <main>
+            <Suspense fallback={<div>Loading...</div>}>
+              {routes}
+              <DeviceIdentifier isMobile={true}>
+                <CodeLinks />
+              </DeviceIdentifier>
+              <BottomNav />
+            </Suspense>
+          </main>
         </div>
       </div>
     </>
