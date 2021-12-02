@@ -7,10 +7,13 @@ import DeviceIdentifier from "react-device-identifier";
 import CodeLinks from "./CodeLinks";
 import BottomNav from "./BottomNav";
 import { Suspense } from "react";
+import { useLocation } from "react-router-dom";
+import {useEffect} from 'react';
 
 function App(props) {
-  usePageTracking();
 
+  usePageTracking();
+  const location = useLocation();
   return (
     <>
       <Helmet>
@@ -19,6 +22,9 @@ function App(props) {
           name="description"
           content="Code examples, tutorials, updates, downloads, and blog for React JS Foundations by Chris Minnick. Get up to speed on building applications with ReactJS."
         />
+        <meta property="og:url" content={`https://www.reactjsfoundations.com${location.pathname}${location.search}`} />
+        <meta property="og:image" content="https://www.reactjsfoundations.com/images/cover.jpg" />
+        <meta property="og:description" content="Code examples, tutorials, updates, downloads, and blog for React JS Foundations by Chris Minnick. Get up to speed on building applications with ReactJS." />
       </Helmet>
       <div style={{ display: "flex" }}>
         <div style={{ order: 2, flexDirection: "column" }}>
