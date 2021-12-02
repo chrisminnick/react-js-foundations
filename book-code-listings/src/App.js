@@ -21,20 +21,20 @@ function App(props) {
         />
       </Helmet>
       <div style={{ display: "flex" }}>
-      <div style={{ order: 2, flexDirection: "column" }}>
-          <header style={{ display: "block" }}>
-            <h1>React JS Foundations</h1>
-            <p>by Chris Minnick</p>
-          </header>
-          <main>
-            <Suspense fallback={<div>Loading...</div>}>
+        <div style={{ order: 2, flexDirection: "column" }}>
+          <Suspense fallback={<div>Loading...</div>}>
+            <header style={{ display: "block" }}>
+              <h1>React JS Foundations</h1>
+              <p>by Chris Minnick</p>
+            </header>
+            <main>
               {routes}
               <DeviceIdentifier isMobile={true}>
                 <CodeLinks />
               </DeviceIdentifier>
               <BottomNav />
-            </Suspense>
-          </main>
+            </main>
+          </Suspense>
         </div>
         <DeviceIdentifier isDesktop={true} isTablet={true}>
           <nav>
@@ -1484,7 +1484,6 @@ function App(props) {
             </ul>
           </nav>
         </DeviceIdentifier>
-        
       </div>
     </>
   );
