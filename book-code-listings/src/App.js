@@ -8,7 +8,6 @@ import CodeLinks from "./CodeLinks";
 import BottomNav from "./BottomNav";
 import { Suspense } from "react";
 import { useLocation } from "react-router-dom";
-import {useEffect} from 'react';
 
 function App(props) {
 
