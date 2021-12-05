@@ -1,0 +1,68 @@
+{
+  "name": "book-code-listings",
+  "homepage": "https://www.reactjsfoundations.com",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.21.1",
+    "axios-hooks": "^2.3.0",
+    "create-react-class": "^15.7.0",
+    "loggly-jslogger": "^2.2.2",
+    "react": "^17.0.1",
+    "react-addons-shallow-compare": "^15.6.2",
+    "react-collapsible": "^2.8.4",
+    "react-device-identifier": "^0.3.0",
+    "react-dom": "^17.0.1",
+    "react-error-boundary": "^3.1.3",
+    "react-helmet": "^6.1.0",
+    "react-hook-form": "^7.12.2",
+    "react-lazily": "^0.9.0",
+    "react-router-dom": "5.2.0",
+    "react-router-sitemap": "^1.2.0",
+    "react-scripts": "4.0.3",
+    "styled-components": "^5.3.1",
+    "typescript": "^4.3.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "prebuild": "npm run sitemap",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "sitemap": "babel-node ./sitemap-gen.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/node": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.1",
+    "@testing-library/user-event": "^12.2.2",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-import-css": "^1.0.0-alpha.11",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "prettier": "^2.4.1",
+    "react-app-rewired": "^2.1.8"
+  }
+}

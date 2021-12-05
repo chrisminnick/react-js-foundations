@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="%PUBLIC_URL%/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="%PUBLIC_URL%/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="%PUBLIC_URL%/favicon-16x16.png"
+    />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-GVT9Z3S6EH"
+    ></script>
+    <style>
+      
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+          "Helvetica Neue", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      @media only screen and (max-width: 360px) {
+        ul.inside-links {
+          font-size: 1em;
+          line-height: 1.6;
+          margin-bottom: 1.25em;
+          list-style-position: outside;
+          font-family: inherit;
+          padding-left:0px;
+        }
+        ul.inside-links li:first-child {
+          border-top: 1px solid #ccc;
+        }
+        ul.inside-links li {
+          display: block;
+          list-style-type: none;
+          padding-left: 20px;
+          padding-right: 30px;
+          padding-bottom: 15px;
+          padding-top: 15px;
+          list-style-type: none;
+          border-left: 1px solid #ccc;
+          border-right: 1px solid #ccc;
+          border-bottom: 1px solid #ccc;
+          position: relative;
+        }
+      }
+      code {
+        font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+          monospace;
+      }
+      .listing-result {
+        padding: 10px;
+        border: solid 1px #999;
+      }
+      .App {
+        text-align: center;
+      }
+      h1 {
+        font-size: 1.5em;
+      }
+      h2 {
+        margin-top: 20px;
+      }
+      img {
+        aspect-ratio: attr(width) / attr(height);
+      }
+      a {
+        text-decoration: none;
+      }
+      .navlink {
+        text-decoration: none;
+        padding: 4px;
+        font-size: 1.5em;
+        color: black;
+      }
+      #buttons ul {
+        margin-left: 0;
+        padding-left: 0;
+      }
+
+      #buttons > li {
+        list-style: none;
+        max-width: 500px;
+        border: 1px solid black;
+        cursor: pointer;
+      }
+      #buttons li a {
+        text-decoration: none;
+        display: block;
+      }
+
+      #buttons li a:hover {
+        text-decoration: none;
+      }
+
+      pre {
+        overflow-x: auto;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+        background-color: #ddd;
+        padding: 10px;
+      }
+
+      /* HTML5 display-role reset for older browsers */
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+
+      blockquote,
+      q {
+        quotes: none;
+      }
+
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: "";
+        content: none;
+      }
+
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      /**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+      .cf:before,
+      .cf:after {
+        content: " ";
+        /* 1 */
+        display: table;
+        /* 2 */
+      }
+
+      .cf:after {
+        clear: both;
+      }
+
+      /**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+      .cf {
+        *zoom: 1;
+      }
+
+      html {
+        font-size: 16px;
+      }
+
+      body {
+        padding-top: 10px;
+      }
+      ul#buttons {
+        padding: 10px;
+      }
+      main {
+        padding: 10px;
+        margin: 0px auto;
+        max-width: 800px;
+      }
+      header {
+        padding: 10px;
+        margin: 0px auto;
+        max-width: 800px;
+      }
+
+      strong {
+        font-weight: bold;
+      }
+
+      .NonCollapsibleNav {
+        padding: 10px;
+        border: 1px solid #ebebeb;
+        border-top: 0;
+      }
+      .NonCollapsibleNav li {
+        display: block;
+        font-weight: 400;
+        text-decoration: none;
+        position: relative;
+        border: 1px solid white;
+        padding: 10px;
+        background: #00ac9d;
+        color: white;
+        list-style-type: none;
+        margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      .Collapsible {
+        background-color: white;
+      }
+
+      .Collapsible__contentInner {
+        padding: 10px;
+        border: 1px solid #ebebeb;
+        border-top: 0;
+      }
+      .Collapsible__contentInner li {
+        list-style-type: none;
+        margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      .Collapsible__contentInner p:last-child {
+        margin-bottom: 0;
+      }
+
+      .Collapsible__trigger {
+        display: block;
+        font-weight: 400;
+        text-decoration: none;
+        position: relative;
+        border: 1px solid white;
+        padding: 10px;
+        background: #00ac9d;
+        color: white;
+      }
+      .Collapsible__trigger:after {
+        content: "\25BC";
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: block;
+        transition: transform 300ms;
+      }
+      .Collapsible__trigger.is-open:after {
+        transform: rotateZ(180deg);
+      }
+      .Collapsible__trigger.is-disabled {
+        opacity: 0.5;
+        background-color: grey;
+      }
+
+      .CustomTriggerCSS {
+        background-color: lightcoral;
+        transition: background-color 200ms ease;
+      }
+
+      .CustomTriggerCSS--open {
+        background-color: darkslateblue;
+      }
+
+      .Collapsible__custom-sibling {
+        padding: 5px;
+        font-size: 12px;
+        background-color: #cbb700;
+        color: black;
+      }
+      
+    </style>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <meta
+      name="description"
+      content="Get up to speed on building applications with ReactJS with this practical yet very approachable book that will provide you with everything you need to understand what React is and how to start building applications with it."
+    />
+    <title>
+      React JS Foundations Building User Interfaces with ReactJS: An
+      Approachable Guide
+    </title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
