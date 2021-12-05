@@ -44,7 +44,7 @@ function Restful(){
 
     return(
         <>
-          <button onClick={getRepos}>{status?"Fetched":"Fetch Repos"}</button>
+          <button onClick={getRepos}>{status ? "Fetched" : "Fetch Repos"}</button>
           <button onClick={logRepos}>Log Repos</button>
         </>
     )
