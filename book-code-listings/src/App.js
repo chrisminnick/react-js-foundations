@@ -29,7 +29,7 @@ function App(props) {
         <div style={{ order: 2, flexDirection: "column" }}>
           <Suspense fallback={<div>Loading...</div>}>
             <header style={{ display: "block" }}>
-              <h1>React JS Foundations</h1>
+              <a href="/" style={{fontSize:"1.75em",fontWeight:"800",display:"block",color:"#000"}}>React JS Foundations</a>
               <p>by Chris Minnick</p>
             </header>
             <main>

@@ -10,7 +10,7 @@ function HomePage() {
     <>
       <Helmet>
         <title>
-          React JS Foundations by Chris Minnick - Building User Interfaces with
+          React JS Foundations - Building User Interfaces with
           ReactJS: An Approachable Guide
         </title>
         <meta
@@ -21,14 +21,10 @@ function HomePage() {
         building applications with it."
         />
       </Helmet>
-      <h2>Building User Interfaces with ReactJS: An Approachable Guide</h2>
+      <h1>React JS Foundations - Building User Interfaces with ReactJS: An Approachable Guide</h1>
       <Introduction />
-      <DeviceIdentifier isDesktop={true}>
-        <CodeLinks />
-      </DeviceIdentifier>
+      <CodeLinks />
 
-      <WhereToBuy />
-      <About />
     </>
   );
 }

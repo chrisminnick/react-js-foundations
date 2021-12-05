@@ -9,7 +9,7 @@ function Introduction(props) {
       </a>
     </div>
     <Helmet> 
-      <title>React JS Foundations by Chris Minnick - Building User Interfaces with ReactJS: An
+      <title>React JS Foundations - Building User Interfaces with ReactJS: An
           Approachable Guide</title>
       <meta name="description" content="Get up to speed on building applications with ReactJS with this
         practical yet very approachable book that will provide you with

@@ -10,7 +10,7 @@ function WhereToBuy(props) {
         everything you need to understand what React is and how to start
         building applications with it." />
     </Helmet>
-      <h2>Where to Buy the Book</h2>
+      <h1>Where to Buy the Book</h1>
       <p>
         React JS Foundations Building User Interfaces with ReactJS: An
         Approachable Guide can be purchased anywhere computer books are sold.
