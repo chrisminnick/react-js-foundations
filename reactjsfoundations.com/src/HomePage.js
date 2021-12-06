@@ -3,7 +3,6 @@ import WhereToBuy from "./WhereToBuy";
 import About from "./About";
 import CodeLinks from "./CodeLinks";
 import Helmet from "react-helmet";
-import DeviceIdentifier from "react-device-identifier";
 
 function HomePage() {
   return (
