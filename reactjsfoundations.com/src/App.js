@@ -41,7 +41,7 @@ function App(props) {
             </main>
           </Suspense>
         </div>
-        <DeviceIdentifier isMobile={false} isTablet={false}>
+        <DeviceIdentifier isMobile={false} isTablet={false} isDesktop={true}>
           <nav>
             <ul id="buttons">
               <li>
