@@ -22,7 +22,6 @@ function HomePage() {
       </Helmet>
       <h1>React JS Foundations - Building User Interfaces with ReactJS: An Approachable Guide</h1>
       <Introduction />
-      <CodeLinks />
 
     </>
   );
