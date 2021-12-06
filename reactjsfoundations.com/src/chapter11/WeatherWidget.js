@@ -38,7 +38,7 @@ function WeatherWidget() {
     setCity(cityRef.current.value);
   }
 
-  const [{data, loading, error}, refetch] = useAxios(\`https://api.openweathermap.org/data/2.5/weather?q=\${city}&appid=${API_KEY}\`);
+  const [{data, loading, error}, refetch] = useAxios( \`https://api.openweathermap.org/data/2.5/weather?q=\${city}&appid=\${API_KEY}\` );
   if (loading) return <p>Loading...</p>;
   if (error) return <p>There was an error. {error.message}</p>;
 
