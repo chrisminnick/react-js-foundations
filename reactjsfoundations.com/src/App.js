@@ -7,25 +7,6 @@ import CodeLinks from "./CodeLinks";
 import BottomNav from "./BottomNav";
 import { Suspense } from "react";
 import { useLocation } from "react-router-dom";
-import { useMediaQuery } from "react-responsive";
-
-const useDesktopMediaQuery = () =>
-  useMediaQuery({ query: "(min-width: 1280px)" });
-
-const useTabletAndBelowMediaQuery = () =>
-  useMediaQuery({ query: "(max-width: 1279px)" });
-
-const Desktop = ({ children }) => {
-  const isDesktop = useDesktopMediaQuery();
-
-  return isDesktop ? children : null;
-};
-
-const TabletAndBelow = ({ children }) => {
-  const isTabletAndBelow = useTabletAndBelowMediaQuery();
-
-  return isTabletAndBelow ? children : null;
-};
 
 function App(props) {
   usePageTracking();
@@ -51,8 +32,8 @@ function App(props) {
           content="Code examples, tutorials, updates, downloads, and blog for React JS Foundations by Chris Minnick. Get up to speed on building applications with ReactJS."
         />
       </Helmet>
-      <div style={{ display: "flex" }}>
-        <div style={{ order: 2, flexDirection: "column" }}>
+      <div class="container">
+        <div id="column2">
           <Suspense fallback={<div>Loading...</div>}>
             <header style={{ display: "block" }}>
               <a
@@ -75,7 +56,6 @@ function App(props) {
             </main>
           </Suspense>
         </div>
-        <Desktop>
           <nav>
             <ul id="buttons">
               <li>
@@ -1522,7 +1502,6 @@ function App(props) {
               </li>
             </ul>
           </nav>
-        </Desktop>
       </div>
     </>
   );
