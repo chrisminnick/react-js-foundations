@@ -56,6 +56,8 @@ function App(props) {
             </main>
           </Suspense>
         </div>
+        <Suspense fallback={<div>Loading...</div>}>
+
           <nav>
             <ul id="buttons">
               <li>
@@ -1502,6 +1504,7 @@ function App(props) {
               </li>
             </ul>
           </nav>
+          </Suspense>
       </div>
     </>
   );
