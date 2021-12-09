@@ -30,8 +30,9 @@ function App(props) {
         />
       </Helmet>
       <div class="container">
+      <Suspense fallback={<div>Loading...</div>}>
         <div id="column2">
-          <Suspense fallback={<div>Loading...</div>}>
+          
             <header style={{ display: "block" }}>
               <a
                 href="/"
@@ -51,10 +52,11 @@ function App(props) {
               <CodeLinks />
               <BottomNav />
             </main>
-          </Suspense>
+
         </div>
         <Suspense fallback={<div>Loading...</div>}>
           <MainNav />
+        </Suspense>
         </Suspense>
       </div>
     </>
