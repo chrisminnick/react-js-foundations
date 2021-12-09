@@ -13,9 +13,11 @@ function About() {
         building applications with it."
         />
       </Helmet>
-      <h2>About the Author</h2>
-      <p>
-        <a href="https://chrisminnick.com" target="_blank">Chris Minnick</a> has 
+      <h1>About the Author</h1>
+      <div style={{textAlign:"center"}}>
+      <img alt="Chris Minnick" src="/images/chris-and-car.jpeg" style={{maxWidth:"100%",height:"auto"}} width="300" height="400" />
+      </div>
+      <p><a href="https://chrisminnick.com" target="_blank">Chris Minnick</a> has 
         been a full stack developer for over 25 years, and a professional
         author and trainer for 15 years. He has been the lead front-end React
         developer for several startup companies, and has been building web and
