@@ -15,7 +15,10 @@ function App(props) {
     <>
       <Helmet>
         <title>React JS Foundations by Chris Minnick</title>
-
+        <meta
+          name="description"
+          content="Code examples, tutorials, updates, downloads, and blog for React JS Foundations by Chris Minnick. Get up to speed on building applications with ReactJS."
+        />
         <meta
           property="og:url"
           content={`https://www.reactjsfoundations.com${location.pathname}${location.search}`}
@@ -30,9 +33,8 @@ function App(props) {
         />
       </Helmet>
       <div class="container">
-      <Suspense fallback={<div>Loading...</div>}>
-        <div id="column2">
-          
+        <Suspense fallback={<div>Loading...</div>}>
+          <div id="column2">
             <header style={{ display: "block" }}>
               <a
                 href="/"
@@ -52,11 +54,10 @@ function App(props) {
               <CodeLinks />
               <BottomNav />
             </main>
-
-        </div>
-        <Suspense fallback={<div>Loading...</div>}>
-          <MainNav />
-        </Suspense>
+          </div>
+          <Suspense fallback={<div>Loading...</div>}>
+            <MainNav />
+          </Suspense>
         </Suspense>
       </div>
     </>
