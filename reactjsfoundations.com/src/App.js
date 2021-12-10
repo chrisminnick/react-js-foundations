@@ -3,6 +3,7 @@ import { routes } from "./routes";
 import usePageTracking from "./usePageTracking";
 import Helmet from "react-helmet";
 import CodeLinks from "./CodeLinks";
+import {Link} from 'react-router-dom';
 import BottomNav from "./BottomNav";
 import { Suspense } from "react";
 import { useLocation } from "react-router-dom";
@@ -35,7 +36,8 @@ function App(props) {
       <div class="container">
         <Suspense fallback={<div>Loading...</div>}>
           <div id="column2">
-            <header style={{ display: "block" }}>
+            <header style={{display: "flex", justifyContent:"space-between" }}>
+              <div style={{justifyContent:"flex-start"}}>
               <a
                 href="/"
                 style={{
@@ -48,6 +50,8 @@ function App(props) {
                 React JS Foundations
               </a>
               <p>by Chris Minnick</p>
+              </div>
+              <div style={{justifyContent:"flex-end"}}><Link to="/wheretobuy">Get the book</Link></div>
             </header>
             <main>
               {routes}
