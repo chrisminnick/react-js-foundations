@@ -6,11 +6,11 @@ class FigureList extends Component {
     return (
       <>
         <div style={{ display: "flex" }}>
-          <BasicFigureProps filename="images/dog.png" caption="Chauncey" />
-          <BasicFigureProps filename="images/cat.png" caption="Murray" />
+          <BasicFigureProps filename="images/dog.png" caption="Chauncey" nocode/>
+          <BasicFigureProps filename="images/cat.png" caption="Murray" nocode/>
           <BasicFigureProps
             filename="images/chickens.png"
-            caption="Lefty and Ginger"
+            caption="Lefty and Ginger" nocode
           />
         </div>
         <pre>

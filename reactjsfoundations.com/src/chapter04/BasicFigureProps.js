@@ -4,16 +4,27 @@ class BasicFigureProps extends Component {
   render() {
     return (
       <>
-        <figure>
-          <img
-            style={{ width: "150px" }}
-            src={this.props.filename}
-            alt={this.props.caption}
-          />
-          <figcaption>{this.props.caption}</figcaption>
-        </figure>
-        <pre>
-          {`import {Component} from 'react';
+        <div className="listing-result">
+          <figure>
+            <img
+              style={{ width: "150px" }}
+              src={this.props.filename}
+              alt={this.props.caption}
+            />
+            <figcaption>{this.props.caption}</figcaption>
+          </figure>
+        </div>
+
+        {this.props.nocode?'':<CodeAndText />}
+      </>
+    );
+  }
+}
+
+function CodeAndText() {
+  return (
+    <pre>
+      {`import {Component} from 'react';
 
 class BasicFigureProps extends Component {
 
@@ -29,10 +40,8 @@ class BasicFigureProps extends Component {
 
 export default BasicFigureProps;
 `}
-        </pre>
-      </>
-    );
-  }
+    </pre>
+  );
 }
 
 export default BasicFigureProps;
