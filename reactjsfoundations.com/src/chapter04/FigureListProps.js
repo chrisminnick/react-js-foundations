@@ -5,7 +5,7 @@ class FigureList extends Component {
   render() {
     return (
       <>
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex", flexWrap:"wrap" }}>
           <BasicFigureProps filename="images/dog.png" caption="Chauncey" nocode/>
           <BasicFigureProps filename="images/cat.png" caption="Murray" nocode/>
           <BasicFigureProps
