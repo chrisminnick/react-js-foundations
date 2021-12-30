@@ -11,8 +11,15 @@ function Welcome({ loggedIn }) {
   }
   return (
     <>
-      <div>{header}</div>
-      <pre>
+      <div className="listing-result">{header}</div>
+      <CodeAndText />
+    </>
+  );
+}
+
+function CodeAndText() {
+  return (
+    <pre>
         {`
 import Header from './Header';
 import Login from './Login';
@@ -34,8 +41,7 @@ function Welcome({loggedIn}) {
         
 export default Welcome;`}
       </pre>
-    </>
-  );
+  )
 }
 
 export default Welcome;
