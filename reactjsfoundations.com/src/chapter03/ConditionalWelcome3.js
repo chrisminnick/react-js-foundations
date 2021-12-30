@@ -6,15 +6,13 @@ function Welcome({ loggedIn }) {
     <>
       <div className="listing-result">{loggedIn ? <Header /> : <Login />}</div>
       <CodeAndText />
-
-      
     </>
   );
 }
 function CodeAndText() {
   return (
     <pre>
-        {`import Header from './Header';
+      {`import Header from './Header';
 import Login from './Login';
 
 function Welcome({loggedIn}){
@@ -26,7 +24,7 @@ function Welcome({loggedIn}){
 }
   
 export default Welcome;`}
-      </pre>
-  )
+    </pre>
+  );
 }
 export default Welcome;
