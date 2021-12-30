@@ -3,11 +3,19 @@ import Header from "./Header";
 function Welcome({ loggedIn }) {
   return (
     <>
-      <div>
+      <div className="listing-result">
         {loggedIn && <Header />}
         Note: if you don't see the welcome messsage, you're not logged in.
       </div>
-      <pre>
+      <CodeAndText />
+
+    </>
+  );
+}
+
+function CodeAndText() {
+  return (
+    <pre>
         {`import Header from './Header';
 
 function Welcome({loggedIn}){
@@ -22,8 +30,6 @@ function Welcome({loggedIn}){
   
 export default Welcome;`}
       </pre>
-    </>
-  );
+  )
 }
-
 export default Welcome;
