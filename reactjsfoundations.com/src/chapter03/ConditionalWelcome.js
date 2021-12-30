@@ -20,7 +20,7 @@ function Welcome({ loggedIn }) {
 function CodeAndText() {
   return (
     <>
-    <pre>
+      <pre>
         {`
 import Header from './Header';
 import Login from './Login';
@@ -43,13 +43,23 @@ function Welcome({loggedIn}) {
 export default Welcome;`}
       </pre>
       <h1>Conditional Rendering with Element Variables</h1>
-      <p>Outside of the return statement, create a variable to hold the element you want to render conditionally. 
-        You can then use an if/else statement to assign different elements to the variable based on any condition. In this 
-        example, the Boolean <code>isLoggedIn</code> is passed to the component as a prop and a different component 
-        is assigned to the <code>header</code> variable based on whether <code>isLoggedIn</code> is true or false. 
-        The final step is to render the <code>header</code> variable inside the return statement.</p>
-      </>
-  )
+      <p>
+        Outside of the return statement, create a variable to hold the element
+        you want to render conditionally. You can then use an if/else statement
+        to assign different elements to the variable based on any condition. In
+        this example, the Boolean <code>isLoggedIn</code> is passed to the
+        component as a prop and a different component is assigned to the{" "}
+        <code>header</code> variable based on whether <code>isLoggedIn</code> is
+        true or false. The final step is to render the <code>header</code>{" "}
+        variable inside the return statement.
+      </p>
+      <p>
+        The benefit of using this method for conditional rendering is that it's
+        easy to read, and you can have as many
+        <code>else if</code> and <code>else</code> branches as you need.
+      </p>
+    </>
+  );
 }
 
 export default Welcome;
