@@ -36,23 +36,7 @@ function App(props) {
       <div class="container">
         <Suspense fallback={<div>Loading...</div>}>
           <div id="column2">
-            <header style={{display: "flex", justifyContent:"space-between" }}>
-              <div style={{justifyContent:"flex-start"}}>
-              <a
-                href="/"
-                style={{
-                  fontSize: "1.75em",
-                  fontWeight: "800",
-                  display: "block",
-                  color: "#000",
-                }}
-              >
-                React JS Foundations
-              </a>
-              <p>by Chris Minnick</p>
-              </div>
-              <div style={{justifyContent:"flex-end"}}><Link to="/wheretobuy">Get the book</Link></div>
-            </header>
+            
             <main>
               {routes}
               <CodeLinks />
