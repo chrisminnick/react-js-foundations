@@ -8,7 +8,7 @@ function CodeLinks() {
           github page
         </a>
         . All of the code for the book is also available on{" "}
-        <a href="https://codesandbox.io/s/book-code-listings-f4565">
+        <a href="https://codesandbox.io/s/react-js-foundations-9mbn3">
           codesandbox.io
         </a>{" "}
         for you to play around with.
