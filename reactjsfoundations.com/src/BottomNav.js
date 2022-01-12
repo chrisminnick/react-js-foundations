@@ -7,7 +7,7 @@ function BottomNav() {
         <Link to="/">Home</Link> | <Link to="/wheretobuy">Buy the Book</Link> |{" "}
         <Link to="/intro">About the Book</Link> |{" "}
         <a href="https://github.com/chrisminnick/react-js-foundations">
-          Get the Code
+          Download the Code
         </a>
       </p>
     </nav>

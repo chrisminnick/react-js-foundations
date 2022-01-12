@@ -40,7 +40,7 @@ function App(props) {
             <main>
               {routes}
               <CodeLinks />
-              <BottomNav />
+              
             </main>
           </div>
           <Suspense fallback={<div>Loading...</div>}>
@@ -48,6 +48,7 @@ function App(props) {
           </Suspense>
         </Suspense>
       </div>
+      <BottomNav />
     </>
   );
 }
