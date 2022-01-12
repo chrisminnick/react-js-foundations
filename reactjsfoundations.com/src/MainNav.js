@@ -7,8 +7,8 @@ function MainNav() {
       <ul id="buttons">
         <li>
           <div className="Collapsible">
-            <span className="Collapsible__trigger is-closed">
-              <Link to="/" style={{ color: "#fff" }}>
+            <span className="Collapsible__trigger is-closed no-arrow">
+              <Link to="/" style={{ color: "#b4032d" }}>
                 Home
               </Link>
             </span>
@@ -16,8 +16,8 @@ function MainNav() {
         </li>
         <li>
           <div className="Collapsible">
-            <span className="Collapsible__trigger is-closed">
-              <Link to="/WhereToBuy" style={{ color: "#fff" }}>
+            <span className="Collapsible__trigger is-closed no-arrow">
+              <Link to="/WhereToBuy" style={{ color: "#b4032d" }}>
                 Buy the Book
               </Link>
             </span>

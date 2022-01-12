@@ -94,6 +94,7 @@
       }
       a {
         text-decoration: none;
+        color: #b4032d;
       }
       .navlink {
         text-decoration: none;
@@ -238,8 +239,8 @@
         position: relative;
         border: 1px solid white;
         padding: 10px;
-        background: #00ac9d;
-        color: white;
+        background: #666;
+        color: #61dafb;
         list-style-type: none;
         margin-bottom: 10px;
         font-size: 14px;
@@ -271,8 +272,8 @@
         position: relative;
         border: 1px solid white;
         padding: 10px;
-        background: #00ac9d;
-        color: white;
+        background: #ccc;
+        color: #b4032d;
       }
       .Collapsible__trigger:after {
         content: "\25BC";
@@ -289,7 +290,14 @@
         opacity: 0.5;
         background-color: grey;
       }
-
+      .Collapsible__trigger.no-arrow:after {
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: block;
+        transition: transform 300ms;
+      }
       .CustomTriggerCSS {
         background-color: lightcoral;
         transition: background-color 200ms ease;
@@ -342,10 +350,21 @@
           vertical-align: middle;
           border: 1px solid #666;
           border-radius: 2px;
-          border-color: #3079ed;
-          background-color: #4d90fe;"
-          ><a style="color:#fff" href="/wheretobuy">Get the book</a></button>
+          border-color: #1b1f2426;
+          background-color: #2da44e;"
+          ><a style="color:#fff" href="https://github.com/chrisminnick/react-js-foundations">Download</a></button>
       </div>
+      <!-- <div style="padding:14px 12px 0px 0px;">
+        <button style="height:30px;
+          padding: 4px 20px;
+          width: auto;
+          vertical-align: middle;
+          border: 1px solid #666;
+          border-radius: 2px;
+          border-color: #1b1f2426;
+          background-color: #2da44e;"
+          ><a style="color:#fff" href="/wheretobuy">Get the book</a></button>
+      </div> -->
     </header>
 
   
