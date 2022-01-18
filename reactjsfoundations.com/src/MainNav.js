@@ -17,6 +17,15 @@ function MainNav() {
         <li>
           <div className="Collapsible">
             <span className="Collapsible__trigger is-closed no-arrow">
+              <a href="http://blog.reactjsfoundations.com" target="_blank" style={{ color: "#b4032d" }}>
+                Blog and Errata
+              </a>
+            </span>
+          </div>
+        </li>
+        <li>
+          <div className="Collapsible">
+            <span className="Collapsible__trigger is-closed no-arrow">
               <Link to="/WhereToBuy" style={{ color: "#b4032d" }}>
                 Buy the Book
               </Link>
