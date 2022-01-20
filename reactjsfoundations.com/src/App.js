@@ -15,10 +15,10 @@ function App(props) {
   return (
     <>
       <Helmet>
-        <title>React JS Foundations by Chris Minnick</title>
+        <title>ReactJS Foundations by Chris Minnick</title>
         <meta
           name="description"
-          content="Code examples, tutorials, updates, downloads, and blog for React JS Foundations by Chris Minnick. Get up to speed on building applications with ReactJS."
+          content="Code examples, tutorials, updates, downloads, and blog for ReactJS Foundations by Chris Minnick. Get up to speed on building applications with ReactJS."
         />
         <meta
           property="og:url"
@@ -30,7 +30,7 @@ function App(props) {
         />
         <meta
           property="og:description"
-          content="Code examples, tutorials, updates, downloads, and blog for React JS Foundations by Chris Minnick. Get up to speed on building applications with ReactJS."
+          content="Code examples, tutorials, updates, downloads, and blog for ReactJS Foundations by Chris Minnick. Get up to speed on building applications with ReactJS."
         />
       </Helmet>
       <div class="container">

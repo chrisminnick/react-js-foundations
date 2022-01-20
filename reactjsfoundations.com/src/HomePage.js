@@ -9,7 +9,7 @@ function HomePage() {
     <>
       <Helmet>
         <title>
-          React JS Foundations - Building User Interfaces with
+          ReactJS Foundations - Building User Interfaces with
           ReactJS: An Approachable Guide
         </title>
         <meta
@@ -20,7 +20,7 @@ function HomePage() {
         building applications with it."
         />
       </Helmet>
-      <h1>React JS Foundations - Building User Interfaces with ReactJS: An Approachable Guide</h1>
+      <h1>ReactJS Foundations - Building User Interfaces with ReactJS: An Approachable Guide</h1>
       <Introduction />
 
     </>
