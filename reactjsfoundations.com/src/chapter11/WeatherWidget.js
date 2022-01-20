@@ -21,10 +21,20 @@ function WeatherWidget() {
 
   return (
     <>
+    <div className="listing-result">
       <input type="text" ref={cityRef} />{" "}
       <button onClick={changeCity}>Change City</button>
       <pre>{JSON.stringify(data, null, 2)}</pre>
-      <pre>
+    </div>
+      
+      <CodeAndText />
+    </>
+  );
+}
+
+function CodeAndText(){
+  return (
+    <pre>
         {`import {useState,useRef} from 'react';
 import useAxios from 'axios-hooks';
 import {API_KEY} from './config';
@@ -50,7 +60,7 @@ function WeatherWidget() {
 }
 export default WeatherWidget;`}
       </pre>
-    </>
-  );
+  )
 }
 export default WeatherWidget;
+

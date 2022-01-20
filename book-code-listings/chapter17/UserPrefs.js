@@ -22,10 +22,7 @@ const UserPrefs = (props) => {
       Your preferred temperature unit: {unitPrefs.tempUnit}&nbsp;
       <button onClick={changeTempUnit}>
         Switch to {unitPrefs.tempUnit === "c" ? "f" : "c"}
-      </button>
-      <br />
-      <br />
-      
+      </button>    
     </>
   );
 };
