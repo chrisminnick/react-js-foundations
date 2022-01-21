@@ -4,7 +4,7 @@ function WhereToBuy(props) {
   return (
     <>
     <Helmet> 
-      <title>React JS Foundations by Chris Minnick - Where to Buy the Book</title>
+      <title>ReactJS Foundations by Chris Minnick - Where to Buy the Book</title>
       <meta name="description" content="Get up to speed on building applications with ReactJS with this
         practical yet very approachable book that will provide you with
         everything you need to understand what React is and how to start
@@ -12,7 +12,7 @@ function WhereToBuy(props) {
     </Helmet>
       <h1>Where to Buy the Book</h1>
       <p>
-        React JS Foundations Building User Interfaces with ReactJS: An
+        ReactJS Foundations Building User Interfaces with ReactJS: An
         Approachable Guide can be purchased anywhere computer books are sold.
         The expected release date for the book is in March 2022. I'll add more
         stores to this list as they make the book availble for sale / presale.

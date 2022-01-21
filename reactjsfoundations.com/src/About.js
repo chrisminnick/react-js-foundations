@@ -23,7 +23,7 @@ function About() {
         developer for several startup companies, and has been building web and
         mobile user interfaces with React since 2015. Chris has produced online
         video courses for Pluralsight and O'Reilly Media and is the author of
-        over a dozen books including React JS Foundations: Building User
+        over a dozen books including ReactJS Foundations: Building User
         Interfaces with React JS.
       </p>
 
