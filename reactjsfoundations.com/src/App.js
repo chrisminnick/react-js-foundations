@@ -1,13 +1,16 @@
-import { lazy } from "react";
-import { routes } from "./routes";
-import usePageTracking from "./usePageTracking";
-import Helmet from "react-helmet";
-import CodeLinks from "./CodeLinks";
-import {Link} from 'react-router-dom';
-import BottomNav from "./BottomNav";
-import { Suspense } from "react";
-import { useLocation } from "react-router-dom";
-const MainNav = lazy(() => import("./MainNav"));
+import { lazy } from 'react';
+import { routes } from './routes';
+import usePageTracking from './usePageTracking';
+import Helmet from 'react-helmet';
+import CodeLinks from './CodeLinks';
+import { Link } from 'react-router-dom';
+import BottomNav from './BottomNav';
+import { Suspense } from 'react';
+import { useLocation } from 'react-router-dom';
+import ErrorBoundary from 'react-error-boundary';
+import ErrorFallback from './ErrorFallback';
+
+const MainNav = lazy(() => import('./MainNav'));
 
 function App(props) {
   usePageTracking();
@@ -36,11 +39,9 @@ function App(props) {
       <div className="container">
         <Suspense fallback={<div>Loading...</div>}>
           <div id="column2">
-            
             <main>
               {routes}
               <CodeLinks />
-              
             </main>
           </div>
           <Suspense fallback={<div>Loading...</div>}>
