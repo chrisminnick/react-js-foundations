@@ -33,7 +33,7 @@ function App(props) {
           content="Code examples, tutorials, updates, downloads, and blog for ReactJS Foundations by Chris Minnick. Get up to speed on building applications with ReactJS."
         />
       </Helmet>
-      <div class="container">
+      <div className="container">
         <Suspense fallback={<div>Loading...</div>}>
           <div id="column2">
             

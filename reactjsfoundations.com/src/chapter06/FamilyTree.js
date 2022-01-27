@@ -40,5 +40,7 @@ FamilyTree.propTypes = {
   father: PropTypes.instanceOf(Person).isRequired,
   pet: PropTypes.elementType,
 };
-
+FamilyTree.defaultProps = {
+  father: new Person()
+}
 export default FamilyTree;
