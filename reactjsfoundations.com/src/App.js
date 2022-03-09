@@ -41,6 +41,7 @@ function App(props) {
           <div id="column2">
             <main>
               {routes}
+
               <CodeLinks />
             </main>
           </div>
