@@ -57,8 +57,7 @@ export default Welcome;`}
       </p>
       <p>
         The benefit of using this method for conditional rendering is that it's
-        easy to read, and you can have as many <code>else if</code> and{' '}
-        <code>else</code> branches as you need.
+        easy to read, and you can have as many branches as you need.
       </p>
     </>
   );
