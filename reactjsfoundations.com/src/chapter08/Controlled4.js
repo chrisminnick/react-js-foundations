@@ -1,10 +1,11 @@
-import { Component } from "react";
-
+import { Component } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class SignUp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      emailAddress: "",
+      emailAddress: '',
     };
   }
 
@@ -24,7 +25,7 @@ class SignUp extends Component {
           </label>
         </form>
         <p>Your email address: {this.state.emailAddress}</p>
-        <pre>
+        <SyntaxHighlighter language="javascript" style={github}>
           {`import {Component} from 'react';
 
 class SignUp extends Component{
@@ -53,7 +54,7 @@ class SignUp extends Component{
 
 export default SignUp;
 `}
-        </pre>
+        </SyntaxHighlighter>
       </>
     );
   }

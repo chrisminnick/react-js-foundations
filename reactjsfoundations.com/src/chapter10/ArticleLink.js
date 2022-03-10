@@ -1,5 +1,6 @@
 //import "style.css";
-
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function ArticleLink(props) {
   return (
     <>
@@ -12,7 +13,7 @@ function ArticleLink(props) {
           </a>
         </p>
       </div>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import "styles.css";
 
 function ArticleLink(props){
@@ -29,7 +30,7 @@ return (
 }
 
 export default ArticleLink;`}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

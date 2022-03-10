@@ -1,5 +1,6 @@
-import { Component } from "react";
-
+import { Component } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class NewsFeed2 extends Component {
   state = {
     date: new Date(),
@@ -11,7 +12,7 @@ class NewsFeed2 extends Component {
       <>
         <h1>Headlines for {this.state.date.toLocaleString()}</h1>
         ...
-        <pre>
+        <SyntaxHighlighter language="javascript" style={github}>
           {`import {Component} from 'react'
 
 class NewsFeed2 extends Component {
@@ -32,7 +33,7 @@ class NewsFeed2 extends Component {
 }
 
 export default NewsFeed2;`}
-        </pre>
+        </SyntaxHighlighter>
       </>
     );
   }

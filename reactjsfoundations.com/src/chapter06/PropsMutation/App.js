@@ -1,5 +1,6 @@
-import { useState } from "react";
-
+import { useState } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function App() {
   const [theNumber, setTheNumber] = useState(0);
   return (
@@ -17,7 +18,7 @@ function PropsMutator(props) {
 
   const changeProp = () => {
     myNumber = myNumber + 1;
-    console.log("my number is: " + myNumber);
+    console.log('my number is: ' + myNumber);
   };
 
   return (
@@ -39,7 +40,7 @@ function PropsMutator(props) {
 
 function CodeAndText() {
   return (
-    <pre>
+    <SyntaxHighlighter language="javascript" style={github}>
       {`import {useState} from 'react';
 
 function App(){
@@ -71,7 +72,7 @@ function PropsMutator(props){
 
 export default App;
 `}
-    </pre>
+    </SyntaxHighlighter>
   );
 }
 export default App;

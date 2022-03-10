@@ -1,5 +1,6 @@
-import { useState } from "react";
-
+import { useState } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function ButtonContainer() {
   const [count, setCount] = useState(0);
 
@@ -8,7 +9,7 @@ function ButtonContainer() {
       <MyButton count={count} setCount={setCount} />
       <br />
       count value: {count}
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useState} from 'react';
 
 function ButtonContainer(){
@@ -33,7 +34,7 @@ function MyButton(props){
 
 export {ButtonContainer,MyButton};
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

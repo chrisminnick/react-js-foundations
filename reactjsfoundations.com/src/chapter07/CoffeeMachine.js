@@ -1,5 +1,6 @@
-import { Component } from "react";
-
+import { Component } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class CoffeeMachine extends Component {
   constructor(props) {
     super(props);
@@ -16,9 +17,9 @@ class CoffeeMachine extends Component {
   render() {
     return (
       <>
-        The Coffee Maker is {this.state.brewing ? "on" : "off"}.<br />
+        The Coffee Maker is {this.state.brewing ? 'on' : 'off'}.<br />
         <button onClick={this.toggleBrewing}>toggle brewing state</button>
-        <pre>
+        <SyntaxHighlighter language="javascript" style={github}>
           {`import {Component} from 'react';
 
 class CoffeeMachine extends Component {
@@ -47,7 +48,7 @@ class CoffeeMachine extends Component {
 
 export default CoffeeMachine;
   `}
-        </pre>
+        </SyntaxHighlighter>
       </>
     );
   }

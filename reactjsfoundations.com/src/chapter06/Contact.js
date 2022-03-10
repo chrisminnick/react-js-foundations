@@ -1,12 +1,13 @@
-import PropTypes from "prop-types";
-
+import PropTypes from 'prop-types';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function Contact(props) {
   return (
     <>
       <li>
         {props.fullName}: {props.phone}
       </li>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import PropTypes from 'prop-types';
 
 function Contact(props){
@@ -29,7 +30,7 @@ phone: isPhoneNumber,
 }
 
 export default Contact;`}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

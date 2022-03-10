@@ -1,6 +1,9 @@
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+
 function Listing0102() {
   return (
-    <pre>
+    <SyntaxHighlighter language="javascript" style={github}>
       {`class HelloWorld extends React.Component {
   constructor(props) {
     super(props);
@@ -14,7 +17,7 @@ function Listing0102() {
 
 const domContainer = document.querySelector('#app');
 ReactDOM.render(React.createElement(HelloWorld), domContainer);`}
-    </pre>
+    </SyntaxHighlighter>
   );
 }
 

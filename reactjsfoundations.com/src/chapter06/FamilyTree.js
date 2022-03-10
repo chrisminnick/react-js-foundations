@@ -1,7 +1,8 @@
-import { Component } from "react";
-import { PropTypes } from "prop-types";
-import Person from "./Person";
-
+import { Component } from 'react';
+import { PropTypes } from 'prop-types';
+import Person from './Person';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class FamilyTree extends Component {
   render() {
     return (
@@ -9,7 +10,7 @@ class FamilyTree extends Component {
         <div>
           <h1>{this.props.father.firstName}</h1>
         </div>
-        <pre>
+        <SyntaxHighlighter language="javascript" style={github}>
           {`import {Component} from 'react';
 import {PropTypes} from 'prop-types';
 import Person from './Person';
@@ -30,7 +31,7 @@ FamilyTree.propTypes = {
 }
 
 export default FamilyTree;`}
-        </pre>
+        </SyntaxHighlighter>
       </>
     );
   }
@@ -41,6 +42,6 @@ FamilyTree.propTypes = {
   pet: PropTypes.elementType,
 };
 FamilyTree.defaultProps = {
-  father: new Person()
-}
+  father: new Person(),
+};
 export default FamilyTree;

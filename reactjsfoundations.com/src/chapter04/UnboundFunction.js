@@ -1,9 +1,10 @@
-import React from "react";
-
+import React from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class Foo extends React.Component {
   constructor(props) {
     super(props);
-    this.message = "hello";
+    this.message = 'hello';
   }
 
   handleClick(event) {
@@ -16,7 +17,7 @@ class Foo extends React.Component {
         <button type="button" onClick={this.handleClick}>
           Click Me
         </button>
-        <pre>
+        <SyntaxHighlighter language="javascript" style={github}>
           {`import React from 'react';
 
 class Foo extends React.Component{
@@ -39,7 +40,7 @@ class Foo extends React.Component{
 }
     
 export default Foo;`}
-        </pre>
+        </SyntaxHighlighter>
       </>
     );
   }

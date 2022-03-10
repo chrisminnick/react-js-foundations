@@ -1,4 +1,6 @@
-import { Component } from "react";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { Component } from 'react';
 class NewsFeed extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +22,7 @@ class NewsFeed extends Component {
 function CodeAndText() {
   return (
     <>
-    <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {Component} from 'react'
 
 class NewsFeed extends Component {
@@ -42,7 +44,7 @@ class NewsFeed extends Component {
 }
 
 export default NewsFeed;`}
-      </pre>
+      </SyntaxHighlighter>
       <hr />
 
       <h1>Using State in a Class Component</h1>
@@ -59,7 +61,7 @@ export default NewsFeed;`}
         To create a class component, import React into your module and then
         extend React's Component class.
       </p>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import React from 'react';
 
 class MyComponent extends React.Component {
@@ -67,7 +69,7 @@ class MyComponent extends React.Component {
 ...
 
 }`}
-      </pre>
+      </SyntaxHighlighter>
       <p>
         A JavaScript class can have a constructor method, which will only run
         once during the lifecycle of the component. The constructor is used to
@@ -77,7 +79,7 @@ class MyComponent extends React.Component {
         calls the constructor of the parent class. You should also pass the
         props object to super().
       </p>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import React from 'react';
 
 class MyComponent extends React.Component {
@@ -94,7 +96,7 @@ constructor(props){
 }
 
 export default MyComponent;`}
-      </pre>
+      </SyntaxHighlighter>
       <p>
         The rest of a component may contain any number of methods, but one
         method, render() must be present. The render() method of a class
@@ -103,7 +105,7 @@ export default MyComponent;`}
         uses JSX to define the part of the user interface the component is
         responsible for.
       </p>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import React from 'react';
 
 class MyComponent extends React.Component {
@@ -120,7 +122,7 @@ class MyComponent extends React.Component {
 }
 
 export default MyComponent;`}
-      </pre>
+      </SyntaxHighlighter>
       <p>
         The state object, which can be initialized in the constructor of a class
         component, holds the stateful properties of a component. When these
@@ -129,8 +131,6 @@ export default MyComponent;`}
         because the developer only changes the state object using React's
         setState() method.
       </p>
-
-      
     </>
   );
 }

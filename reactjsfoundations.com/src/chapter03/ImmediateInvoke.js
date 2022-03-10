@@ -1,3 +1,5 @@
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function ImmediateInvoke() {
   return (
     <>
@@ -6,7 +8,7 @@ function ImmediateInvoke() {
           <h1>The Header</h1>
         ))()}
       </div>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`function ImmediateInvoke(){
     return(
         <div>
@@ -16,7 +18,7 @@ function ImmediateInvoke() {
       
 }
 export default ImmediateInvoke;`}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

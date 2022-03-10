@@ -1,14 +1,15 @@
-import { useState } from "react";
-
+import { useState } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function SometimesBad() {
   const [message, setMessage] = useState();
 
   const handleClick = () => {
     const randomNumber = Math.floor(Math.random() * 2);
     if (randomNumber === 1) {
-      setMessage({ error: "there has been an error" });
+      setMessage({ error: 'there has been an error' });
     } else {
-      setMessage("great");
+      setMessage('great');
     }
   };
   return (
@@ -17,7 +18,7 @@ function SometimesBad() {
         <button onClick={handleClick}>Mystery Button</button>
         {message}
       </div>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import ErrorBoundary from './ErrorBoundary';
 import {useState} from 'react';
 
@@ -42,7 +43,7 @@ function SometimesBad(){
 
 export default SometimesBad;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

@@ -1,6 +1,7 @@
-import Header from "./Header";
-import Login from "./Login";
-
+import Header from './Header';
+import Login from './Login';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function Welcome({ loggedIn }) {
   return (
     <>
@@ -11,7 +12,7 @@ function Welcome({ loggedIn }) {
 }
 function CodeAndText() {
   return (
-    <pre>
+    <SyntaxHighlighter language="javascript" style={github}>
       {`import Header from './Header';
 import Login from './Login';
 
@@ -24,7 +25,7 @@ function Welcome({loggedIn}){
 }
   
 export default Welcome;`}
-    </pre>
+    </SyntaxHighlighter>
   );
 }
 export default Welcome;

@@ -1,7 +1,8 @@
-import React from "react";
-import { LessTraveledPath, MoreTraveledPath } from "./PathOptions";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-
+import React from 'react';
+import { LessTraveledPath, MoreTraveledPath } from './PathOptions';
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function ChooseYourAdventure() {
   return (
     <>
@@ -27,7 +28,7 @@ function ChooseYourAdventure() {
           </Switch>
         </div>
       </BrowserRouter>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import React from "react";
 import {LessTraveledPath,MoreTraveledPath} from './PathOptions';
 import {
@@ -68,7 +69,7 @@ function ChooseYourAdventure() {
 
 export default ChooseYourAdventure;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

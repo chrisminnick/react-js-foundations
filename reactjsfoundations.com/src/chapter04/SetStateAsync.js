@@ -1,5 +1,6 @@
-import { Component } from "react";
-
+import { Component } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class SetStateAsync extends Component {
   constructor(props) {
     super(props);
@@ -8,7 +9,7 @@ class SetStateAsync extends Component {
   }
   incrementCount() {
     this.setState({ count: this.state.count + 1 });
-    console.log("current count: " + this.state.count);
+    console.log('current count: ' + this.state.count);
   }
   render() {
     return (
@@ -23,7 +24,7 @@ class SetStateAsync extends Component {
             Add 1
           </button>
         </div>
-        <pre>
+        <SyntaxHighlighter language="javascript" style={github}>
           {`import {Component} from 'react';
 
 class SetStateAsync extends Component {
@@ -49,7 +50,7 @@ class SetStateAsync extends Component {
 }
 
 export default SetStateAsync;`}
-        </pre>
+        </SyntaxHighlighter>
       </>
     );
   }

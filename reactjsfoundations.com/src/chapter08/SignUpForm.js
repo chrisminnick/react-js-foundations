@@ -1,3 +1,5 @@
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function SignUpForm(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -10,7 +12,7 @@ function SignUpForm(props) {
         <input type="email" value={props.email} onChange={props.setEmail} />
         <button>Sign Up!</button>
       </form>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`function SignUpForm(props){
 
 const handleSubmit = (e)=>{
@@ -27,7 +29,7 @@ return(
 }
 
 export default SignUpForm;  `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

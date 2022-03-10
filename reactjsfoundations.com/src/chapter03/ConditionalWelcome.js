@@ -1,7 +1,7 @@
 import Header from './Header';
 import Login from './Login';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 function Welcome({ loggedIn }) {
   let header;
@@ -22,7 +22,7 @@ function Welcome({ loggedIn }) {
 function CodeAndText() {
   return (
     <>
-      <SyntaxHighlighter language="javascript" style={docco}>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`
 import Header from './Header';
 import Login from './Login';

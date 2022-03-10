@@ -1,6 +1,7 @@
-import PropTypes from "prop-types";
-import { Component } from "react";
-
+import PropTypes from 'prop-types';
+import { Component } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class WelcomeClass extends Component {
   static propTypes = {
     firstName: PropTypes.string,
@@ -10,7 +11,7 @@ class WelcomeClass extends Component {
     return (
       <>
         <h1>Welcome, {this.props.firstName}!</h1>
-        <pre>
+        <SyntaxHighlighter language="javascript" style={github}>
           {`import PropTypes from 'prop-types';
 import {Component} from 'react';
 
@@ -27,7 +28,7 @@ class WelcomeClass extends Component {
 
 export default WelcomeClass;
 `}
-        </pre>
+        </SyntaxHighlighter>
       </>
     );
   }

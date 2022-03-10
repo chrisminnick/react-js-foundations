@@ -5,6 +5,8 @@ import Helmet from 'react-helmet';
 import PrevNext from './PrevNext';
 import * as Chapter09 from './chapter09';
 import ErrorBoundary from './chapter13/ErrorBoundary';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 const Introduction = lazy(() => import('./Introduction'));
 const WhereToBuy = lazy(() => import('./WhereToBuy'));
@@ -59,7 +61,7 @@ export const routes = (
       <h1>Listing 3-1: A React Component</h1>
       <PrevNext prev="/listing103" next="/listing302" />
       {
-        <pre>
+        <SyntaxHighlighter language="javascript" style={github}>
           {`import React from "react";
 
 function Login(){
@@ -85,7 +87,7 @@ function Login(){
 }
 
 export default Login;`}
-        </pre>
+        </SyntaxHighlighter>
       }
     </Route>
     <Route path="/listing302">
@@ -108,12 +110,15 @@ export default Login;`}
       <h1>Listing 3-3: Custom attributes in HTML must start with data-</h1>
       <PrevNext prev="/listing302" next="/listing304" />
 
-      <pre>{`<div data-size="XL" 
+      <SyntaxHighlighter
+        language="javascript"
+        style={github}
+      >{`<div data-size="XL" 
          data-color="black"
          data-description="awesome">
          My Favorite T-Shirt
     </div>
-`}</pre>
+`}</SyntaxHighlighter>
     </Route>
     <Route path="/listing304">
       <Helmet>
@@ -135,7 +140,7 @@ export default Login;`}
       <h1>Listing 3-5: Using literal JavaScript inside of JSX</h1>
       <PrevNext prev="/listing304" next="/listing306" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`function SearchInput(props) {
 
 return (
@@ -150,7 +155,7 @@ return (
 
 export default SearchInput;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing306">
       <Helmet>
@@ -171,7 +176,10 @@ export default SearchInput;
       <h1>Listing 3-7: Enclose comments in curly braces</h1>
       <PrevNext prev="/listing306" next="/listing308" />
 
-      <pre>{`function Header(props){
+      <SyntaxHighlighter
+        language="javascript"
+        style={github}
+      >{`function Header(props){
 return (
   <h1 style={{fontSize:"24px",color:"blue"}}>
     {/* Todo: Make this header dynamic */}
@@ -181,7 +189,7 @@ return (
   )
 }
 export default Header;
-`}</pre>
+`}</SyntaxHighlighter>
     </Route>
     <Route path="/listing308">
       <Helmet>
@@ -566,7 +574,7 @@ export default Header;
       </h1>
       <PrevNext prev="/listing429" next="/listing431" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`class ToDoItem extends Component {
     shouldComponentUpdate(nextProps, nextState) {
         return nextProps.isChecked != this.props.isChecked;
@@ -574,7 +582,7 @@ export default Header;
     ...
 }
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing431">
       <Helmet>
@@ -684,7 +692,10 @@ export default Header;
       <h1>Listing 6-5: Putting PropTypes Outside the Class Body</h1>
       <PrevNext prev="/listing604" next="/listing606" />
 
-      <pre>{`import PropTypes from 'prop-types';
+      <SyntaxHighlighter
+        language="javascript"
+        style={github}
+      >{`import PropTypes from 'prop-types';
 import {Component} from 'react';
 
 class WelcomeMessage extends Component {
@@ -699,7 +710,7 @@ WelcomeMessage.propTypes = {
 }
 
 export default WelcomeMessage;
-`}</pre>
+`}</SyntaxHighlighter>
     </Route>
     <Route path="/listing606">
       <Helmet>
@@ -710,7 +721,7 @@ export default WelcomeMessage;
       <h1>Listing 6-6: Using PropTypes with a Function Component</h1>
       <PrevNext prev="/listing605" next="/listing607" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import PropTypes from 'prop-types';
 
 function MyComponent(props){
@@ -723,7 +734,7 @@ MyComponent.propTypes = {
 
 export default MyComponent;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing607">
       <Helmet>
@@ -732,14 +743,14 @@ export default MyComponent;
       <h1>Listing 6-7: Appending the isRequired Validator</h1>
       <PrevNext prev="/listing606" next="/listing608" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`MyComponent.propTypes = {
   firstName: PropTypes.string.isRequired,
   middleName: PropTypes.string,
   lastName: PropTypes.string.isRequired
 }
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing608">
       <Helmet>
@@ -782,12 +793,12 @@ export default MyComponent;
       <h1>Listing 6-11: Using the elementType Validator</h1>
       <PrevNext prev="/listing610" next="/listing612" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`FamilyTree.propTypes = {
   pet: PropTypes.elementType
 }
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing612">
       <Helmet>
@@ -978,7 +989,7 @@ export default MyComponent;
       <h1>Listing 6-29: The Static Version of the App Component</h1>
       <PrevNext prev="/listing628" next="/listing630" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import InputForm from './InputForm';
 import FilterSelect from './FilterSelect';
 import RemindersList from './RemindersList';
@@ -995,7 +1006,7 @@ function App(){
 
 export default App;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing630">
       <Helmet>
@@ -1004,7 +1015,7 @@ export default App;
       <h1>Listing 6-30: A Shell Component for InputForm</h1>
       <PrevNext prev="/listing629" next="/listing631" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`function InputForm(props){
   return(
     <div>Input form here</div>
@@ -1012,7 +1023,7 @@ export default App;
 }
 export default InputForm;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing631">
       <Helmet>
@@ -1021,7 +1032,7 @@ export default InputForm;
       <h1>Listing 6-31: A Shell Component for FilterSelect</h1>
       <PrevNext prev="/listing630" next="/listing632" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`function FilterSelect(props){
   return(
       <div>Filter the List</div>
@@ -1029,7 +1040,7 @@ export default InputForm;
 }
 export default FilterSelect;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing632">
       <Helmet>
@@ -1038,7 +1049,7 @@ export default FilterSelect;
       <h1>Listing 6-32: A Shell Component for RemindersList</h1>
       <PrevNext prev="/listing631" next="/listing633" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`function RemindersList(props){
   return(
       <div>Reminders List</div>
@@ -1046,7 +1057,7 @@ export default FilterSelect;
 }
 export default RemindersList;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing633">
       <Helmet>
@@ -1055,7 +1066,7 @@ export default RemindersList;
       <h1>Listing 6-33: A Shell Component for Reminder</h1>
       <PrevNext prev="/listing632" next="/listing634" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`function Reminder(props){
   return(
       <div>Reminder</div>
@@ -1063,7 +1074,7 @@ export default RemindersList;
 }
 export default Reminder;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing634">
       <Helmet>
@@ -1072,7 +1083,7 @@ export default Reminder;
       <h1>Listing 6-34: RemindersList with Reminder Imported</h1>
       <PrevNext prev="/listing633" next="/listing635" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import Reminder from './Reminder';
 
 function RemindersList(props){
@@ -1086,7 +1097,7 @@ function RemindersList(props){
 }
 export default RemindersList;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing635">
       <Helmet>
@@ -1095,7 +1106,7 @@ export default RemindersList;
       <h1>Listing 6-35: Round Two of InputForm</h1>
       <PrevNext prev="/listing634" next="/listing636" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`function InputForm(props){
   return(
     <form>
@@ -1107,7 +1118,7 @@ export default RemindersList;
 }
 export default InputForm;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing636">
       <Helmet>
@@ -1116,7 +1127,7 @@ export default InputForm;
       <h1>Listing 6-36: Round Two of FilterSelect</h1>
       <PrevNext prev="/listing635" next="/listing637" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`function FilterSelect(props){
   return(
     <label htmlFor="filterReminders">Show tasks due: 
@@ -1131,7 +1142,7 @@ export default InputForm;
 }
 export default FilterSelect;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing637">
       <Helmet>
@@ -1140,7 +1151,7 @@ export default FilterSelect;
       <h1>Listing 6-37: Round Two of RemindersList</h1>
       <PrevNext prev="/listing636" next="/listing638" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import Reminder from './Reminder';
 
 function RemindersList(props){
@@ -1154,7 +1165,7 @@ function RemindersList(props){
 }
 export default RemindersList;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing638">
       <Helmet>
@@ -1163,7 +1174,7 @@ export default RemindersList;
       <h1>Listing 6-38: Round Two of Reminder</h1>
       <PrevNext prev="/listing637" next="/listing639" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`function Reminder(props){
   return(
     <div>item: {props.reminderText} 
@@ -1174,7 +1185,7 @@ export default RemindersList;
 }
 export default Reminder;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing639">
       <Helmet>
@@ -1183,7 +1194,7 @@ export default Reminder;
       <h1>Listing 6-39: App with Lifted State</h1>
       <PrevNext prev="/listing638" next="/listing640" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useState} from 'react';
 import InputForm from './InputForm';
 import FilterSelect from './FilterSelect';
@@ -1207,7 +1218,7 @@ function App(){
 
 export default App;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing640">
       <Helmet>
@@ -1216,7 +1227,7 @@ export default App;
       <h1>Listing 6-40: Pure InputForm</h1>
       <PrevNext prev="/listing639" next="/listing641" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`function InputForm(props){
   return(
     <form>
@@ -1233,7 +1244,7 @@ export default App;
 }
 export default InputForm;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing641">
       <Helmet>
@@ -1242,7 +1253,7 @@ export default InputForm;
       <h1>Listing 6-41: Pure FilterSelect</h1>
       <PrevNext prev="/listing640" next="/listing642" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`function FilterSelect(props){
   return(
     <label htmlFor="filterReminders">Show tasks due: 
@@ -1257,7 +1268,7 @@ export default InputForm;
 }
 export default FilterSelect;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing642">
       <Helmet>
@@ -1266,7 +1277,7 @@ export default FilterSelect;
       <h1>Listing 6-42: Pure RemindersList</h1>
       <PrevNext prev="/listing641" next="/listing643" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import Reminder from './Reminder';
 
 function RemindersList(props){
@@ -1287,7 +1298,7 @@ function RemindersList(props){
 }
 export default RemindersList;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing643">
       <Helmet>
@@ -1298,7 +1309,7 @@ export default RemindersList;
       <h1>Listing 6-43: Adding PropTypes and Default Values to InputForm</h1>
       <PrevNext prev="/listing642" next="/listing644" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import PropTypes from 'prop-types';
 
 function InputForm(props){
@@ -1336,7 +1347,7 @@ InputForm.defaultProps = {
 
 export default InputForm;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing644">
       <Helmet>
@@ -1347,7 +1358,7 @@ export default InputForm;
       <h1>Listing 6-44: RemindersList with Default Props and PropTypes</h1>
       <PrevNext prev="/listing643" next="/listing645" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import PropTypes from 'prop-types';
 import Reminder from './Reminder';
 
@@ -1385,7 +1396,7 @@ RemindersList.defaultProps = {
 
 export default RemindersList;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing645">
       <Helmet>
@@ -1396,7 +1407,7 @@ export default RemindersList;
       <h1>Listing 6-45: Validating and Setting Defaults for FilterSelect</h1>
       <PrevNext prev="/listing644" next="/listing646" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import PropTypes from 'prop-types';
 
 function FilterSelect(props){
@@ -1423,7 +1434,7 @@ FilterSelect.defaultProps = {
 
 export default FilterSelect;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing646">
       <Helmet>
@@ -1434,7 +1445,7 @@ export default FilterSelect;
       <h1>Listing 6-46: Reminder with PropTypes and defaultProps</h1>
       <PrevNext prev="/listing645" next="/listing647" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import PropTypes from 'prop-types';
 
 function Reminder(props){
@@ -1462,7 +1473,7 @@ Reminder.defaultProps = {
 
 export default Reminder; 
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing647">
       <Helmet>
@@ -1477,7 +1488,7 @@ export default Reminder;
       </h1>
       <PrevNext prev="/listing646" next="/listing648" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import PropTypes from 'prop-types';
 
 function InputForm(props){
@@ -1539,7 +1550,7 @@ InputForm.defaultProps = {
 
 export default InputForm;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing648">
       <Helmet>
@@ -1550,7 +1561,7 @@ export default InputForm;
       <h1>Listing 6-48: Creating a New filteredReminders Array</h1>
       <PrevNext prev="/listing647" next="/listing649" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useState} from 'react';
 import InputForm from './InputForm';
 import FilterSelect from './FilterSelect';
@@ -1585,7 +1596,7 @@ function App(){
 
 export default App;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing649">
       <Helmet>
@@ -1594,7 +1605,7 @@ export default App;
       <h1>Listing 6-49: Filtering the Reminders List</h1>
       <PrevNext prev="/listing648" next="/listing650" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`function filterList(reminders,selectedFilter){
       if (selectedFilter === "all"){
           return reminders;
@@ -1627,7 +1638,7 @@ export default App;
     }
   }
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing650">
       <Helmet>
@@ -1636,7 +1647,7 @@ export default App;
       <h1>Listing 6-50: Implementing the filterList Function</h1>
       <PrevNext prev="/listing649" next="/listing651" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useState} from 'react';
 import InputForm from './InputForm';
 import FilterSelect from './FilterSelect';
@@ -1702,7 +1713,7 @@ function App(){
 
 export default App;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing651">
       <Helmet>
@@ -1716,7 +1727,7 @@ export default App;
       </h1>
       <PrevNext prev="/listing650" next="/listing652" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import PropTypes from 'prop-types';
 
 function FilterSelect(props){
@@ -1748,7 +1759,7 @@ FilterSelect.defaultProps = {
 
 export default FilterSelect;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing652">
       <Helmet>
@@ -1757,7 +1768,7 @@ export default FilterSelect;
       <h1>Listing 6-52: Reminder with the checkbox</h1>
       <PrevNext prev="/listing651" next="/listing653" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import PropTypes from 'prop-types';
 
 function Reminder(props){
@@ -1793,7 +1804,7 @@ Reminder.defaultProps = {
 
 export default Reminder; 
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing653">
       <Helmet>
@@ -1802,7 +1813,7 @@ export default Reminder;
       <h1>Listing 6-53: Initializing State in App</h1>
       <PrevNext prev="/listing652" next="/listing654" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {Component} from 'react';
 class App extends Component{
   constructor(props){
@@ -1820,7 +1831,7 @@ class App extends Component{
 
 export default App;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing654">
       <Helmet>
@@ -1829,7 +1840,7 @@ export default App;
       <h1>Listing 6-54: Copying and Modifying JSX in App</h1>
       <PrevNext prev="/listing653" next="/listing655" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {Component} from 'react';
 import InputForm from './InputForm';
 import FilterSelect from './FilterSelect';
@@ -1860,7 +1871,7 @@ class App extends Component{
 
 export default App;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing655">
       <Helmet>
@@ -1871,7 +1882,7 @@ export default App;
       <h1>Listing 6-55: Adding Methods and Binding Them to App</h1>
       <PrevNext prev="/listing654" next="/listing656" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {Component} from 'react';
 import InputForm from './InputForm';
 import FilterSelect from './FilterSelect';
@@ -1936,7 +1947,7 @@ class App extends Component{
 
 export default App;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing656">
       <Helmet>
@@ -1945,7 +1956,7 @@ export default App;
       <h1>Listing 6-56: The Converted App Component</h1>
       <PrevNext prev="/listing655" next="/listing657" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {Component} from 'react';
 import InputForm from './InputForm';
 import FilterSelect from './FilterSelect';
@@ -2044,7 +2055,7 @@ class App extends Component{
 
 export default App;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Listing657">
       <Helmet>
@@ -2053,7 +2064,7 @@ export default App;
       <h1>Listing 6-57: The converted InputForm component</h1>
       <PrevNext prev="/listing656" next="/listing701" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {Component} from 'react';
 import PropTypes from 'prop-types';
 
@@ -2119,7 +2130,7 @@ InputForm.defaultProps = {
 
 export default InputForm;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/Reminders">
       <Chapter06.Reminders />
@@ -2134,14 +2145,14 @@ export default InputForm;
       <h1>Listing 7-1: Using an event attribute in HTML</h1>
       <PrevNext prev="/listing657" next="/listing702" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`<form id="signup-form" onsubmit="validate()">
   <input type="text" id="email">
   <input type="text" id="fullname">
   <input type="submit">
 </form>
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing702">
       <Helmet>
@@ -2150,7 +2161,7 @@ export default InputForm;
       <h1>Listing 7-2: Using addEventListener</h1>
       <PrevNext prev="/listing701" next="/listing703" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`<html>
   <head>
     <script>
@@ -2170,7 +2181,7 @@ export default InputForm;
   </script>
 </html>
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing703">
       <Helmet>
@@ -2417,12 +2428,12 @@ export default InputForm;
       <h1>Listing 8-10: An HTML textarea's value is its children</h1>
       <PrevNext prev="/listing809" next="/listing811" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`<textarea name="terms-of-use">
   Make sure to read all of these terms of use. By reading this book, you agree to learn React and to never try to mutate a prop or forget to bind an event handler in a class component. Furthermore, although it is not required, you agree to consider writing a review of this book and to tell your friends how great this book is.
 </textarea>
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing811">
       <Helmet>
@@ -2443,7 +2454,7 @@ export default InputForm;
       <h1>Listing 8-12: A select element in HTML</h1>
       <PrevNext prev="/listing811" next="/listing813" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`<select name="pizza-type">
   <option value="thin">Thin Crust</option>
   <option value="thick">Thick Crust</option>
@@ -2452,7 +2463,7 @@ export default InputForm;
   <option value="chicago">Chicago-style</option>
 </select>
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing813">
       <Helmet>
@@ -2557,7 +2568,7 @@ export default InputForm;
       <h1>Listing 10-1: Adding an HTML Link to the HTML File</h1>
       <PrevNext prev="/listing908" next="/listing1002" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -2584,7 +2595,7 @@ export default InputForm;
   </body>
 </html>
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1002">
       <Helmet>
@@ -2622,7 +2633,7 @@ export default InputForm;
       <h1>Listing 10-5: CSS rule-sets vs. JavaScript style objects</h1>
       <PrevNext prev="/listing1004" next="/listing1006" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`/* CSS rule-set */
 .headingStyle{
   background-color: #999999;
@@ -2641,7 +2652,7 @@ const headingStyle = {
   width: '50%'
 };
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1006">
       <Helmet>
@@ -2661,12 +2672,12 @@ const headingStyle = {
       <h1>Listing 10-7: A Style Module Library</h1>
       <PrevNext prev="/listing1006" next="/listing1008" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`export const warningStyle = {color:"red",padding:"6px",backgroundColor:"#000000"};
 export const infoStyle = {color:"yellow",padding:"6px",backgroundColor:"#000000"};
 export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#000000"};
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1008">
       <Helmet>
@@ -2684,7 +2695,7 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
       <h1>Listing 10-9: A CSS Module</h1>
       <PrevNext prev="/listing1008" next="/listing1010" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`/* my-component.module.css */
 .bigText {
   font-size: 4em;
@@ -2694,7 +2705,7 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
   color: #FF0000;
 }
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1010">
       <Helmet>
@@ -2712,7 +2723,7 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
       <h1>Listing 10-11: Using Class Composition</h1>
       <PrevNext prev="/listing1010" next="/listing1012" />
 
-      <pre>{`.bodyText {
+      <SyntaxHighlighter language="javascript" style={github}>{`.bodyText {
   font-size: 12px;
   font-family: Georgia serif;
   color: #333;
@@ -2723,7 +2734,7 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
   composes: bodyText;
   text-indent: 0px;
 }
-`}</pre>
+`}</SyntaxHighlighter>
     </Route>
     <Route path="/listing1012">
       <Helmet>
@@ -2734,14 +2745,14 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
       <h1>Listing 10-12: Basing a new class on an external style</h1>
       <PrevNext prev="/listing1011" next="/listing1013" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`.checkoutButton {
   composes: button from './buttons';
   background-color: #4CAF50;
   font-size: 32px;
 }
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1013">
       <Helmet>
@@ -2938,7 +2949,7 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
       </h1>
       <PrevNext prev="/listing1116" next="/listing1118" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useEffect,useState} from 'react';
 
 function useZipLookup(zipcode){
@@ -2967,7 +2978,7 @@ function useZipLookup(zipcode){
 
 export default useZipLookup;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1118">
       <Helmet>
@@ -2985,7 +2996,7 @@ export default useZipLookup;
       <h1>Listing 11-19: Using useDebugValue</h1>
       <PrevNext prev="/listing1118" next="/listing1120" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useEffect,useState,useDebugValue} from 'react';
 
 function useZipLookup(zipcode){
@@ -3016,7 +3027,7 @@ function useZipLookup(zipcode){
 
 export default useZipLookup;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1120">
       <Helmet>
@@ -3052,7 +3063,7 @@ export default useZipLookup;
       <h1>Listing 12-2: A list of NavLinks with sub-items</h1>
       <PrevNext prev="/listing1201" next="/listing1203" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`<ul>
   <li><NavLink to="/" activeClassName="active">Home</NavLink></li>
   <li><NavLink to="/aboutUs" activeClassName="active">About Us</NavLink>
@@ -3072,7 +3083,7 @@ export default useZipLookup;
 <li><NavLink to="/contactUs" activeClassName="active">Contact Us</NavLink></li>
 </ul>
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1203">
       <Helmet>
@@ -3083,7 +3094,7 @@ export default useZipLookup;
       <h1>Listing 12-3: Using the exact attribute on NavLink components</h1>
       <PrevNext prev="/listing1202" next="/listing1204" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`
             <ul>
           <li><NavLink exact to="/" activeClassName="active">Home</NavLink></li>
@@ -3096,7 +3107,7 @@ export default useZipLookup;
           <li><NavLink exact to="/contactUs" activeClassName="active">Contact Us</NavLink></li>
         </ul>
         `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1204">
       <Helmet>
@@ -3152,7 +3163,10 @@ export default useZipLookup;
       <h1>Listing 12-9: Rendering a render prop</h1>
       <PrevNext prev="/listing1208" next="/listing1210" />
 
-      <pre>{`function Route(props) {
+      <SyntaxHighlighter
+        language="javascript"
+        style={github}
+      >{`function Route(props) {
 
 return (
   
@@ -3162,7 +3176,7 @@ return (
 }
 
 export default Route;
-`}</pre>
+`}</SyntaxHighlighter>
     </Route>
     <Route path="/listing1210">
       <Helmet>
@@ -3171,7 +3185,7 @@ export default Route;
       <h1>Listing 12-10: Switching between multiple routes</h1>
       <PrevNext prev="/listing1209" next="/listing1211" />
 
-      <pre>{`<Switch>  
+      <SyntaxHighlighter language="javascript" style={github}>{`<Switch>  
   <Route path="/">
     <p>home</p>
   </Route>
@@ -3182,7 +3196,7 @@ export default Route;
     <p>meet the team</p>
   </Route>
 </Switch>
-`}</pre>
+`}</SyntaxHighlighter>
     </Route>
     <Route path="/listing1211">
       <Helmet>
@@ -3191,7 +3205,7 @@ export default Route;
       <h1>Listing 12-11: Rendering a default route</h1>
       <PrevNext prev="/listing1210" next="/listing1212" />
 
-      <pre>{`<Switch>  
+      <SyntaxHighlighter language="javascript" style={github}>{`<Switch>  
   <Route path="/">
     <p>home</p>
   </Route>
@@ -3205,7 +3219,7 @@ export default Route;
     <PageNotFound />
   </Route>
 </Switch>
-`}</pre>
+`}</SyntaxHighlighter>
     </Route>
     <Route path="/listing1212">
       <Helmet>
@@ -3274,7 +3288,7 @@ export default Route;
       <h1>Listing 13-2: A component with an error</h1>
       <PrevNext prev="/listing1301" next="/listing1303" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`function BadComponent(){
   return (
     {oops:"this is not good"}
@@ -3283,7 +3297,7 @@ export default Route;
 
 export default BadComponent;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1303">
       <Helmet>
@@ -3317,7 +3331,7 @@ export default BadComponent;
       <h1>Listing 13-5: The Logger Component</h1>
       <PrevNext prev="/listing1304" next="/listing1306" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import { LogglyTracker } from 'loggly-jslogger';
 
 const logger = new LogglyTracker();
@@ -3325,7 +3339,7 @@ const logger = new LogglyTracker();
 logger.push({ 'logglyKey': 'YOUR CUSTOMER TOKEN HERE' });
 
 export default logger;`}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1306">
       <Helmet>
@@ -3374,14 +3388,14 @@ export default logger;`}
       </h1>
       <PrevNext prev="/listing1308" next="/listing1310" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import ErrorBoundary from 'react-error-boundary';
 
 function ErrorFallback({error}) {
   return (
     <div role="alert">
       <p>Something went wrong:</p>
-      <pre>{error.message}</pre>
+      <SyntaxHighlighter language="javascript" style={github}>{error.message}</SyntaxHighlighter>
     </div>  
   )
 }
@@ -3403,7 +3417,7 @@ function BadComponent(){
 
 export default BadComponentContainer;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1310">
       <Helmet>
@@ -3417,7 +3431,7 @@ export default BadComponentContainer;
       </h1>
       <PrevNext prev="/listing1309" next="/listing1311" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {Component} from 'react';
 import logger from './logger';
 
@@ -3451,7 +3465,7 @@ class ErrorBoundary extends Component {
 
 export default ErrorBoundary;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1311">
       <Helmet>
@@ -3480,7 +3494,7 @@ export default ErrorBoundary;
       <h1>Listing 16-1: Callbacks within Callbacks</h1>
       <PrevNext prev="/listing1311" next="/listing1602" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`function userCheck(username, password, callback){
   db.verifyUser(username, password, (error, userInfo) => {
     if (error) {
@@ -3503,7 +3517,7 @@ export default ErrorBoundary;
   })
 };
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1602">
       <Helmet>
@@ -3514,7 +3528,7 @@ export default ErrorBoundary;
       <h1>Listing 16-2: Loading initial data in a class component</h1>
       <PrevNext prev="/listing1601" next="/listing1603" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {Component} from 'react';
 
 class NewsFeed extends Component {
@@ -3546,7 +3560,7 @@ class NewsFeed extends Component {
 
 export default NewsFeed;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1603">
       <Helmet>
@@ -3557,7 +3571,7 @@ export default NewsFeed;
       <h1>Listing 16-3: Loading initial data in a function component</h1>
       <PrevNext prev="/listing1602" next="/listing1604" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useState,useEffect} from 'react';
 
 const NewsFeedFunction = () => {
@@ -3585,7 +3599,7 @@ const NewsFeedFunction = () => {
 
 export default NewsFeedFunction;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1604">
       <Helmet>
@@ -3658,9 +3672,9 @@ export default NewsFeedFunction;
       <h1>Listing 17-2: A Context for User Preferences</h1>
       <PrevNext prev="/listing1701" next="/listing1703" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`const PrefsContext = React.createContext({lang:'English',timezone:'Pacific Time'});`}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1703">
       <Helmet>
@@ -3669,7 +3683,7 @@ export default NewsFeedFunction;
       <h1>Listing 17-3: Using a Provider Component</h1>
       <PrevNext prev="/listing1702" next="/listing1704" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import React, {useState} from 'react';
 import {PrefsContext} from './contexts/UserPrefs';
 
@@ -3695,7 +3709,7 @@ function App(){
 
 export default App;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1704">
       <Helmet>
@@ -3706,7 +3720,7 @@ export default App;
       <h1>Listing 17-4: Consuming a Context in a Class Component</h1>
       <PrevNext prev="/listing1703" next="/listing1705" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import React from 'react';
 import {PrefsContext} from './contexts/UserPrefs';
 
@@ -3726,7 +3740,7 @@ class TimeDisplay extends React.Component {
 
 export default TimeDisplay;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1705">
       <Helmet>
@@ -3735,7 +3749,7 @@ export default TimeDisplay;
       <h1>Listing 17-5: Using the Context.Consumer Component</h1>
       <PrevNext prev="/listing1704" next="/listing1706" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import React from 'react';
 import {PrefsContext} from './contexts/UserPrefs';
 
@@ -3757,7 +3771,7 @@ class TimeDisplay extends React.Component {
 
 export default TimeDisplay;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1706">
       <Helmet>
@@ -3768,7 +3782,7 @@ export default TimeDisplay;
       <h1>Listing 17-6: Consuming a Context in a Function Component</h1>
       <PrevNext prev="/listing1705" next="/listing1707" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useContext} from 'react';
 import {PrefsContext} from './contexts/UserPrefs';
 
@@ -3785,7 +3799,7 @@ function TimeDisplay(props){
 
 export default TimeDisplay;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1707">
       <Helmet>
@@ -3840,7 +3854,7 @@ export default TimeDisplay;
       <h1>Listing 17-11: Making a Provider</h1>
       <PrevNext prev="/listing1710" next="/listing1712" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import React, {createContext, useState} from 'react';
 export const UnitsContext = createContext();
 
@@ -3853,7 +3867,7 @@ export const UnitsProvider = ({ children }) => {
         </UnitsContext.Provider>
     );
 };`}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1712">
       <Helmet>
@@ -3882,7 +3896,7 @@ export const UnitsProvider = ({ children }) => {
       <h1>Listing 18-1: An HTML document with multiple nodes in the body</h1>
       <PrevNext prev="/listing1713" next="/listing1802" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -3898,7 +3912,7 @@ export const UnitsProvider = ({ children }) => {
 </body>
 </html>
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1802">
       <Helmet>
@@ -3907,7 +3921,7 @@ export const UnitsProvider = ({ children }) => {
       <h1>Listing 18-2: Creating a Portal</h1>
       <PrevNext prev="/listing1801" next="/listing1803" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {createPortal} from 'react-dom';
 
 function SidebarHelp(props){
@@ -3919,7 +3933,7 @@ function SidebarHelp(props){
 
 export default SidebarHelp;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1803">
       <Helmet>
@@ -3928,7 +3942,7 @@ export default SidebarHelp;
       <h1>Listing 18-3: Using the SidebarHelp Component</h1>
       <PrevNext prev="/listing1802" next="/listing1804" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import Chart from './Chart';
 import SidebarHelp from './SidebarHelp';
 
@@ -3943,7 +3957,7 @@ function SalesChart(props){
 
 export default SalesChart;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1804">
       <Helmet>
@@ -3951,7 +3965,7 @@ export default SalesChart;
       </Helmet>
       <h1>Listing 18-4: One Way to Style a Modal</h1>
       <PrevNext prev="/listing1803" next="/listing1805" />
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`.modalOverlay {
   position: absolute;
   top: 0;
@@ -3979,7 +3993,7 @@ export default SalesChart;
   text-align: center;
 }
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1805">
       <Helmet>
@@ -3988,7 +4002,7 @@ export default SalesChart;
       <h1>Listing 18-5: The App Component</h1>
       <PrevNext prev="/listing1804" next="/listing1806" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useState} from 'react';
 import Modal from './Modal';
 import './styles.css';
@@ -4012,7 +4026,7 @@ function App() {
 
 export default App;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1806">
       <Helmet>
@@ -4021,7 +4035,7 @@ export default App;
       <h1>Listing 18-6: The Finished Modal Component</h1>
       <PrevNext prev="/listing1805" next="/listing1807" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import ReactDOM from 'react-dom';
 import "./styles.css";
 
@@ -4045,7 +4059,7 @@ function Modal(props){
 }
 export default Modal;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
     <Route path="/listing1807">
       <Helmet>
@@ -4054,7 +4068,7 @@ export default Modal;
       <h1>Listing 18-7: Using a ref to set keyboard focus</h1>
       <PrevNext prev="/listing1806" next="/WhereToBuy" />
 
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useState,useRef,useEffect} from 'react';
 import Modal from './Modal';
 import './styles.css';
@@ -4091,7 +4105,7 @@ function App() {
 
 export default App;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </Route>
   </Switch>
 );

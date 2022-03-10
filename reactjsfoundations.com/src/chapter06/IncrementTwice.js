@@ -1,5 +1,6 @@
-import { Component } from "react";
-
+import { Component } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class CounterClass extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +14,7 @@ class CounterClass extends Component {
     this.countCopy++;
     this.setState({ count: this.state.count + 1 });
     this.countCopy++;
-    console.log("Count should be: " + this.countCopy);
+    console.log('Count should be: ' + this.countCopy);
   }
 
   render() {

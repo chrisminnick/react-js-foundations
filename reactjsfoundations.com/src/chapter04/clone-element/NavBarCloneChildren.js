@@ -1,5 +1,6 @@
-import React from "react";
-
+import React from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function NavBar(props) {
   return (
     <>
@@ -10,7 +11,7 @@ function NavBar(props) {
           });
         })}
       </div>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import React from 'react';
 
 function NavBar(props){
@@ -26,7 +27,7 @@ function NavBar(props){
 
 export default NavBar;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

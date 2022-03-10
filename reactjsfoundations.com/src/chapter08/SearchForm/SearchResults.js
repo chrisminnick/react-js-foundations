@@ -1,8 +1,10 @@
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function SearchResults(props) {
   return (
     <>
       <p>You're searching for: {props.searchTerm}</p>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`function SearchResults(props){
   return(
     <p>You're searching for: {props.searchTerm}</p>
@@ -11,7 +13,7 @@ function SearchResults(props) {
 
 export default SearchResults;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

@@ -1,5 +1,6 @@
-import { Component } from "react";
-
+import { Component } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class BasicFigureProps extends Component {
   render() {
     return (
@@ -7,7 +8,7 @@ class BasicFigureProps extends Component {
         <div className="listing-result">
           <figure>
             <img
-              style={{ width: "150px" }}
+              style={{ width: '150px' }}
               src={this.props.filename}
               alt={this.props.caption}
             />
@@ -15,7 +16,7 @@ class BasicFigureProps extends Component {
           </figure>
         </div>
 
-        {this.props.nocode?'':<CodeAndText />}
+        {this.props.nocode ? '' : <CodeAndText />}
       </>
     );
   }
@@ -23,7 +24,7 @@ class BasicFigureProps extends Component {
 
 function CodeAndText() {
   return (
-    <pre>
+    <SyntaxHighlighter language="javascript" style={github}>
       {`import {Component} from 'react';
 
 class BasicFigureProps extends Component {
@@ -40,7 +41,7 @@ class BasicFigureProps extends Component {
 
 export default BasicFigureProps;
 `}
-    </pre>
+    </SyntaxHighlighter>
   );
 }
 

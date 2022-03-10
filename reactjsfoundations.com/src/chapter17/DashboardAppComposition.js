@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-
+import React, { useState } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 const App = () => {
   const [username, setUsername] = useState();
 
@@ -19,8 +20,8 @@ const App = () => {
   } else {
     return (
       <>
-        <button onClick={() => setUsername("Chris")}>Login</button>
-        <pre>
+        <button onClick={() => setUsername('Chris')}>Login</button>
+        <SyntaxHighlighter language="javascript" style={github}>
           {`import React,{useState} from 'react';
  
  const App = () => {
@@ -63,7 +64,7 @@ const App = () => {
  }
  
  export default App;`}
-        </pre>
+        </SyntaxHighlighter>
       </>
     );
   }
@@ -89,7 +90,7 @@ const Logout = (props) => {
   return (
     <button
       onClick={() => {
-        props.setUsername("");
+        props.setUsername('');
       }}
     >
       Logout

@@ -1,7 +1,8 @@
-import { useState } from "react";
-
+import { useState } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function Search(props) {
-  const [term, setTerm] = useState("");
+  const [term, setTerm] = useState('');
 
   const updateTerm = (searchTerm) => {
     setTerm(searchTerm);
@@ -18,7 +19,7 @@ function Search(props) {
       />
       <br />
       You're searching for: {term}
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useState} from 'react';
 
 function Search(props){
@@ -39,7 +40,7 @@ function Search(props){
   
   export default Search;
   `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

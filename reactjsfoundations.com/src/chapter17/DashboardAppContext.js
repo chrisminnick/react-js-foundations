@@ -1,4 +1,6 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 const UserContext = React.createContext();
 
 const App = () => {
@@ -19,7 +21,7 @@ const App = () => {
     return (
       <>
         <div className="listing-result">
-          <button onClick={() => setUsername("Chris")}>Login</button>
+          <button onClick={() => setUsername('Chris')}>Login</button>
         </div>
         <CodeAndText />
       </>
@@ -54,7 +56,7 @@ const Logout = (props) => {
   return (
     <button
       onClick={() => {
-        setUsername("");
+        setUsername('');
       }}
     >
       Logout
@@ -64,7 +66,10 @@ const Logout = (props) => {
 
 function CodeAndText() {
   return (
-    <pre>{`import React, { useState, useContext } from "react";
+    <SyntaxHighlighter
+      language="javascript"
+      style={github}
+    >{`import React, { useState, useContext } from "react";
     const UserContext = React.createContext();
     
     const App = () => {
@@ -116,7 +121,7 @@ function CodeAndText() {
           Logout
         </button>
       );
-    };`}</pre>
+    };`}</SyntaxHighlighter>
   );
 }
 

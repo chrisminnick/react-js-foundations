@@ -1,8 +1,9 @@
-import { useState } from "react";
-import useZipLookup from "./useZipLookup";
-
+import { useState } from 'react';
+import useZipLookup from './useZipLookup';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function ShippingAddress2(props) {
-  const [zipcode, setZipcode] = useState("");
+  const [zipcode, setZipcode] = useState('');
   const [city, state] = useZipLookup(zipcode);
 
   const setZip = (e) => {
@@ -21,7 +22,7 @@ function ShippingAddress2(props) {
         State: {state}
         <br />
       </form>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useRef,useState} from 'react';
 import useZipLookup from './useZipLookup';
 
@@ -48,7 +49,7 @@ function ShippingAddress2(props){
 
 export default ShippingAddress2;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

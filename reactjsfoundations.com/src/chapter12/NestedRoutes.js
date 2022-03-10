@@ -6,7 +6,9 @@ import {
   useParams,
   useRouteMatch,
   useLocation,
-} from "react-router-dom";
+} from 'react-router-dom';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 function Reports() {
   let { path, url } = useRouteMatch();
@@ -36,7 +38,7 @@ function Reports() {
           </Route>
         </Switch>
       </div>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {
   BrowserRouter as Router,
   Switch,
@@ -113,7 +115,7 @@ function App() {
 
 export default App;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

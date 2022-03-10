@@ -1,10 +1,11 @@
-import PropTypes from "prop-types";
-
+import PropTypes from 'prop-types';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function DisplayPrimaryColor(props) {
   return (
     <>
       <p>You picked: {props.primaryColor}</p>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import PropTypes from 'prop-types';
 
 function DisplayPrimaryColor(props){
@@ -19,13 +20,13 @@ DisplayPrimaryColor.propTypes = {
 
 export default DisplayPrimaryColor;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }
 
 DisplayPrimaryColor.propTypes = {
-  primaryColor: PropTypes.oneOf(["red", "green", "blue"]),
+  primaryColor: PropTypes.oneOf(['red', 'green', 'blue']),
 };
 
 export default DisplayPrimaryColor;

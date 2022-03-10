@@ -1,5 +1,6 @@
-import { useEffect, useState, useRef, useCallback } from "react";
-
+import { useEffect, useState, useRef, useCallback } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function CallMe(props) {
   const [phoneNumber, setPhoneNumber] = useState();
   const [currentNumber, setCurrentNumber] = useState();
@@ -35,7 +36,7 @@ function CallMe(props) {
         <button onClick={handleClick}>Place Call</button>
         <h1>{currentNumber}</h1>
       </form>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useEffect,useState,useRef,useCallback} from 'react';
 
 function CallMe(props){
@@ -77,7 +78,7 @@ function CallMe(props){
 
 export default CallMe;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

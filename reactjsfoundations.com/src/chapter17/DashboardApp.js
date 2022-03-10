@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 const App = () => {
   const [username, setUsername] = useState();
   if (username) {
     return <Dashboard setUsername={setUsername} username={username} />;
   } else {
-    return <button onClick={() => setUsername("Chris")}>Login</button>;
+    return <button onClick={() => setUsername('Chris')}>Login</button>;
   }
 };
 
@@ -36,7 +36,7 @@ const Logout = (props) => {
   return (
     <button
       onClick={() => {
-        props.setUsername("");
+        props.setUsername('');
       }}
     >
       Logout

@@ -1,10 +1,11 @@
-import React from "react";
-
+import React from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class ToDoClass extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      item: "",
+      item: '',
       todolist: [],
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -40,7 +41,7 @@ class ToDoClass extends React.Component {
           <button type="submit">Add</button>
           {currentTodos}
         </form>
-        <pre>
+        <SyntaxHighlighter language="javascript" style={github}>
           {`import React from 'react';
 
 class ToDoClass extends React.Component{
@@ -86,7 +87,7 @@ class ToDoClass extends React.Component{
 }
     
 export default ToDoClass;`}
-        </pre>
+        </SyntaxHighlighter>
       </>
     );
   }

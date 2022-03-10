@@ -1,5 +1,6 @@
-import React, { Component } from "react";
-
+import React, { Component } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class AudioPlayer extends Component {
   constructor(props) {
     super(props);
@@ -23,7 +24,7 @@ class AudioPlayer extends Component {
         </audio>
         <br />
         <button onClick={this.playToggle}>Play/Pause</button>
-        <pre>
+        <SyntaxHighlighter language="javascript" style={github}>
           {`import React,{Component} from 'react';
 
 class AudioPlayer extends Component {
@@ -56,7 +57,7 @@ class AudioPlayer extends Component {
 }
 
 export default AudioPlayer;`}
-        </pre>
+        </SyntaxHighlighter>
       </>
     );
   }

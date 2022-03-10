@@ -1,6 +1,7 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
+import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function ComponentProp(props) {
   return (
     <>
@@ -13,7 +14,7 @@ function ComponentProp(props) {
           )}
         />
       </Router>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import React from "react";
 import {
   BrowserRouter as Router, 
@@ -38,7 +39,7 @@ function ComponentProp(props) {
 }
 
 export default ComponentProp;`}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

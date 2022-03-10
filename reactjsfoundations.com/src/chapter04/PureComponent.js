@@ -1,11 +1,12 @@
-import React from "react";
-
+import React from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class PureComponentExample extends React.PureComponent {
   render() {
     return (
       <>
         <div>foo</div>
-        <pre>
+        <SyntaxHighlighter language="javascript" style={github}>
           {`import React from 'react';
 
 class PureComponentExample extends React.PureComponent {
@@ -15,7 +16,7 @@ class PureComponentExample extends React.PureComponent {
 }
 
 export default PureComponentExample;`}
-        </pre>
+        </SyntaxHighlighter>
       </>
     );
   }

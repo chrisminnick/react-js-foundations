@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import styles from "./Cart.css.js";
-
+import React, { useState } from 'react';
+import styles from './Cart.css.js';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function Cart(props) {
   const [inCart, setInCart] = useState(props.inCart);
 
@@ -41,7 +42,7 @@ function Cart(props) {
 
         <button>Checkout</button>
       </div>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import React,{useState} from 'react';
 import styles from './Cart.css.js';
 
@@ -81,13 +82,13 @@ Cart.defaultProps = {
 };
 
 export default Cart;`}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }
 
 Cart.defaultProps = {
-  inCart: [{ id: 1, title: "React JS Foundations", price: 5 }],
+  inCart: [{ id: 1, title: 'React JS Foundations', price: 5 }],
 };
 
 export default Cart;

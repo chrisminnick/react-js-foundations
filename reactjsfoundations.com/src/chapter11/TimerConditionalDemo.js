@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
-
+import { useEffect, useState } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function TimerConditionalFun(props) {
   const [count, setCount] = useState(0);
   const [gameNumber, setGameNumber] = useState(0);
@@ -28,7 +29,7 @@ function TimerConditionalFun(props) {
           New Game
         </button>
       </p>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useEffect,useState} from 'react';
 
 function TimerConditionalFun(props){
@@ -62,7 +63,7 @@ function TimerConditionalFun(props){
 }
 
 export default TimerConditionalFun;`}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

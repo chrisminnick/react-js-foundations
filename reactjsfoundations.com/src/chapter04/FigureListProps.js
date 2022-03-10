@@ -1,19 +1,25 @@
-import { Component } from "react";
-import BasicFigureProps from "./BasicFigureProps";
-
+import { Component } from 'react';
+import BasicFigureProps from './BasicFigureProps';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class FigureList extends Component {
   render() {
     return (
       <>
-        <div style={{ display: "flex", flexWrap:"wrap" }}>
-          <BasicFigureProps filename="images/dog.png" caption="Chauncey" nocode/>
-          <BasicFigureProps filename="images/cat.png" caption="Murray" nocode/>
+        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+          <BasicFigureProps
+            filename="images/dog.png"
+            caption="Chauncey"
+            nocode
+          />
+          <BasicFigureProps filename="images/cat.png" caption="Murray" nocode />
           <BasicFigureProps
             filename="images/chickens.png"
-            caption="Lefty and Ginger" nocode
+            caption="Lefty and Ginger"
+            nocode
           />
         </div>
-        <pre>
+        <SyntaxHighlighter language="javascript" style={github}>
           {`import {Component} from 'react';
 import BasicFigureProps from './BasicFigureProps';
 
@@ -29,7 +35,7 @@ class FigureList extends Component {
   }
 }
 export default FigureList;`}
-        </pre>
+        </SyntaxHighlighter>
       </>
     );
   }

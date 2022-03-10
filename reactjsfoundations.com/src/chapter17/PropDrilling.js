@@ -1,5 +1,6 @@
-import {Link} from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 const Grandpa = (props) => {
   return <Dad story={props.story} />;
 };
@@ -17,7 +18,7 @@ const Grandson = (props) => {
     <>
       <div className="listing-result">
         <p>
-          Here's the story that was passed down to the Grandson component:{" "}
+          Here's the story that was passed down to the Grandson component:{' '}
           {props.story}
         </p>
       </div>
@@ -28,7 +29,7 @@ const Grandson = (props) => {
 function CodeAndText() {
   return (
     <>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`const Grandpa = (props) => {
   return (<Dad story = {props.story} />);
 }
@@ -46,7 +47,7 @@ const Grandson = (props) => {
 }
   
 export default Grandpa;`}
-      </pre>
+      </SyntaxHighlighter>
       <h1>Prop Drilling</h1>
       <p>
         Data in React is passed down from parent components to child components
@@ -59,8 +60,10 @@ export default Grandpa;`}
         times, however, when 'global' data, such as user preferences or theming
         information must be passed to many different component and through
         multiple layers. If prop drilling becomes hard to keep track of or
-        otherwise causes problems, it can be useful to use a technique such as <Link to="/listing1701">React Context</Link> 
-        {` `}or <Link to="/listing1710">Composition</Link> to reduce or eliminate it.
+        otherwise causes problems, it can be useful to use a technique such as{' '}
+        <Link to="/listing1701">React Context</Link>
+        {` `}or <Link to="/listing1710">Composition</Link> to reduce or
+        eliminate it.
       </p>
     </>
   );

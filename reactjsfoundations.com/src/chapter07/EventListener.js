@@ -1,3 +1,5 @@
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function MyForm(props) {
   return (
     <>
@@ -6,7 +8,7 @@ function MyForm(props) {
         <input type="text" id="phoneNumber" />
         <button>Submit</button>
       </form>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`function MyForm(props){
     return (
       <form onSubmit={props.handleSubmit}>
@@ -17,7 +19,7 @@ function MyForm(props) {
     );
   }
   export default MyForm;`}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

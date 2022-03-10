@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import Item from "./Item.js";
+import React, { useState } from 'react';
+import Item from './Item.js';
 
 function CartItems(props) {
   const [inCart] = useState(props.inCart);
@@ -20,7 +20,7 @@ function CartItems(props) {
   );
 }
 CartItems.defaultProps = {
-  inCart: [{ id: 1, title: "React JS Foundations", price: 5 }],
+  inCart: [{ id: 1, title: 'React JS Foundations', price: 5 }],
 };
 
 export default CartItems;

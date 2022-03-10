@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 
 function NavMenu() {
   return (
@@ -10,7 +10,7 @@ function NavMenu() {
             <NavLink
               exact
               to="/"
-              activeStyle={{ backgroundColor: "black", color: "white" }}
+              activeStyle={{ backgroundColor: 'black', color: 'white' }}
             >
               Home
             </NavLink>
@@ -19,7 +19,7 @@ function NavMenu() {
             <NavLink
               exact
               to="/aboutUs"
-              activeStyle={{ backgroundColor: "black", color: "white" }}
+              activeStyle={{ backgroundColor: 'black', color: 'white' }}
             >
               About Us
             </NavLink>
@@ -28,7 +28,7 @@ function NavMenu() {
                 <NavLink
                   exact
                   to="/aboutUs/team"
-                  activeStyle={{ backgroundColor: "black", color: "white" }}
+                  activeStyle={{ backgroundColor: 'black', color: 'white' }}
                 >
                   Meet the Team
                 </NavLink>
@@ -37,7 +37,7 @@ function NavMenu() {
                 <NavLink
                   exact
                   to="/aboutUs/history"
-                  activeStyle={{ backgroundColor: "black", color: "white" }}
+                  activeStyle={{ backgroundColor: 'black', color: 'white' }}
                 >
                   Company History
                 </NavLink>
@@ -48,7 +48,7 @@ function NavMenu() {
             <NavLink
               exact
               to="/contactUs"
-              activeStyle={{ backgroundColor: "black", color: "white" }}
+              activeStyle={{ backgroundColor: 'black', color: 'white' }}
             >
               Contact Us
             </NavLink>

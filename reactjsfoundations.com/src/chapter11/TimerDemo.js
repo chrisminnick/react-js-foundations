@@ -1,5 +1,6 @@
-import { useEffect } from "react";
-
+import { useEffect } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function TimerFun(props) {
   useEffect(() => {
     let time = 0;
@@ -12,7 +13,7 @@ function TimerFun(props) {
   return (
     <>
       <p>Check the console to see the timer.</p>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useEffect} from 'react';
 
 function TimerFun(props){
@@ -29,7 +30,7 @@ function TimerFun(props){
 }
 
 export default TimerFun;`}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

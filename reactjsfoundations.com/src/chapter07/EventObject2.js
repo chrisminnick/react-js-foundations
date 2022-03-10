@@ -1,3 +1,5 @@
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function LogInput() {
   const logChange = (e) => {
     console.dir(e);
@@ -9,7 +11,7 @@ function LogInput() {
           logChange(e);
         }}
       />
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`function LogInput(){
     const logChange=(e)=>{
         console.dir(e);
@@ -21,7 +23,7 @@ function LogInput() {
 
 export default LogInput;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

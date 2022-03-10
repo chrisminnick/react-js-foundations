@@ -1,15 +1,16 @@
-import { warningStyle, infoStyle, successStyle } from "./messageStyles";
-
+import { warningStyle, infoStyle, successStyle } from './messageStyles';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function DisplayStatus(props) {
   let messageStyle;
   switch (props.message.type) {
-    case "warning":
+    case 'warning':
       messageStyle = warningStyle;
       break;
-    case "info":
+    case 'info':
       messageStyle = infoStyle;
       break;
-    case "success":
+    case 'success':
       messageStyle = successStyle;
       break;
     default:
@@ -20,7 +21,7 @@ function DisplayStatus(props) {
   return (
     <>
       <p style={messageStyle}>{props.message.text}</p>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {warningStyle,infoStyle,successStyle} from './messageStyles';
 
 function DisplayStatus(props){
@@ -47,7 +48,7 @@ switch(props.message.type){
 
 export default DisplayStatus;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

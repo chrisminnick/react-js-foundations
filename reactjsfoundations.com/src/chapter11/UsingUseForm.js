@@ -1,5 +1,6 @@
-import { useForm } from "react-hook-form";
-
+import { useForm } from 'react-hook-form';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function SignUpForm() {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
@@ -12,15 +13,15 @@ function SignUpForm() {
         <label>First Name: </label>
         <input
           name="firstname"
-          {...register("firstname", { required: true })}
+          {...register('firstname', { required: true })}
         />
 
         <label>Last Name: </label>
-        <input name="lastname" {...register("lastname", { required: true })} />
+        <input name="lastname" {...register('lastname', { required: true })} />
 
         <input type="submit" />
       </form>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useForm} from 'react-hook-form';
 
 function SignUpForm() {
@@ -44,7 +45,7 @@ return (
 
 export default SignUpForm;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

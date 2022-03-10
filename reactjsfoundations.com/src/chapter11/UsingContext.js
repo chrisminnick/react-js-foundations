@@ -1,6 +1,7 @@
-import React from "react";
-import { ThemeContext } from "./theme-context";
-
+import React from 'react';
+import { ThemeContext } from './theme-context';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function App() {
   const { theme } = React.useContext(ThemeContext);
   return (
@@ -11,7 +12,7 @@ function App() {
       >
         <h1>Welcome to my app.</h1>
       </header>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import React from 'react';
 import { ThemeContext } from './theme-context'
 
@@ -31,7 +32,7 @@ function App() {
 
 export default App;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

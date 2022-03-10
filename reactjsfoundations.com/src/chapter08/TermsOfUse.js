@@ -1,12 +1,14 @@
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function TermsOfUse(props) {
   return (
     <>
       <textarea
         value={props.terms}
         onChange={props.updateTerms}
-        style={{ height: "200px", width: "300px" }}
+        style={{ height: '200px', width: '300px' }}
       />
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`function TermsOfUse(props){
   return(
     <textarea value={props.terms} onChange={props.updateTerms} />
@@ -15,7 +17,7 @@ function TermsOfUse(props) {
 
 export default TermsOfUse;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

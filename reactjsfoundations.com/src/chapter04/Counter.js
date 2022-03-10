@@ -1,5 +1,6 @@
-import { useState } from "react";
-
+import { useState } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function Counter() {
   const [count, setCount] = useState(0);
 
@@ -15,7 +16,7 @@ function Counter() {
           Add 1
         </button>
       </div>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useState} from 'react';
 
 function Counter() {
@@ -32,7 +33,7 @@ function Counter() {
 }
 
 export default Counter;`}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

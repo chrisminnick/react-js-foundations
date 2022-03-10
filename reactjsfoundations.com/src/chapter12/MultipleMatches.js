@@ -1,5 +1,6 @@
-import { BrowserRouter as Router, Route } from "react-router-dom";
-
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function HomeScreen(props) {
   return (
     <>
@@ -11,7 +12,7 @@ function HomeScreen(props) {
           <Login />
         </Route>
       </Router>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 function HomeScreen(props){
@@ -40,7 +41,7 @@ function Login(){
         <p>Login Route</p>
     )
 }`}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

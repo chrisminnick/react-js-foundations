@@ -1,5 +1,6 @@
-import { useState, useRef } from "react";
-
+import { useState, useRef } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function BlogComment(props) {
   const [comments, setComments] = useState([]);
   const textAreaRef = useRef(null);
@@ -22,7 +23,7 @@ function BlogComment(props) {
         <p>All Comments:</p>
         {commentList}
       </form>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useState,useRef} from 'react';
 
 function BlogComment(props){
@@ -52,7 +53,7 @@ function BlogComment(props){
 
 export default BlogComment;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

@@ -1,13 +1,14 @@
-import { useEffect, useState } from "react";
-
+import { useEffect, useState } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function ShippingAddress(props) {
-  const [zipcode, setZipcode] = useState("");
-  const [city, setCity] = useState("");
-  const [state, setState] = useState("");
+  const [zipcode, setZipcode] = useState('');
+  const [city, setCity] = useState('');
+  const [state, setState] = useState('');
 
   const API_URL =
-    "https://api.zip-codes.com/ZipCodesAPI.svc/1.0/QuickGetZipCodeDetails/";
-  const API_KEY = "DEMOAPIKEY";
+    'https://api.zip-codes.com/ZipCodesAPI.svc/1.0/QuickGetZipCodeDetails/';
+  const API_KEY = 'DEMOAPIKEY';
 
   const updateZip = (e) => {
     e.preventDefault();
@@ -38,7 +39,7 @@ function ShippingAddress(props) {
         State: {state}
         <br />
       </form>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useEffect, useState} from 'react';
 
 function ShippingAddress(props){
@@ -82,7 +83,7 @@ function ShippingAddress(props){
 
 export default ShippingAddress;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

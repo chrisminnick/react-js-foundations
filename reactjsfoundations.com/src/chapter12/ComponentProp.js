@@ -1,6 +1,7 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
+import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function ComponentProp(props) {
   const OrderDetails = (props) => {
     return <h1>Details for order # {props.match.params.orderid}</h1>;
@@ -12,7 +13,7 @@ function ComponentProp(props) {
         <Link to="/orders/4">Order #4</Link>
         <Route path="/orders/:orderid" component={OrderDetails} />
       </Router>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import React from "react";
 import {
   BrowserRouter as Router, 
@@ -40,7 +41,7 @@ function ComponentProp(props) {
 }
 
 export default ComponentProp;`}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

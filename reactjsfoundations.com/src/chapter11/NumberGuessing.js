@@ -1,9 +1,10 @@
-import { useState } from "react";
-
+import { useState } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function NumberGuessing(props) {
   const [score, setScore] = useState(0);
-  const [guess, setGuess] = useState("");
-  console.log("Guess: " + guess);
+  const [guess, setGuess] = useState('');
+  console.log('Guess: ' + guess);
   const checkNumber = (e) => {
     const randomNumber = Math.floor(Math.random() * 10) + 1;
     console.log(`you guessed ${guess}. The number is ${randomNumber}.`);
@@ -23,7 +24,7 @@ function NumberGuessing(props) {
       />
       <button onClick={checkNumber}>Guess!</button>
       <p>Your score: {score}</p>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useState} from 'react';
 
 function NumberGuessing(props){
@@ -54,7 +55,7 @@ function NumberGuessing(props){
 
 export default NumberGuessing;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

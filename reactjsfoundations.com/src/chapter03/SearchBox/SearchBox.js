@@ -1,9 +1,10 @@
-import { useState } from "react";
-import SearchInput from "./SearchInput";
-import SearchResults from "./SearchResults";
-
+import { useState } from 'react';
+import SearchInput from './SearchInput';
+import SearchResults from './SearchResults';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function SearchBox() {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
 
   return (
     <>
@@ -11,7 +12,10 @@ function SearchBox() {
         <SearchInput term={searchTerm} onChange={setSearchTerm} />
         <SearchResults term={searchTerm} />
       </div>
-      <pre>{`import {useState} from 'react';
+      <SyntaxHighlighter
+        language="javascript"
+        style={github}
+      >{`import {useState} from 'react';
 import SearchInput from './SearchInput';
 import SearchResults from './SearchResults';
 
@@ -26,7 +30,7 @@ function SearchBox() {
   )
 }
 
-export default SearchBox;`}</pre>
+export default SearchBox;`}</SyntaxHighlighter>
     </>
   );
 }

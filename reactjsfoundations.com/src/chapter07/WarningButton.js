@@ -1,25 +1,26 @@
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function WarningButton() {
   return (
     <>
-    <div className="listing-result">
-      <button
-        onClick={() => {
-          alert("Are you sure?");
-        }}
-      >
-        Don't Click Here
-      </button>
+      <div className="listing-result">
+        <button
+          onClick={() => {
+            alert('Are you sure?');
+          }}
+        >
+          Don't Click Here
+        </button>
       </div>
       <CodeAndText />
-
     </>
   );
 }
 
-function CodeAndText(){
-  return(
+function CodeAndText() {
+  return (
     <>
-    <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`function WarningButton(){
 
 return (
@@ -29,10 +30,9 @@ return (
 }
 
 export default WarningButton;    `}
-      </pre>
-      
-      </>
-  )
+      </SyntaxHighlighter>
+    </>
+  );
 }
 
 export default WarningButton;

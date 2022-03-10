@@ -1,5 +1,6 @@
-import MyFancyWidget from "./MyFancyWidget";
-
+import MyFancyWidget from './MyFancyWidget';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function MyFancyComponent(props) {
   return (
     <>
@@ -8,7 +9,7 @@ function MyFancyComponent(props) {
         numberOfColumns="3"
         title="Welcome to My Widget"
       />
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import MyFancyWidget from './MyFancyWidget';
 
 function MyFancyComponent(props){
@@ -20,7 +21,7 @@ function MyFancyComponent(props){
   )
 }
 export default MyFancyComponent;`}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

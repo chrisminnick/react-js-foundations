@@ -5,8 +5,9 @@ import {
   Switch,
   Link,
   useLocation,
-} from "react-router-dom";
-
+} from 'react-router-dom';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function Header(props) {
   return <Link to="/users">View a list of users</Link>;
 }
@@ -17,7 +18,7 @@ function UsersList(props) {
     <>
       <h1>User List</h1>
       path: {location.pathname}
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import { BrowserRouter as Router, Redirect, Route, Switch, Link, useLocation } from "react-router-dom";
 
 function Header(props){
@@ -60,7 +61,7 @@ function App(props){
 }
 
 export default App;`}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

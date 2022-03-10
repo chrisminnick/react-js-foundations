@@ -1,11 +1,12 @@
-import { useState } from "react";
-import ImprovedFarm from "./ImprovedFarm";
-
+import { useState } from 'react';
+import ImprovedFarm from './ImprovedFarm';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 export default function ImprovedFarms() {
   const initialFarms = [
     {
-      farmer: "Old McDonald",
-      animals: ["pigs", "cows", "chickens"],
+      farmer: 'Old McDonald',
+      animals: ['pigs', 'cows', 'chickens'],
     },
   ];
   const [farms] = useState(initialFarms);
@@ -20,7 +21,7 @@ export default function ImprovedFarms() {
             />
           ))
         : null}
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useState} from 'react';
 import ImprovedFarm from './ImprovedFarm';
 
@@ -39,7 +40,7 @@ export default function ImprovedFarms(){
     </>
   )
 }`}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

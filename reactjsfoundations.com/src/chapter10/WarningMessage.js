@@ -1,10 +1,12 @@
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function WarningMessage(props) {
   return (
     <>
-      <p style={{ color: "red", padding: "6px", backgroundColor: "#000000" }}>
+      <p style={{ color: 'red', padding: '6px', backgroundColor: '#000000' }}>
         {props.warningMessage}
       </p>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`function WarningMessage(props){
     return (
       <p style={{color:"red",padding:"6px",backgroundColor:"#000000"}}>
@@ -15,7 +17,7 @@ function WarningMessage(props) {
   
   export default WarningMessage;
   `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

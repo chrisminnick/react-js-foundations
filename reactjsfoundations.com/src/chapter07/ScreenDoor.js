@@ -1,5 +1,6 @@
-import { Component } from "react";
-
+import { Component } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class ScreenDoor extends Component {
   constructor(props) {
     super(props);
@@ -11,9 +12,9 @@ class ScreenDoor extends Component {
     return (
       <>
         <button onClick={() => this.setState({ isOpen: !this.state.isOpen })}>
-          {this.state.isOpen ? "Close the Door" : "Open the Door"}
+          {this.state.isOpen ? 'Close the Door' : 'Open the Door'}
         </button>
-        <pre>
+        <SyntaxHighlighter language="javascript" style={github}>
           {`import {Component} from 'react';
 
 class ScreenDoor extends Component {
@@ -34,7 +35,7 @@ class ScreenDoor extends Component {
   
   export default ScreenDoor;
   `}
-        </pre>
+        </SyntaxHighlighter>
       </>
     );
   }

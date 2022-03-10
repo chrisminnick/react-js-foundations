@@ -1,5 +1,6 @@
-import { Component } from "react";
-
+import { Component } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class CounterClass extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +14,7 @@ class CounterClass extends Component {
     return (
       <>
         <button onClick={this.increment}>{this.state.count}</button>
-        <pre>
+        <SyntaxHighlighter language="javascript" style={github}>
           {`import {Component} from 'react';
 
 class CounterClass extends Component {
@@ -33,7 +34,7 @@ class CounterClass extends Component {
 }
 export default CounterClass;
 `}
-        </pre>
+        </SyntaxHighlighter>
       </>
     );
   }

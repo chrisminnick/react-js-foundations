@@ -1,10 +1,11 @@
-import PropTypes from "prop-types";
-
+import PropTypes from 'prop-types';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function SiteLink(props) {
   return (
     <>
       <a href={props.url}>{props.linkName}</a>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import PropTypes from 'prop-types';
 
 function SiteLink(props) {
@@ -19,7 +20,7 @@ SiteLink.propTypes = {
 
 export default SiteLink;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

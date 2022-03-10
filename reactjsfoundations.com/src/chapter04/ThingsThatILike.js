@@ -1,6 +1,7 @@
-import ThingsThatAreFunny from "./ThingsThatAreFunny";
-import Joke from "./Joke";
-
+import ThingsThatAreFunny from './ThingsThatAreFunny';
+import Joke from './Joke';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 export default function ThingsILike(props) {
   return (
     <>
@@ -14,7 +15,7 @@ export default function ThingsILike(props) {
           </li>
         </ul>
       </ThingsThatAreFunny>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import ThingsThatAreFunny from './ThingsThatAreFunny';
 import Joke from './Joke';
 
@@ -28,7 +29,7 @@ export default function ThingsILike(props){
       </ThingsThatAreFunny>
     )
 }`}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

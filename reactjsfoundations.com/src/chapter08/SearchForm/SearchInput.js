@@ -1,3 +1,5 @@
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function SearchInput(props) {
   const handleChange = (e) => {
     props.setSearchTerm(e.target.value);
@@ -9,7 +11,7 @@ function SearchInput(props) {
         Enter your search term:
         <input type="text" value={props.searchTerm} onChange={handleChange} />
       </label>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`function SearchInput(props){
 
 const handleChange = (e)=>{
@@ -25,7 +27,7 @@ return(
 
 export default SearchInput;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

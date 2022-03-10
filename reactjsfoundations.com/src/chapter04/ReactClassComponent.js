@@ -1,5 +1,6 @@
-import React from "react";
-
+import React from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class UserProfile extends React.Component {
   constructor(props) {
     super(props);
@@ -9,7 +10,7 @@ class UserProfile extends React.Component {
     return (
       <>
         <h1>User Profile</h1>
-        <pre>
+        <SyntaxHighlighter language="javascript" style={github}>
           {`import React from 'react';
 
 class UserProfile extends React.Component {
@@ -26,7 +27,7 @@ class UserProfile extends React.Component {
 };
 
 export default UserProfile;`}
-        </pre>
+        </SyntaxHighlighter>
       </>
     );
   }

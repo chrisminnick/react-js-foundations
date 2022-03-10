@@ -1,5 +1,6 @@
-import React, { Component } from "react";
-
+import React, { Component } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class TextReader extends Component {
   constructor(props) {
     super(props);
@@ -9,7 +10,7 @@ class TextReader extends Component {
     return (
       <>
         <textarea ref={this.textView} value={this.props.bookText} />
-        <pre>
+        <SyntaxHighlighter language="javascript" style={github}>
           {`import React,{Component} from 'react';
 
 class TextReader extends Component {
@@ -25,7 +26,7 @@ class TextReader extends Component {
 }
 
 export default TextReader;`}
-        </pre>
+        </SyntaxHighlighter>
       </>
     );
   }

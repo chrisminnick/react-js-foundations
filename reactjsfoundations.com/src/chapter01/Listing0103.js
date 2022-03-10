@@ -1,23 +1,27 @@
-import React from "react";
+import React from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 function App() {
-  const [personName, setPersonName] = React.useState("");
+  const [personName, setPersonName] = React.useState('');
 
   return (
     <div>
       <div className="listing-result">
-      <h1>Hello {personName}</h1>
-      <input type="text" onChange={(e) => setPersonName(e.target.value)} />
+        <h1>Hello {personName}</h1>
+        <input type="text" onChange={(e) => setPersonName(e.target.value)} />
       </div>
       <CodeAndText />
-      
     </div>
   );
 }
 
 function CodeAndText() {
   return (
-    <pre>{`import React from 'react';
+    <SyntaxHighlighter
+      language="javascript"
+      style={github}
+    >{`import React from 'react';
 
 function App() {
   const [personName,setPersonName] = React.useState('');
@@ -30,8 +34,8 @@ function App() {
   );
 }
 
-export default App;`}</pre>
-  )
+export default App;`}</SyntaxHighlighter>
+  );
 }
 
 export default App;

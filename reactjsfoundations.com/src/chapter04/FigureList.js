@@ -1,6 +1,7 @@
-import { Component } from "react";
-import BasicFigure from "./BasicFigure";
-
+import { Component } from 'react';
+import BasicFigure from './BasicFigure';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class FigureList extends Component {
   render() {
     return (
@@ -8,7 +9,7 @@ class FigureList extends Component {
         <BasicFigure />
         <BasicFigure />
         <BasicFigure />
-        <pre>
+        <SyntaxHighlighter language="javascript" style={github}>
           {`import {Component} from 'react';
 import BasicFigure from './BasicFigure';
 
@@ -25,7 +26,7 @@ class FigureList extends Component {
 }
 export default FigureList;
 `}
-        </pre>
+        </SyntaxHighlighter>
       </>
     );
   }

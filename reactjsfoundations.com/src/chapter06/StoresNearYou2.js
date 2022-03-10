@@ -1,9 +1,10 @@
-import Map from "./Map";
-import StoreList from "./StoreList";
-
+import Map from './Map';
+import StoreList from './StoreList';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function StoresNearYou3(props) {
-  const latitude = props.latitude || "37.3230";
-  const longitude = props.longitude || "122.0322";
+  const latitude = props.latitude || '37.3230';
+  const longitude = props.longitude || '122.0322';
 
   return (
     <>
@@ -13,7 +14,7 @@ function StoresNearYou3(props) {
       <div id="store-list">
         <StoreList latitude={latitude} longitude={longitude} />
       </div>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import Map from './Map';
 import StoreList from './StoreList';
 
@@ -40,7 +41,7 @@ function StoresNearYou3(props){
 }
 
 export default StoresNearYou3;`}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

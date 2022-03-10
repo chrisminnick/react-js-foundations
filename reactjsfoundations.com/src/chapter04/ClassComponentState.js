@@ -1,5 +1,6 @@
-import { Component } from "react";
-
+import { Component } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class ClassComponentState extends Component {
   constructor(props) {
     super(props);
@@ -22,7 +23,7 @@ class ClassComponentState extends Component {
             Add 1
           </button>
         </div>
-        <pre>
+        <SyntaxHighlighter language="javascript" style={github}>
           {`import {Component} from 'react';
 
 class ClassComponentState extends Component {
@@ -47,7 +48,7 @@ class ClassComponentState extends Component {
 }
 
 export default ClassComponentState;`}
-        </pre>
+        </SyntaxHighlighter>
       </>
     );
   }

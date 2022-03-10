@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
-
+import { useEffect, useState } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function TimerOnceFun(props) {
   const [count, setCount] = useState(0);
 
@@ -21,7 +22,7 @@ function TimerOnceFun(props) {
         Check the console to see the timer.
         <button onClick={() => setCount((prev) => prev + 1)}>{count}</button>
       </p>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useEffect,useState} from 'react';
 
 function TimerOnceFun(props){
@@ -49,7 +50,7 @@ function TimerOnceFun(props){
 }
 
 export default TimerOnceFun;`}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

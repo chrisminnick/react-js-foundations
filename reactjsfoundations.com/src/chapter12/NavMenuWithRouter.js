@@ -1,9 +1,10 @@
-import React from "react";
-import { withRouter } from "react-router-dom";
-
+import React from 'react';
+import { withRouter } from 'react-router-dom';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function NavMenu(props) {
   function handleClick() {
-    props.history.push("/home");
+    props.history.push('/home');
   }
 
   return (
@@ -11,7 +12,10 @@ function NavMenu(props) {
       <button type="button" onClick={handleClick}>
         Go home
       </button>
-      <pre>{`import React from "react";
+      <SyntaxHighlighter
+        language="javascript"
+        style={github}
+      >{`import React from "react";
 import {
   withRouter
 } from "react-router-dom";
@@ -28,7 +32,7 @@ function NavMenu(props) {
       );
 }
 
-export default withRouter(NavMenu);`}</pre>
+export default withRouter(NavMenu);`}</SyntaxHighlighter>
     </>
   );
 }

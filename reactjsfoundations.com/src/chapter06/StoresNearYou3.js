@@ -1,11 +1,12 @@
-import { Component } from "react";
-import Map from "./Map";
-import StoreList from "./StoreList";
-
+import { Component } from 'react';
+import Map from './Map';
+import StoreList from './StoreList';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class StoresNearYou3 extends Component {
   static defaultProps = {
-    latitude: "37.3230",
-    longitude: "122.0322",
+    latitude: '37.3230',
+    longitude: '122.0322',
   };
 
   render() {
@@ -23,7 +24,7 @@ class StoresNearYou3 extends Component {
             longitude={this.props.longitude}
           />
         </div>
-        <pre>
+        <SyntaxHighlighter language="javascript" style={github}>
           {`import {Component} from 'react';
 import Map from './Map';
 import StoreList from './StoreList';
@@ -57,7 +58,7 @@ class StoresNearYou3 extends Component{
 
 export default StoresNearYou3;
 `}
-        </pre>
+        </SyntaxHighlighter>
       </>
     );
   }

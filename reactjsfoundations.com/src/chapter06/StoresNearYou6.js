@@ -1,7 +1,8 @@
-import { Component } from "react";
-import Map from "./Map";
-import StoreList from "./StoreList";
-
+import { Component } from 'react';
+import Map from './Map';
+import StoreList from './StoreList';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class StoresNearYou6 extends Component {
   render() {
     return (
@@ -24,8 +25,8 @@ class StoresNearYou6 extends Component {
 }
 
 StoresNearYou6.defaultProps = {
-  latitude: "37.3230",
-  longitude: "122.0322",
+  latitude: '37.3230',
+  longitude: '122.0322',
 };
 
 export default StoresNearYou6;

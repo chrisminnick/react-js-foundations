@@ -1,5 +1,6 @@
-import React from "react";
-
+import React from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function ReactMemoExample(props) {
   return (
     <>
@@ -7,7 +8,7 @@ function ReactMemoExample(props) {
         Hi, {props.firstName}. This component returns the same thing when given
         the same props.
       </p>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import React from 'react';
 
 function ReactMemoExample(props){
@@ -16,7 +17,7 @@ function ReactMemoExample(props){
 
 export default React.memo(ReactMemoExample);
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

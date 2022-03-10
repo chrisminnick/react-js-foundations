@@ -1,5 +1,6 @@
 import { useState } from 'react';
-
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function Restful() {
   const [repos, setRepos] = useState([]);
   const [status, setStatus] = useState();
@@ -22,7 +23,7 @@ function Restful() {
     <>
       <button onClick={getRepos}>{status ? 'Fetched' : 'Fetch Repos'}</button>
       <button onClick={logRepos}>Log Repos</button>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useState} from 'react';
 
 function Restful(){
@@ -52,7 +53,7 @@ function Restful(){
 
 export default Restful;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

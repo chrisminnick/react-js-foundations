@@ -1,11 +1,12 @@
-import { useState, useRef } from "react";
-import useAxios from "axios-hooks";
+import { useState, useRef } from 'react';
+import useAxios from 'axios-hooks';
 //import {API_KEY} from './config';
-
-const API_KEY = "fa06c370ce2f0491945df49ffd3fdafb";
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+const API_KEY = 'fa06c370ce2f0491945df49ffd3fdafb';
 
 function WeatherWidget() {
-  const [city, setCity] = useState("London");
+  const [city, setCity] = useState('London');
   const cityRef = useRef();
 
   const changeCity = (e) => {
@@ -21,21 +22,23 @@ function WeatherWidget() {
 
   return (
     <>
-    <div className="listing-result">
-      <input type="text" ref={cityRef} />{" "}
-      <button onClick={changeCity}>Change City</button>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-    </div>
-      
+      <div className="listing-result">
+        <input type="text" ref={cityRef} />{' '}
+        <button onClick={changeCity}>Change City</button>
+        <SyntaxHighlighter language="javascript" style={github}>
+          {JSON.stringify(data, null, 2)}
+        </SyntaxHighlighter>
+      </div>
+
       <CodeAndText />
     </>
   );
 }
 
-function CodeAndText(){
+function CodeAndText() {
   return (
-    <pre>
-        {`import {useState,useRef} from 'react';
+    <SyntaxHighlighter language="javascript" style={github}>
+      {`import {useState,useRef} from 'react';
 import useAxios from 'axios-hooks';
 import {API_KEY} from './config';
 
@@ -54,13 +57,12 @@ function WeatherWidget() {
 
   return (
     <><input type="text" ref={cityRef} /> <button onClick={changeCity}>Change City</button>
-    <pre>{JSON.stringify(data,null,2)}</pre>
+    <SyntaxHighlighter language="javascript" style={github}>{JSON.stringify(data,null,2)}</SyntaxHighlighter>
     </>
   );
 }
 export default WeatherWidget;`}
-      </pre>
-  )
+    </SyntaxHighlighter>
+  );
 }
 export default WeatherWidget;
-

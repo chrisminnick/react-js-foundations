@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
-
+import { useEffect, useState } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function RenderCounter() {
   const [count, setCount] = useState(0);
 
@@ -11,7 +12,7 @@ function RenderCounter() {
     <>
       This component will count how many times it renders.
       <button onClick={() => setCount((prev) => prev + 1)}>Update State</button>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useEffect,useState} from 'react';
 
 function RenderCounter(){
@@ -29,7 +30,7 @@ function RenderCounter(){
 }
 
 export default RenderCounter;`}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

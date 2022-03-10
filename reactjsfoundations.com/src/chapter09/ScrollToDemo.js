@@ -1,5 +1,6 @@
-import { useRef } from "react";
-
+import { useRef } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 const ScrollToElement = (ref) => {
   window.scrollTo(0, ref.current.offsetTop);
 };
@@ -10,7 +11,7 @@ function ScrollToDemo() {
   return (
     <>
       <div ref={bookStart}>CHAPTER 1. Loomings.</div>
-      <div style={{ width: "300px" }}>
+      <div style={{ width: '300px' }}>
         <p>
           Call me Ishmael. Some years ago—never mind how long precisely—having
           little or no money in my purse, and nothing particular to interest me
@@ -57,7 +58,7 @@ function ScrollToDemo() {
       <button onClick={() => ScrollToElement(bookStart)}>
         Scroll to the Beginning
       </button>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useRef} from 'react';
 
 const ScrollToElement = (ref)=>{window.scrollTo(0,ref.current.offsetTop)};
@@ -103,7 +104,7 @@ function ScrollToDemo(){
 
 export default ScrollToDemo;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

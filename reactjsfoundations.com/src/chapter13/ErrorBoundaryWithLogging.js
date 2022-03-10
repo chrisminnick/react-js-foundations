@@ -1,6 +1,7 @@
-import { Component } from "react";
-import logger from "./logger";
-
+import { Component } from 'react';
+import logger from './logger';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +21,7 @@ class ErrorBoundary extends Component {
       return (
         <>
           <h1>Oops! There's been an error.</h1>
-          <pre>
+          <SyntaxHighlighter language="javascript" style={github}>
             {`import {Component} from 'react';
 import logger from './logger';
 
@@ -49,7 +50,7 @@ class ErrorBoundary extends Component {
 }
 
 export default ErrorBoundary;`}
-          </pre>
+          </SyntaxHighlighter>
         </>
       );
     }

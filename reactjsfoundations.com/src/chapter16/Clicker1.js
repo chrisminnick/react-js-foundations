@@ -1,6 +1,7 @@
-import { useState } from "react";
-import "./style.css";
-
+import { useState } from 'react';
+import './style.css';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 function Clicker1() {
   const [count, setCount] = useState(0);
 
@@ -16,7 +17,7 @@ function Clicker1() {
           +
         </button>
       </div>
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useState} from 'react';
 import './style.css';
 
@@ -37,7 +38,7 @@ function Clicker1(){
 }
 
 export default Clicker1;`}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 }

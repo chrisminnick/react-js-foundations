@@ -1,12 +1,13 @@
-import { useState, useRef, useImperativeHandle, forwardRef } from "react";
-
+import { useState, useRef, useImperativeHandle, forwardRef } from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 const CountingBox = forwardRef((props, ref) => {
-  const [text, setText] = useState("");
+  const [text, setText] = useState('');
 
   useImperativeHandle(
     ref,
     () => {
-      return { count: text.split(" ").length };
+      return { count: text.split(' ').length };
     },
     [text]
   );
@@ -14,7 +15,7 @@ const CountingBox = forwardRef((props, ref) => {
   return (
     <>
       <textarea value={text} onChange={(e) => setText(e.target.value)} />
-      <pre>
+      <SyntaxHighlighter language="javascript" style={github}>
         {`import {useState,useRef,useImperativeHandle,forwardRef} from 'react';
 
 const CountingBox = forwardRef((props, ref) => {
@@ -51,7 +52,7 @@ function TextEdit(props){
 
 export default TextEdit;
 `}
-      </pre>
+      </SyntaxHighlighter>
     </>
   );
 });
