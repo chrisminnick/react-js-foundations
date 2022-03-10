@@ -63,6 +63,9 @@
         order: 2;
         flex-direction: column;
       }
+      ul {
+        margin-top: 0px;
+      }
       @media only screen and (max-width: 480px) {
         .container {
           display: block;
@@ -238,8 +241,8 @@
       }
 
       header {
-        padding: 10px;
         margin: 0px auto;
+        padding-top: 10px;
       }
 
       strong {
@@ -332,6 +335,14 @@
         background-color: #cbb700;
         color: black;
       }
+      .gsc-control-cse {
+        background-color: #000 !important;
+        border: none !important;
+      }
+      .gsc-search-button {
+        background-color: #2da44e !important;
+        border-color: #1b1f2426 !important;
+      }
     </style>
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
@@ -346,7 +357,12 @@
   </head>
   <body>
     <header
-      style="display: flex; flex-wrap: wrap; justify-content: space-between"
+      style="
+        background-color: #000;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      "
     >
       <div>
         <a
@@ -355,14 +371,15 @@
             font-size: 1.75em;
             font-weight: 800;
             display: block;
-            color: #000;
+            color: #fff;
+            margin-top: 10px;
+            margin-left: 30px;
           "
         >
           ReactJS Foundations
         </a>
-        <p>by Chris Minnick</p>
       </div>
-      <div style="flex-grow: 1; max-width: 66%">
+      <div style="background-color: #000; flex-grow: 1; max-width: 66%">
         <div class="gcse-search"></div>
       </div>
       <div style="padding: 14px 12px 0px 0px">
@@ -370,6 +387,7 @@
           style="
             height: 30px;
             padding: 4px 20px;
+            margin-right: 10px;
             width: auto;
             vertical-align: middle;
             border: 1px solid #666;

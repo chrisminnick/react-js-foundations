@@ -1,16 +1,16 @@
-import Introduction from "./Introduction";
-import WhereToBuy from "./WhereToBuy";
-import About from "./About";
-import CodeLinks from "./CodeLinks";
-import Helmet from "react-helmet";
+import Introduction from './Introduction';
+import WhereToBuy from './WhereToBuy';
+import About from './About';
+import CodeLinks from './CodeLinks';
+import Helmet from 'react-helmet';
 
 function HomePage() {
   return (
     <>
       <Helmet>
         <title>
-          ReactJS Foundations - Building User Interfaces with
-          ReactJS: An Approachable Guide
+          ReactJS Foundations - Building User Interfaces with ReactJS: An
+          Approachable Guide
         </title>
         <meta
           name="description"
@@ -20,9 +20,12 @@ function HomePage() {
         building applications with it."
         />
       </Helmet>
-      <h1>ReactJS Foundations - Building User Interfaces with ReactJS: An Approachable Guide</h1>
+      <div style={{ textAlign: 'center' }}>
+        <h1>ReactJS Foundations</h1>
+        <h2>Building User Interfaces with ReactJS</h2>
+        <h3 style={{ fontStyle: 'italic' }}>An Approachable Guide</h3>
+      </div>
       <Introduction />
-
     </>
   );
 }
