@@ -2,6 +2,7 @@ import { Switch, Route } from 'react-router-dom';
 import React, { lazy } from 'react';
 import { lazily } from 'react-lazily';
 import Helmet from 'react-helmet';
+import PrevNext from './PrevNext';
 import * as Chapter09 from './chapter09';
 import ErrorBoundary from './chapter13/ErrorBoundary';
 
@@ -31,22 +32,24 @@ export const routes = (
     <Route path="/intro" component={Introduction} />
     <Route path="/WhereToBuy" component={WhereToBuy} />
     <Route path="/AboutChrisMinnick" component={About} />
-    <Route path="/listing0102">
+    <Route path="/listing102">
       <Helmet>
         <title>
           ReactJS Foundations: Changing the state data in a component
         </title>
       </Helmet>
       <h1>Listing 1-2: Changing the state data in a component</h1>
+      <PrevNext prev="/" next="/listing103" />
       <Chapter01.Listing0102 />
     </Route>
-    <Route path="/listing0103">
+    <Route path="/listing103">
       <Helmet>
         <title>
           ReactJS Foundations: An interactive Hello, World component
         </title>
       </Helmet>
       <h1>Listing 1-3: An interactive Hello, World component</h1>
+      <PrevNext prev="/listing102" next="/listing301" />
       <Chapter01.Listing0103 />
     </Route>
     <Route path="/listing301">
@@ -54,7 +57,36 @@ export const routes = (
         <title>ReactJS Foundations: Listing 3-1: A React Component</title>
       </Helmet>
       <h1>Listing 3-1: A React Component</h1>
-      <Chapter03.Login />
+      <PrevNext prev="/listing103" next="/listing302" />
+      {
+        <pre>
+          {`import React from "react";
+
+function Login(){
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		console.log('logging in ' + e.target[0].value);
+
+		// do something else here
+
+	}
+
+	return (
+		<form id="login-form" onSubmit={handleSubmit}>
+			<input	type="email"
+				id="email"
+				placeholder="E-Mail Address" />
+			<input type="password"
+				id="password" />
+			<button>Login</button>
+		</form>
+    );
+}
+
+export default Login;`}
+        </pre>
+      }
     </Route>
     <Route path="/listing302">
       <Helmet>
@@ -63,6 +95,8 @@ export const routes = (
         </title>
       </Helmet>
       <h1>Listing 3-2: Using a user-defined React component in JSX</h1>
+      <PrevNext prev="/listing301" next="/listing303" />
+
       <Chapter03.SearchBox />
     </Route>
     <Route path="/listing303">
@@ -72,6 +106,8 @@ export const routes = (
         </title>
       </Helmet>
       <h1>Listing 3-3: Custom attributes in HTML must start with data-</h1>
+      <PrevNext prev="/listing302" next="/listing304" />
+
       <pre>{`<div data-size="XL" 
          data-color="black"
          data-description="awesome">
@@ -86,6 +122,8 @@ export const routes = (
         </title>
       </Helmet>
       <h1>Listing 3-4: User-defined elements can have any attributes</h1>
+      <PrevNext prev="/listing303" next="/listing305" />
+
       <Chapter03.MyFancyComponent />
     </Route>
     <Route path="/listing305">
@@ -95,6 +133,8 @@ export const routes = (
         </title>
       </Helmet>
       <h1>Listing 3-5: Using literal JavaScript inside of JSX</h1>
+      <PrevNext prev="/listing304" next="/listing306" />
+
       <pre>
         {`function SearchInput(props) {
 
@@ -120,6 +160,8 @@ export default SearchInput;
         </title>
       </Helmet>
       <h1>Listing 3-6: Object literals in JSX result in double curly braces</h1>
+      <PrevNext prev="/listing305" next="/listing307" />
+
       <Chapter03.Header />
     </Route>
     <Route path="/listing307">
@@ -127,6 +169,8 @@ export default SearchInput;
         <title>ReactJS Foundations: Enclose comments in curly braces</title>
       </Helmet>
       <h1>Listing 3-7: Enclose comments in curly braces</h1>
+      <PrevNext prev="/listing306" next="/listing308" />
+
       <pre>{`function Header(props){
 return (
   <h1 style={{fontSize:"24px",color:"blue"}}>
@@ -144,6 +188,8 @@ export default Header;
         <title>ReactJS Foundations: Using Element Variables</title>
       </Helmet>
       <h1>Listing 3-8: Using Element Variables</h1>
+      <PrevNext prev="/listing307" next="/listing309" />
+
       <Chapter03.Welcome />
     </Route>
     <Route path="/listing309">
@@ -153,6 +199,8 @@ export default Header;
         </title>
       </Helmet>
       <h1>Listing 3-9: Conditional Rendering with Element Variables</h1>
+      <PrevNext prev="/listing308" next="/listing310" />
+
       <Chapter03.ConditionalWelcome />
     </Route>
     <Route path="/listing310">
@@ -160,6 +208,8 @@ export default Header;
         <title>ReactJS Foundations: Conditional Rendering with &&</title>
       </Helmet>
       <h1>Listing 3-10: Conditional Rendering with &&</h1>
+      <PrevNext prev="/listing309" next="/listing311" />
+
       <Chapter03.ConditionalWelcome2 />
     </Route>
     <Route path="/listing311">
@@ -167,6 +217,8 @@ export default Header;
         <title>ReactJS Foundations: Using the conditional operator</title>
       </Helmet>
       <h1>Listing 3-11: Using the conditional operator</h1>
+      <PrevNext prev="/listing310" next="/listing312" />
+
       <Chapter03.ConditionalWelcome3 />
     </Route>
     <Route path="/listing312">
@@ -176,6 +228,8 @@ export default Header;
         </title>
       </Helmet>
       <h1>Listing 3-12: Using an arrow function as an event handler</h1>
+      <PrevNext prev="/listing311" next="/listing313" />
+
       <Chapter03.CountUp />
     </Route>
     <Route path="/listing313">
@@ -185,6 +239,8 @@ export default Header;
         </title>
       </Helmet>
       <h1>Listing 3-13: Immediately invoking a function in JSX</h1>
+      <PrevNext prev="/listing312" next="/listing314" />
+
       <Chapter03.ImmediateInvoke />
     </Route>
     <Route path="/listing314">
@@ -192,6 +248,8 @@ export default Header;
         <title>ReactJS Foundations: Using React.Fragment</title>
       </Helmet>
       <h1>Listing 3-14: Using React.Fragment</h1>
+      <PrevNext prev="/listing313" next="/listing315" />
+
       <Chapter03.FragmentExample1 />
     </Route>
     <Route path="/listing315">
@@ -199,6 +257,8 @@ export default Header;
         <title>ReactJS Foundations: Using React.Fragment's Short Syntax</title>
       </Helmet>
       <h1>Listing 3-15: Using React.Fragment's Short Syntax</h1>
+      <PrevNext prev="/listing314" next="/listing401" />
+
       <Chapter03.FragmentExample2 />
     </Route>
     <Route path="/listing401">
@@ -206,6 +266,8 @@ export default Header;
         <title>ReactJS Foundations: Components Define Elements</title>
       </Helmet>
       <h1>Listing 4-1: Components Define Elements</h1>
+      <PrevNext prev="/listing315" next="/listing402" />
+
       <Chapter04.WelcomeMessage />
     </Route>
     <Route path="/listing402">
@@ -215,6 +277,8 @@ export default Header;
         </title>
       </Helmet>
       <h1>Listing 4-2: Components can be imported into other components</h1>
+      <PrevNext prev="/listing401" next="/listing403" />
+
       <Chapter04.WelcomeTitle />
     </Route>
     <Route path="/listing403">
@@ -224,6 +288,8 @@ export default Header;
         </title>
       </Helmet>
       <h1>Listing 4-3: Using components to reduce complexity</h1>
+      <PrevNext prev="/listing402" next="/listing404" />
+
       <Chapter04.Cart />
     </Route>
     <Route path="/listing404">
@@ -231,6 +297,8 @@ export default Header;
         <title>ReactJS Foundations: Putting everything in one component</title>
       </Helmet>
       <h1>Listing 4-4: Putting everything in one component</h1>
+      <PrevNext prev="/listing403" next="/listing405" />
+
       <Chapter04.SingleComponentCart />
     </Route>
     <Route path="/listing405">
@@ -238,6 +306,8 @@ export default Header;
         <title>ReactJS Foundations: Passing props</title>
       </Helmet>
       <h1>Listing 4-5: Passing props</h1>
+      <PrevNext prev="/listing404" next="/listing406" />
+
       <Chapter04.Farms />
     </Route>
     <Route path="/listing406">
@@ -245,6 +315,8 @@ export default Header;
         <title>ReactJS Foundations: Using props inside a component</title>
       </Helmet>
       <h1>Listing 4-6: Using props inside a component</h1>
+      <PrevNext prev="/listing405" next="/listing407" />
+
       <Chapter04.Farm
         farmer="Old McDonald"
         animals={['pigs', 'cows', 'chickens']}
@@ -257,6 +329,8 @@ export default Header;
         </title>
       </Helmet>
       <h1>Listing 4-7: An improved version of the Farm component</h1>
+      <PrevNext prev="/listing406" next="/listing408" />
+
       <Chapter04.ImprovedFarms />
     </Route>
     <Route path="/listing408">
@@ -266,6 +340,8 @@ export default Header;
         </title>
       </Helmet>
       <h1>Listing 4-8: Creating a Component with React.createClass</h1>
+      <PrevNext prev="/listing407" next="/listing409" />
+
       <Chapter04.CreateReactClass />
     </Route>
     <Route path="/listing409">
@@ -273,6 +349,8 @@ export default Header;
         <title>ReactJS Foundations: Creating a Component Using a Class</title>
       </Helmet>
       <h1>Listing 4-9: Creating a Component Using a Class</h1>
+      <PrevNext prev="/listing408" next="/listing410" />
+
       <Chapter04.ReactClassComponent />
     </Route>
     <Route path="/listing410">
@@ -282,6 +360,8 @@ export default Header;
         </title>
       </Helmet>
       <h1>Listing 4-10: Not binding your functions results in errors</h1>
+      <PrevNext prev="/listing409" next="/listing411" />
+
       <Chapter04.UnboundFunction />
     </Route>
     <Route path="/listing411">
@@ -291,6 +371,8 @@ export default Header;
         </title>
       </Helmet>
       <h1>Listing 4-11: Binding a function and using it in another class</h1>
+      <PrevNext prev="/listing410" next="/listing412" />
+
       <Chapter04.BoundFunction />
     </Route>
     <Route path="/listing412">
@@ -300,6 +382,8 @@ export default Header;
         </title>
       </Helmet>
       <h1>Listing 4-12: Using state and setState in a Class Component</h1>
+      <PrevNext prev="/listing411" next="/listing413" />
+
       <Chapter04.ClassComponentState />
     </Route>
     <Route path="/listing413">
@@ -307,6 +391,8 @@ export default Header;
         <title>ReactJS Foundations: setState() is asynchronous</title>
       </Helmet>
       <h1>Listing 4-13: setState() is asynchronous</h1>
+      <PrevNext prev="/listing412" next="/listing414" />
+
       <Chapter04.SetStateAsync />
     </Route>
     <Route path="/listing414">
@@ -314,6 +400,8 @@ export default Header;
         <title>ReactJS Foundations: Rendering a figure and caption</title>
       </Helmet>
       <h1>Listing 4-14: Rendering a figure and caption</h1>
+      <PrevNext prev="/listing413" next="/listing415" />
+
       <Chapter04.BasicFigure />
     </Route>
     <Route path="/listing415">
@@ -321,6 +409,8 @@ export default Header;
         <title>ReactJS Foundations: The FigureList component</title>
       </Helmet>
       <h1>Listing 4-15: The FigureList component</h1>
+      <PrevNext prev="/listing414" next="/listing416" />
+
       <Chapter04.FigureList />
     </Route>
     <Route path="/listing416">
@@ -330,6 +420,8 @@ export default Header;
         </title>
       </Helmet>
       <h1>Listing 4-16: Using props to pass data to a child component</h1>
+      <PrevNext prev="/listing415" next="/listing417" />
+
       <Chapter04.FigureListProps />
     </Route>
     <Route path="/listing417">
@@ -337,6 +429,8 @@ export default Header;
         <title>ReactJS Foundations: Using props in a class component</title>
       </Helmet>
       <h1>Listing 4-17: Using props in a class component</h1>
+      <PrevNext prev="/listing416" next="/listing418" />
+
       <Chapter04.BasicFigureProps
         filename="images/chickens.png"
         caption="Lefty and Ginger"
@@ -347,6 +441,8 @@ export default Header;
         <title>ReactJS Foundations: A typical class component</title>
       </Helmet>
       <h1>Listing 4-18: A typical class component</h1>
+      <PrevNext prev="/listing417" next="/listing419" />
+
       <Chapter04.ToDoClass />
     </Route>
     <Route path="/listing419">
@@ -354,6 +450,8 @@ export default Header;
         <title>ReactJS Foundations: A typical function component</title>
       </Helmet>
       <h1>Listing 4-19: A typical function component</h1>
+      <PrevNext prev="/listing418" next="/listing420" />
+
       <Chapter04.ToDoFunction />
     </Route>
     <Route path="/listing420">
@@ -363,6 +461,8 @@ export default Header;
         </title>
       </Helmet>
       <h1>Listing 4-20: Further simplifying a function component</h1>
+      <PrevNext prev="/listing419" next="/listing421" />
+
       <Chapter04.ToDoFunctionSimple />
     </Route>
     <Route path="/listing421">
@@ -370,6 +470,8 @@ export default Header;
         <title>ReactJS Foundations: Using state in functional components</title>
       </Helmet>
       <h1>Listing 4-21: Using state in functional components</h1>
+      <PrevNext prev="/listing420" next="/listing422" />
+
       <Chapter04.Counter />
     </Route>
     <Route path="/listing422">
@@ -379,6 +481,8 @@ export default Header;
         </title>
       </Helmet>
       <h1>Listing 4-22: A component made up of three child components</h1>
+      <PrevNext prev="/listing421" next="/listing423" />
+
       <Chapter04.LoginForm />
     </Route>
     <Route path="/listing423">
@@ -386,6 +490,8 @@ export default Header;
         <title>ReactJS Foundations: Presenting ThingsThatAreFunny</title>
       </Helmet>
       <h1>Listing 4-23: Presenting ThingsThatAreFunny</h1>
+      <PrevNext prev="/listing422" next="/listing424" />
+
       <Chapter04.ThingsThatAreFunny />
     </Route>
     <Route path="/listing424">
@@ -393,6 +499,8 @@ export default Header;
         <title>ReactJS Foundations: Passing children into a component</title>
       </Helmet>
       <h1>Listing 4-24: Passing children into a component</h1>
+      <PrevNext prev="/listing423" next="/listing425" />
+
       <Chapter04.ThingsThatILike />
     </Route>
     <Route path="/listing425">
@@ -400,6 +508,8 @@ export default Header;
         <title>ReactJS Foundations: Rendering a NavBar inside of App</title>
       </Helmet>
       <h1>Listing 4-25: Rendering a NavBar inside of App</h1>
+      <PrevNext prev="/listing424" next="/listing426" />
+
       <Chapter04.CloneElementExample />
     </Route>
     <Route path="/listing426">
@@ -409,6 +519,8 @@ export default Header;
         </title>
       </Helmet>
       <h1>Listing 4-26: Rendering the Children using props.children</h1>
+      <PrevNext prev="/listing425" next="/listing427" />
+
       <Chapter04.NavBarChildren />
     </Route>
     <Route path="/listing427">
@@ -416,6 +528,8 @@ export default Header;
         <title>ReactJS Foundations: Cloning the Children in NavBar.js</title>
       </Helmet>
       <h1>Listing 4-27: Cloning the Children in NavBar.js</h1>
+      <PrevNext prev="/listing426" next="/listing428" />
+
       <Chapter04.NavBarCloneChildren />
     </Route>
     <Route path="/listing428">
@@ -425,6 +539,8 @@ export default Header;
         </title>
       </Helmet>
       <h1>Listing 4-28: Passing onClick into the parent component</h1>
+      <PrevNext prev="/listing427" next="/listing429" />
+
       <Chapter04.NavBarPassingOnClick />
     </Route>
     <Route path="/listing429">
@@ -434,6 +550,8 @@ export default Header;
         </title>
       </Helmet>
       <h1>Listing 4-29: Making use of props in a child component</h1>
+      <PrevNext prev="/listing428" next="/listing430" />
+
       <Chapter04.NavBarUsingOnClick />
     </Route>
     <Route path="/listing430">
@@ -446,6 +564,8 @@ export default Header;
       <h1>
         Listing 4-30: Comparing previous and next props in shouldComponentUpdate
       </h1>
+      <PrevNext prev="/listing429" next="/listing431" />
+
       <pre>
         {`class ToDoItem extends Component {
     shouldComponentUpdate(nextProps, nextState) {
@@ -463,6 +583,8 @@ export default Header;
         </title>
       </Helmet>
       <h1>Listing 4-31: A React component with a potential memory leak</h1>
+      <PrevNext prev="/listing430" next="/listing432" />
+
       <Chapter04.LeakyCounter />
     </Route>
     <Route path="/listing432">
@@ -472,6 +594,8 @@ export default Header;
         </title>
       </Helmet>
       <h1>Listing 4-32: Toggling the rendering of the Counter</h1>
+      <PrevNext prev="/listing431" next="/listing433" />
+
       <Chapter04.CounterController />
     </Route>
     <Route path="/listing433">
@@ -479,6 +603,8 @@ export default Header;
         <title>ReactJS Foundations: Fixing a memory leak</title>
       </Helmet>
       <h1>Listing 4-33: Fixing a memory leak</h1>
+      <PrevNext prev="/listing432" next="/listing434" />
+
       <Chapter04.NoLeakCounterController />
     </Route>
     <Route path="/listing434">
@@ -489,6 +615,8 @@ export default Header;
         </title>
       </Helmet>
       <h1>Listing 4-34: Using shouldComponentUpdate() and shallowCompare()</h1>
+      <PrevNext prev="/listing433" next="/listing435" />
+
       <Chapter04.ShallowCompare />
     </Route>
     <Route path="/listing435">
@@ -496,6 +624,8 @@ export default Header;
         <title>ReactJS Foundations: Extending React.PureComponent</title>
       </Helmet>
       <h1>Listing 4-35: Extending React.PureComponent</h1>
+      <PrevNext prev="/listing434" next="/listing436" />
+
       <Chapter04.PureComponent />
     </Route>
     <Route path="/listing436">
@@ -503,6 +633,8 @@ export default Header;
         <title>ReactJS Foundations: Using React.memo</title>
       </Helmet>
       <h1>Listing 4-36: Using React.memo</h1>
+      <PrevNext prev="/listing435" next="/listing601" />
+
       <Chapter04.ReactMemoExample />
     </Route>
     <Route path="/listing601">
@@ -512,6 +644,8 @@ export default Header;
         </title>
       </Helmet>
       <h1>Listing 6-1: Changing local variables doesn't update the view</h1>
+      <PrevNext prev="/listing436" next="/listing602" />
+
       <Chapter06.Mutato />
     </Route>
     <Route path="/listing602">
@@ -519,6 +653,8 @@ export default Header;
         <title>ReactJS Foundations: A Component That Uses a String Prop</title>
       </Helmet>
       <h1>Listing 6-2: A Component That Uses a String Prop</h1>
+      <PrevNext prev="/listing601" next="/listing603" />
+
       <Chapter06.WelcomeMessageProps firstName="Jimmy" />
     </Route>
     <Route path="/listing603">
@@ -526,6 +662,8 @@ export default Header;
         <title>ReactJS Foundations: Validating That a Prop is a String</title>
       </Helmet>
       <h1>Listing 6-3: Validating That a Prop is a String</h1>
+      <PrevNext prev="/listing602" next="/listing604" />
+
       <Chapter06.WelcomeMessageProps firstName="Test" />
     </Route>
     <Route path="/listing604">
@@ -533,6 +671,8 @@ export default Header;
         <title>ReactJS Foundations: PropTypes Inside a Component's Body</title>
       </Helmet>
       <h1>Listing 6-4: PropTypes Inside a Component's Body</h1>
+      <PrevNext prev="/listing603" next="/listing605" />
+
       <Chapter06.WelcomeClass firstName={'frank'} />
     </Route>
     <Route path="/listing605">
@@ -542,6 +682,8 @@ export default Header;
         </title>
       </Helmet>
       <h1>Listing 6-5: Putting PropTypes Outside the Class Body</h1>
+      <PrevNext prev="/listing604" next="/listing606" />
+
       <pre>{`import PropTypes from 'prop-types';
 import {Component} from 'react';
 
@@ -566,6 +708,8 @@ export default WelcomeMessage;
         </title>
       </Helmet>
       <h1>Listing 6-6: Using PropTypes with a Function Component</h1>
+      <PrevNext prev="/listing605" next="/listing607" />
+
       <pre>
         {`import PropTypes from 'prop-types';
 
@@ -586,6 +730,8 @@ export default MyComponent;
         <title>ReactJS Foundations: Appending the isRequired Validator</title>
       </Helmet>
       <h1>Listing 6-7: Appending the isRequired Validator</h1>
+      <PrevNext prev="/listing606" next="/listing608" />
+
       <pre>
         {`MyComponent.propTypes = {
   firstName: PropTypes.string.isRequired,
@@ -600,6 +746,8 @@ export default MyComponent;
         <title>ReactJS Foundations: Trying to render a non-node value</title>
       </Helmet>
       <h1>Listing 6-8: Trying to render a non-node value</h1>
+      <PrevNext prev="/listing607" next="/listing609" />
+
       <p>
         Uncomment the SiteLink element in App.js to see the error from passing
         an object to the SiteLink component.
@@ -611,6 +759,8 @@ export default MyComponent;
         <title>ReactJS Foundations: Using PropTypes.node</title>
       </Helmet>
       <h1>Listing 6-9: Using PropTypes.node</h1>
+      <PrevNext prev="/listing608" next="/listing610" />
+
       <Chapter06.SiteLinkNode url="http://example.com" linkName="Example" />
     </Route>
     <Route path="/listing610">
@@ -618,6 +768,8 @@ export default MyComponent;
         <title>ReactJS Foundations: Validating React Elements</title>
       </Helmet>
       <h1>Listing 6-10: Validating React Elements</h1>
+      <PrevNext prev="/listing609" next="/listing611" />
+
       <Chapter06.BorderBox>
         <p>The first paragraph</p>
         <p>The second paragraph</p>
@@ -628,6 +780,7 @@ export default MyComponent;
         <title>ReactJS Foundations: Using the elementType Validator</title>
       </Helmet>
       <h1>Listing 6-11: Using the elementType Validator</h1>
+      <PrevNext prev="/listing610" next="/listing612" />
 
       <pre>
         {`FamilyTree.propTypes = {
@@ -643,6 +796,7 @@ export default MyComponent;
         </title>
       </Helmet>
       <h1>Listing 6-12: Validating that a prop is an instance of a class</h1>
+      <PrevNext prev="/listing611" next="/listing613" />
       <Chapter06.FamilyTree /> {/* propType validates */}
       {/* <Chapter06.FamilyTree father={"Patrick"} /> propType doesn't validate */}
     </Route>
@@ -651,6 +805,8 @@ export default MyComponent;
         <title>ReactJS Foundations: Using PropTypes.oneOf</title>
       </Helmet>
       <h1>Listing 6-13: Using PropTypes.oneOf</h1>
+      <PrevNext prev="/listing612" next="/listing614" />
+
       <Chapter06.DisplayPrimaryColors primaryColor="red" />
     </Route>
     <Route path="/listing614">
@@ -658,6 +814,8 @@ export default MyComponent;
         <title>ReactJS Foundations: A component without default props</title>
       </Helmet>
       <h1>Listing 6-14: Using a Custom validator to test for a phone number</h1>
+      <PrevNext prev="/listing613" next="/listing615" />
+
       <Chapter06.Contact fullName="Chris Minnick" phone="5555555555" />
       <Chapter06.Contact fullName="John Doe" phone="5555" />
     </Route>
@@ -666,6 +824,8 @@ export default MyComponent;
         <title>ReactJS Foundations: A component without default props</title>
       </Helmet>
       <h1>Listing 6-15: A component without default props</h1>
+      <PrevNext prev="/listing614" next="/listing616" />
+
       <Chapter06.StoresNearYou latitude="37.3230" longitude="122.0322" />
     </Route>
     <Route path="/listing616">
@@ -675,6 +835,8 @@ export default MyComponent;
         </title>
       </Helmet>
       <h1>Listing 6-16: Setting defaults with the || Operator</h1>
+      <PrevNext prev="/listing615" next="/listing617" />
+
       <Chapter06.StoresNearYou1 />
     </Route>
     <Route path="/listing617">
@@ -684,6 +846,8 @@ export default MyComponent;
         </title>
       </Helmet>
       <h1>Listing 6-17: Destructuring props and setting defaults</h1>
+      <PrevNext prev="/listing616" next="/listing618" />
+
       <Chapter06.StoresNearYou2 />
     </Route>
     <Route path="/listing618">
@@ -693,6 +857,8 @@ export default MyComponent;
         </title>
       </Helmet>
       <h1>Listing 6-18: Setting defaultProps as a static property</h1>
+      <PrevNext prev="/listing617" next="/listing619" />
+
       <Chapter06.StoresNearYou3 />
     </Route>
     <Route path="/listing619">
@@ -703,6 +869,8 @@ export default MyComponent;
         </title>
       </Helmet>
       <h1>Listing 6-19: Setting defaultProps outside of the component body</h1>
+      <PrevNext prev="/listing618" next="/listing620" />
+
       <Chapter06.StoresNearYou4 />
     </Route>
     <Route path="/listing620">
@@ -712,6 +880,8 @@ export default MyComponent;
         </title>
       </Helmet>
       <h1>Listing 6-20: Setting defaultProps for a function component</h1>
+      <PrevNext prev="/listing619" next="/listing621" />
+
       <Chapter06.StoresNearYou5 />
     </Route>
     <Route path="/listing621">
@@ -721,6 +891,8 @@ export default MyComponent;
         </title>
       </Helmet>
       <h1>Listing 6-21: Initializing State in a Class Component</h1>
+      <PrevNext prev="/listing620" next="/listing622" />
+
       <Chapter06.NewsFeed />
     </Route>
 
@@ -731,6 +903,8 @@ export default MyComponent;
         </title>
       </Helmet>
       <h1>Listing 6-22: Initializing state using the class property</h1>
+      <PrevNext prev="/listing621" next="/listing623" />
+
       <Chapter06.NewsFeed2 />
     </Route>
     <Route path="/listing623">
@@ -740,6 +914,8 @@ export default MyComponent;
         </title>
       </Helmet>
       <h1>Listing 6-23: Initializing State in a Function Component</h1>
+      <PrevNext prev="/listing622" next="/listing624" />
+
       <Chapter06.NewsFeed3 />
     </Route>
     <Route path="/listing624">
@@ -747,6 +923,8 @@ export default MyComponent;
         Listing 6-24: Another Approach to Initializing State in a Function
         Component
       </h1>
+      <PrevNext prev="/listing623" next="/listing625" />
+
       <Chapter06.NewsFeed4 />
     </Route>
     <Route path="/listing625">
@@ -754,6 +932,8 @@ export default MyComponent;
         <title>ReactJS Foundations: Using setState</title>
       </Helmet>
       <h1>Listing 6-25: Using setState</h1>
+      <PrevNext prev="/listing624" next="/listing626" />
+
       <Chapter06.CounterClass />
     </Route>
     <Route path="/listing626">
@@ -763,6 +943,8 @@ export default MyComponent;
         </title>
       </Helmet>
       <h1>Listing 6-26: Using setState with Multiple State Properties</h1>
+      <PrevNext prev="/listing625" next="/listing627" />
+
       <Chapter06.CounterClass2 />
     </Route>
     <Route path="/listing627">
@@ -772,6 +954,8 @@ export default MyComponent;
         </title>
       </Helmet>
       <h1>Listing 6-27: Demonstrating setState's asychronous nature</h1>
+      <PrevNext prev="/listing626" next="/listing628" />
+
       <Chapter06.CounterClass3 />
     </Route>
     <Route path="/listing628">
@@ -781,6 +965,8 @@ export default MyComponent;
         </title>
       </Helmet>
       <h1>Listing 6-28: Using the updater function with setState</h1>
+      <PrevNext prev="/listing627" next="/listing629" />
+
       <Chapter06.CounterClass4 />
     </Route>
     <Route path="/listing629">
@@ -790,6 +976,8 @@ export default MyComponent;
         </title>
       </Helmet>
       <h1>Listing 6-29: The Static Version of the App Component</h1>
+      <PrevNext prev="/listing628" next="/listing630" />
+
       <pre>
         {`import InputForm from './InputForm';
 import FilterSelect from './FilterSelect';
@@ -814,6 +1002,8 @@ export default App;
         <title>ReactJS Foundations: A Shell Component for InputForm</title>
       </Helmet>
       <h1>Listing 6-30: A Shell Component for InputForm</h1>
+      <PrevNext prev="/listing629" next="/listing631" />
+
       <pre>
         {`function InputForm(props){
   return(
@@ -829,6 +1019,8 @@ export default InputForm;
         <title>ReactJS Foundations: A Shell Component for FilterSelect</title>
       </Helmet>
       <h1>Listing 6-31: A Shell Component for FilterSelect</h1>
+      <PrevNext prev="/listing630" next="/listing632" />
+
       <pre>
         {`function FilterSelect(props){
   return(
@@ -844,6 +1036,8 @@ export default FilterSelect;
         <title>ReactJS Foundations: A Shell Component for RemindersList</title>
       </Helmet>
       <h1>Listing 6-32: A Shell Component for RemindersList</h1>
+      <PrevNext prev="/listing631" next="/listing633" />
+
       <pre>
         {`function RemindersList(props){
   return(
@@ -859,6 +1053,8 @@ export default RemindersList;
         <title>ReactJS Foundations: A Shell Component for Reminder</title>
       </Helmet>
       <h1>Listing 6-33: A Shell Component for Reminder</h1>
+      <PrevNext prev="/listing632" next="/listing634" />
+
       <pre>
         {`function Reminder(props){
   return(
@@ -874,6 +1070,8 @@ export default Reminder;
         <title>ReactJS Foundations: RemindersList with Reminder Imported</title>
       </Helmet>
       <h1>Listing 6-34: RemindersList with Reminder Imported</h1>
+      <PrevNext prev="/listing633" next="/listing635" />
+
       <pre>
         {`import Reminder from './Reminder';
 
@@ -895,6 +1093,8 @@ export default RemindersList;
         <title>ReactJS Foundations: Round Two of InputForm</title>
       </Helmet>
       <h1>Listing 6-35: Round Two of InputForm</h1>
+      <PrevNext prev="/listing634" next="/listing636" />
+
       <pre>
         {`function InputForm(props){
   return(
@@ -914,6 +1114,8 @@ export default InputForm;
         <title>ReactJS Foundations: Round Two of FilterSelect</title>
       </Helmet>
       <h1>Listing 6-36: Round Two of FilterSelect</h1>
+      <PrevNext prev="/listing635" next="/listing637" />
+
       <pre>
         {`function FilterSelect(props){
   return(
@@ -936,6 +1138,8 @@ export default FilterSelect;
         <title>ReactJS Foundations: Round Two of RemindersList</title>
       </Helmet>
       <h1>Listing 6-37: Round Two of RemindersList</h1>
+      <PrevNext prev="/listing636" next="/listing638" />
+
       <pre>
         {`import Reminder from './Reminder';
 
@@ -957,6 +1161,8 @@ export default RemindersList;
         <title>ReactJS Foundations: Round Two of Reminder</title>
       </Helmet>
       <h1>Listing 6-38: Round Two of Reminder</h1>
+      <PrevNext prev="/listing637" next="/listing639" />
+
       <pre>
         {`function Reminder(props){
   return(
@@ -975,6 +1181,8 @@ export default Reminder;
         <title>ReactJS Foundations: App with Lifted State</title>
       </Helmet>
       <h1>Listing 6-39: App with Lifted State</h1>
+      <PrevNext prev="/listing638" next="/listing640" />
+
       <pre>
         {`import {useState} from 'react';
 import InputForm from './InputForm';
@@ -1006,6 +1214,8 @@ export default App;
         <title>ReactJS Foundations: Pure InputForm</title>
       </Helmet>
       <h1>Listing 6-40: Pure InputForm</h1>
+      <PrevNext prev="/listing639" next="/listing641" />
+
       <pre>
         {`function InputForm(props){
   return(
@@ -1030,6 +1240,8 @@ export default InputForm;
         <title>ReactJS Foundations: Pure FilterSelect</title>
       </Helmet>
       <h1>Listing 6-41: Pure FilterSelect</h1>
+      <PrevNext prev="/listing640" next="/listing642" />
+
       <pre>
         {`function FilterSelect(props){
   return(
@@ -1052,6 +1264,8 @@ export default FilterSelect;
         <title>ReactJS Foundations: Pure RemindersList</title>
       </Helmet>
       <h1>Listing 6-42: Pure RemindersList</h1>
+      <PrevNext prev="/listing641" next="/listing643" />
+
       <pre>
         {`import Reminder from './Reminder';
 
@@ -1082,6 +1296,8 @@ export default RemindersList;
         </title>
       </Helmet>
       <h1>Listing 6-43: Adding PropTypes and Default Values to InputForm</h1>
+      <PrevNext prev="/listing642" next="/listing644" />
+
       <pre>
         {`import PropTypes from 'prop-types';
 
@@ -1129,6 +1345,8 @@ export default InputForm;
         </title>
       </Helmet>
       <h1>Listing 6-44: RemindersList with Default Props and PropTypes</h1>
+      <PrevNext prev="/listing643" next="/listing645" />
+
       <pre>
         {`import PropTypes from 'prop-types';
 import Reminder from './Reminder';
@@ -1176,6 +1394,8 @@ export default RemindersList;
         </title>
       </Helmet>
       <h1>Listing 6-45: Validating and Setting Defaults for FilterSelect</h1>
+      <PrevNext prev="/listing644" next="/listing646" />
+
       <pre>
         {`import PropTypes from 'prop-types';
 
@@ -1212,6 +1432,8 @@ export default FilterSelect;
         </title>
       </Helmet>
       <h1>Listing 6-46: Reminder with PropTypes and defaultProps</h1>
+      <PrevNext prev="/listing645" next="/listing647" />
+
       <pre>
         {`import PropTypes from 'prop-types';
 
@@ -1253,6 +1475,8 @@ export default Reminder;
         Listing 6-47: The InputForm component with event handlers and event
         listeners
       </h1>
+      <PrevNext prev="/listing646" next="/listing648" />
+
       <pre>
         {`import PropTypes from 'prop-types';
 
@@ -1324,6 +1548,8 @@ export default InputForm;
         </title>
       </Helmet>
       <h1>Listing 6-48: Creating a New filteredReminders Array</h1>
+      <PrevNext prev="/listing647" next="/listing649" />
+
       <pre>
         {`import {useState} from 'react';
 import InputForm from './InputForm';
@@ -1366,6 +1592,8 @@ export default App;
         <title>ReactJS Foundations: Filtering the Reminders List</title>
       </Helmet>
       <h1>Listing 6-49: Filtering the Reminders List</h1>
+      <PrevNext prev="/listing648" next="/listing650" />
+
       <pre>
         {`function filterList(reminders,selectedFilter){
       if (selectedFilter === "all"){
@@ -1406,6 +1634,8 @@ export default App;
         <title>ReactJS Foundations: Implementing the filterList Function</title>
       </Helmet>
       <h1>Listing 6-50: Implementing the filterList Function</h1>
+      <PrevNext prev="/listing649" next="/listing651" />
+
       <pre>
         {`import {useState} from 'react';
 import InputForm from './InputForm';
@@ -1484,6 +1714,8 @@ export default App;
       <h1>
         Listing 6-51: FilterSelect with an event handler and event listener
       </h1>
+      <PrevNext prev="/listing650" next="/listing652" />
+
       <pre>
         {`import PropTypes from 'prop-types';
 
@@ -1523,6 +1755,8 @@ export default FilterSelect;
         <title>ReactJS Foundations: Reminder with the checkbox</title>
       </Helmet>
       <h1>Listing 6-52: Reminder with the checkbox</h1>
+      <PrevNext prev="/listing651" next="/listing653" />
+
       <pre>
         {`import PropTypes from 'prop-types';
 
@@ -1566,6 +1800,8 @@ export default Reminder;
         <title>ReactJS Foundations: Initializing State in App</title>
       </Helmet>
       <h1>Listing 6-53: Initializing State in App</h1>
+      <PrevNext prev="/listing652" next="/listing654" />
+
       <pre>
         {`import {Component} from 'react';
 class App extends Component{
@@ -1591,6 +1827,8 @@ export default App;
         <title>ReactJS Foundations: Copying and Modifying JSX in App</title>
       </Helmet>
       <h1>Listing 6-54: Copying and Modifying JSX in App</h1>
+      <PrevNext prev="/listing653" next="/listing655" />
+
       <pre>
         {`import {Component} from 'react';
 import InputForm from './InputForm';
@@ -1631,6 +1869,8 @@ export default App;
         </title>
       </Helmet>
       <h1>Listing 6-55: Adding Methods and Binding Them to App</h1>
+      <PrevNext prev="/listing654" next="/listing656" />
+
       <pre>
         {`import {Component} from 'react';
 import InputForm from './InputForm';
@@ -1703,6 +1943,8 @@ export default App;
         <title>ReactJS Foundations: The Converted App Component</title>
       </Helmet>
       <h1>Listing 6-56: The Converted App Component</h1>
+      <PrevNext prev="/listing655" next="/listing657" />
+
       <pre>
         {`import {Component} from 'react';
 import InputForm from './InputForm';
@@ -1809,6 +2051,8 @@ export default App;
         <title>ReactJS Foundations: The converted InputForm component</title>
       </Helmet>
       <h1>Listing 6-57: The converted InputForm component</h1>
+      <PrevNext prev="/listing656" next="/listing701" />
+
       <pre>
         {`import {Component} from 'react';
 import PropTypes from 'prop-types';
@@ -1888,6 +2132,8 @@ export default InputForm;
         <title>ReactJS Foundations: Using an event attribute in HTML</title>
       </Helmet>
       <h1>Listing 7-1: Using an event attribute in HTML</h1>
+      <PrevNext prev="/listing657" next="/listing702" />
+
       <pre>
         {`<form id="signup-form" onsubmit="validate()">
   <input type="text" id="email">
@@ -1902,6 +2148,8 @@ export default InputForm;
         <title>ReactJS Foundations: Using addEventListener</title>
       </Helmet>
       <h1>Listing 7-2: Using addEventListener</h1>
+      <PrevNext prev="/listing701" next="/listing703" />
+
       <pre>
         {`<html>
   <head>
@@ -1931,6 +2179,8 @@ export default InputForm;
         </title>
       </Helmet>
       <h1>Listing 7-3: Setting an event listener in a React component</h1>
+      <PrevNext prev="/listing702" next="/listing704" />
+
       <Chapter07.MyForm />
     </Route>
     <Route path="/listing704">
@@ -1940,6 +2190,8 @@ export default InputForm;
         </title>
       </Helmet>
       <h1>Listing 7-4: Viewing the properties of the Event object</h1>
+      <PrevNext prev="/listing703" next="/listing705" />
+
       <Chapter07.EventProps />
     </Route>
     <Route path="/listing705">
@@ -1949,6 +2201,8 @@ export default InputForm;
         </title>
       </Helmet>
       <h1>Listing 7-5: Using an inline event handler to show an alert</h1>
+      <PrevNext prev="/listing704" next="/listing706" />
+
       <Chapter07.WarningButton />
     </Route>
     <Route path="/listing706">
@@ -1958,6 +2212,8 @@ export default InputForm;
         </title>
       </Helmet>
       <h1>Listing 7-6: Using an inline event handler to call setState()</h1>
+      <PrevNext prev="/listing705" next="/listing707" />
+
       <Chapter07.ScreenDoor />
     </Route>
     <Route path="/listing707">
@@ -1970,6 +2226,8 @@ export default InputForm;
       <h1>
         Listing 7-7: Using an event handler function in a function component
       </h1>
+      <PrevNext prev="/listing706" next="/listing708" />
+
       <Chapter07.SearchTerm />
     </Route>
     <Route path="/listing708">
@@ -1982,6 +2240,8 @@ export default InputForm;
       <h1>
         Listing 7-8: Writing and binding an event handler method in a class
       </h1>
+      <PrevNext prev="/listing707" next="/listing709" />
+
       <Chapter07.CoffeeMachine />
     </Route>
     <Route path="/listing709">
@@ -1991,6 +2251,8 @@ export default InputForm;
         </title>
       </Helmet>
       <h1>Listing 7-9: Binding a function in the constructor</h1>
+      <PrevNext prev="/listing708" next="/listing710" />
+
       <Chapter07.ColorWheel />
     </Route>
     <Route path="/listing710">
@@ -1998,6 +2260,8 @@ export default InputForm;
         <title>ReactJS Foundations: Binding an event handler inline</title>
       </Helmet>
       <h1>Listing 7-10: Binding an event handler inline</h1>
+      <PrevNext prev="/listing709" next="/listing711" />
+
       <Chapter07.ColorWheel2 />
     </Route>
     <Route path="/listing711">
@@ -2007,6 +2271,8 @@ export default InputForm;
         </title>
       </Helmet>
       <h1>Listing 7-11: Using an arrow function as an event handler</h1>
+      <PrevNext prev="/listing710" next="/listing712" />
+
       <Chapter07.ColorWheel3 />
     </Route>
     <Route path="/listing712">
@@ -2016,6 +2282,8 @@ export default InputForm;
         </title>
       </Helmet>
       <h1>Listing 7-12: Defining state using a class property</h1>
+      <PrevNext prev="/listing711" next="/listing713" />
+
       <Chapter07.ColorWheel4 />
     </Route>
     <Route path="/listing713">
@@ -2025,6 +2293,8 @@ export default InputForm;
         </title>
       </Helmet>
       <h1>Listing 7-13: The Event object is passed automatically</h1>
+      <PrevNext prev="/listing712" next="/listing714" />
+
       <Chapter07.EventObject />
     </Route>
     <Route path="/listing714">
@@ -2034,6 +2304,8 @@ export default InputForm;
         </title>
       </Helmet>
       <h1>Listing 7-14: Passing the Event object to the event handler</h1>
+      <PrevNext prev="/listing713" next="/listing801" />
+
       <Chapter07.EventObject2 />
     </Route>
     <Route path="/listing801">
@@ -2046,6 +2318,8 @@ export default InputForm;
       <h1>
         Listing 8-1: Omiting the value attribute creates an uncontrolled input
       </h1>
+      <PrevNext prev="/listing714" next="/listing802" />
+
       <Chapter08.UncontrolledInput />
     </Route>
     <Route path="/listing802">
@@ -2058,6 +2332,8 @@ export default InputForm;
       <h1>
         Listing 8-2: Adding the value attribute creates a controlled input
       </h1>
+      <PrevNext prev="/listing801" next="/listing803" />
+
       <Chapter08.ControlledInput />
     </Route>
     <Route path="/listing803">
@@ -2067,6 +2343,8 @@ export default InputForm;
         </title>
       </Helmet>
       <h1>Listing 8-3: Updating an input element with one-way data flow</h1>
+      <PrevNext prev="/listing802" next="/listing804" />
+
       <Chapter08.ControllingFunction />
     </Route>
     <Route path="/listing804">
@@ -2076,6 +2354,8 @@ export default InputForm;
         </title>
       </Helmet>
       <h1>Listing 8-4: Controlling an input in a class component</h1>
+      <PrevNext prev="/listing803" next="/listing805" />
+
       <Chapter08.ControllingClass />
     </Route>
     <Route path="/listing805">
@@ -2085,6 +2365,8 @@ export default InputForm;
         </title>
       </Helmet>
       <h1>Listing 8-5: Simplifying a Controlled Input in a Class</h1>
+      <PrevNext prev="/listing804" next="/listing806" />
+
       <Chapter08.ControllingClass2 />
     </Route>
     <Route path="/listing806">
@@ -2092,6 +2374,8 @@ export default InputForm;
         <title>ReactJS Foundations: The SearchBox component</title>
       </Helmet>
       <h1>Listing 8-6: The SearchBox component</h1>
+      <PrevNext prev="/listing805" next="/listing807" />
+
       <Chapter08.SearchInterface />
     </Route>
     <Route path="/listing807">
@@ -2099,6 +2383,8 @@ export default InputForm;
         <title>ReactJS Foundations: The SearchInput component</title>
       </Helmet>
       <h1>Listing 8-7: The SearchInput component</h1>
+      <PrevNext prev="/listing806" next="/listing808" />
+
       <Chapter08.SearchInput />
     </Route>
     <Route path="/listing808">
@@ -2106,6 +2392,8 @@ export default InputForm;
         <title>ReactJS Foundations: The SearchResults component</title>
       </Helmet>
       <h1>Listing 8-8: The SearchResults component</h1>
+      <PrevNext prev="/listing807" next="/listing809" />
+
       <Chapter08.SearchResults />
     </Route>
     <Route path="/listing809">
@@ -2116,6 +2404,8 @@ export default InputForm;
         </title>
       </Helmet>
       <h1>Listing 8-9: A blog comment interface using an uncontrolled input</h1>
+      <PrevNext prev="/listing808" next="/listing810" />
+
       <Chapter08.BlogComment />
     </Route>
     <Route path="/listing810">
@@ -2125,6 +2415,8 @@ export default InputForm;
         </title>
       </Helmet>
       <h1>Listing 8-10: An HTML textarea's value is its children</h1>
+      <PrevNext prev="/listing809" next="/listing811" />
+
       <pre>
         {`<textarea name="terms-of-use">
   Make sure to read all of these terms of use. By reading this book, you agree to learn React and to never try to mutate a prop or forget to bind an event handler in a class component. Furthermore, although it is not required, you agree to consider writing a review of this book and to tell your friends how great this book is.
@@ -2137,6 +2429,8 @@ export default InputForm;
         <title>ReactJS Foundations: Using a textarea in React</title>
       </Helmet>
       <h1>Listing 8-11: Using a textarea in React</h1>
+      <PrevNext prev="/listing810" next="/listing812" />
+
       <Chapter08.TermsOfUse
         terms="Make sure to read all of these terms of use. By reading this book, you agree to learn React and to never try to mutate a prop or forget to bind an event handler in a class component. Furthermore, although it is not required, you agree to consider writing a review of this book and to tell your friends how great this book is.
 "
@@ -2147,6 +2441,8 @@ export default InputForm;
         <title>ReactJS Foundations: A select element in HTML</title>
       </Helmet>
       <h1>Listing 8-12: A select element in HTML</h1>
+      <PrevNext prev="/listing811" next="/listing813" />
+
       <pre>
         {`<select name="pizza-type">
   <option value="thin">Thin Crust</option>
@@ -2163,6 +2459,8 @@ export default InputForm;
         <title>ReactJS Foundations: Using a select input in React</title>
       </Helmet>
       <h1>Listing 8-13: Using a select input in React</h1>
+      <PrevNext prev="/listing812" next="/listing814" />
+
       <Chapter08.SizeSelect />
     </Route>
     <Route path="/listing814">
@@ -2170,6 +2468,8 @@ export default InputForm;
         <title>ReactJS Foundations: Using preventDefault</title>
       </Helmet>
       <h1>Listing 8-14: Using preventDefault</h1>
+      <PrevNext prev="/listing813" next="/listing901" />
+
       <Chapter08.PreventDefault />
     </Route>
     <Route path="/listing901">
@@ -2177,6 +2477,8 @@ export default InputForm;
         <title>ReactJS Foundations: Creating a Ref in a Class Component</title>
       </Helmet>
       <h1>Listing 9-1: Creating a Ref in a Class Component</h1>
+      <PrevNext prev="/listing814" next="/listing902" />
+
       <Chapter09.CreateRefClass bookText={Chapter09.mobydick} />
     </Route>
     <Route path="/listing902">
@@ -2184,6 +2486,8 @@ export default InputForm;
         <title>ReactJS Foundations: Creating a Ref with useRef()</title>
       </Helmet>
       <h1>Listing 9-2: Creating a Ref with useRef()</h1>
+      <PrevNext prev="/listing901" next="/listing903" />
+
       <Chapter09.CreateRefFunction bookText={Chapter09.mobydick} />
     </Route>
     <Route path="/listing903">
@@ -2193,6 +2497,8 @@ export default InputForm;
         </title>
       </Helmet>
       <h1>Listing 9-3: Calling a DOM Method on a Child Using a Ref</h1>
+      <PrevNext prev="/listing902" next="/listing904" />
+
       <Chapter09.TextReader bookText={Chapter09.mobydick} />
     </Route>
     <Route path="/listing904">
@@ -2200,6 +2506,8 @@ export default InputForm;
         <title>ReactJS Foundations: Creating a Callback Ref</title>
       </Helmet>
       <h1>Listing 9-4: Creating a Callback Ref</h1>
+      <PrevNext prev="/listing903" next="/listing905" />
+
       <Chapter09.TextReaderCallback bookText={Chapter09.mobydick} />
     </Route>
     <Route path="/listing905">
@@ -2209,6 +2517,8 @@ export default InputForm;
         </title>
       </Helmet>
       <h1>Listing 9-5: Passing a ref Callback as an Inline Function</h1>
+      <PrevNext prev="/listing904" next="/listing906" />
+
       <Chapter09.TextReaderCallback2 bookText={Chapter09.mobydick} />
     </Route>
     <Route path="/listing906">
@@ -2218,6 +2528,8 @@ export default InputForm;
         </title>
       </Helmet>
       <h1>Listing 9-6: Selecting and Copying Text with a ref</h1>
+      <PrevNext prev="/listing905" next="/listing907" />
+
       <Chapter09.CodeDisplay yourCode="8675309" />
     </Route>
     <Route path="/listing907">
@@ -2225,6 +2537,8 @@ export default InputForm;
         <title>ReactJS Foundations: A React Audio Player</title>
       </Helmet>
       <h1>Listing 9-7: A React Audio Player</h1>
+      <PrevNext prev="/listing906" next="/listing908" />
+
       <Chapter09.AudioPlayer />
     </Route>
     <Route path="/listing908">
@@ -2232,6 +2546,8 @@ export default InputForm;
         <title>ReactJS Foundations: Scrolling to an Element with a ref</title>
       </Helmet>
       <h1>Listing 9-8: Scrolling to an Element with a ref</h1>
+      <PrevNext prev="/listing907" next="/listing1001" />
+
       <Chapter09.ScrollToDemo />
     </Route>
     <Route path="/listing1001">
@@ -2239,6 +2555,8 @@ export default InputForm;
         <title>ReactJS Foundations: Adding an HTML Link to the HTML File</title>
       </Helmet>
       <h1>Listing 10-1: Adding an HTML Link to the HTML File</h1>
+      <PrevNext prev="/listing908" next="/listing1002" />
+
       <pre>
         {`<!DOCTYPE html>
 <html lang="en">
@@ -2273,6 +2591,8 @@ export default InputForm;
         <title>ReactJS Foundations: Including CSS in a Component</title>
       </Helmet>
       <h1>Listing 10-2: Including CSS in a Component</h1>
+      <PrevNext prev="/listing1001" next="/listing1003" />
+
       <Chapter10.ArticleLink />
     </Route>
     <Route path="/listing1003">
@@ -2280,6 +2600,8 @@ export default InputForm;
         <title>ReactJS Foundations: Cascading Styles in Components</title>
       </Helmet>
       <h1>Listing 10-3: Cascading Styles in Components</h1>
+      <PrevNext prev="/listing1002" next="/listing1004" />
+
       <Chapter10.StyledParent />
     </Route>
     <Route path="/listing1004">
@@ -2287,6 +2609,8 @@ export default InputForm;
         <title>ReactJS Foundations: Using Inline Styles in React</title>
       </Helmet>
       <h1>Listing 10-4: Using Inline Styles in React</h1>
+      <PrevNext prev="/listing1003" next="/listing1005" />
+
       <Chapter10.WarningMessage warningMessage="Look out!" />
     </Route>
     <Route path="/listing1005">
@@ -2296,6 +2620,8 @@ export default InputForm;
         </title>
       </Helmet>
       <h1>Listing 10-5: CSS rule-sets vs. JavaScript style objects</h1>
+      <PrevNext prev="/listing1004" next="/listing1006" />
+
       <pre>
         {`/* CSS rule-set */
 .headingStyle{
@@ -2324,6 +2650,8 @@ const headingStyle = {
         </title>
       </Helmet>
       <h1>Listing 10-6: Using Variables to Hold Style Objects</h1>
+      <PrevNext prev="/listing1005" next="/listing1007" />
+
       <Chapter10.WarningMessageVars warningMessage="Look out!" />
     </Route>
     <Route path="/listing1007">
@@ -2331,6 +2659,8 @@ const headingStyle = {
         <title>ReactJS Foundations: A Style Module Library</title>
       </Helmet>
       <h1>Listing 10-7: A Style Module Library</h1>
+      <PrevNext prev="/listing1006" next="/listing1008" />
+
       <pre>
         {`export const warningStyle = {color:"red",padding:"6px",backgroundColor:"#000000"};
 export const infoStyle = {color:"yellow",padding:"6px",backgroundColor:"#000000"};
@@ -2343,6 +2673,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
         <title>ReactJS Foundations: Importing Multiple Styles</title>
       </Helmet>
       <h1>Listing 10-8: Importing Multiple Styles</h1>
+      <PrevNext prev="/listing1007" next="/listing1009" />
+
       <Chapter10.DisplayStatus message={{ text: 'Look Out!', type: 'info' }} />
     </Route>
     <Route path="/listing1009">
@@ -2350,6 +2682,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
         <title>ReactJS Foundations: A CSS Module</title>
       </Helmet>
       <h1>Listing 10-9: A CSS Module</h1>
+      <PrevNext prev="/listing1008" next="/listing1010" />
+
       <pre>
         {`/* my-component.module.css */
 .bigText {
@@ -2367,6 +2701,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
         <title>ReactJS Foundations: Using a CSS Module</title>
       </Helmet>
       <h1>Listing 10-10: Using a CSS Module</h1>
+      <PrevNext prev="/listing1009" next="/listing1011" />
+
       <Chapter10.CSSModule />
     </Route>
     <Route path="/listing1011">
@@ -2374,6 +2710,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
         <title>ReactJS Foundations: Using Class Composition</title>
       </Helmet>
       <h1>Listing 10-11: Using Class Composition</h1>
+      <PrevNext prev="/listing1010" next="/listing1012" />
+
       <pre>{`.bodyText {
   font-size: 12px;
   font-family: Georgia serif;
@@ -2394,6 +2732,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
         </title>
       </Helmet>
       <h1>Listing 10-12: Basing a new class on an external style</h1>
+      <PrevNext prev="/listing1011" next="/listing1013" />
+
       <pre>
         {`.checkoutButton {
   composes: button from './buttons';
@@ -2408,6 +2748,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
         <title>ReactJS Foundations: Using Styled Components</title>
       </Helmet>
       <h1>Listing 10-13: Using Styled Components</h1>
+      <PrevNext prev="/listing1012" next="/listing1101" />
+
       <Chapter10.ExampleStyled />
     </Route>
 
@@ -2416,6 +2758,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
         <title>ReactJS Foundations: A Number Guessing Game with useState</title>
       </Helmet>
       <h1>Listing 11-1: A Number Guessing Game with useState</h1>
+      <PrevNext prev="/listing1013" next="/listing1102" />
+
       <Chapter11.NumberGuessing />
     </Route>
     <Route path="/listing1102">
@@ -2428,6 +2772,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
       <h1>
         Listing 11-2: Setter functions are bound to their creator component
       </h1>
+      <PrevNext prev="/listing1101" next="/listing1103" />
+
       <Chapter11.ButtonContainer />
     </Route>
     <Route path="/listing1103">
@@ -2435,6 +2781,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
         <title>ReactJS Foundations: The most basic form of useEffect</title>
       </Helmet>
       <h1>Listing 11-3: The most basic form of useEffect</h1>
+      <PrevNext prev="/listing1102" next="/listing1104" />
+
       <Chapter11.RenderCounter />
     </Route>
     <Route path="/listing1104">
@@ -2442,6 +2790,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
         <title>ReactJS Foundations: Starting a timer with each render</title>
       </Helmet>
       <h1>Listing 11-4: Starting a timer with each render</h1>
+      <PrevNext prev="/listing1103" next="/listing1105" />
+
       <Chapter11.TimerFun />
     </Route>
     <Route path="/listing1105">
@@ -2451,6 +2801,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
         </title>
       </Helmet>
       <h1>Listing 11-5: Creating a new timer with each render</h1>
+      <PrevNext prev="/listing1104" next="/listing1106" />
+
       <Chapter11.TimerRestartFun />
     </Route>
     <Route path="/listing1106">
@@ -2463,6 +2815,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
       <h1>
         Listing 11-6: Passing an empty array to only run useEffect on mount
       </h1>
+      <PrevNext prev="/listing1105" next="/listing1107" />
+
       <Chapter11.TimerOnceFun />
     </Route>
     <Route path="/listing1107">
@@ -2470,6 +2824,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
         <title>ReactJS Foundations: Specifying useEffect's dependencies</title>
       </Helmet>
       <h1>Listing 11-7: Specifying useEffect's dependencies</h1>
+      <PrevNext prev="/listing1106" next="/listing1108" />
+
       <Chapter11.TimerConditionalFun />
     </Route>
     <Route path="/listing1108">
@@ -2477,6 +2833,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
         <title>ReactJS Foundations: Asynchronous Requests with useEffect</title>
       </Helmet>
       <h1>Listing 11-8: Asynchronous Requests with useEffect</h1>
+      <PrevNext prev="/listing1107" next="/listing1109" />
+
       <Chapter11.ShippingAddress />
     </Route>
     <Route path="/listing1109">
@@ -2486,6 +2844,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
         </title>
       </Helmet>
       <h1>Listing 11-9: Using Context with the useContext Hook</h1>
+      <PrevNext prev="/listing1108" next="/listing1110" />
+
       <Chapter11.UsingContext />
     </Route>
     <Route path="/listing1110">
@@ -2493,6 +2853,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
         <title>ReactJS Foundations: A Counter with useReducer</title>
       </Helmet>
       <h1>Listing 11-10: A Counter with useReducer</h1>
+      <PrevNext prev="/listing1109" next="/listing1111" />
+
       <Chapter11.ReducerCounter />
     </Route>
     <Route path="/listing1111">
@@ -2500,6 +2862,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
         <title>ReactJS Foundations: Passing a Payload to a Reducer</title>
       </Helmet>
       <h1>Listing 11-11: Passing a Payload to a Reducer</h1>
+      <PrevNext prev="/listing1110" next="/listing1112" />
+
       <Chapter11.ReducerCounterPayload />
     </Route>
     <Route path="/listing1112">
@@ -2509,6 +2873,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
         </title>
       </Helmet>
       <h1>Listing 11-12: Function dependencies cause unnecessary renders</h1>
+      <PrevNext prev="/listing1111" next="/listing1113" />
+
       <Chapter11.CallMe />
     </Route>
     <Route path="/listing1113">
@@ -2521,6 +2887,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
       <h1>
         Listing 11-13: Memoized callbacks fix the unnecessary effect problem
       </h1>
+      <PrevNext prev="/listing1112" next="/listing1114" />
+
       <Chapter11.CallMeFixed />
     </Route>
     <Route path="/listing1114">
@@ -2530,6 +2898,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
         </title>
       </Helmet>
       <h1>Listing 11-14: Solving performance problems with useMemo</h1>
+      <PrevNext prev="/listing1113" next="/listing1115" />
+
       <Chapter11.ShippingAddress2 />
     </Route>
     <Route path="/listing1115">
@@ -2542,6 +2912,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
       <h1>
         Listing 11-15: Getting the value of a textarea and counting its words
       </h1>
+      <PrevNext prev="/listing1114" next="/listing1116" />
+
       <Chapter11.WordCount />
     </Route>
     <Route path="/listing1116">
@@ -2549,6 +2921,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
         <title>ReactJS Foundations: Customizing a value exposed by a ref</title>
       </Helmet>
       <h1>Listing 11-16: Customizing a value exposed by a ref</h1>
+      <PrevNext prev="/listing1115" next="/listing1117" />
+
       <Chapter11.CountingBox />
     </Route>
     <Route path="/listing1117">
@@ -2562,6 +2936,8 @@ export const successStyle = {color:"yellow",padding:"6px",backgroundColor:"#0000
         Listing 11-17: useZipLookup: a custom hook to return location data based
         on a zipcode
       </h1>
+      <PrevNext prev="/listing1116" next="/listing1118" />
+
       <pre>
         {`import {useEffect,useState} from 'react';
 
@@ -2598,6 +2974,8 @@ export default useZipLookup;
         <title>ReactJS Foundations: Using the useZipLookup custom hook</title>
       </Helmet>
       <h1>Listing 11-18: Using the useZipLookup custom hook</h1>
+      <PrevNext prev="/listing1117" next="/listing1119" />
+
       <Chapter11.ShippingAddress2 />
     </Route>
     <Route path="/listing1119">
@@ -2605,6 +2983,8 @@ export default useZipLookup;
         <title>ReactJS Foundations: Using useDebugValue</title>
       </Helmet>
       <h1>Listing 11-19: Using useDebugValue</h1>
+      <PrevNext prev="/listing1118" next="/listing1120" />
+
       <pre>
         {`import {useEffect,useState,useDebugValue} from 'react';
 
@@ -2643,6 +3023,8 @@ export default useZipLookup;
         <title>ReactJS Foundations: Using useAxios</title>
       </Helmet>
       <h1>Listing 11-20: Using useAxios</h1>
+      <PrevNext prev="/listing1119" next="/listing1121" />
+
       <Chapter11.WeatherWidget />
     </Route>
     <Route path="/listing1121">
@@ -2650,6 +3032,8 @@ export default useZipLookup;
         <title>ReactJS Foundations: Using useForm</title>
       </Helmet>
       <h1>Listing 11-21: Using useForm</h1>
+      <PrevNext prev="/listing1120" next="/listing1201" />
+
       <Chapter11.UsingUseForm />
     </Route>
     <Route path="/listing1201">
@@ -2657,6 +3041,8 @@ export default useZipLookup;
         <title>ReactJS Foundations: A Simple Routing Component</title>
       </Helmet>
       <h1>Listing 12-1: A Simple Routing Component</h1>
+      <PrevNext prev="/listing1121" next="/listing1202" />
+
       <Chapter12.ChooseYourAdventure />
     </Route>
     <Route path="/listing1202">
@@ -2664,6 +3050,8 @@ export default useZipLookup;
         <title>ReactJS Foundations: A list of NavLinks with sub-items</title>
       </Helmet>
       <h1>Listing 12-2: A list of NavLinks with sub-items</h1>
+      <PrevNext prev="/listing1201" next="/listing1203" />
+
       <pre>
         {`<ul>
   <li><NavLink to="/" activeClassName="active">Home</NavLink></li>
@@ -2693,6 +3081,7 @@ export default useZipLookup;
         </title>
       </Helmet>
       <h1>Listing 12-3: Using the exact attribute on NavLink components</h1>
+      <PrevNext prev="/listing1202" next="/listing1204" />
 
       <pre>
         {`
@@ -2716,6 +3105,8 @@ export default useZipLookup;
         </title>
       </Helmet>
       <h1>Listing 12-4: Multiple routes in a component may have matches</h1>
+      <PrevNext prev="/listing1203" next="/listing1205" />
+
       <Chapter12.MultipleMatches />
     </Route>
     <Route path="/listing1205">
@@ -2723,6 +3114,8 @@ export default useZipLookup;
         <title>ReactJS Foundations: Using URL parameters</title>
       </Helmet>
       <h1>Listing 12-5: Using URL parameters</h1>
+      <PrevNext prev="/listing1204" next="/listing1206" />
+
       <Chapter12.URLParams />
     </Route>
     <Route path="/listing1206">
@@ -2730,6 +3123,8 @@ export default useZipLookup;
         <title>ReactJS Foundations: Using the useParams Hook</title>
       </Helmet>
       <h1>Listing 12-6: Using the useParams Hook</h1>
+      <PrevNext prev="/listing1205" next="/listing1207" />
+
       <Chapter12.URLParamsHook />
     </Route>
     <Route path="/listing1207">
@@ -2737,6 +3132,8 @@ export default useZipLookup;
         <title>ReactJS Foundations: Using the component attribute</title>
       </Helmet>
       <h1>Listing 12-7: Using the component attribute</h1>
+      <PrevNext prev="/listing1206" next="/listing1208" />
+
       <Chapter12.ComponentProp />
     </Route>
     <Route path="/listing1208">
@@ -2744,6 +3141,8 @@ export default useZipLookup;
         <title>ReactJS Foundations: Using the render attribute</title>
       </Helmet>
       <h1>Listing 12-8: Using the render attribute</h1>
+      <PrevNext prev="/listing1207" next="/listing1209" />
+
       <Chapter12.RenderProp />
     </Route>
     <Route path="/listing1209">
@@ -2751,6 +3150,8 @@ export default useZipLookup;
         <title>ReactJS Foundations: Rendering a render prop</title>
       </Helmet>
       <h1>Listing 12-9: Rendering a render prop</h1>
+      <PrevNext prev="/listing1208" next="/listing1210" />
+
       <pre>{`function Route(props) {
 
 return (
@@ -2768,6 +3169,8 @@ export default Route;
         <title>ReactJS Foundations: Switching between multiple routes</title>
       </Helmet>
       <h1>Listing 12-10: Switching between multiple routes</h1>
+      <PrevNext prev="/listing1209" next="/listing1211" />
+
       <pre>{`<Switch>  
   <Route path="/">
     <p>home</p>
@@ -2786,6 +3189,8 @@ export default Route;
         <title>ReactJS Foundations: Rendering a default route</title>
       </Helmet>
       <h1>Listing 12-11: Rendering a default route</h1>
+      <PrevNext prev="/listing1210" next="/listing1212" />
+
       <pre>{`<Switch>  
   <Route path="/">
     <p>home</p>
@@ -2809,6 +3214,8 @@ export default Route;
         </title>
       </Helmet>
       <h1>Listing 12-12: Redirecting from one location to another</h1>
+      <PrevNext prev="/listing1211" next="/listing1213" />
+
       <Chapter12.UserListRedirect />
     </Route>
     <Route path="/listing1213">
@@ -2816,6 +3223,8 @@ export default Route;
         <title>ReactJS Foundations: Using withRouter</title>
       </Helmet>
       <h1>Listing 12-13: Using withRouter</h1>
+      <PrevNext prev="/listing1212" next="/listing1214" />
+
       <Chapter12.NavMenuWithRouter />
     </Route>
     <Route path="/listing1214">
@@ -2823,6 +3232,8 @@ export default Route;
         <title>ReactJS Foundations: Using useHistory</title>
       </Helmet>
       <h1>Listing 12-14: Using useHistory</h1>
+      <PrevNext prev="/listing1213" next="/listing1215" />
+
       <Chapter12.UsingHistory />
     </Route>
     <Route path="/listing1215">
@@ -2832,6 +3243,8 @@ export default Route;
         </title>
       </Helmet>
       <h1>Listing 12-15: Viewing properties of the current location object</h1>
+      <PrevNext prev="/listing1214" next="/listing1216" />
+
       <Chapter12.ViewLocation />
     </Route>
     <Route path="/listing1216">
@@ -2841,6 +3254,8 @@ export default Route;
         </title>
       </Helmet>
       <h1>Listing 12-16: Dynamic Links and Routes in nested Routes</h1>
+      <PrevNext prev="/listing1215" next="/listing1301" />
+
       <Chapter12.NestedRoutes />
     </Route>
     <Route path="/listing1301">
@@ -2848,6 +3263,8 @@ export default Route;
         <title>ReactJS Foundations: An ErrorBoundary component</title>
       </Helmet>
       <h1>Listing 13-1: An ErrorBoundary component</h1>
+      <PrevNext prev="/listing1216" next="/listing1302" />
+
       <Chapter13.ErrorBoundary />
     </Route>
     <Route path="/listing1302">
@@ -2855,6 +3272,8 @@ export default Route;
         <title>ReactJS Foundations: A component with an error</title>
       </Helmet>
       <h1>Listing 13-2: A component with an error</h1>
+      <PrevNext prev="/listing1301" next="/listing1303" />
+
       <pre>
         {`function BadComponent(){
   return (
@@ -2871,6 +3290,8 @@ export default BadComponent;
         <title>ReactJS Foundations: Exporting with an ErrorBoundary</title>
       </Helmet>
       <h1>Listing 13-3: Exporting with an ErrorBoundary</h1>
+      <PrevNext prev="/listing1302" next="/listing1304" />
+
       <Chapter13.BadComponentWithBoundary />
     </Route>
     <Route path="/listing1304">
@@ -2883,6 +3304,8 @@ export default BadComponent;
       <h1>
         Listing 13-4: Logging the error and the info object to the console
       </h1>
+      <PrevNext prev="/listing1303" next="/listing1305" />
+
       <Chapter13.ErrorBoundaryWithDidCatch>
         <Chapter13.BadComponent />
       </Chapter13.ErrorBoundaryWithDidCatch>
@@ -2892,6 +3315,8 @@ export default BadComponent;
         <title>ReactJS Foundations: The Logger Component</title>
       </Helmet>
       <h1>Listing 13-5: The Logger Component</h1>
+      <PrevNext prev="/listing1304" next="/listing1306" />
+
       <pre>
         {`import { LogglyTracker } from 'loggly-jslogger';
 
@@ -2909,6 +3334,8 @@ export default logger;`}
         </title>
       </Helmet>
       <h1>Listing 13-6: The updated ErrorBoundary with remote logging</h1>
+      <PrevNext prev="/listing1305" next="/listing1307" />
+
       <Chapter13.ErrorBoundaryWithLogging>
         <Chapter13.BadComponent />
       </Chapter13.ErrorBoundaryWithLogging>
@@ -2918,6 +3345,8 @@ export default logger;`}
         <title>ReactJS Foundations: A Component That Sometimes Errors</title>
       </Helmet>
       <h1>Listing 13-7: A Component That Sometimes Errors</h1>
+      <PrevNext prev="/listing1306" next="/listing1308" />
+
       <Chapter13.SometimesBad />
     </Route>
     <Route path="/listing1308">
@@ -2927,6 +3356,8 @@ export default logger;`}
         </title>
       </Helmet>
       <h1>Listing 13-8: Providing a reset link in the Error Boundary</h1>
+      <PrevNext prev="/listing1307" next="/listing1309" />
+
       <Chapter13.ErrorBoundaryWithReset>
         <Chapter13.SometimesBad />
       </Chapter13.ErrorBoundaryWithReset>
@@ -2941,6 +3372,8 @@ export default logger;`}
       <h1>
         Listing 13-9: Specifying a fallback component with react-error-boundary
       </h1>
+      <PrevNext prev="/listing1308" next="/listing1310" />
+
       <pre>
         {`import ErrorBoundary from 'react-error-boundary';
 
@@ -2982,6 +3415,8 @@ export default BadComponentContainer;
       <h1>
         Listing 13-10: Using try/catch to catch errors in an ErrorBoundary
       </h1>
+      <PrevNext prev="/listing1309" next="/listing1311" />
+
       <pre>
         {`import {Component} from 'react';
 import logger from './logger';
@@ -3023,6 +3458,8 @@ export default ErrorBoundary;
         <title>ReactJS Foundations: Using useErrorHandler()</title>
       </Helmet>
       <h1>Listing 13-11: Using useErrorHandler()</h1>
+      <PrevNext prev="/listing1310" next="/listing1601" />
+
       <Chapter13.ErrorBoundaryWithReset>
         <Chapter13.UseErrorHandler />
       </Chapter13.ErrorBoundaryWithReset>
@@ -3041,6 +3478,8 @@ export default ErrorBoundary;
         <title>ReactJS Foundations: Callbacks within Callbacks</title>
       </Helmet>
       <h1>Listing 16-1: Callbacks within Callbacks</h1>
+      <PrevNext prev="/listing1311" next="/listing1602" />
+
       <pre>
         {`function userCheck(username, password, callback){
   db.verifyUser(username, password, (error, userInfo) => {
@@ -3073,6 +3512,8 @@ export default ErrorBoundary;
         </title>
       </Helmet>
       <h1>Listing 16-2: Loading initial data in a class component</h1>
+      <PrevNext prev="/listing1601" next="/listing1603" />
+
       <pre>
         {`import {Component} from 'react';
 
@@ -3114,6 +3555,8 @@ export default NewsFeed;
         </title>
       </Helmet>
       <h1>Listing 16-3: Loading initial data in a function component</h1>
+      <PrevNext prev="/listing1602" next="/listing1604" />
+
       <pre>
         {`import {useState,useEffect} from 'react';
 
@@ -3149,6 +3592,7 @@ export default NewsFeedFunction;
         <title>ReactJS Foundations: Using Fetch in Response to Events</title>
       </Helmet>
       <h1>Listing 16-4: Using Fetch in Response to Events</h1>
+      <PrevNext prev="/listing1603" next="/listing1605" />
       <Chapter16.Restful />
     </Route>
     <Route path="/listing1605">
@@ -3156,6 +3600,8 @@ export default NewsFeedFunction;
         <title>ReactJS Foundations: Performing a GET request with Axios</title>
       </Helmet>
       <h1>Listing 16-5: Performing a GET request with Axios</h1>
+      <PrevNext prev="/listing1604" next="/listing1606" />
+
       <Chapter16.Restful2 />
     </Route>
     <Route path="/listing1606">
@@ -3163,6 +3609,8 @@ export default NewsFeedFunction;
         <title>ReactJS Foundations: A Clicker App</title>
       </Helmet>
       <h1>Listing 16-6: A Clicker App</h1>
+      <PrevNext prev="/listing1605" next="/listing1607" />
+
       <Chapter16.Clicker1 />
     </Route>
     <Route path="/listing1607">
@@ -3172,6 +3620,8 @@ export default NewsFeedFunction;
         </title>
       </Helmet>
       <h1>Listing 16-7: Writing to localStorage When the State Changes</h1>
+      <PrevNext prev="/listing1606" next="/listing1608" />
+
       <Chapter16.Clicker2 />
     </Route>
     <Route path="/listing1608">
@@ -3179,6 +3629,8 @@ export default NewsFeedFunction;
         <title>ReactJS Foundations: Reading localStorage Data in Clicker</title>
       </Helmet>
       <h1>Listing 16-8: Reading localStorage Data in Clicker</h1>
+      <PrevNext prev="/listing1607" next="/listing1609" />
+
       <Chapter16.Clicker3 />
     </Route>
     <Route path="/listing1609">
@@ -3186,6 +3638,8 @@ export default NewsFeedFunction;
         <title>ReactJS Foundations: Clearing localStorage in the Clicker</title>
       </Helmet>
       <h1>Listing 16-9: Clearing localStorage in the Clicker</h1>
+      <PrevNext prev="/listing1608" next="/listing1701" />
+
       <Chapter16.Clicker4 />
     </Route>
     <Route path="/listing1701">
@@ -3193,6 +3647,8 @@ export default NewsFeedFunction;
         <title>ReactJS Foundations: Using Prop Drilling</title>
       </Helmet>
       <h1>Listing 17-1: Using Prop Drilling</h1>
+      <PrevNext prev="/listing1609" next="/listing1702" />
+
       <Chapter17.PropDrilling story="test" />
     </Route>
     <Route path="/listing1702">
@@ -3200,6 +3656,8 @@ export default NewsFeedFunction;
         <title>ReactJS Foundations: A Context for User Preferences</title>
       </Helmet>
       <h1>Listing 17-2: A Context for User Preferences</h1>
+      <PrevNext prev="/listing1701" next="/listing1703" />
+
       <pre>
         {`const PrefsContext = React.createContext({lang:'English',timezone:'Pacific Time'});`}
       </pre>
@@ -3209,6 +3667,8 @@ export default NewsFeedFunction;
         <title>ReactJS Foundations: Using a Provider Component</title>
       </Helmet>
       <h1>Listing 17-3: Using a Provider Component</h1>
+      <PrevNext prev="/listing1702" next="/listing1704" />
+
       <pre>
         {`import React, {useState} from 'react';
 import {PrefsContext} from './contexts/UserPrefs';
@@ -3244,6 +3704,8 @@ export default App;
         </title>
       </Helmet>
       <h1>Listing 17-4: Consuming a Context in a Class Component</h1>
+      <PrevNext prev="/listing1703" next="/listing1705" />
+
       <pre>
         {`import React from 'react';
 import {PrefsContext} from './contexts/UserPrefs';
@@ -3271,6 +3733,8 @@ export default TimeDisplay;
         <title>ReactJS Foundations: Using the Context.Consumer Component</title>
       </Helmet>
       <h1>Listing 17-5: Using the Context.Consumer Component</h1>
+      <PrevNext prev="/listing1704" next="/listing1706" />
+
       <pre>
         {`import React from 'react';
 import {PrefsContext} from './contexts/UserPrefs';
@@ -3302,6 +3766,8 @@ export default TimeDisplay;
         </title>
       </Helmet>
       <h1>Listing 17-6: Consuming a Context in a Function Component</h1>
+      <PrevNext prev="/listing1705" next="/listing1707" />
+
       <pre>
         {`import {useContext} from 'react';
 import {PrefsContext} from './contexts/UserPrefs';
@@ -3332,6 +3798,8 @@ export default TimeDisplay;
         Listing 17-7: Getting Data to a Deeply-nested Component with Prop
         Drilling
       </h1>
+      <PrevNext prev="/listing1706" next="/listing1708" />
+
       <Chapter17.DashboardProps />
     </Route>
     <Route path="/listing1708">
@@ -3341,6 +3809,8 @@ export default TimeDisplay;
         </title>
       </Helmet>
       <h1>Listing 17-8: Eliminating Prop Drilling with Context</h1>
+      <PrevNext prev="/listing1707" next="/listing1709" />
+
       <Chapter17.DashboardContext />
     </Route>
     <Route path="/listing1709">
@@ -3350,6 +3820,8 @@ export default TimeDisplay;
         </title>
       </Helmet>
       <h1>Listing 17-9: Using a component outside of a required Context</h1>
+      <PrevNext prev="/listing1708" next="/listing1710" />
+
       <Chapter17.ComponentOutsideContext />
     </Route>
     <Route path="/listing1710">
@@ -3357,6 +3829,8 @@ export default TimeDisplay;
         <title>ReactJS Foundations: Using Composition Instead of Context</title>
       </Helmet>
       <h1>Listing 17-10: Using Composition Instead of Context</h1>
+      <PrevNext prev="/listing1709" next="/listing1711" />
+
       <Chapter17.DashboardComposition />
     </Route>
     <Route path="/listing1711">
@@ -3364,6 +3838,8 @@ export default TimeDisplay;
         <title>ReactJS Foundations: Making a Provider</title>
       </Helmet>
       <h1>Listing 17-11: Making a Provider</h1>
+      <PrevNext prev="/listing1710" next="/listing1712" />
+
       <pre>
         {`import React, {createContext, useState} from 'react';
 export const UnitsContext = createContext();
@@ -3384,6 +3860,8 @@ export const UnitsProvider = ({ children }) => {
         <title>ReactJS Foundations: Providing a Context to a Tree</title>
       </Helmet>
       <h1>Listing 17-12: Providing a Context to a Tree</h1>
+      <PrevNext prev="/listing1711" next="/listing1713" />
+
       <Chapter17.UnitsContext />
     </Route>
     <Route path="/listing1713">
@@ -3391,6 +3869,8 @@ export const UnitsProvider = ({ children }) => {
         <title>ReactJS Foundations: Consuming a Context</title>
       </Helmet>
       <h1>Listing 17-13: Consuming a Context</h1>
+      <PrevNext prev="/listing1712" next="/listing1801" />
+
       <Chapter17.UnitsContext />
     </Route>
     <Route path="/listing1801">
@@ -3400,6 +3880,8 @@ export const UnitsProvider = ({ children }) => {
         </title>
       </Helmet>
       <h1>Listing 18-1: An HTML document with multiple nodes in the body</h1>
+      <PrevNext prev="/listing1713" next="/listing1802" />
+
       <pre>
         {`<!DOCTYPE html>
 <html lang="en">
@@ -3423,6 +3905,8 @@ export const UnitsProvider = ({ children }) => {
         <title>ReactJS Foundations: Creating a Portal</title>
       </Helmet>
       <h1>Listing 18-2: Creating a Portal</h1>
+      <PrevNext prev="/listing1801" next="/listing1803" />
+
       <pre>
         {`import {createPortal} from 'react-dom';
 
@@ -3442,6 +3926,8 @@ export default SidebarHelp;
         <title>ReactJS Foundations: Using the SidebarHelp Component</title>
       </Helmet>
       <h1>Listing 18-3: Using the SidebarHelp Component</h1>
+      <PrevNext prev="/listing1802" next="/listing1804" />
+
       <pre>
         {`import Chart from './Chart';
 import SidebarHelp from './SidebarHelp';
@@ -3464,6 +3950,7 @@ export default SalesChart;
         <title>ReactJS Foundations: One Way to Style a Modal</title>
       </Helmet>
       <h1>Listing 18-4: One Way to Style a Modal</h1>
+      <PrevNext prev="/listing1803" next="/listing1805" />
       <pre>
         {`.modalOverlay {
   position: absolute;
@@ -3499,6 +3986,8 @@ export default SalesChart;
         <title>ReactJS Foundations: The App Component</title>
       </Helmet>
       <h1>Listing 18-5: The App Component</h1>
+      <PrevNext prev="/listing1804" next="/listing1806" />
+
       <pre>
         {`import {useState} from 'react';
 import Modal from './Modal';
@@ -3530,6 +4019,8 @@ export default App;
         <title>ReactJS Foundations: The Finished Modal Component</title>
       </Helmet>
       <h1>Listing 18-6: The Finished Modal Component</h1>
+      <PrevNext prev="/listing1805" next="/listing1807" />
+
       <pre>
         {`import ReactDOM from 'react-dom';
 import "./styles.css";
@@ -3561,6 +4052,8 @@ export default Modal;
         <title>ReactJS Foundations: Using a ref to set keyboard focus</title>
       </Helmet>
       <h1>Listing 18-7: Using a ref to set keyboard focus</h1>
+      <PrevNext prev="/listing1806" next="/WhereToBuy" />
+
       <pre>
         {`import {useState,useRef,useEffect} from 'react';
 import Modal from './Modal';

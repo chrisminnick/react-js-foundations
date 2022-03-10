@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import Collapsible from "react-collapsible";
+import { Link } from 'react-router-dom';
+import Collapsible from 'react-collapsible';
 
 function MainNav() {
   return (
@@ -8,7 +8,7 @@ function MainNav() {
         <li>
           <div className="Collapsible">
             <span className="Collapsible__trigger is-closed no-arrow">
-              <Link to="/" style={{ color: "#b4032d" }}>
+              <Link to="/" style={{ color: '#b4032d' }}>
                 Home
               </Link>
             </span>
@@ -17,7 +17,11 @@ function MainNav() {
         <li>
           <div className="Collapsible">
             <span className="Collapsible__trigger is-closed no-arrow">
-              <a href="http://blog.reactjsfoundations.com" target="_blank" style={{ color: "#b4032d" }}>
+              <a
+                href="http://blog.reactjsfoundations.com"
+                target="_blank"
+                style={{ color: '#b4032d' }}
+              >
                 Blog and Errata
               </a>
             </span>
@@ -26,7 +30,7 @@ function MainNav() {
         <li>
           <div className="Collapsible">
             <span className="Collapsible__trigger is-closed no-arrow">
-              <Link to="/WhereToBuy" style={{ color: "#b4032d" }}>
+              <Link to="/WhereToBuy" style={{ color: '#b4032d' }}>
                 Buy the Book
               </Link>
             </span>
@@ -51,12 +55,12 @@ function MainNav() {
                   <a href="/Listing01-01">Listing 1-1</a>
                 </li> */}
               <li>
-                <Link to="/Listing0102">
+                <Link to="/Listing102">
                   Listing 1-2: Changing the state data in a component
                 </Link>
               </li>
               <li>
-                <Link to="/listing0103">
+                <Link to="/listing103">
                   Listing 1-3: An interactive Hello, World component
                 </Link>
               </li>
