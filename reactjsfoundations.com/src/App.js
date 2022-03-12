@@ -37,7 +37,7 @@ function App(props) {
         />
       </Helmet>
       <div className="container">
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div></div>}>
           <div id="column2">
             <main>
               {routes}
