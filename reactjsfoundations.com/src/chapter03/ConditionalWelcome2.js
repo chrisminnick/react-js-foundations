@@ -31,7 +31,7 @@ function Welcome({loggedIn}){
   
 export default Welcome;`}
       </SyntaxHighlighter>
-      <h1>Conditional Rendering with Element Variables</h1>
+      <h1>Conditional Rendering with &amp;&amp;</h1>
       <p>
         The &amp;&amp; operator relies on the fact that any operand in
         JavaScript can be converted to a Boolean true or a Boolean false. The
