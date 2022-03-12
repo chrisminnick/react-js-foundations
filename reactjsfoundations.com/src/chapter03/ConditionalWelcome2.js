@@ -71,8 +71,8 @@ export default Welcome;`}
         Using the <code>&amp;&amp;</code> operator is a quick and easy way to
         conditionally render a component. Unlike using an <code>if/else</code>{' '}
         statement, a <code>switch</code> statement, or the ternary operator,
-        using <code>&amp;&amp;</code>
-        doesn't provide a way to choose between 2 or more components to render.
+        using <code>&amp;&amp;</code> doesn't provide a way to choose between 2
+        or more components to render.
       </p>
     </>
   );
