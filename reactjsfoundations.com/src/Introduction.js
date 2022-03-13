@@ -155,6 +155,9 @@ function Introduction(props) {
           me.
         </b>
       </p>
+      <p>
+        <em>- Chris Minnick</em>
+      </p>
     </>
   );
 }
