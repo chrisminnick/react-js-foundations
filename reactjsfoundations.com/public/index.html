@@ -84,12 +84,21 @@
         order: 2;
         flex-direction: column;
       }
+      #column3 {
+        order: 3;
+        width: 20%;
+        text-align: center;
+        margin-top: 20px;
+      }
       ul {
         margin-top: 0px;
       }
       @media only screen and (max-width: 480px) {
         .container {
           display: block;
+        }
+        #column3 {
+          display: none;
         }
         ul.inside-links {
           font-size: 1em;

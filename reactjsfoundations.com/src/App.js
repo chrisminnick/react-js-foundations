@@ -48,6 +48,25 @@ function App(props) {
           <Suspense fallback={<div>Loading...</div>}>
             <MainNav />
           </Suspense>
+          <div id="column3">
+            <a
+              href="https://www.amazon.com/dp/1119685540?&linkCode=li3&tag=chrismincom-20&linkId=6c69efbcfd2ca6ae74a870e3a88a40db&language=en_US&ref_=as_li_ss_il"
+              target="_blank"
+            >
+              <img
+                border="0"
+                src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1119685540&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=chrismincom-20&language=en_US"
+              />
+            </a>
+            <img
+              src="https://ir-na.amazon-adsystem.com/e/ir?t=chrismincom-20&language=en_US&l=li3&o=1&a=1119685540"
+              width="1"
+              height="1"
+              border="0"
+              alt=""
+              style={{ border: 'none !important', margin: '0px !important' }}
+            />
+          </div>
         </Suspense>
       </div>
       <BottomNav />
