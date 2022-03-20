@@ -18,7 +18,7 @@ function ReactBlog() {
     ).then((res) => res.json())
   );
 
-  if (isLoading) return 'Loading...';
+  if (isLoading) return '<div>Loading...</div>';
 
   if (error) return 'An error has occurred: ' + error.message;
 
