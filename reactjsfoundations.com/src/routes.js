@@ -7,7 +7,7 @@ import * as Chapter09 from './chapter09';
 import ErrorBoundary from './chapter13/ErrorBoundary';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-
+import WpBlog from './WpBlog';
 const Introduction = lazy(() => import('./Introduction'));
 const WhereToBuy = lazy(() => import('./WhereToBuy'));
 const About = lazy(() => import('./About'));
@@ -34,6 +34,9 @@ export const routes = (
     <Route path="/intro" component={Introduction} />
     <Route path="/WhereToBuy" component={WhereToBuy} />
     <Route path="/AboutChrisMinnick" component={About} />
+    <Route path="/blog">
+      <WpBlog posts={10} title="ReactJS Foundations Blog and Errata" />
+    </Route>
     <Route path="/listing102">
       <Helmet>
         <title>
