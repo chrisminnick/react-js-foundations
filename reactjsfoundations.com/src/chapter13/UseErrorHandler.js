@@ -1,8 +1,8 @@
-import React from "react";
-import { useErrorHandler } from "react-error-boundary";
+import React from 'react';
+import { useErrorHandler } from 'react-error-boundary';
 
 function fetchGreeting() {
-  throw new Error("💥 CABOOM 💥");
+  throw new Error('💥 CABOOM 💥');
 }
 
 function Greeting() {

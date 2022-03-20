@@ -4,7 +4,7 @@ import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false }; //normally, you'd set this initial value to false
+    this.state = { hasError: true }; //normally, you'd set this initial value to false
   }
 
   static getDerivedStateFromError(error) {

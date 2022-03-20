@@ -3,12 +3,10 @@ import { routes } from './routes';
 import usePageTracking from './usePageTracking';
 import Helmet from 'react-helmet';
 import CodeLinks from './CodeLinks';
-import { Link } from 'react-router-dom';
 import BottomNav from './BottomNav';
 import { Suspense } from 'react';
 import { useLocation } from 'react-router-dom';
-import ErrorBoundary from 'react-error-boundary';
-import ErrorFallback from './ErrorFallback';
+
 import WpBlogWidget from './WpBlogWidget';
 
 const MainNav = lazy(() => import('./MainNav'));
@@ -42,7 +40,6 @@ function App(props) {
           <div id="column2">
             <main>
               {routes}
-
               <CodeLinks />
             </main>
           </div>
