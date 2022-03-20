@@ -9,6 +9,7 @@ import { Suspense } from 'react';
 import { useLocation } from 'react-router-dom';
 import ErrorBoundary from 'react-error-boundary';
 import ErrorFallback from './ErrorFallback';
+import WpBlog from './WpBlog';
 
 const MainNav = lazy(() => import('./MainNav'));
 
@@ -66,6 +67,7 @@ function App(props) {
               alt=""
               style={{ border: 'none !important', margin: '0px !important' }}
             />
+            <WpBlog />
           </div>
         </Suspense>
       </div>

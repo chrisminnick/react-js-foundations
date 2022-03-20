@@ -1,0 +1,14 @@
+.blog__title {
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  padding: 8px;
+}
+.blog__posts {
+  text-align: left;
+  border: 1px solid #999;
+  padding: 8px;
+}
+.post__title {
+  color: #333;
+}
