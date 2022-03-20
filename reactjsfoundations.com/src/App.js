@@ -67,7 +67,7 @@ function App(props) {
               alt=""
               style={{ border: 'none !important', margin: '0px !important' }}
             />
-            <WpBlogWidget posts="1" title="Latest Blog Posts" />
+            <WpBlogWidget posts="3" title="Latest Blog Posts" />
           </div>
         </Suspense>
       </div>
