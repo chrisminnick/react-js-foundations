@@ -1,6 +1,7 @@
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
 import { useState } from 'react';
 import * as styles from './WpBlog.module.css';
+import { useParams } from 'react-router-dom';
 
 const queryClient = new QueryClient();
 
@@ -19,13 +20,19 @@ export default function WpBlog(props) {
 function ReactBlog(props) {
   const [totalPages, setTotalPages] = useState(0);
   const [page, setPage] = useState(1);
+  let { id } = useParams();
 
+  let url;
+
+  if (id) {
+    url = `https://blog.reactjsfoundations.com/wp-json/wp/v2/posts/${id}/?per_page=${props.posts}&page=${page}`;
+  } else {
+    url = `https://blog.reactjsfoundations.com/wp-json/wp/v2/posts?per_page=${props.posts}&page=${page}`;
+  }
   const { isLoading, error, data } = useQuery(
     ['posts', page],
     () => {
-      return fetch(
-        `https://blog.reactjsfoundations.com/wp-json/wp/v2/posts?per_page=${props.posts}&page=${page}`
-      ).then((res) => {
+      return fetch(url).then((res) => {
         setTotalPages(parseInt(res.headers.get('x-wp-totalpages')));
         return res.json();
       });
@@ -66,6 +73,8 @@ function ReactBlog(props) {
             className={styles.post__content}
             dangerouslySetInnerHTML={{ __html: post.content.rendered }}
           />
+
+          <hr />
         </div>
       ))}
     </div>

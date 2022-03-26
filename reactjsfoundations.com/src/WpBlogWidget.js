@@ -1,6 +1,7 @@
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
 import { useState } from 'react';
 import * as styles from './WpBlog.module.css';
+import { Link } from 'react-router-dom';
 
 const queryClient = new QueryClient();
 
@@ -56,16 +57,21 @@ function ReactBlog(props) {
       {data.map((post) => (
         <div key={post.id}>
           <h2>
-            <section
-              className={styles.post__title}
-              dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-            />
+            <Link to={`/blog/${post.id}`}>
+              <section
+                className={styles.post__title}
+                dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+              />
+            </Link>
           </h2>
 
           <section
             className={styles.post__content}
-            dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+            dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
           />
+          <p>
+            <Link to={`/blog/${post.id}`}>Read More &gt;</Link>
+          </p>
         </div>
       ))}
     </div>
