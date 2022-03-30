@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
 import { useState } from 'react';
-import * as styles from './WpBlog.module.css';
+import styles from './wp-blog.module.css';
 import { Link } from 'react-router-dom';
 
 const queryClient = new QueryClient();
