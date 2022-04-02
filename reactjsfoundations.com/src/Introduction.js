@@ -48,7 +48,22 @@ function Introduction(props) {
         building applications with it."
         />
       </Helmet>
-
+      <p>
+        <blockquote>
+          <strong>
+            "It is rare to find it hard to put down a programming book but it is
+            the case for me with this one. It should be the textbook for any
+            React course and for anyone learning react."
+          </strong>
+        </blockquote>
+      </p>
+      <p>
+        <blockquote style={{ textAlign: 'right' }}>
+          <a href="https://www.amazon.com/React-Foundations-Building-Interfaces-ReactJS/product-reviews/1119685540">
+            Read More Reviews
+          </a>
+        </blockquote>
+      </p>
       <h2>WHY THIS BOOK?</h2>
       <p>
         My aim with this book is to provide an up-to-date and thorough
