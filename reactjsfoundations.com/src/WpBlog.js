@@ -37,7 +37,9 @@ function ReactBlog(props) {
         return res.json();
       });
     },
-    [page]
+    {
+      staleTime: 1000,
+    }
   );
 
   const handlePrevPage = () => {
