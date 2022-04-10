@@ -33,8 +33,7 @@ function ReactBlog(props) {
     },
     {
       staleTime: 1000,
-    },
-    [page]
+    }
   );
 
   const handlePrevPage = () => {
