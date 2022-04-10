@@ -31,6 +31,9 @@ function ReactBlog(props) {
         return res.json();
       });
     },
+    {
+      staleTime: 1000,
+    },
     [page]
   );
 
