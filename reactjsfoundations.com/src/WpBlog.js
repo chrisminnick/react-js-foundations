@@ -55,7 +55,7 @@ function ReactBlog(props) {
   }
   return (
     <div className={styles.blog__posts}>
-      <h1 className={styles.blog__title}>{props.title}</h1>
+      <h2 className={styles.blog__title}>{props.title}</h2>
       <div style={{ textAlign: 'center' }}>
         {page > 1 && <button onClick={handlePrevPage}>Newer posts</button>}{' '}
         {page + 1 <= totalPages && (
