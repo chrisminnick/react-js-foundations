@@ -22,11 +22,11 @@ export default function ReactBlog(props) {
 
   if (post) {
     return (
-      <div className={styles.blog__posts}>
-        <h1 className={styles.blog__title}>{post.title.rendered}</h1>
+      <div className="blog__posts">
+        <h1 className="blog__title">{post.title.rendered}</h1>
         <div key={post.id}>
           <section
-            className={styles.post__content}
+            className="post__content"
             dangerouslySetInnerHTML={{ __html: post.content.rendered }}
           />
         </div>
