@@ -56,7 +56,19 @@ function Introduction(props) {
           course and for anyone learning react."
         </strong>
       </blockquote>
-
+      <blockquote>
+        <strong>
+          "This is a wonderfully researched, impeccably written book
+          meticulously covering the all the key, core concepts involved in
+          developing application with React."
+        </strong>
+      </blockquote>
+      <blockquote>
+        <strong>
+          "The details inside are perfectly explained, organized in perfect
+          order, and explained completely."
+        </strong>
+      </blockquote>
       <blockquote style={{ textAlign: 'right' }}>
         <a href="https://www.amazon.com/React-Foundations-Building-Interfaces-ReactJS/product-reviews/1119685540">
           Read More Reviews
