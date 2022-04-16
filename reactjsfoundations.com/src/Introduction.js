@@ -48,7 +48,16 @@ function Introduction(props) {
         building applications with it."
         />
       </Helmet>
-
+      <p
+        style={{
+          textAlign: 'center',
+          color: '#b4032d',
+          fontSize: '24px',
+          marginBottom: '-10px',
+        }}
+      >
+        &#9733;&#9733;&#9733;&#9733;&#9733;
+      </p>
       <blockquote>
         <strong>
           "It is rare to find it hard to put down a programming book but it is
@@ -56,6 +65,16 @@ function Introduction(props) {
           course and for anyone learning react."
         </strong>
       </blockquote>
+      <p
+        style={{
+          textAlign: 'center',
+          color: '#b4032d',
+          fontSize: '24px',
+          marginBottom: '-10px',
+        }}
+      >
+        &#9733;&#9733;&#9733;&#9733;&#9733;
+      </p>
       <blockquote>
         <strong>
           "This is a wonderfully researched, impeccably written book
@@ -63,6 +82,16 @@ function Introduction(props) {
           developing application with React."
         </strong>
       </blockquote>
+      <p
+        style={{
+          textAlign: 'center',
+          color: '#b4032d',
+          fontSize: '24px',
+          marginBottom: '-10px',
+        }}
+      >
+        &#9733;&#9733;&#9733;&#9733;&#9733;
+      </p>
       <blockquote>
         <strong>
           "The details inside are perfectly explained, organized in perfect
