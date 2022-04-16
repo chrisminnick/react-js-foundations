@@ -1,6 +1,5 @@
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
 import { useState, useEffect } from 'react';
-import styles from './wp-blog.module.css';
 import { useParams } from 'react-router-dom';
 
 export default function ReactBlog(props) {

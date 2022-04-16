@@ -1,6 +1,5 @@
 import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
 import { useState } from 'react';
-import styles from './wp-blog.module.css';
 import { Link } from 'react-router-dom';
 
 const queryClient = new QueryClient();
@@ -48,8 +47,8 @@ function ReactBlog(props) {
     return <div>Loading...</div>;
   }
   return (
-    <div className={styles.blog__posts}>
-      <h1 className={styles.blog__title}>{props.title}</h1>
+    <div className="blog__posts">
+      <h1 className="blog__title">{props.title}</h1>
       <div style={{ textAlign: 'center' }}>
         {page > 1 && <button onClick={handlePrevPage}>Newer posts</button>}{' '}
         {page + 1 <= totalPages && (
@@ -61,14 +60,14 @@ function ReactBlog(props) {
           <h2>
             <Link to={`/blog/${post.id}`}>
               <section
-                className={styles.post__title}
+                className="post__title"
                 dangerouslySetInnerHTML={{ __html: post.title.rendered }}
               />
             </Link>
           </h2>
 
           <section
-            className={styles.post__content}
+            className="post__content"
             dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
           />
           <p>
