@@ -64,6 +64,8 @@ function App(props) {
               <img
                 alt="ReactJS Foundations"
                 border="0"
+                width="200"
+                height="250"
                 src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1119685540&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=chrismincom-20&language=en_US"
               />
             </a>

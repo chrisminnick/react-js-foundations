@@ -107,6 +107,12 @@
         .container {
           display: block;
         }
+        #top-title {
+          display: none;
+        }
+        .greenButton {
+          display: none;
+        }
         #column3 {
           display: none;
         }
@@ -390,10 +396,10 @@
       ReactJS Foundations Building User Interfaces with ReactJS: An Approachable
       Guide
     </title>
-    <script
+    <!--     <script
       async
       src="https://cse.google.com/cse.js?cx=ceb64708ba0602a7b"
-    ></script>
+    ></script> -->
   </head>
   <body>
     <header
@@ -404,7 +410,7 @@
         justify-content: space-between;
       "
     >
-      <div>
+      <div id="top-title">
         <a
           href="/"
           style="
@@ -414,16 +420,18 @@
             color: #fff;
             margin-top: 10px;
             margin-left: 30px;
+            margin-bottom: 10px;
           "
         >
           ReactJS Foundations
         </a>
       </div>
-      <div style="background-color: #000; flex-grow: 1; max-width: 66%">
+      <!--       <div style="background-color: #000; flex-grow: 1; max-width: 66%">
         <div class="gcse-search"></div>
-      </div>
-      <div style="padding: 14px 12px 0px 0px">
+      </div> -->
+      <div style="padding: 14px 12px 0px 0px; margin-bottom: 10px">
         <button
+          class="greenButton"
           style="
             height: 30px;
             padding: 4px 20px;
@@ -439,21 +447,10 @@
           <a
             style="color: #fff"
             href="https://github.com/chrisminnick/react-js-foundations"
-            >Download</a
+            >Download Code</a
           >
         </button>
       </div>
-      <!-- <div style="padding:14px 12px 0px 0px;">
-        <button style="height:30px;
-          padding: 4px 20px;
-          width: auto;
-          vertical-align: middle;
-          border: 1px solid #666;
-          border-radius: 2px;
-          border-color: #1b1f2426;
-          background-color: #2da44e;"
-          ><a style="color:#fff" href="/wheretobuy">Get the book</a></button>
-      </div> -->
     </header>
 
     <noscript>You need to enable JavaScript to run this app.</noscript>
