@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.21.1",
-    "axios-hooks": "^2.3.0",
+    "axios": "^0.24.0",
+    "axios-hooks": "^3.0.2",
     "create-react-class": "^15.7.0",
     "loggly-jslogger": "^2.2.2",
     "react": "^18.0.0",
