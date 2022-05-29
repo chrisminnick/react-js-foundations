@@ -7,8 +7,9 @@ import * as Chapter09 from './chapter09';
 import ErrorBoundary from './chapter13/ErrorBoundary';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import WpBlog from './WpBlog';
-import WpBlogSP from './WpBlogSP';
+
+const WpBlog = lazy(() => import('./WpBlog'));
+const WpBlogSP = lazy(() => import('./WpBlogSP'));
 const Introduction = lazy(() => import('./Introduction'));
 const WhereToBuy = lazy(() => import('./WhereToBuy'));
 const About = lazy(() => import('./About'));
