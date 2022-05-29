@@ -6,8 +6,8 @@ function Introduction(props) {
       <div style={{ textAlign: 'center' }}>
         <a href="https://amzn.to/3wVXbqk">
           <picture style={{ maxWidth: '100%', height: 'auto' }}>
-            <source srcset="/images/cover.webp" type="image/webp" />
-            <source srcset="/images/cover.jpg" type="image/jpeg" />
+            <source srcSet="/images/cover.webp" type="image/webp" />
+            <source srcSet="/images/cover.jpg" type="image/jpeg" />
             <img
               src="/images/cover.jpg"
               width="300"
