@@ -4,14 +4,18 @@ function Introduction(props) {
   return (
     <>
       <div style={{ textAlign: 'center' }}>
-        <a href="https://www.amazon.com/React-Foundations-Building-Interfaces-ReactJS/dp/1119685540">
-          <img
-            src="/images/cover.jpg"
-            width="300"
-            height="378"
-            style={{ maxWidth: '100%', height: 'auto' }}
-            alt="React JS Foundations"
-          />
+        <a href="https://amzn.to/3wVXbqk">
+          <picture style={{ maxWidth: '100%', height: 'auto' }}>
+            <source srcset="/images/cover.webp" type="image/webp" />
+            <source srcset="/images/cover.jpg" type="image/jpeg" />
+            <img
+              src="/images/cover.jpg"
+              width="300"
+              height="378"
+              style={{ maxWidth: '100%', height: 'auto' }}
+              alt="React JS Foundations"
+            />
+          </picture>
         </a>
       </div>
       <div style={{ textAlign: 'center', spadding: '4px 12px 0px 0px' }}>
@@ -27,10 +31,7 @@ function Introduction(props) {
             backgroundColor: '#2da44e',
           }}
         >
-          <a
-            style={{ color: '#fff' }}
-            href="https://www.amazon.com/React-Foundations-Building-Interfaces-ReactJS/dp/1119685540"
-          >
+          <a style={{ color: '#fff' }} href="https://amzn.to/3wVXbqk">
             Preview and Buy Now @ Amazon.com
           </a>
         </button>
