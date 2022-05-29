@@ -57,18 +57,17 @@ function App(props) {
                 style={{ height: 40, width: 40, margin: '8px' }}
               />
             </div>
-            <a href="https://www.amazon.com/dp/1119685540?&linkCode=li3&tag=chrismincom-20&linkId=6c69efbcfd2ca6ae74a870e3a88a40db&language=en_US&ref_=as_li_ss_il">
-              <picture style={{ maxWidth: '100%', height: 'auto' }}>
-                <source srcset="/images/cover.webp" type="image/webp" />
-                <source srcset="/images/cover.jpg" type="image/jpeg" />
-                <img
-                  src="/images/cover.jpg"
-                  width="300"
-                  height="378"
-                  style={{ maxWidth: '100%', height: 'auto' }}
-                  alt="React JS Foundations"
-                />
-              </picture>
+            <a
+              href="https://www.amazon.com/dp/1119685540?&linkCode=li3&tag=chrismincom-20&linkId=6c69efbcfd2ca6ae74a870e3a88a40db&language=en_US&ref_=as_li_ss_il"
+              target="_blank"
+            >
+              <img
+                alt="ReactJS Foundations"
+                border="0"
+                width="200"
+                height="250"
+                src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1119685540&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=chrismincom-20&language=en_US"
+              />
             </a>
             <img
               src="https://ir-na.amazon-adsystem.com/e/ir?t=chrismincom-20&language=en_US&l=li3&o=1&a=1119685540"
