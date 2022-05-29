@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 function Introduction(props) {
   return (
     <>
-      {/* <div style={{ textAlign: 'center' }}>
+      <div style={{ textAlign: 'center' }}>
         <a href="https://amzn.to/3wVXbqk">
           <picture style={{ maxWidth: '100%', height: 'auto' }}>
             <source srcset="/images/cover.webp" type="image/webp" />
@@ -17,7 +17,7 @@ function Introduction(props) {
             />
           </picture>
         </a>
-      </div> */}
+      </div>
       <div style={{ textAlign: 'center', spadding: '4px 12px 0px 0px' }}>
         <button
           style={{
