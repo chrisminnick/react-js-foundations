@@ -65,14 +65,7 @@ function App(props) {
                 src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1119685540&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=chrismincom-20&language=en_US"
               />
             </a>
-            <img
-              src="https://ir-na.amazon-adsystem.com/e/ir?t=chrismincom-20&language=en_US&l=li3&o=1&a=1119685540"
-              width="1"
-              height="1"
-              border="0"
-              alt=""
-              style={{ border: 'none !important', margin: '0px !important' }}
-            />
+
             <br />
             <br />
             <WpBlogWidget posts="3" title="Latest Blog Posts" />

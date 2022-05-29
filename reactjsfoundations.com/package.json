@@ -1,6 +1,7 @@
 {
   "name": "book-code-listings",
   "homepage": "https://www.reactjsfoundations.com",
+  "sideEffects": false,
   "version": "1.0.0",
   "private": true,
   "dependencies": {
