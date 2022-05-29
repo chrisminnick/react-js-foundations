@@ -1,4 +1,3 @@
-import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 

@@ -56,10 +56,7 @@ function App(props) {
                 style={{ height: 40, width: 40, margin: '8px' }}
               />
             </div>
-            <a
-              href="https://www.amazon.com/dp/1119685540?&linkCode=li3&tag=chrismincom-20&linkId=6c69efbcfd2ca6ae74a870e3a88a40db&language=en_US&ref_=as_li_ss_il"
-              target="_blank"
-            >
+            <a href="https://www.amazon.com/dp/1119685540?&linkCode=li3&tag=chrismincom-20&linkId=6c69efbcfd2ca6ae74a870e3a88a40db&language=en_US&ref_=as_li_ss_il">
               <img
                 alt="ReactJS Foundations"
                 border="0"
