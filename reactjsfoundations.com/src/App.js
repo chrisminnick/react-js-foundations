@@ -3,7 +3,6 @@ import { routes } from './routes';
 import usePageTracking from './usePageTracking';
 import Helmet from 'react-helmet';
 import CodeLinks from './CodeLinks';
-import BottomNav from './BottomNav';
 import { Suspense } from 'react';
 import { useLocation } from 'react-router-dom';
 import { SocialIcon } from 'react-social-icons';
@@ -83,7 +82,6 @@ function App(props) {
           </div>
         </Suspense>
       </div>
-      <BottomNav />
     </>
   );
 }
