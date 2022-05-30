@@ -3269,7 +3269,7 @@ export default Route;
 
       <Chapter12.ViewLocation />
     </Route>
-    <Route path="/listing1216">
+    {/* <Route path="/listing1216">
       <Helmet>
         <title>
           ReactJS Foundations: Dynamic Links and Routes in nested Routes
@@ -3279,7 +3279,7 @@ export default Route;
       <PrevNext prev="/listing1215" next="/listing1301" />
 
       <Chapter12.NestedRoutes />
-    </Route>
+    </Route> */}
     <Route path="/listing1301">
       <Helmet>
         <title>ReactJS Foundations: An ErrorBoundary component</title>

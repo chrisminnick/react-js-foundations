@@ -30,6 +30,7 @@
     "start": "react-scripts start",
     "prebuild": "npm run sitemap",
     "build": "react-scripts build",
+    "postbuild": "react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "sitemap": "babel-node ./sitemap-gen.js"
@@ -66,6 +67,7 @@
     "fs": "^0.0.1-security",
     "path": "^0.12.7",
     "prettier": "^2.6.2",
-    "react-app-rewired": "^2.2.1"
+    "react-app-rewired": "^2.2.1",
+    "react-snap": "^1.23.0"
   }
 }

@@ -15,8 +15,8 @@ function Reports() {
 
   return (
     <>
-      <div>
-        <h2>Reports</h2>
+      {/*<div>
+         <h2>Reports</h2>
         <ul>
           <li>
             <Link to={`${url}/profitloss`}>Profit and Loss</Link>
@@ -37,7 +37,7 @@ function Reports() {
             <Report />
           </Route>
         </Switch>
-      </div>
+      </div> */}
       <SyntaxHighlighter language="javascript" style={github}>
         {`import {
   BrowserRouter as Router,
