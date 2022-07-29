@@ -1,12 +1,12 @@
-import { useState } from "react";
-import InputForm from "./InputForm";
-import FilterSelect from "./FilterSelect";
-import RemindersList from "./RemindersList";
+import { useState } from 'react';
+import InputForm from './InputForm';
+import FilterSelect from './FilterSelect';
+import RemindersList from './RemindersList';
 
 function App() {
   const [reminders, setReminders] = useState();
   const [userInput, setUserInput] = useState();
-  const [selectedFilter, setSelectedFilter] = useState("all");
+  const [selectedFilter, setSelectedFilter] = useState('all');
 
   const addNewReminder = (itemToAdd) => {
     if (reminders === undefined) {
@@ -16,7 +16,9 @@ function App() {
     }
   };
 
-  const filteredList = filterList(reminders, selectedFilter);
+  const filteredList = reminders
+    ? filterList(reminders, selectedFilter)
+    : undefined;
 
   function setIsComplete(isComplete, index) {
     const newReminders = [
@@ -28,19 +30,19 @@ function App() {
   }
 
   function filterList(reminders, selectedFilter) {
-    if (selectedFilter === "all") {
+    if (selectedFilter === 'all') {
       return reminders;
     } else {
       let numberOfDays;
 
       switch (selectedFilter) {
-        case "2day":
+        case '2day':
           numberOfDays = 2;
           break;
-        case "1week":
+        case '1week':
           numberOfDays = 7;
           break;
-        case "30days":
+        case '30days':
           numberOfDays = 30;
           break;
         default:

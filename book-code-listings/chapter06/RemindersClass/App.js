@@ -1,7 +1,7 @@
-import { Component } from "react";
-import InputForm from "./InputForm";
-import FilterSelect from "./FilterSelect";
-import RemindersList from "./RemindersList";
+import { Component } from 'react';
+import InputForm from './InputForm';
+import FilterSelect from './FilterSelect';
+import RemindersList from './RemindersList';
 
 class App extends Component {
   constructor(props) {
@@ -9,7 +9,7 @@ class App extends Component {
     this.state = {
       reminders: undefined,
       userInput: undefined,
-      selectedFilter: "all",
+      selectedFilter: 'all',
     };
     this.setUserInput = this.setUserInput.bind(this);
     this.setSelectedFilter = this.setSelectedFilter.bind(this);
@@ -47,19 +47,19 @@ class App extends Component {
   }
 
   filterList(reminders, selectedFilter) {
-    if (selectedFilter === "all") {
+    if (selectedFilter === 'all') {
       return reminders;
     } else {
       let numberOfDays;
 
       switch (selectedFilter) {
-        case "2day":
+        case '2day':
           numberOfDays = 2;
           break;
-        case "1week":
+        case '1week':
           numberOfDays = 7;
           break;
-        case "30days":
+        case '30days':
           numberOfDays = 30;
           break;
         default:
