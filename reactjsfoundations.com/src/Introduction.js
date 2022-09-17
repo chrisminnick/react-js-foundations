@@ -48,7 +48,7 @@ function Introduction(props) {
         everything you need to understand what React is and how to start
         building applications with it."
         />
-        <link rel="preload" as="image" href="/images/cover.webp" />
+        {/* <link rel="preload" as="image" href="/images/cover.webp" /> */}
       </Helmet>
       <p
         style={{

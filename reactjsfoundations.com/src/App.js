@@ -33,6 +33,7 @@ function App(props) {
           property="og:description"
           content="Code examples, tutorials, updates, downloads, and blog for ReactJS Foundations by Chris Minnick. Get up to speed on building applications with ReactJS."
         />
+        <link rel="preload" as="image" href="/images/cover.webp" />
       </Helmet>
       <div className="container">
         <Suspense fallback={<div>loading...</div>}>
@@ -57,13 +58,17 @@ function App(props) {
               />
             </div>
             <a href="https://www.amazon.com/dp/1119685540?&linkCode=li3&tag=chrismincom-20&linkId=6c69efbcfd2ca6ae74a870e3a88a40db&language=en_US&ref_=as_li_ss_il">
-              <img
-                alt="ReactJS Foundations"
-                border="0"
-                width="200"
-                height="250"
-                src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1119685540&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=chrismincom-20&language=en_US"
-              />
+              <picture style={{ maxWidth: '100%', height: 'auto' }}>
+                <source srcSet="/images/cover.webp" type="image/webp" />
+                <source srcSet="/images/cover.jpg" type="image/jpeg" />
+                <img
+                  src="/images/cover.jpg"
+                  width="200"
+                  height="250"
+                  style={{ maxWidth: '100%', height: 'auto' }}
+                  alt="React JS Foundations"
+                />
+              </picture>
             </a>
 
             <br />
