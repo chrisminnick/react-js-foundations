@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 function Introduction(props) {
   return (
     <>
-      <div style={{ textAlign: 'center' }}>
+      {/* <div style={{ textAlign: 'center' }}>
         <a href="https://amzn.to/3wVXbqk">
           <picture style={{ maxWidth: '100%', height: 'auto' }}>
             <source srcSet="/images/cover.webp" type="image/webp" />
@@ -35,7 +35,7 @@ function Introduction(props) {
             Preview and Buy Now @ Amazon.com
           </a>
         </button>
-      </div>
+      </div> */}
       <Helmet>
         <title>
           React JS Foundations - Building User Interfaces with ReactJS: An
