@@ -62,6 +62,23 @@ function Introduction(props) {
       </p>
       <blockquote>
         <strong>
+          "It's not only the best book on React, it's probably one of the best
+          tech books I've ever cracked open. It's reads really well and is
+          formatted really nicely."
+        </strong>
+      </blockquote>
+      <p
+        style={{
+          textAlign: 'center',
+          color: '#b4032d',
+          fontSize: '24px',
+          marginBottom: '-10px',
+        }}
+      >
+        &#9733;&#9733;&#9733;&#9733;&#9733;
+      </p>
+      <blockquote>
+        <strong>
           "Best ReactJS book I have come across. Simply the best. This book is
           well structured and detailed for absolute beginner to a professional.
           I am impressed to be honest"
