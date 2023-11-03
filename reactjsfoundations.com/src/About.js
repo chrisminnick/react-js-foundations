@@ -25,7 +25,7 @@ function About() {
       </div>
       <p>
         <a href="https://chrisminnick.com">Chris Minnick</a> has been a full
-        stack developer for over 25 years, and a professional author and trainer
+        stack developer for over 26 years, and a professional author and trainer
         for 15 years. He has been the lead front-end React developer for several
         startup companies, and has been building web and mobile user interfaces
         with React since 2015. Chris has produced online video courses for
